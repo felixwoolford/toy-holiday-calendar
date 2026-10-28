@@ -20,9 +20,10 @@ test('bank data integrity: every entry is a valid ISO date inside the covered ye
       const y = Number(h.date.slice(0, 4));
       assert.ok(y >= minY && y <= maxY, `${c.code}: year out of range ${h.date}`);
       assert.ok(h.name && h.name.length > 0, `${c.code}: missing name ${h.date}`);
+      if (h.approx !== undefined) assert.strictEqual(typeof h.approx, 'boolean', `${c.code}: bad approx ${h.date}`);
     }
   }
-  assert.ok(count > 5000, 'suspiciously little data');
+  assert.ok(count > 8000, 'suspiciously little data');
 });
 
 test('school data integrity: valid ranges, always a region label', () => {
@@ -88,11 +89,32 @@ test('French and Japanese holidays', () => {
   assert.deepStrictEqual(H.holidaysForDate('2026-12-25', ['JP']), []);
 });
 
+test('newly covered countries: India, Israel, Thailand, Saudi Arabia, UAE, ...', () => {
+  const bank = (d, code) => H.holidaysForDate(d, [code]).filter((h) => h.kind === 'bank');
+  // India: Diwali is a real day (2025), not flagged as expected
+  assert.deepStrictEqual(bank('2025-10-20', 'IN').map((h) => h.name), ['Diwali']);
+  assert.ok(!bank('2025-10-20', 'IN')[0].approx);
+  // Israel: Hebrew-calendar dates (Passover 2026 starts 2 April)
+  assert.ok(bank('2026-04-02', 'IL').some((h) => /Passover/.test(h.name)));
+  // Thailand: Visakha Bucha 2026 (full moon of May)
+  assert.ok(bank('2026-05-31', 'TH').some((h) => /Visakha/.test(h.name)));
+  // UAE: Eid al-Fitr 2026 is flagged as expected (moon sighting)
+  const aeEid = bank('2026-03-20', 'AE').find((h) => /Eid al-Fitr/.test(h.name));
+  assert.ok(aeEid, 'UAE observes Eid al-Fitr on 20 Mar 2026');
+  assert.strictEqual(aeEid.approx, true);
+  // Pakistan: the 3-day Eid span is expanded to one entry per day
+  const pk = ['2026-03-20', '2026-03-21', '2026-03-22'].map((d) =>
+    bank(d, 'PK').some((h) => /Eid al-Fitr/.test(h.name)));
+  assert.deepStrictEqual(pk, [true, true, true]);
+  // Saudi Arabia: Eid al-Adha 2024 (16 June)
+  assert.ok(bank('2024-06-16', 'SA').some((h) => /Eid al-Adha/.test(h.name)));
+});
+
 test('holidaysForDate: all countries, ordering and filtering', () => {
   const all = H.holidaysForDate('2026-12-25');
   const codes = [...new Set(all.map((h) => h.country))];
   // Christmas is observed in most data countries, but not in Japan
-  assert.ok(codes.length > 50, 'many countries observe Christmas');
+  assert.ok(codes.length > 100, 'many countries observe Christmas');
   for (const c of ['GB', 'US', 'DE', 'FR']) assert.ok(codes.includes(c), c + ' observes Christmas');
   assert.ok(!codes.includes('JP'), 'Japan does not observe Christmas');
   assert.ok(all.every((h) => h.kind === 'bank' || h.kind === 'school'));
@@ -294,16 +316,18 @@ test('world map data: every country has a path, data countries match the data', 
       codes.add(c.code);
     }
   }
-  // most map countries have data (nager.at covers them), incl. the original five
-  assert.ok(codes.size > 100, 'expected most map countries to have data, got ' + codes.size);
+  // most map countries have data (nager.at + date-holidays + python holidays)
+  assert.ok(codes.size > 160, 'expected most map countries to have data, got ' + codes.size);
   for (const c of ['DE', 'FR', 'GB', 'JP', 'US']) assert.ok(codes.has(c), c + ' flagged');
+  // the countries the user books most now all have data
+  for (const c of ['IN', 'IL', 'TH', 'SA', 'AE', 'ID', 'MY', 'SG']) assert.ok(codes.has(c), c + ' flagged');
   const byCode = Object.fromEntries(M.countries.filter((c) => c.code).map((c) => [c.code, c.name]));
   assert.strictEqual(byCode.GB, 'United Kingdom');
   assert.strictEqual(byCode.US, 'United States');
   // the map's data codes and the holiday data's countries agree exactly
   assert.deepStrictEqual([...codes].sort(), H.COUNTRIES.map((c) => c.code).sort());
-  // a known no-data country is present but unflagged (India is not on nager.at)
-  const inr = M.countries.find((c) => c.name === 'India');
-  assert.ok(inr, 'India present');
-  assert.strictEqual(inr.code, '');
+  // a known no-data country is present but unflagged
+  const sl = M.countries.find((c) => c.name === 'Somaliland');
+  assert.ok(sl, 'Somaliland present');
+  assert.strictEqual(sl.code, '');
 });

@@ -110,6 +110,17 @@
   }
   .hname { font-weight: 600; }
   .hmeta { color: var(--muted); font-size: 12.5px; }
+  .bgroup {
+    display: flex; align-items: baseline; gap: 8px; width: 100%;
+    border: 0; border-top: 1px solid var(--line); background: none;
+    padding: 8px 0; font: inherit; font-size: 14px; text-align: left;
+    color: var(--ink); cursor: pointer;
+  }
+  .bgroup:first-child { border-top: 0; }
+  .bgroup:hover .gname { color: var(--accent); }
+  .chev { color: var(--muted); font-size: 10px; flex: none; }
+  .gname { font-weight: 600; }
+  .gmeta { color: var(--muted); font-size: 12.5px; margin-left: auto; text-align: right; }
   .none { color: var(--muted); padding: 8px 0; }
   .dhead { margin: 14px 0 2px; font-size: 13.5px; }
   .dhead:first-child { margin-top: 2px; }
@@ -174,7 +185,7 @@
     </section>
   </div>
 
-  <footer>Self-contained page &mdash; works offline, no install needed. Bank &amp; public holidays for <span id="ncountries"></span> countries: <a href="https://date.nager.at">date.nager.at</a> &middot; School holidays: <a href="https://www.schulferien.org">schulferien.org</a> (Germany, France), <a href="https://www.education-ni.gov.uk">education-ni.gov.uk</a> (Northern Ireland) &middot; Religious dates computed and verified for 2024&ndash;2028; moon-dependent ones may fall a day off</footer>
+  <footer>Self-contained page &mdash; works offline, no install needed. Bank &amp; public holidays for <span id="ncountries"></span> countries: <a href="https://date.nager.at">date.nager.at</a>, <a href="https://github.com/mohammadghousey/date-holidays">date-holidays</a> and the Python <a href="https://github.com/vacanza/holidays">holidays</a> package &middot; School holidays: <a href="https://www.schulferien.org">schulferien.org</a> (Germany, France), <a href="https://www.education-ni.gov.uk">education-ni.gov.uk</a> (Northern Ireland) &middot; Religious dates computed and verified for 2024&ndash;2028; moon-dependent ones may fall a day off</footer>
 </div>
 
 <script src="holidays.js"></script>
@@ -518,6 +529,78 @@
     return row;
   }
 
+  // A few countries call the same holiday by different names (mostly the
+  // May 1 workers' day). They are grouped together; the expanded rows still
+  // show each country's own name.
+  var NAME_ALIASES = {
+    'Christmas': 'Christmas Day',
+    'Catholic Christmas Day': 'Christmas Day',
+    "Catholic St. Stephen's Day": "St. Stephen's Day",
+    'Labor Day': 'Labour Day',
+    "International Workers' Day": 'Labour Day',
+    "International Worker's Day": 'Labour Day',
+    'International Labor Day': 'Labour Day',
+    'International Labour Day': 'Labour Day',
+    'May Day': 'Labour Day',
+    "Workers' Day": 'Labour Day',
+    "Worker's Day": 'Labour Day',
+    'National Labor Day': 'Labour Day'
+  };
+
+  // Group one day's bank holidays by (normalised) name, so that with many
+  // countries selected "Christmas Day · 124 countries" is one expandable
+  // line instead of 124 rows. A name seen once stays a plain row.
+  function appendBankByName(box, hols) {
+    var groups = [];
+    var byKey = {};
+    hols.forEach(function (h) {
+      var key = NAME_ALIASES[h.name] || h.name;
+      var g = byKey[key];
+      if (!g) { g = byKey[key] = { name: h.name, approx: false, rows: [] }; groups.push(g); }
+      g.rows.push(h);
+      if (h.approx) g.approx = true;
+    });
+    groups.forEach(function (g) {
+      // the most common original name in the group becomes the header
+      var counts = {};
+      g.rows.forEach(function (r) { counts[r.name] = (counts[r.name] || 0) + 1; });
+      g.rows.forEach(function (r) {
+        if (counts[r.name] > counts[g.name]) g.name = r.name;
+      });
+      if (g.rows.length === 1) box.appendChild(hrow(g.rows[0]));
+      else bankGroupEl(box, g);
+    });
+  }
+
+  function bankGroupEl(box, g) {
+    var n = g.rows.length;
+    var names = g.rows.map(function (r) { return r.countryName; });
+    var meta = n === 2 ? names[0] + ' and ' + names[1]
+      : n <= 8 ? n + ' countries: ' + joinList(names)
+      : n + ' countries';
+    var open = n <= 3;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'bgroup';
+    btn.setAttribute('aria-expanded', String(open));
+    var badge = g.approx ? ' <span class="badge">\u00b11 day</span>' : '';
+    btn.innerHTML =
+      '<span class="chev" aria-hidden="true">' + (open ? '\u25be' : '\u25b8') + '</span>' +
+      '<span class="gname">' + esc(g.name) + badge + '</span>' +
+      '<span class="gmeta">' + esc(meta) + '</span>';
+    var rows = document.createElement('div');
+    g.rows.forEach(function (r) { rows.appendChild(hrow(r)); });
+    if (!open) rows.hidden = true;
+    btn.addEventListener('click', function () {
+      var nowOpen = rows.hidden;
+      rows.hidden = !nowOpen;
+      btn.setAttribute('aria-expanded', String(nowOpen));
+      btn.querySelector('.chev').textContent = nowOpen ? '\u25be' : '\u25b8';
+    });
+    box.appendChild(btn);
+    box.appendChild(rows);
+  }
+
   function fmtDay(isoStr, extra) {
     return new Date(isoStr + 'T00:00:00Z').toLocaleDateString(
       undefined, Object.assign({ timeZone: 'UTC', day: 'numeric', month: 'short' }, extra || {}));
@@ -714,7 +797,7 @@
           head.textContent = fullDate(g.date);
           box.appendChild(head);
         }
-        g.hols.forEach(function (h) { box.appendChild(hrow(h)); });
+        appendBankByName(box, g.hols);
       });
     });
 

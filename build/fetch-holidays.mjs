@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 // Regenerates app/holidays.js and app/map-paths.js:
 //   - bank/public holidays from https://date.nager.at (free, no API key) for
-//     every world-map country that nager.at covers (~140 countries)
+//     every world-map country that nager.at covers (~141 countries)
+//   - the other map countries nager.at lacks, from two more free keyless
+//     sources baked in the same way: npm `date-holidays` (10 countries) and
+//     the Python `holidays` package (21 countries, via
+//     build/fetch-py-holidays.py)
 //   - school holidays from:
 //       Germany:  https://www.schulferien.org/deutschland/ferien/<year>/ (per state)
 //       France:   https://www.schulferien.org/frankreich/ferien/<year>/  (per zone)
@@ -14,8 +18,10 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import assert from 'node:assert';
+import { spawnSync } from 'node:child_process';
 import { feature as topoFeature } from 'topojson-client';
 import * as d3geo from 'd3-geo';
+import Holidays from 'date-holidays';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 mkdirSync(join(root, 'app'), { recursive: true });
@@ -55,11 +61,17 @@ async function mapPool(items, limit, fn) {
   return out;
 }
 
+// ISO date + n days.
+const addDaysISO = (s, n) =>
+  new Date(Date.parse(s + 'T00:00:00Z') + n * 86400000).toISOString().slice(0, 10);
+
 // --------------------------------------------------- country coverage
 // The app's country selector is the world map (world-atlas / Natural Earth,
-// ~176 countries). We give holiday data to every map country that nager.at
-// covers. mledoze/countries bridges the map's numeric ISO ids to nager.at's
-// alpha-2 codes and supplies clean country names.
+// 50m resolution so small countries like Singapore and Malta are on the
+// map, ~240 entries). We give holiday data to every map country that
+// nager.at covers, plus the map countries nager.at lacks that the two
+// secondary sources cover (below). mledoze/countries bridges the map's numeric ISO ids
+// to the alpha-2 codes and supplies clean country names.
 const norm = (s) => String(s).replace(/^0+(?=\d)/, '');
 const ISO_LIST = await fetchJSON(
   'https://raw.githubusercontent.com/mledoze/countries/master/countries.json',
@@ -73,30 +85,46 @@ for (const c of ISO_LIST) {
 }
 const nagerCodes = new Set(NAGER_LIST.map((c) => c.countryCode));
 
-const topo = await fetchJSON('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
+// The map countries nager.at doesn't cover, filled from two more free,
+// keyless sources (fetched in the bank section below):
+const DH_CODES = ['AZ', 'BN', 'FJ', 'IR', 'IL', 'PK', 'TW', 'AE', 'UZ', 'EH'];
+const PY_CODES = ['AF', 'BT', 'IN', 'JO', 'KW', 'KG', 'LA', 'LB', 'MM', 'NP', 'KP',
+                  'OM', 'PS', 'QA', 'SA', 'LK', 'TJ', 'TH', 'TL', 'TM', 'MY'];
+const EXTRA_CODES = new Set([...DH_CODES, ...PY_CODES]);
+
+const topo = await fetchJSON('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json');
 const fc = topoFeature(topo, topo.objects.countries);
 const mapFeatures = fc.features.filter((f) => String(f.id) !== '010'); // drop Antarctica
+// 50m gives some offshore territories the parent country's numeric id
+// (Ashmore and Cartier Is. share 036 with Australia); group by id so each
+// country stays a single clickable entry (one path with several subpaths).
+const groups = new Map();
+for (const f of mapFeatures) {
+  const hasId = f.id !== undefined && f.id !== null;
+  const key = hasId ? String(f.id) : 'noid' + groups.size;
+  if (!groups.has(key)) groups.set(key, { id: hasId ? String(f.id) : null, feats: [] });
+  groups.get(key).feats.push(f);
+}
 const W = 960, H = 460;
 const projection = d3geo.geoNaturalEarth1().fitExtent(
   [[4, 4], [W - 4, H - 4]], { type: 'FeatureCollection', features: mapFeatures },
 );
 const geoPath = d3geo.geoPath(projection);
 const mapCountries = [];
-for (const f of mapFeatures) {
-  const d = geoPath(f);
+for (const g of groups.values()) {
+  const d = g.feats.map((f) => geoPath(f)).filter(Boolean).join(' ');
   if (!d) continue;
-  const num = f.id === undefined || f.id === null ? null : String(f.id);
-  const a2 = num ? numToA2[norm(num)] : null;
+  const a2 = g.id ? numToA2[norm(g.id)] : null;
   mapCountries.push({
-    iso: num || 'noid' + mapCountries.length,
-    code: a2 && nagerCodes.has(a2) ? a2 : '',
-    name: (a2 && a2ToName[a2]) || (f.properties && f.properties.name) || 'Unknown',
+    iso: g.id || 'noid' + mapCountries.length,
+    code: a2 && (nagerCodes.has(a2) || EXTRA_CODES.has(a2)) ? a2 : '',
+    name: (a2 && a2ToName[a2]) || (g.feats[0].properties && g.feats[0].properties.name) || 'Unknown',
     d,
   });
 }
 const DATA_COUNTRIES = mapCountries.filter((c) => c.code);
 const DATA_CODES = DATA_COUNTRIES.map((c) => c.code);
-assert.ok(DATA_CODES.length > 100, `expected >100 data countries, got ${DATA_CODES.length}`);
+assert.ok(DATA_CODES.length > 160, `expected >160 data countries, got ${DATA_CODES.length}`);
 for (const code of ['GB', 'US', 'DE', 'FR', 'JP']) {
   assert.ok(DATA_CODES.includes(code), `original data country missing: ${code}`);
 }
@@ -166,7 +194,12 @@ function processBank(code, raw) {
 }
 
 const bank = {};
-await mapPool(DATA_CODES, 8, async (code) => {
+const nagerDataCodes = DATA_CODES.filter((c) => nagerCodes.has(c));
+assert.strictEqual(
+  new Set([...nagerDataCodes, ...DH_CODES, ...PY_CODES]).size, DATA_CODES.length,
+  'data countries must be exactly nager.at + date-holidays + python-holidays',
+);
+await mapPool(nagerDataCodes, 8, async (code) => {
   const raw = [];
   for (const year of YEARS) {
     raw.push(...(await fetchWithRetry(
@@ -175,6 +208,52 @@ await mapPool(DATA_CODES, 8, async (code) => {
   }
   bank[code] = processBank(code, raw);
 });
+
+// The 10 countries nager.at lacks that `date-holidays` (npm) covers: English
+// names, built-in calendar rules. The library gives one entry per holiday;
+// multi-day spans ("P3D" in the rule) are expanded here, and Hijri-calendar
+// dates are flagged approx (they depend on moon sighting).
+const HIJRI_RE = /(Muharram|Safar|Rabi|Jumada|Rajab|Shaban|Ramadan|Shawwal|Dhu al-)/i;
+for (const code of DH_CODES) {
+  const hd = new Holidays(code, { languages: ['en'] });
+  const seen = new Map(); // "date|name" -> entry
+  for (const year of YEARS) {
+    for (const h of hd.getHolidays(year)) {
+      if (h.type !== 'public' && h.type !== 'bank') continue;
+      const first = h.date.slice(0, 10);
+      const pm = /P(\d+)D/.exec(h.rule || '');
+      const days = pm ? Number(pm[1]) : 1;
+      const approx = HIJRI_RE.test(h.rule || '');
+      for (let i = 0; i < days; i++) {
+        const d = addDaysISO(first, i);
+        const key = `${d}|${h.name}`;
+        if (!seen.has(key) || approx) seen.set(key, { date: d, name: h.name, approx });
+      }
+    }
+  }
+  bank[code] = [...seen.values()].sort(
+    (a, b) => a.date.localeCompare(b.date) || a.name.localeCompare(b.name),
+  );
+  assert.ok(bank[code].length >= 8, `date-holidays ${code}: suspiciously few holidays`);
+}
+
+// The 21 countries nager.at lacks that the Python `holidays` package covers:
+// build/fetch-py-holidays.py asks for English names, turns the package's
+// "(estimated)" marker into the approx flag, and fails loudly on anything
+// unexpected. Needs the project .venv (uv-managed, `holidays` installed).
+const pyRes = spawnSync(
+  join(root, '.venv', 'bin', 'python'),
+  [join(root, 'build', 'fetch-py-holidays.py')],
+  { encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 },
+);
+assert.strictEqual(pyRes.status, 0, 'fetch-py-holidays.py failed:\n' + (pyRes.stderr || pyRes.stdout));
+const pyBank = JSON.parse(pyRes.stdout);
+for (const code of PY_CODES) {
+  bank[code] = pyBank[code];
+  assert.ok(Array.isArray(bank[code]) && bank[code].length >= 20,
+    `python ${code}: missing or too few holidays`);
+}
+
 const totalBank = DATA_CODES.reduce((s, c) => s + bank[c].length, 0);
 console.log(`bank: ${DATA_CODES.length} countries, ${totalBank} holidays total`);
 const noBank = DATA_CODES.filter((c) => bank[c].length === 0);
@@ -217,8 +296,6 @@ function iso(y, m, d) {
   );
   return dt.toISOString().slice(0, 10);
 }
-const addDaysISO = (s, n) =>
-  new Date(Date.parse(s + 'T00:00:00Z') + n * 86400000).toISOString().slice(0, 10);
 
 // schulferien.org cells, e.g.
 //   "16.02. - 20.02."          one range
@@ -635,7 +712,7 @@ const apiSource = `
   'use strict';
 
   // DATA[code] = {
-  //   bank:    [{ date, name, note? }],
+  //   bank:    [{ date, name, note?, approx? }],
   //   school:  [{ start, end, name, region }]
   // };
   var DATA = __DATA__;
@@ -656,7 +733,8 @@ const apiSource = `
       (BY_DATE[h.date] = BY_DATE[h.date] || []).push({
         country: c.code,
         name: h.name,
-        note: h.note
+        note: h.note,
+        approx: h.approx
       });
     });
   });
@@ -683,6 +761,7 @@ const apiSource = `
           name: h.name, start: dateStr, end: dateStr
         };
         if (h.note) row.note = h.note;
+        if (h.approx) row.approx = true;
         out.push(row);
       });
       (DATA[c.code].school || []).forEach(function (h) {
@@ -790,7 +869,9 @@ const apiSource = `
 
 const header = `// Generated by build/fetch-holidays.mjs on ${new Date().toISOString().slice(0, 10)}
 // Sources:
-//   bank holidays:  https://date.nager.at
+//   bank holidays:  https://date.nager.at (the ~141 countries it covers)
+//   bank holidays:  npm date-holidays (10 more countries)
+//   bank holidays:  Python holidays package (21 more countries)
 //   school DE/FR:   https://www.schulferien.org
 //   school GB (NI): https://www.education-ni.gov.uk
 //   religious:      computed at build time (computus, Islamic/Hebrew/lunisolar
@@ -811,18 +892,19 @@ console.log(`wrote ${join(root, 'app', 'holidays.js')} (${DATA_CODES.length} cou
 // ------------------------------------------------------- world map
 // A static, offline world map so the page can be clicked to select countries.
 // Each country is one SVG path, generated from the free world-atlas TopoJSON
-// (Natural Earth, public domain) and projected with d3-geo. Only the five
-// countries with holiday data carry a `code`; the rest are selectable but
-// have none (the app says so). Antarctica is dropped (no data, skews the fit).
+// (Natural Earth, public domain) and projected with d3-geo. Every country
+// with holiday data carries a `code`; the few without (the app says so)
+// are selectable but have none. Antarctica is dropped (no data, skews the fit).
 const mapData = { viewbox: `0 0 ${W} ${H}`, countries: mapCountries };
-assert(mapData.countries.length > 150, 'world map too small');
+assert(mapData.countries.length > 200, 'world map too small');
 for (const code of DATA_CODES) {
   assert.ok(mapData.countries.some((c) => c.code === code), `map missing data country ${code}`);
 }
 const mapSource = `// Generated by build/fetch-holidays.mjs on ${new Date().toISOString().slice(0, 10)}
 // Offline world map: one SVG path per country (world-atlas / Natural Earth,
 // projected with d3-geo). \`code\` is set for every country that has holiday
-// data (nager.at); the others are selectable but have none.
+// data (nager.at + date-holidays + python holidays); the others are
+// selectable but have none.
 globalThis.MapData = ${JSON.stringify(mapData)};
 `;
 writeFileSync(join(root, 'app', 'map-paths.js'), mapSource);

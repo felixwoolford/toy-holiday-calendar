@@ -70,8 +70,7 @@ await clickDay(25);
 assert.ok((await title()).includes('25 December 2025'));
 assert.ok(!(await title()).includes(DASH));
 let d = await detail();
-for (const want of ['School holidays', 'Bank holidays', 'Christmas Day',
-  'United Kingdom', 'United States', 'Germany', 'France']) {
+for (const want of ['School holidays', 'Bank holidays', 'Christmas Day']) {
   assert.ok(d.includes(want), `detail should mention ${want}; got: ${d}`);
 }
 // school entries carry their region, and the lack of school data is stated
@@ -79,6 +78,28 @@ assert.ok(d.includes('Northern Ireland'), 'NI school break should name its regio
 assert.ok(d.includes('No school-holiday data for'), 'missing school data should be stated');
 // Japan has data but does not observe Christmas, so it appears nowhere
 assert.ok(!d.includes('Japan'), `Japan should not appear on 25 Dec; got: ${d}`);
+
+// 2b. With many countries selected, same-named holidays are grouped:
+// "Christmas Day · 128 countries" is one collapsed line, not 128 rows.
+const xmasGroup = page.locator('#detail .bgroup', { hasText: 'Christmas Day' });
+assert.strictEqual(await xmasGroup.count(), 1, 'one Christmas Day group');
+assert.ok((await xmasGroup.textContent()).includes('countries'), 'group shows a country count');
+assert.strictEqual(await xmasGroup.getAttribute('aria-expanded'), 'false', 'big groups start collapsed');
+// scope to this group's rows: school rows share the .hrow class and are visible
+const ukRow = xmasGroup.locator('xpath=following-sibling::div[1]')
+  .locator('.hrow', { hasText: 'United Kingdom' });
+assert.ok(await ukRow.count() >= 1, 'UK row exists in the group');
+assert.strictEqual(await ukRow.first().isVisible(), false, 'collapsed group hides the rows');
+await xmasGroup.click();
+assert.strictEqual(await xmasGroup.getAttribute('aria-expanded'), 'true');
+assert.strictEqual(await ukRow.first().isVisible(), true, 'expanded group shows the rows');
+d = await detail();
+for (const want of ['United Kingdom', 'United States', 'Germany', 'France', 'India']) {
+  assert.ok(d.includes(want), `expanded group should list ${want}; got: ${d}`);
+}
+// collapsing again hides the rows
+await xmasGroup.click();
+assert.strictEqual(await ukRow.first().isVisible(), false);
 
 // 3. Second click extends to a range; span is highlighted
 await clickDay(28);
@@ -89,6 +110,12 @@ d = await detail();
 assert.ok(d.includes('holidays over 4 days'), d);
 assert.ok(d.includes('26 December 2025') && d.includes('Boxing Day'), d);
 assert.ok(d.includes("St. Stephen's Day"), d);
+// small groups (<= 3 countries) start open and name the countries
+const goodwill = page.locator('#detail .bgroup', { hasText: 'Day of Goodwill' });
+assert.strictEqual(await goodwill.count(), 1, 'Day of Goodwill group present');
+assert.strictEqual(await goodwill.getAttribute('aria-expanded'), 'true', 'small groups start open');
+assert.ok((await goodwill.textContent()).includes('South Africa and Namibia'),
+  'small group names its countries');
 
 // 4. Clicking an earlier day restarts the selection as a single day
 await clickDay(20);
@@ -153,17 +180,29 @@ await luxCb.check();
 assert.ok(await luxCb.isChecked());
 mc = await page.textContent('#mapcount');
 assert.ok(mc.includes(totalPaths + ' of ' + totalPaths), mc);
-// A country without data (India): unticking leaves the "with data" count alone.
+// A newly covered data country (India): unticking drops the "with data" count.
+// 'india' also matches the Indian Ocean territories, so match the exact name.
 await page.fill('#search', 'india');
-const inRow = page.locator('#searchresults .searchrow', { hasText: 'India' });
-assert.strictEqual(await inRow.count(), 1, 'India should be the only match');
+const inRow = page.locator('#searchresults .searchrow', { hasText: /^India$/ });
+assert.strictEqual(await inRow.count(), 1, 'India should match exactly once');
 const inCb = inRow.locator('input');
 assert.ok(await inCb.isChecked(), 'India is selected by default');
 await inCb.uncheck();
 mc = await page.textContent('#mapcount');
 assert.ok(mc.includes(String(totalPaths - 1) + ' of ' + totalPaths), mc);
-assert.ok(mc.includes(dataPaths + ' with data'), mc); // India has no data
+assert.ok(mc.includes(String(dataPaths - 1) + ' with data'), mc); // India has data
 await inCb.check();
+// A country without data (Somaliland): unticking leaves the "with data" count alone.
+await page.fill('#search', 'somaliland');
+const slRow = page.locator('#searchresults .searchrow', { hasText: 'Somaliland' });
+assert.strictEqual(await slRow.count(), 1, 'Somaliland should be the only match');
+const slCb = slRow.locator('input');
+assert.ok(await slCb.isChecked(), 'Somaliland is selected by default');
+await slCb.uncheck();
+mc = await page.textContent('#mapcount');
+assert.ok(mc.includes(String(totalPaths - 1) + ' of ' + totalPaths), mc);
+assert.ok(mc.includes(dataPaths + ' with data'), mc); // Somaliland has no data
+await slCb.check();
 // a data country is findable too and shows ticked
 await page.fill('#search', 'germany');
 const deRow = page.locator('#searchresults .searchrow', { hasText: 'Germany' });
@@ -188,20 +227,20 @@ for (const want of ['School holidays', 'Summer holiday', 'Bavaria', 'Northern Ir
 }
 assert.ok(d.includes('No school-holiday data for'), 'missing school data still stated');
 
-// 8. A day with no holidays at all (7 Jun 2026 is holiday-free in every
+// 8. A day with no holidays at all (13 Jun 2026 is holiday-free in every
 // data country, verified against the data)
 await gotoMonth('June', 2026);
-await clickDay(7);
-await clickDay(7);
+await clickDay(13);
+await clickDay(13);
 d = await detail();
 assert.ok(d.includes('No school holidays on this day.'), d);
 assert.ok(d.includes('No bank holidays on this day.'), d);
 
-// 9. ... and as a range (13-15 Dec 2026 is likewise holiday-free)
+// 9. ... and as a range (14-15 Dec 2026 is likewise holiday-free)
 await gotoMonth('December', 2026);
-await clickDay(13);
+await clickDay(14);
 await clickDay(15);
-assert.ok((await title()).includes(`13 December ${DASH} 15 December 2026`), await title());
+assert.ok((await title()).includes(`14 December ${DASH} 15 December 2026`), await title());
 d = await detail();
 assert.ok(d.includes('No school holidays in this range.'), d);
 assert.ok(d.includes('No bank holidays in this range.'), d);
@@ -237,6 +276,11 @@ d = await detail();
 assert.ok(d.includes('Eid al-Fitr'), d);
 assert.ok(d.includes('\u00b11 day'), 'approx holidays should be flagged');
 assert.ok(d.includes('expected'), 'the ±1 day note should explain why');
+// moon-dependent bank holidays (UAE, Pakistan, ...) are grouped and flagged too
+const eidGroup = page.locator('#detail .bgroup', { hasText: 'Eid al-Fitr' });
+assert.ok(await eidGroup.count() >= 1, 'Eid al-Fitr bank group present');
+assert.ok((await eidGroup.first().textContent()).includes('\u00b11 day'),
+  'the bank group carries the ±1 day flag');
 
 // 12. Months beyond the data limit show the note
 await gotoMonth('June', 2029);
