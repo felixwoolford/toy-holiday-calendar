@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holiday lookup</title>
+<style>
+  :root {
+    --gb: #1d4ed8;
+    --us: #dc2626;
+    --de: #d97706;
+    --fr: #7c3aed;
+    --jp: #db2777;
+    --bg: #f4f5fa;
+    --card: #ffffff;
+    --ink: #1f2430;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --accent: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font: 15px/1.45 system-ui, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 20px 16px 40px; }
+  header h1 { margin: 0 0 2px; font-size: 22px; }
+  .sub { margin: 0 0 10px; color: var(--muted); font-size: 13px; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    border: 1px solid var(--line); background: var(--card);
+    border-radius: 999px; padding: 4px 12px 4px 8px;
+    font-size: 13px; cursor: pointer; user-select: none;
+  }
+  .chip input { margin: 0; accent-color: var(--accent); }
+  .chip.off { opacity: .45; }
+  .chip svg { width: 22px; height: 14px; border-radius: 2px; flex: none; }
+
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: 16px;
+    align-items: start;
+  }
+  @media (max-width: 720px) { .layout { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px;
+  }
+
+  .calhead { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .calhead h2 { margin: 0; font-size: 17px; min-width: 130px; text-align: center; }
+  .btn {
+    border: 1px solid var(--line); background: var(--card); color: var(--ink);
+    border-radius: 8px; padding: 5px 12px; font: inherit; font-size: 14px;
+    cursor: pointer;
+  }
+  .btn:hover { background: #f3f4f6; }
+  .calsub { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 8px 0 10px; }
+  .note { color: var(--muted); font-size: 12px; }
+
+  .grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+  .dow { text-align: center; color: var(--muted); font-size: 12px; padding: 2px 0 4px; }
+  .day {
+    position: relative;
+    display: block; width: 100%;
+    min-height: 46px;
+    border: 1px solid transparent; border-radius: 8px;
+    background: #fbfbfd; color: var(--ink);
+    padding: 4px 6px; font: inherit; font-size: 13px;
+    text-align: left; cursor: pointer;
+  }
+  .day:hover:not(:disabled) { border-color: var(--accent); }
+  .day:disabled { opacity: .35; cursor: default; background: transparent; }
+  .day.today { box-shadow: inset 0 0 0 1.5px var(--accent); }
+  .day.sel { background: #e8efff; border-color: var(--accent); }
+  .dots { display: flex; gap: 3px; margin-top: 4px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+
+  .detail h2 { margin: 2px 0 10px; font-size: 16px; }
+  .hrow { display: flex; gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); }
+  .hrow:first-child { border-top: 0; }
+  .hrow svg { width: 26px; height: 16px; border-radius: 2px; flex: none; margin-top: 2px; }
+  .hname { font-weight: 600; }
+  .hmeta { color: var(--muted); font-size: 12.5px; }
+  .none { color: var(--muted); padding: 8px 0; }
+  footer { margin-top: 14px; color: var(--muted); font-size: 12px; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Holiday lookup</h1>
+    <p class="sub">Public &amp; bank holidays, at a glance. Data covers <span id="range"></span>.</p>
+    <div class="chips" id="chips"></div>
+  </header>
+
+  <div class="layout">
+    <section class="card" aria-label="Calendar">
+      <div class="calhead">
+        <button class="btn" id="prev" aria-label="Previous month">&#8249;</button>
+        <h2 id="month-label"></h2>
+        <button class="btn" id="next" aria-label="Next month">&#8250;</button>
+      </div>
+      <div class="calsub">
+        <button class="btn" id="today">Today</button>
+        <span class="note" id="range-note" hidden>No holiday data for this month (data covers <span id="range2"></span>).</span>
+      </div>
+      <div class="grid" id="cal" role="grid"></div>
+    </section>
+
+    <section class="card detail" aria-label="Holidays on the selected day">
+      <h2 id="detail-date"></h2>
+      <div id="detail"></div>
+    </section>
+  </div>
+
+  <footer>Self-contained page &mdash; works offline, no install needed. Holiday data: <a href="https://date.nager.at">date.nager.at</a></footer>
+</div>
+
+<script src="holidays.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var H = globalThis.Holidays;
+  var YEARS = H.supportedYears();
+  var MIN_Y = YEARS[0], MAX_Y = YEARS[YEARS.length - 1];
+  var RANGE = MIN_Y + '\u2013' + MAX_Y;
+  document.getElementById('range').textContent = RANGE;
+  document.getElementById('range2').textContent = RANGE;
+
+  var COLORS = { GB: '#1d4ed8', US: '#dc2626', DE: '#d97706', FR: '#7c3aed', JP: '#db2777' };
+  var FLAGS = {
+    GB: '<svg viewBox="0 0 60 30" aria-hidden="true"><rect width="60" height="30" fill="#012169"/><path d="M0 0l60 30M60 0L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30M60 0L0 30" stroke="#C8102E" stroke-width="2"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></svg>',
+    US: (function () {
+      var h = 30 / 13, s = '<svg viewBox="0 0 60 30" aria-hidden="true"><rect width="60" height="30" fill="#fff"/>';
+      for (var i = 0; i < 13; i += 2) {
+        s += '<rect y="' + (i * h).toFixed(2) + '" width="60" height="' + h.toFixed(2) + '" fill="#B22234"/>';
+      }
+      s += '<rect width="24" height="' + (7 * h).toFixed(2) + '" fill="#3C3B6E"/></svg>';
+      return s;
+    })(),
+    DE: '<svg viewBox="0 0 60 30" aria-hidden="true"><rect width="60" height="10" fill="#000"/><rect y="10" width="60" height="10" fill="#DD0000"/><rect y="20" width="60" height="10" fill="#FFCE00"/></svg>',
+    FR: '<svg viewBox="0 0 60 30" aria-hidden="true"><rect width="20" height="30" fill="#0055A4"/><rect x="20" width="20" height="30" fill="#fff"/><rect x="40" width="20" height="30" fill="#EF4135"/></svg>',
+    JP: '<svg viewBox="0 0 60 30" aria-hidden="true"><rect width="60" height="30" fill="#fff" stroke="#c9ccd4" stroke-width="1"/><circle cx="30" cy="15" r="9" fill="#BC002D"/></svg>'
+  };
+
+  function localISO(d) {
+    var m = String(d.getMonth() + 1).padStart(2, '0');
+    var day = String(d.getDate()).padStart(2, '0');
+    return d.getFullYear() + '-' + m + '-' + day;
+  }
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (ch) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch];
+    });
+  }
+
+  var now = new Date();
+  var state = {
+    year: now.getFullYear(),
+    month: now.getMonth(),
+    selected: localISO(now),
+    active: H.COUNTRIES.map(function (c) { return c.code; })
+  };
+
+  // Country filter chips
+  var chips = document.getElementById('chips');
+  H.COUNTRIES.forEach(function (c) {
+    var label = document.createElement('label');
+    label.className = 'chip';
+    label.dataset.country = c.code;
+    var cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.checked = true;
+    cb.addEventListener('change', function () {
+      state.active = H.COUNTRIES.map(function (x) { return x.code; }).filter(function (code) {
+        return chips.querySelector('[data-country="' + code + '"] input').checked;
+      });
+      label.classList.toggle('off', !cb.checked);
+      render();
+    });
+    label.appendChild(cb);
+    var flag = document.createElement('span');
+    flag.innerHTML = FLAGS[c.code];
+    label.appendChild(flag);
+    label.appendChild(document.createTextNode(shortName(c)));
+    chips.appendChild(label);
+  });
+
+  function shortName(c) {
+    var map = { GB: 'UK', US: 'US', DE: 'Germany', FR: 'France', JP: 'Japan' };
+    return map[c.code] || c.name;
+  }
+
+  // Calendar
+  var DOW = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  var cal = document.getElementById('cal');
+
+  function renderCalendar() {
+    var label = new Date(Date.UTC(state.year, state.month, 1)).toLocaleDateString(
+      undefined, { month: 'long', year: 'numeric', timeZone: 'UTC' });
+    document.getElementById('month-label').textContent = label;
+    document.getElementById('range-note').hidden =
+      state.year >= MIN_Y && state.year <= MAX_Y;
+
+    cal.innerHTML = '';
+    DOW.forEach(function (d) {
+      var el = document.createElement('div');
+      el.className = 'dow';
+      el.textContent = d;
+      cal.appendChild(el);
+    });
+
+    var todayStr = localISO(new Date());
+    H.calendarMonth(state.year, state.month).forEach(function (cell) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'day';
+      b.dataset.date = cell.date;
+      b.textContent = Number(cell.date.slice(8));
+      b.setAttribute('aria-label',
+        new Date(cell.date + 'T00:00:00Z').toLocaleDateString(
+          undefined, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }));
+      if (!cell.inMonth) {
+        b.disabled = true;
+      } else {
+        var hols = H.holidaysForDate(cell.date, state.active);
+        if (hols.length) {
+          var dots = document.createElement('span');
+          dots.className = 'dots';
+          var seen = {};
+          hols.forEach(function (h) {
+            if (seen[h.country]) return;
+            seen[h.country] = true;
+            var d = document.createElement('span');
+            d.className = 'dot';
+            d.style.background = COLORS[h.country];
+            dots.appendChild(d);
+          });
+          b.appendChild(dots);
+        }
+        b.addEventListener('click', function () {
+          state.selected = cell.date;
+          render();
+        });
+      }
+      if (cell.date === state.selected) b.classList.add('sel');
+      if (cell.date === todayStr) b.classList.add('today');
+      cal.appendChild(b);
+    });
+  }
+
+  // Detail panel
+  function renderDetail() {
+    var d = new Date(state.selected + 'T00:00:00Z');
+    document.getElementById('detail-date').textContent = d.toLocaleDateString(
+      undefined, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+    var box = document.getElementById('detail');
+    box.innerHTML = '';
+
+    var y = Number(state.selected.slice(0, 4));
+    if (y < MIN_Y || y > MAX_Y) {
+      box.appendChild(p('No holiday data for this date \u2014 data covers ' + RANGE + '.'));
+      return;
+    }
+
+    var any = false;
+    H.COUNTRIES.forEach(function (c) {
+      if (state.active.indexOf(c.code) === -1) return;
+      H.holidaysForDate(state.selected, [c.code]).forEach(function (h) {
+        any = true;
+        var row = document.createElement('div');
+        row.className = 'hrow';
+        var flag = document.createElement('span');
+        flag.innerHTML = FLAGS[c.code];
+        row.appendChild(flag);
+        var txt = document.createElement('span');
+        var meta = esc(c.name) + (h.note ? ' \u00b7 ' + esc(h.note) : '');
+        txt.innerHTML = '<span class="hname">' + esc(h.name) + '</span><br><span class="hmeta">' + meta + '</span>';
+        row.appendChild(txt);
+        box.appendChild(row);
+      });
+    });
+    if (!any) {
+      box.appendChild(p('No holidays in the selected countries on this day.'));
+    }
+  }
+
+  function p(text) {
+    var el = document.createElement('p');
+    el.className = 'none';
+    el.textContent = text;
+    return el;
+  }
+
+  function shiftMonth(n) {
+    var m = state.month + n;
+    if (m < 0) { m = 11; state.year--; }
+    if (m > 11) { m = 0; state.year++; }
+    state.month = m;
+    render();
+  }
+
+  document.getElementById('prev').addEventListener('click', function () { shiftMonth(-1); });
+  document.getElementById('next').addEventListener('click', function () { shiftMonth(1); });
+  document.getElementById('today').addEventListener('click', function () {
+    var t = new Date();
+    state.year = t.getFullYear();
+    state.month = t.getMonth();
+    state.selected = localISO(t);
+    render();
+  });
+
+  function render() {
+    renderCalendar();
+    renderDetail();
+  }
+  render();
+})();
+</script>
+</body>
+</html>
