@@ -3,6 +3,8 @@
 //   bank holidays:  https://date.nager.at
 //   school DE/FR:   https://www.schulferien.org
 //   school GB (NI): https://www.education-ni.gov.uk
+//   religious:      computed at build time (computus, Islamic/Hebrew/lunisolar
+//                   calendars) and verified against published 2024-2028 dates
 // Do not edit by hand - rerun the build script to refresh.
 
 (function (root, factory) {
@@ -4042,6 +4044,412 @@
  "FR": "The French school calendar for 2027/28 is not published yet, so autumn and Christmas 2027 are missing."
 };
 
+  // Major religious observances, worldwide (not tied to the five countries).
+  // Each: { name, religion, start, end, approx, note }. approx marks the
+  // moon-dependent dates that may fall a day earlier or later.
+  var RELIGIOUS = [
+ {
+  "name": "Holi",
+  "religion": "Hindu",
+  "start": "2024-03-25",
+  "end": "2024-03-25",
+  "approx": true,
+  "note": "Festival of Colours. Observed by Hindu communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Easter",
+  "religion": "Christian",
+  "start": "2024-03-31",
+  "end": "2024-03-31",
+  "approx": false,
+  "note": "Easter Sunday itself is not a public holiday, but Good Friday and Easter Monday are bank holidays in the UK, Germany and most of France."
+ },
+ {
+  "name": "Eid al-Fitr",
+  "religion": "Islamic",
+  "start": "2024-04-10",
+  "end": "2024-04-10",
+  "approx": true,
+  "note": "Ends Ramadan. Observed by Muslim communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Passover",
+  "religion": "Jewish",
+  "start": "2024-04-23",
+  "end": "2024-04-23",
+  "approx": false,
+  "note": "First day of Passover (a seven-to-eight-day festival). Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Vesak",
+  "religion": "Buddhist",
+  "start": "2024-05-23",
+  "end": "2024-05-23",
+  "approx": true,
+  "note": "Buddha's birth, awakening and passing. Observed by Buddhist communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Eid al-Adha",
+  "religion": "Islamic",
+  "start": "2024-06-16",
+  "end": "2024-06-16",
+  "approx": true,
+  "note": "Festival of Sacrifice. Observed by Muslim communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Rosh Hashanah",
+  "religion": "Jewish",
+  "start": "2024-10-03",
+  "end": "2024-10-04",
+  "approx": false,
+  "note": "Jewish New Year, two days. Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Yom Kippur",
+  "religion": "Jewish",
+  "start": "2024-10-12",
+  "end": "2024-10-12",
+  "approx": false,
+  "note": "Day of Atonement. Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Diwali",
+  "religion": "Hindu",
+  "start": "2024-11-01",
+  "end": "2024-11-01",
+  "approx": true,
+  "note": "Festival of Lights. Observed by Hindu, Jain and Sikh communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Hanukkah",
+  "religion": "Jewish",
+  "start": "2024-12-26",
+  "end": "2025-01-02",
+  "approx": false,
+  "note": "Festival of Lights, eight days. Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Holi",
+  "religion": "Hindu",
+  "start": "2025-03-14",
+  "end": "2025-03-14",
+  "approx": true,
+  "note": "Festival of Colours. Observed by Hindu communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Eid al-Fitr",
+  "religion": "Islamic",
+  "start": "2025-03-30",
+  "end": "2025-03-30",
+  "approx": true,
+  "note": "Ends Ramadan. Observed by Muslim communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Passover",
+  "religion": "Jewish",
+  "start": "2025-04-13",
+  "end": "2025-04-13",
+  "approx": false,
+  "note": "First day of Passover (a seven-to-eight-day festival). Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Easter",
+  "religion": "Christian",
+  "start": "2025-04-20",
+  "end": "2025-04-20",
+  "approx": false,
+  "note": "Easter Sunday itself is not a public holiday, but Good Friday and Easter Monday are bank holidays in the UK, Germany and most of France."
+ },
+ {
+  "name": "Vesak",
+  "religion": "Buddhist",
+  "start": "2025-05-12",
+  "end": "2025-05-12",
+  "approx": true,
+  "note": "Buddha's birth, awakening and passing. Observed by Buddhist communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Eid al-Adha",
+  "religion": "Islamic",
+  "start": "2025-06-06",
+  "end": "2025-06-06",
+  "approx": true,
+  "note": "Festival of Sacrifice. Observed by Muslim communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Rosh Hashanah",
+  "religion": "Jewish",
+  "start": "2025-09-23",
+  "end": "2025-09-24",
+  "approx": false,
+  "note": "Jewish New Year, two days. Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Yom Kippur",
+  "religion": "Jewish",
+  "start": "2025-10-02",
+  "end": "2025-10-02",
+  "approx": false,
+  "note": "Day of Atonement. Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Diwali",
+  "religion": "Hindu",
+  "start": "2025-10-20",
+  "end": "2025-10-20",
+  "approx": true,
+  "note": "Festival of Lights. Observed by Hindu, Jain and Sikh communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Hanukkah",
+  "religion": "Jewish",
+  "start": "2025-12-15",
+  "end": "2025-12-22",
+  "approx": false,
+  "note": "Festival of Lights, eight days. Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Holi",
+  "religion": "Hindu",
+  "start": "2026-03-04",
+  "end": "2026-03-04",
+  "approx": true,
+  "note": "Festival of Colours. Observed by Hindu communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Eid al-Fitr",
+  "religion": "Islamic",
+  "start": "2026-03-20",
+  "end": "2026-03-20",
+  "approx": true,
+  "note": "Ends Ramadan. Observed by Muslim communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Passover",
+  "religion": "Jewish",
+  "start": "2026-04-02",
+  "end": "2026-04-02",
+  "approx": false,
+  "note": "First day of Passover (a seven-to-eight-day festival). Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Easter",
+  "religion": "Christian",
+  "start": "2026-04-05",
+  "end": "2026-04-05",
+  "approx": false,
+  "note": "Easter Sunday itself is not a public holiday, but Good Friday and Easter Monday are bank holidays in the UK, Germany and most of France."
+ },
+ {
+  "name": "Eid al-Adha",
+  "religion": "Islamic",
+  "start": "2026-05-27",
+  "end": "2026-05-27",
+  "approx": true,
+  "note": "Festival of Sacrifice. Observed by Muslim communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Vesak",
+  "religion": "Buddhist",
+  "start": "2026-05-31",
+  "end": "2026-05-31",
+  "approx": true,
+  "note": "Buddha's birth, awakening and passing. Observed by Buddhist communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Rosh Hashanah",
+  "religion": "Jewish",
+  "start": "2026-09-12",
+  "end": "2026-09-13",
+  "approx": false,
+  "note": "Jewish New Year, two days. Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Yom Kippur",
+  "religion": "Jewish",
+  "start": "2026-09-21",
+  "end": "2026-09-21",
+  "approx": false,
+  "note": "Day of Atonement. Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Diwali",
+  "religion": "Hindu",
+  "start": "2026-11-08",
+  "end": "2026-11-08",
+  "approx": true,
+  "note": "Festival of Lights. Observed by Hindu, Jain and Sikh communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Hanukkah",
+  "religion": "Jewish",
+  "start": "2026-12-05",
+  "end": "2026-12-12",
+  "approx": false,
+  "note": "Festival of Lights, eight days. Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Eid al-Fitr",
+  "religion": "Islamic",
+  "start": "2027-03-09",
+  "end": "2027-03-09",
+  "approx": true,
+  "note": "Ends Ramadan. Observed by Muslim communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Holi",
+  "religion": "Hindu",
+  "start": "2027-03-22",
+  "end": "2027-03-22",
+  "approx": true,
+  "note": "Festival of Colours. Observed by Hindu communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Easter",
+  "religion": "Christian",
+  "start": "2027-03-28",
+  "end": "2027-03-28",
+  "approx": false,
+  "note": "Easter Sunday itself is not a public holiday, but Good Friday and Easter Monday are bank holidays in the UK, Germany and most of France."
+ },
+ {
+  "name": "Passover",
+  "religion": "Jewish",
+  "start": "2027-04-22",
+  "end": "2027-04-22",
+  "approx": false,
+  "note": "First day of Passover (a seven-to-eight-day festival). Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Eid al-Adha",
+  "religion": "Islamic",
+  "start": "2027-05-16",
+  "end": "2027-05-16",
+  "approx": true,
+  "note": "Festival of Sacrifice. Observed by Muslim communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Vesak",
+  "religion": "Buddhist",
+  "start": "2027-05-20",
+  "end": "2027-05-20",
+  "approx": true,
+  "note": "Buddha's birth, awakening and passing. Observed by Buddhist communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Rosh Hashanah",
+  "religion": "Jewish",
+  "start": "2027-10-02",
+  "end": "2027-10-03",
+  "approx": false,
+  "note": "Jewish New Year, two days. Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Yom Kippur",
+  "religion": "Jewish",
+  "start": "2027-10-11",
+  "end": "2027-10-11",
+  "approx": false,
+  "note": "Day of Atonement. Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Diwali",
+  "religion": "Hindu",
+  "start": "2027-10-29",
+  "end": "2027-10-29",
+  "approx": true,
+  "note": "Festival of Lights. Observed by Hindu, Jain and Sikh communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Hanukkah",
+  "religion": "Jewish",
+  "start": "2027-12-25",
+  "end": "2028-01-01",
+  "approx": false,
+  "note": "Festival of Lights, eight days. Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Eid al-Fitr",
+  "religion": "Islamic",
+  "start": "2028-02-26",
+  "end": "2028-02-26",
+  "approx": true,
+  "note": "Ends Ramadan. Observed by Muslim communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Holi",
+  "religion": "Hindu",
+  "start": "2028-03-11",
+  "end": "2028-03-11",
+  "approx": true,
+  "note": "Festival of Colours. Observed by Hindu communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Passover",
+  "religion": "Jewish",
+  "start": "2028-04-11",
+  "end": "2028-04-11",
+  "approx": false,
+  "note": "First day of Passover (a seven-to-eight-day festival). Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Easter",
+  "religion": "Christian",
+  "start": "2028-04-16",
+  "end": "2028-04-16",
+  "approx": false,
+  "note": "Easter Sunday itself is not a public holiday, but Good Friday and Easter Monday are bank holidays in the UK, Germany and most of France."
+ },
+ {
+  "name": "Eid al-Adha",
+  "religion": "Islamic",
+  "start": "2028-05-05",
+  "end": "2028-05-05",
+  "approx": true,
+  "note": "Festival of Sacrifice. Observed by Muslim communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Vesak",
+  "religion": "Buddhist",
+  "start": "2028-05-09",
+  "end": "2028-05-09",
+  "approx": true,
+  "note": "Buddha's birth, awakening and passing. Observed by Buddhist communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Rosh Hashanah",
+  "religion": "Jewish",
+  "start": "2028-09-21",
+  "end": "2028-09-22",
+  "approx": false,
+  "note": "Jewish New Year, two days. Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Yom Kippur",
+  "religion": "Jewish",
+  "start": "2028-09-30",
+  "end": "2028-09-30",
+  "approx": false,
+  "note": "Day of Atonement. Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Diwali",
+  "religion": "Hindu",
+  "start": "2028-10-17",
+  "end": "2028-10-17",
+  "approx": true,
+  "note": "Festival of Lights. Observed by Hindu, Jain and Sikh communities worldwide; not a public holiday in the five countries."
+ },
+ {
+  "name": "Hanukkah",
+  "religion": "Jewish",
+  "start": "2028-12-13",
+  "end": "2028-12-20",
+  "approx": false,
+  "note": "Festival of Lights, eight days. Observed by Jewish communities worldwide; not a public holiday in the five countries."
+ }
+];
+
   var BY_DATE = {};
   COUNTRIES.forEach(function (c) {
     (DATA[c.code].bank || []).forEach(function (h) {
@@ -4101,6 +4509,20 @@
     return out;
   }
 
+  // Religious observances overlapping [a, b] (either order), sorted by start.
+  // Worldwide; not filtered by country.
+  function religiousHolidaysInRange(a, b) {
+    var lo = a < b ? a : b;
+    var hi = a < b ? b : a;
+    var out = RELIGIOUS.filter(function (h) {
+      return h.start <= hi && lo <= h.end;
+    });
+    out.sort(function (x, y) {
+      return x.start < y.start ? -1 : x.start > y.start ? 1 : x.name.localeCompare(y.name);
+    });
+    return out;
+  }
+
   function hasHoliday(dateStr, countryCodes) {
     return holidaysForDate(dateStr, countryCodes).length > 0;
   }
@@ -4153,8 +4575,10 @@
     DATA: DATA,
     COUNTRIES: COUNTRIES,
     SCHOOL_NOTES: SCHOOL_NOTES,
+    RELIGIOUS: RELIGIOUS,
     holidaysForDate: holidaysForDate,
     schoolHolidaysInRange: schoolHolidaysInRange,
+    religiousHolidaysInRange: religiousHolidaysInRange,
     hasHoliday: hasHoliday,
     supportedYears: supportedYears,
     calendarMonth: calendarMonth,

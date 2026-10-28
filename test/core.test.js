@@ -187,6 +187,81 @@ test('dateRange: inclusive, either order, across boundaries', () => {
   assert.strictEqual(H.dateRange('2028-02-01', '2028-02-29').length, 29);
 });
 
+test('religious data integrity: valid ranges, religion, note, approx flag', () => {
+  assert.ok(Array.isArray(H.RELIGIOUS), 'RELIGIOUS is an array');
+  assert.strictEqual(H.RELIGIOUS.length, 50, '10 holidays x 5 years (2024-2028)');
+  const religions = new Set();
+  for (const h of H.RELIGIOUS) {
+    assert.match(h.start, /^\d{4}-\d{2}-\d{2}$/, `bad start ${h.start}`);
+    assert.match(h.end, /^\d{4}-\d{2}-\d{2}$/, `bad end ${h.end}`);
+    assert.ok(h.start <= h.end, `backwards range ${h.start}..${h.end}`);
+    assert.ok(h.name && h.name.length > 0, 'missing name');
+    assert.ok(h.religion && h.religion.length > 0, 'missing religion');
+    assert.ok(h.note && h.note.length > 0, 'missing note');
+    assert.strictEqual(typeof h.approx, 'boolean', 'missing approx');
+    assert.ok(h.start >= '2024-01-01' && h.end <= '2028-12-31', `out of bounds ${h.start}`);
+    religions.add(h.religion);
+  }
+  assert.deepStrictEqual(
+    [...religions].sort(),
+    ['Buddhist', 'Christian', 'Hindu', 'Islamic', 'Jewish']);
+});
+
+test('religious dates are right for 2024-2028 (spot checks)', () => {
+  const on = (name, date) =>
+    H.RELIGIOUS.some((h) => h.name === name && h.start <= date && date <= h.end);
+  // Easter (computus)
+  assert.ok(on('Easter', '2024-03-31'));
+  assert.ok(on('Easter', '2026-04-05'));
+  assert.ok(on('Easter', '2028-04-16'));
+  // Hanukkah (8 days, can cross a year boundary)
+  assert.ok(on('Hanukkah', '2024-12-26'));
+  assert.ok(on('Hanukkah', '2025-01-01')); // 2024/25 Hanukkah crosses into January
+  assert.ok(on('Hanukkah', '2026-12-05'));
+  assert.ok(!on('Hanukkah', '2026-12-13')); // ends 12 Dec
+  // Rosh Hashanah (2 days)
+  assert.ok(on('Rosh Hashanah', '2026-09-12'));
+  assert.ok(on('Rosh Hashanah', '2026-09-13'));
+  assert.ok(!on('Rosh Hashanah', '2026-09-14'));
+  // Diwali, Eid al-Fitr, Vesak (approx)
+  assert.ok(on('Diwali', '2026-11-08'));
+  assert.ok(on('Eid al-Fitr', '2026-03-20'));
+  assert.ok(on('Vesak', '2028-05-09'));
+  // a day that is not Easter
+  assert.ok(!on('Easter', '2026-04-06'));
+});
+
+test('religiousHolidaysInRange: overlap, either order, sorted, approx flags', () => {
+  // single day
+  assert.deepStrictEqual(
+    H.religiousHolidaysInRange('2026-04-05', '2026-04-05').map((h) => h.name),
+    ['Easter']);
+  // a range covering several religious events
+  const r = H.religiousHolidaysInRange('2026-03-01', '2026-04-30');
+  const names = r.map((h) => h.name);
+  assert.ok(names.includes('Eid al-Fitr'), names.join(',')); // 20 Mar
+  assert.ok(names.includes('Holi'), names.join(',')); // 4 Mar
+  assert.ok(names.includes('Passover'), names.join(',')); // 2 Apr
+  assert.ok(names.includes('Easter'), names.join(',')); // 5 Apr
+  // either order gives the same result
+  assert.deepStrictEqual(
+    H.religiousHolidaysInRange('2026-04-30', '2026-03-01').map((h) => h.name),
+    names);
+  // sorted by start date
+  for (let i = 1; i < r.length; i++) {
+    assert.ok(r[i - 1].start <= r[i].start, 'sorted by start');
+  }
+  // approx flags are carried through
+  assert.strictEqual(H.religiousHolidaysInRange('2026-03-20', '2026-03-20')[0].approx, true);
+  assert.strictEqual(H.religiousHolidaysInRange('2026-04-05', '2026-04-05')[0].approx, false);
+  // empty range
+  assert.deepStrictEqual(H.religiousHolidaysInRange('2026-06-17', '2026-06-17'), []);
+  // 2028 is covered
+  assert.deepStrictEqual(
+    H.religiousHolidaysInRange('2028-04-16', '2028-04-16').map((h) => h.name),
+    ['Easter']);
+});
+
 test('isoDate round-trips', () => {
   assert.strictEqual(H.isoDate(new Date(Date.UTC(2026, 0, 5))), '2026-01-05');
   assert.strictEqual(H.isoDate(new Date(Date.UTC(2026, 11, 31))), '2026-12-31');

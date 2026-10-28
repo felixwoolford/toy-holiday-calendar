@@ -143,7 +143,24 @@ assert.ok(!(await page.locator('#range-note').isVisible()), 'Jan 2028 is covered
 // 5 out-of-month cells (27-31 Dec) + 5 in-month (1-5 Jan)
 assert.strictEqual(await page.locator('#cal .day.inrange').count(), 10);
 
-// 11. Months beyond the data limit show the note
+// 11. Religious holidays: their own section, with the ±1 day flag
+await gotoMonth('April', 2026);
+await clickDay(5);
+await clickDay(5);
+d = await detail();
+assert.ok(d.includes('Religious holidays'), d);
+assert.ok(d.includes('Easter'), 'Easter should be listed');
+assert.ok(d.includes('Christian'), 'the religion should be named');
+// an approx (moon-dependent) holiday is flagged ±1 day and explained
+await gotoMonth('March', 2026);
+await clickDay(20);
+await clickDay(20);
+d = await detail();
+assert.ok(d.includes('Eid al-Fitr'), d);
+assert.ok(d.includes('\u00b11 day'), 'approx holidays should be flagged');
+assert.ok(d.includes('expected'), 'the ±1 day note should explain why');
+
+// 12. Months beyond the data limit show the note
 await gotoMonth('June', 2029);
 assert.ok(await page.locator('#range-note').isVisible());
 

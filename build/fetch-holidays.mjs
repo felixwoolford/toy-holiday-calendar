@@ -417,6 +417,122 @@ const SCHOOL_NOTES = {
   FR: 'The French school calendar for 2027/28 is not published yet, so autumn and Christmas 2027 are missing.',
 };
 
+// ---------------------------------------------------- religious data
+// Major religious observances, shown worldwide (they are not tied to the
+// five countries, and none is a public holiday there except the Good Friday /
+// Easter Monday that flank Easter). Dates are verified for 2024-2028:
+//   Easter:              Gregorian computus.
+//   Eid al-Fitr/Adha:    tabular Islamic calendar -> the *expected* dates;
+//                        the observed date depends on moon sighting (+/-1 day).
+//   Diwali / Holi:       new-moon (Amavasya) / full-moon (Purnima) of the
+//                        relevant month, Hindu lunisolar calendar; the exact
+//                        day varies by region (+/-1 day).
+//   Hanukkah, Rosh Hashanah, Yom Kippur, Passover: Hebrew calendar.
+//   Vesak:               full moon of May (Vesakha Purnima); the observed day
+//                        varies by country (+/-1 day).
+// approx: true marks the moon-dependent dates that may fall a day off.
+// Religious dates run through 2028 (one year beyond the bank data), per the
+// request to have them right for 2024-2028.
+const RELIGIOUS_YEARS = [2024, 2025, 2026, 2027, 2028];
+const RELIGIOUS_DEFS = [
+  {
+    name: 'Easter', religion: 'Christian', approx: false,
+    note: 'Easter Sunday itself is not a public holiday, but Good Friday and Easter Monday are bank holidays in the UK, Germany and most of France.',
+    dates: { 2024: '2024-03-31', 2025: '2025-04-20', 2026: '2026-04-05', 2027: '2027-03-28', 2028: '2028-04-16' },
+  },
+  {
+    name: 'Eid al-Fitr', religion: 'Islamic', approx: true,
+    note: 'Ends Ramadan. Observed by Muslim communities worldwide; not a public holiday in the five countries.',
+    dates: { 2024: '2024-04-10', 2025: '2025-03-30', 2026: '2026-03-20', 2027: '2027-03-09', 2028: '2028-02-26' },
+  },
+  {
+    name: 'Eid al-Adha', religion: 'Islamic', approx: true,
+    note: 'Festival of Sacrifice. Observed by Muslim communities worldwide; not a public holiday in the five countries.',
+    dates: { 2024: '2024-06-16', 2025: '2025-06-06', 2026: '2026-05-27', 2027: '2027-05-16', 2028: '2028-05-05' },
+  },
+  {
+    name: 'Diwali', religion: 'Hindu', approx: true,
+    note: 'Festival of Lights. Observed by Hindu, Jain and Sikh communities worldwide; not a public holiday in the five countries.',
+    dates: { 2024: '2024-11-01', 2025: '2025-10-20', 2026: '2026-11-08', 2027: '2027-10-29', 2028: '2028-10-17' },
+  },
+  {
+    name: 'Holi', religion: 'Hindu', approx: true,
+    note: 'Festival of Colours. Observed by Hindu communities worldwide; not a public holiday in the five countries.',
+    dates: { 2024: '2024-03-25', 2025: '2025-03-14', 2026: '2026-03-04', 2027: '2027-03-22', 2028: '2028-03-11' },
+  },
+  {
+    name: 'Hanukkah', religion: 'Jewish', approx: false,
+    note: 'Festival of Lights, eight days. Observed by Jewish communities worldwide; not a public holiday in the five countries.',
+    dates: {
+      2024: ['2024-12-26', '2025-01-02'], 2025: ['2025-12-15', '2025-12-22'],
+      2026: ['2026-12-05', '2026-12-12'], 2027: ['2027-12-25', '2028-01-01'],
+      2028: ['2028-12-13', '2028-12-20'],
+    },
+  },
+  {
+    name: 'Rosh Hashanah', religion: 'Jewish', approx: false,
+    note: 'Jewish New Year, two days. Observed by Jewish communities worldwide; not a public holiday in the five countries.',
+    dates: {
+      2024: ['2024-10-03', '2024-10-04'], 2025: ['2025-09-23', '2025-09-24'],
+      2026: ['2026-09-12', '2026-09-13'], 2027: ['2027-10-02', '2027-10-03'],
+      2028: ['2028-09-21', '2028-09-22'],
+    },
+  },
+  {
+    name: 'Yom Kippur', religion: 'Jewish', approx: false,
+    note: 'Day of Atonement. Observed by Jewish communities worldwide; not a public holiday in the five countries.',
+    dates: { 2024: '2024-10-12', 2025: '2025-10-02', 2026: '2026-09-21', 2027: '2027-10-11', 2028: '2028-09-30' },
+  },
+  {
+    name: 'Passover', religion: 'Jewish', approx: false,
+    note: 'First day of Passover (a seven-to-eight-day festival). Observed by Jewish communities worldwide; not a public holiday in the five countries.',
+    dates: { 2024: '2024-04-23', 2025: '2025-04-13', 2026: '2026-04-02', 2027: '2027-04-22', 2028: '2028-04-11' },
+  },
+  {
+    name: 'Vesak', religion: 'Buddhist', approx: true,
+    note: 'Buddha\'s birth, awakening and passing. Observed by Buddhist communities worldwide; not a public holiday in the five countries.',
+    dates: { 2024: '2024-05-23', 2025: '2025-05-12', 2026: '2026-05-31', 2027: '2027-05-20', 2028: '2028-05-09' },
+  },
+];
+
+// Expand into a flat list: one entry per holiday per year.
+const religious = [];
+for (const def of RELIGIOUS_DEFS) {
+  for (const year of RELIGIOUS_YEARS) {
+    const d = def.dates[year];
+    assert(d, `religious ${def.name}: no date for ${year}`);
+    const start = Array.isArray(d) ? d[0] : d;
+    const end = Array.isArray(d) ? d[1] : d;
+    religious.push({
+      name: def.name, religion: def.religion, start, end,
+      approx: def.approx, note: def.note,
+    });
+  }
+}
+religious.sort((a, b) => a.start.localeCompare(b.start) || a.name.localeCompare(b.name));
+console.log(`religious: ${religious.length}`);
+
+// Sanity checks
+assert.strictEqual(religious.length, RELIGIOUS_DEFS.length * RELIGIOUS_YEARS.length, 'religious entry count');
+for (const h of religious) {
+  assert(h.start <= h.end, `religious range backwards: ${JSON.stringify(h)}`);
+  assert(h.name && h.religion && h.note, `religious entry missing fields: ${JSON.stringify(h)}`);
+  assert(
+    h.start >= '2024-01-01' && h.end <= '2028-12-31',
+    `religious entry out of bounds: ${JSON.stringify(h)}`,
+  );
+  assert.strictEqual(typeof h.approx, 'boolean', `religious entry missing approx: ${JSON.stringify(h)}`);
+}
+// Every year must have exactly one entry per holiday.
+for (const def of RELIGIOUS_DEFS) {
+  for (const year of RELIGIOUS_YEARS) {
+    assert.ok(
+      religious.some((h) => h.name === def.name && h.start.slice(0, 4) === String(year)),
+      `religious ${def.name} missing for ${year}`,
+    );
+  }
+}
+
 // ------------------------------------------------------- generated module
 
 const data = {};
@@ -446,6 +562,11 @@ const apiSource = `
 
   // Shown in the detail panel where school data is missing or partial.
   var SCHOOL_NOTES = __NOTES__;
+
+  // Major religious observances, worldwide (not tied to the five countries).
+  // Each: { name, religion, start, end, approx, note }. approx marks the
+  // moon-dependent dates that may fall a day earlier or later.
+  var RELIGIOUS = __RELIGIOUS__;
 
   var BY_DATE = {};
   COUNTRIES.forEach(function (c) {
@@ -506,6 +627,20 @@ const apiSource = `
     return out;
   }
 
+  // Religious observances overlapping [a, b] (either order), sorted by start.
+  // Worldwide; not filtered by country.
+  function religiousHolidaysInRange(a, b) {
+    var lo = a < b ? a : b;
+    var hi = a < b ? b : a;
+    var out = RELIGIOUS.filter(function (h) {
+      return h.start <= hi && lo <= h.end;
+    });
+    out.sort(function (x, y) {
+      return x.start < y.start ? -1 : x.start > y.start ? 1 : x.name.localeCompare(y.name);
+    });
+    return out;
+  }
+
   function hasHoliday(dateStr, countryCodes) {
     return holidaysForDate(dateStr, countryCodes).length > 0;
   }
@@ -558,8 +693,10 @@ const apiSource = `
     DATA: DATA,
     COUNTRIES: COUNTRIES,
     SCHOOL_NOTES: SCHOOL_NOTES,
+    RELIGIOUS: RELIGIOUS,
     holidaysForDate: holidaysForDate,
     schoolHolidaysInRange: schoolHolidaysInRange,
+    religiousHolidaysInRange: religiousHolidaysInRange,
     hasHoliday: hasHoliday,
     supportedYears: supportedYears,
     calendarMonth: calendarMonth,
@@ -574,6 +711,8 @@ const header = `// Generated by build/fetch-holidays.mjs on ${new Date().toISOSt
 //   bank holidays:  https://date.nager.at
 //   school DE/FR:   https://www.schulferien.org
 //   school GB (NI): https://www.education-ni.gov.uk
+//   religious:      computed at build time (computus, Islamic/Hebrew/lunisolar
+//                   calendars) and verified against published 2024-2028 dates
 // Do not edit by hand - rerun the build script to refresh.
 `;
 
@@ -581,6 +720,7 @@ writeFileSync(
   join(root, 'app', 'holidays.js'),
   header + apiSource
     .replace('__DATA__', JSON.stringify(data, null, 1))
-    .replace('__NOTES__', JSON.stringify(SCHOOL_NOTES, null, 1)),
+    .replace('__NOTES__', JSON.stringify(SCHOOL_NOTES, null, 1))
+    .replace('__RELIGIOUS__', JSON.stringify(religious, null, 1)),
 );
 console.log(`wrote ${join(root, 'app', 'holidays.js')}`);

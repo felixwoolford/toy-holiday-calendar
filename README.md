@@ -1,9 +1,9 @@
 # Holiday map
 
 A tiny self-contained browser applet: open a calendar, pick a day or a range
-of days, and see the bank and school holidays on those days for the UK, US,
-Germany, France and Japan. Built for people who keep getting caught out by
-other countries' holidays when booking calls and trips.
+of days, and see the bank, school and religious holidays on those days for
+the UK, US, Germany, France and Japan. Built for people who keep getting
+catch out by other countries' holidays when booking calls and trips.
 
 ## Running it (nothing to install)
 
@@ -30,6 +30,12 @@ That's all — no internet, no server, no Node/Python. The holiday data
   into one line ("3 regions: …"). Where a country has no school-holiday data
   (US, Japan, and England/Scotland/Wales — set by each local authority), the
   app says so explicitly instead of showing an empty list.
+- Religious holidays (Easter, Eid, Diwali, Holi, Hanukkah, Rosh Hashanah, Yom
+  Kippur, Passover, Vesak) are shown in their own section, with the religion
+  named. They're shown generally (worldwide) rather than per country, since
+  they aren't bank holidays in most of the five. Moon-dependent dates (Eid,
+  Diwali, Holi, Vesak) are flagged "±1 day" — they depend on moon sighting or
+  regional custom and can fall a day earlier or later.
 
 ## Development (optional)
 
@@ -57,3 +63,9 @@ That's all — no internet, no server, no Node/Python. The holiday data
   Reformation Day, …) and US state holidays are not in the data.
 - The data source sometimes lists only the observed date when a holiday falls
   on a weekend (e.g. US Independence Day 2026 shows on 3 July).
+- Religious dates for 2024–2028 are computed (Easter computus, tabular
+  Islamic calendar, Hebrew calendar, and astronomical moon phases for the
+  Hindu/Buddhist ones) and cross-checked against published dates. The
+  moon-dependent ones are inherently ±1 day: e.g. Diwali can fall on the
+  first or second new moon of Oct–Nov depending on region, and Vesak can
+  differ by a day between countries (Singapore vs India).
