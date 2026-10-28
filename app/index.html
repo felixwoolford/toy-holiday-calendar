@@ -32,14 +32,29 @@
   .mapcard { margin-bottom: 16px; }
   .maphead { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
   .mapbtns { display: flex; gap: 6px; }
-  .mapbox { width: 100%; }
+  .mapbody { display: flex; gap: 16px; align-items: flex-start; }
+  .mapbox { flex: 0 1 500px; min-width: 0; max-width: 500px; }
   .mapbox svg { width: 100%; height: auto; display: block; }
   .country { fill: #d7dbe3; stroke: #ffffff; stroke-width: 0.5; cursor: pointer; }
   .country:hover { fill: #b9c2d0; }
   .country.on { fill: #60a5fa; }
   .country.on:hover { fill: #3b82f6; }
   .country.hasdata { stroke: #1f2937; stroke-width: 1; }
+  .searchbox { flex: 1 1 300px; min-width: 0; }
+  #search {
+    width: 100%; font: inherit; font-size: 14px; padding: 7px 10px;
+    border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--ink);
+  }
+  #search:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: var(--accent); }
+  .searchresults { margin-top: 8px; max-height: 210px; overflow-y: auto; border: 1px solid var(--line); border-radius: 8px; }
+  .searchcount { position: sticky; top: 0; background: var(--card); padding: 6px 10px; color: var(--muted); font-size: 12px; z-index: 1; }
+  .searchrow { display: flex; align-items: center; gap: 8px; padding: 6px 10px; cursor: pointer; border-top: 1px solid var(--line); }
+  .searchrow:hover { background: #f3f4f6; }
+  .searchrow input { margin: 0; flex: none; }
+  .searchrow span { font-size: 13.5px; }
+  .searchhint { padding: 10px; color: var(--muted); font-size: 13px; }
   .maplegend { margin: 8px 0 0; }
+  @media (max-width: 720px) { .mapbody { flex-direction: column; } .mapbox { flex-basis: auto; max-width: 100%; width: 100%; } }
 
   .layout {
     display: grid;
@@ -126,8 +141,14 @@
       </div>
       <span class="note" id="mapcount"></span>
     </div>
-    <div class="mapbox" id="map"></div>
-    <p class="note maplegend">Click a country to include or exclude it. Countries with a dark outline have holiday data; the rest are selectable but have none (the list below says so).</p>
+    <div class="mapbody">
+      <div class="mapbox" id="map"></div>
+      <div class="searchbox">
+        <input id="search" type="search" placeholder="Search a country (e.g. Luxembourg)" aria-label="Search countries">
+        <div class="searchresults" id="searchresults"></div>
+      </div>
+    </div>
+    <p class="note maplegend">Click a country on the map, or search for it and tick it here. Countries with a dark outline have holiday data; the rest are selectable but have none (the list below says so).</p>
   </section>
 
   <div class="layout">
@@ -258,6 +279,59 @@
       activeCodes().length + ' with data';
   }
 
+  // Search box: find any country by name (small countries are hard to click
+  // on the map) and tick it on/off. Stays in sync with the map and the list.
+  var searchInput = document.getElementById('search');
+  var searchResults = document.getElementById('searchresults');
+
+  function renderSearch() {
+    var q = searchInput.value.trim().toLowerCase();
+    searchResults.innerHTML = '';
+    if (!q) {
+      var hint = document.createElement('div');
+      hint.className = 'searchhint';
+      hint.textContent = 'Type to search all ' + ALL_ISO.length + ' countries.';
+      searchResults.appendChild(hint);
+      return;
+    }
+    var matches = MAP.countries
+      .filter(function (c) { return c.name.toLowerCase().indexOf(q) !== -1; })
+      .sort(function (a, b) { return a.name.localeCompare(b.name); });
+    if (!matches.length) {
+      var none = document.createElement('div');
+      none.className = 'searchhint';
+      none.textContent = 'No country matches "' + searchInput.value.trim() + '".';
+      searchResults.appendChild(none);
+      return;
+    }
+    var count = document.createElement('div');
+    count.className = 'searchcount';
+    count.textContent = matches.length + ' match' + (matches.length === 1 ? '' : 'es');
+    searchResults.appendChild(count);
+    matches.forEach(function (c) {
+      var label = document.createElement('label');
+      label.className = 'searchrow';
+      var cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.checked = state.active.has(c.iso);
+      cb.addEventListener('change', function () {
+        if (cb.checked) state.active.add(c.iso); else state.active.delete(c.iso);
+        syncMapClasses(); updateMapCount(); render();
+      });
+      label.appendChild(cb);
+      var span = document.createElement('span');
+      span.textContent = c.name + (c.code ? '' : '  (no data)');
+      label.appendChild(span);
+      searchResults.appendChild(label);
+    });
+  }
+
+  // Rebuild the results list only while a search is active, so clicking the
+  // map keeps the ticked state visible without resetting an idle box.
+  function refreshSearch() { if (searchInput.value.trim()) renderSearch(); }
+
+  searchInput.addEventListener('input', renderSearch);
+
   svg.addEventListener('click', function (e) {
     var iso = e.target && e.target.getAttribute ? e.target.getAttribute('data-iso') : null;
     if (!iso) return;
@@ -265,17 +339,20 @@
     else state.active.add(iso);
     syncMapClasses();
     updateMapCount();
+    refreshSearch();
     render();
   });
 
   document.getElementById('selall').addEventListener('click', function () {
     state.active = new Set(ALL_ISO);
-    syncMapClasses(); updateMapCount(); render();
+    syncMapClasses(); updateMapCount(); refreshSearch(); render();
   });
   document.getElementById('selnone').addEventListener('click', function () {
     state.active = new Set();
-    syncMapClasses(); updateMapCount(); render();
+    syncMapClasses(); updateMapCount(); refreshSearch(); render();
   });
+
+  renderSearch(); // show the idle hint
 
   // Calendar
   var DOW = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];

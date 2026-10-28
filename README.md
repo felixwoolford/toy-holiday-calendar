@@ -24,6 +24,9 @@ That's all — no internet, no server, no Node/Python. The holiday data
   France, Japan) have holiday data — they're marked with a dark outline. The
   others are still selectable, and the list says plainly that there's no data
   for them. "Select all" and "Clear" reset the whole map.
+- Small countries are hard to click on the map, so there's also a **search
+  box**: type a name (e.g. "Luxembourg") and tick or untick it from the
+  results. It stays in sync with the map.
 - Click a day to see its holidays. Click a start day and then an end day to
   select a range: the span is highlighted and every holiday in it is listed,
   grouped by date. Clicking a day earlier than the start begins a new

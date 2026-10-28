@@ -129,6 +129,33 @@ mc = await page.textContent('#mapcount');
 assert.ok(mc.includes(totalPaths + ' of ' + totalPaths), mc);
 assert.ok(mc.includes('5 with data'), mc);
 
+// 6c. The search box finds small countries that are hard to click on the map,
+// and ticking them stays in sync with the map and the count.
+await page.fill('#search', 'luxembourg');
+const luxRow = page.locator('#searchresults .searchrow', { hasText: 'Luxembourg' });
+assert.strictEqual(await luxRow.count(), 1, 'Luxembourg should be the only match');
+const luxCb = luxRow.locator('input');
+assert.ok(await luxCb.isChecked(), 'Luxembourg is selected by default');
+await luxCb.uncheck();
+mc = await page.textContent('#mapcount');
+assert.ok(mc.includes(String(totalPaths - 1) + ' of ' + totalPaths), mc);
+assert.ok(mc.includes('5 with data'), mc); // Luxembourg has no data
+// ticking it back on restores the full selection
+await luxCb.check();
+assert.ok(await luxCb.isChecked());
+mc = await page.textContent('#mapcount');
+assert.ok(mc.includes(totalPaths + ' of ' + totalPaths), mc);
+// a data country is findable too and shows ticked
+await page.fill('#search', 'germany');
+const deRow = page.locator('#searchresults .searchrow', { hasText: 'Germany' });
+assert.strictEqual(await deRow.count(), 1, 'Germany should be the only match');
+assert.ok(await deRow.locator('input').isChecked(), 'Germany is ticked');
+// a non-matching query says so; clearing restores the idle hint
+await page.fill('#search', 'zzzz');
+assert.ok((await page.textContent('#searchresults')).includes('No country matches'));
+await page.fill('#search', '');
+assert.ok((await page.textContent('#searchresults')).includes('Type to search'));
+
 // 7. School holidays on a day in the middle of summer break
 // (the pending single selection is completed by the first click;
 // clicking the same day again starts a fresh single day)
