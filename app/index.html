@@ -228,6 +228,51 @@
   var CODE_TO_ISO = { GB: '826', US: '840', DE: '276', FR: '250', JP: '392' };
   var ALL_ISO = MAP.countries.map(function (c) { return c.iso; });
 
+  // --- Persistent storage (fails soft) ------------------------------------
+  // Remembers the country selection across visits. If localStorage is not
+  // available (some file:// setups, private windows, blocked storage) the app
+  // quietly carries on without remembering — it never throws.
+  var STORE_KEY = 'holidaymap.countries.v1';
+  var store = (function () {
+    function probe() {
+      try {
+        window.localStorage.setItem('__hm_probe__', '1');
+        window.localStorage.removeItem('__hm_probe__');
+        return true;
+      } catch (e) { return false; }
+    }
+    var ok = probe();
+    return {
+      get: function (key) {
+        try { return ok ? window.localStorage.getItem(key) : null; } catch (e) { return null; }
+      },
+      set: function (key, val) {
+        try { if (ok) window.localStorage.setItem(key, val); } catch (e) {}
+      },
+      remove: function (key) {
+        try { if (ok) window.localStorage.removeItem(key); } catch (e) {}
+      }
+    };
+  })();
+
+  // Restore the last country selection. We deliberately do NOT restore the
+  // month or the selected day — those always default to today.
+  function loadSelection() {
+    var raw = store.get(STORE_KEY);
+    if (!raw) return new Set(ALL_ISO); // first visit: everything selected
+    try {
+      var arr = JSON.parse(raw);
+      if (!Array.isArray(arr)) return new Set(ALL_ISO);
+      var valid = new Set(ALL_ISO);
+      var s = new Set();
+      arr.forEach(function (iso) { if (valid.has(iso)) s.add(iso); });
+      return s; // may be empty (she had cleared all)
+    } catch (e) { return new Set(ALL_ISO); }
+  }
+  function saveSelection() {
+    store.set(STORE_KEY, JSON.stringify(Array.from(state.active)));
+  }
+
   var now = new Date();
   var state = {
     year: now.getFullYear(),
@@ -235,7 +280,7 @@
     start: localISO(now),
     end: localISO(now),
     pending: false, // a start day is waiting for an end day
-    active: new Set(ALL_ISO) // every country selected by default
+    active: loadSelection() // remembered countries, or all on first visit
   };
 
   // World map: the country selector. Every country starts selected; clicking
@@ -316,7 +361,7 @@
       cb.checked = state.active.has(c.iso);
       cb.addEventListener('change', function () {
         if (cb.checked) state.active.add(c.iso); else state.active.delete(c.iso);
-        syncMapClasses(); updateMapCount(); render();
+        syncMapClasses(); updateMapCount(); saveSelection(); render();
       });
       label.appendChild(cb);
       var span = document.createElement('span');
@@ -340,16 +385,18 @@
     syncMapClasses();
     updateMapCount();
     refreshSearch();
+    saveSelection();
     render();
   });
 
+  // "Select all" doubles as reset-to-all-countries.
   document.getElementById('selall').addEventListener('click', function () {
     state.active = new Set(ALL_ISO);
-    syncMapClasses(); updateMapCount(); refreshSearch(); render();
+    syncMapClasses(); updateMapCount(); refreshSearch(); saveSelection(); render();
   });
   document.getElementById('selnone').addEventListener('click', function () {
     state.active = new Set();
-    syncMapClasses(); updateMapCount(); refreshSearch(); render();
+    syncMapClasses(); updateMapCount(); refreshSearch(); saveSelection(); render();
   });
 
   renderSearch(); // show the idle hint
@@ -682,6 +729,7 @@
     renderCalendar();
     renderDetail();
   }
+  syncMapClasses(); // paths are built all-"on"; align them with the (possibly restored) selection
   updateMapCount();
   render();
 })();

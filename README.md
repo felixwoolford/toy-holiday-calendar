@@ -27,6 +27,11 @@ That's all — no internet, no server, no Node/Python. The holiday data
 - Small countries are hard to click on the map, so there's also a **search
   box**: type a name (e.g. "Luxembourg") and tick or untick it from the
   results. It stays in sync with the map.
+- Your **country selection is remembered** the next time you open it (via the
+  browser's localStorage, which works from a local file). The month and day
+  are *not* remembered — those always open on today. If the browser blocks
+  storage (some private windows), it simply doesn't remember; nothing breaks.
+  "Select all" resets the selection back to every country.
 - Click a day to see its holidays. Click a start day and then an end day to
   select a range: the span is highlighted and every holiday in it is listed,
   grouped by date. Clicking a day earlier than the start begins a new

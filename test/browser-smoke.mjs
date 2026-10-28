@@ -221,6 +221,55 @@ assert.ok(d.includes('expected'), 'the ±1 day note should explain why');
 await gotoMonth('June', 2029);
 assert.ok(await page.locator('#range-note').isVisible());
 
+// 13. The country selection is remembered across reloads (localStorage),
+// while the month and the selected day are not — they reset to today.
+await page.locator('#map path[data-iso="250"]').dispatchEvent('click'); // France off
+await page.locator('#map path[data-iso="392"]').dispatchEvent('click'); // Japan off
+mc = await page.textContent('#mapcount');
+assert.ok(mc.includes(String(totalPaths - 2) + ' of ' + totalPaths), mc);
+assert.ok(mc.includes('3 with data'), mc);
+await page.reload();
+await page.waitForSelector('#cal .day');
+mc = await page.textContent('#mapcount');
+assert.ok(mc.includes(String(totalPaths - 2) + ' of ' + totalPaths), mc);
+assert.ok(mc.includes('3 with data'), mc);
+assert.strictEqual(await page.locator('#map path.country.on').count(), totalPaths - 2,
+  'map should show the remembered subset');
+assert.ok(!/\bon\b/.test(await page.locator('#map path[data-iso="250"]').getAttribute('class')),
+  'France stays deselected after reload');
+assert.ok(!/\bon\b/.test(await page.locator('#map path[data-iso="392"]').getAttribute('class')),
+  'Japan stays deselected after reload');
+assert.strictEqual(
+  (await page.textContent('#month-label')).trim(),
+  now.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' }),
+  'month should reset to today, not be remembered');
+assert.strictEqual((await page.locator('#cal .day.edge').textContent()).trim(), String(now.getDate()),
+  'selected day should reset to today');
+
+// 14. Fails soft: if localStorage is unavailable (blocked/private window),
+// the app still works — it defaults to all countries and never throws.
+const ctx2 = await browser.newContext({ viewport: { width: 1000, height: 760 }, locale: 'en-GB' });
+const page2 = await ctx2.newPage();
+const errors2 = [];
+page2.on('pageerror', (e) => errors2.push(String(e)));
+page2.on('console', (m) => { if (m.type() === 'error') errors2.push(m.text()); });
+await page2.addInitScript(() => {
+  Object.defineProperty(window, 'localStorage', {
+    get() { throw new Error('storage blocked'); },
+    configurable: true,
+  });
+});
+await page2.goto(url);
+await page2.waitForSelector('#cal .day');
+const mc2 = await page2.textContent('#mapcount');
+assert.ok(mc2.includes(totalPaths + ' of ' + totalPaths), mc2); // defaults to all
+assert.ok(mc2.includes('5 with data'), mc2);
+await page2.locator('#map path[data-iso="826"]').dispatchEvent('click'); // still toggleable
+const mc3 = await page2.textContent('#mapcount');
+assert.ok(mc3.includes(String(totalPaths - 1) + ' of ' + totalPaths), mc3);
+assert.deepStrictEqual(errors2, [], `page errors with storage blocked: ${errors2.join(' | ')}`);
+await ctx2.close();
+
 assert.deepStrictEqual(errors, [], `page errors: ${errors.join(' | ')}`);
 console.log('browser smoke test: OK');
 await browser.close();
