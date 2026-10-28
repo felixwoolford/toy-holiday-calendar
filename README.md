@@ -2,8 +2,9 @@
 
 A tiny self-contained browser applet: open a calendar, pick a day or a range
 of days, and see the bank, school and religious holidays on those days for
-the UK, US, Germany, France and Japan. Built for people who keep getting
-catch out by other countries' holidays when booking calls and trips.
+the UK, US, Germany, France and Japan. A world map lets you narrow the list
+to the countries you care about. Built for people who keep getting catch out
+by other countries' holidays when booking calls and trips.
 
 ## Running it (nothing to install)
 
@@ -17,8 +18,12 @@ That's all — no internet, no server, no Node/Python. The holiday data
 ## Using it
 
 - The calendar opens on the current month with today selected.
-- Coloured dots mark days that have holidays (one colour per country); the
-  chips at the top switch countries on/off.
+- Coloured dots mark days that have holidays (one colour per country).
+- The world map is the country selector: every country starts selected, and
+  clicking one toggles it. Only the five data countries (UK, US, Germany,
+  France, Japan) have holiday data — they're marked with a dark outline. The
+  others are still selectable, and the list says plainly that there's no data
+  for them. "Select all" and "Clear" reset the whole map.
 - Click a day to see its holidays. Click a start day and then an end day to
   select a range: the span is highlighted and every holiday in it is listed,
   grouped by date. Clicking a day earlier than the start begins a new
@@ -43,13 +48,17 @@ That's all — no internet, no server, no Node/Python. The holiday data
 - `npm test` — core logic tests (Node's built-in test runner, no extra deps)
 - `npm run test:browser` — UI smoke test in headless Chromium
   (`CHROMIUM=/path/to/chromium npm run test:browser`)
-- `npm run build:data` — refresh the holiday data (needs internet; regenerates
-  `app/holidays.js` — commit the result). Bank holidays come from
+- `npm run build:data` — refresh the holiday data and the world map (needs
+  internet; regenerates `app/holidays.js` and `app/map-paths.js` — commit the
+  result). Bank holidays come from
   [date.nager.at](https://date.nager.at); school holidays from
   [schulferien.org](https://www.schulferien.org) (Germany, France) and
   [education-ni.gov.uk](https://www.education-ni.gov.uk) (Northern Ireland).
   The French zones are cross-checked against the official
-  [service-public.gouv.fr](https://www.service-public.gouv.fr) calendar.
+  [service-public.gouv.fr](https://www.service-public.gouv.fr) calendar. The
+  map is generated from the free
+  [world-atlas](https://github.com/topojson/world-atlas) (Natural Earth)
+  country shapes, projected with `d3-geo`.
 
 ## Known limitations
 
@@ -61,6 +70,8 @@ That's all — no internet, no server, no Node/Python. The holiday data
   2027/28 calendar is not published yet, so autumn/Christmas 2027 are missing.
 - Bank holidays are nationwide: German state holidays (Corpus Christi,
   Reformation Day, …) and US state holidays are not in the data.
+- The world map lists every country, but only the five above have holiday
+  data; selecting any other country just adds a "no holiday data" note.
 - The data source sometimes lists only the observed date when a holiday falls
   on a weekend (e.g. US Independence Day 2026 shows on 3 July).
 - Religious dates for 2024–2028 are computed (Easter computus, tabular

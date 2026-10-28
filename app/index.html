@@ -29,16 +29,17 @@
   header h1 { margin: 0 0 2px; font-size: 22px; }
   .sub { margin: 0 0 10px; color: var(--muted); font-size: 13px; }
 
-  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
-  .chip {
-    display: inline-flex; align-items: center; gap: 6px;
-    border: 1px solid var(--line); background: var(--card);
-    border-radius: 999px; padding: 4px 12px 4px 8px;
-    font-size: 13px; cursor: pointer; user-select: none;
-  }
-  .chip input { margin: 0; accent-color: var(--accent); }
-  .chip.off { opacity: .45; }
-  .chip svg { width: 22px; height: 14px; border-radius: 2px; flex: none; }
+  .mapcard { margin-bottom: 16px; }
+  .maphead { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+  .mapbtns { display: flex; gap: 6px; }
+  .mapbox { width: 100%; }
+  .mapbox svg { width: 100%; height: auto; display: block; }
+  .country { fill: #d7dbe3; stroke: #ffffff; stroke-width: 0.5; cursor: pointer; }
+  .country:hover { fill: #b9c2d0; }
+  .country.on { fill: #60a5fa; }
+  .country.on:hover { fill: #3b82f6; }
+  .country.hasdata { stroke: #1f2937; stroke-width: 1; }
+  .maplegend { margin: 8px 0 0; }
 
   .layout {
     display: grid;
@@ -115,8 +116,19 @@
   <header>
     <h1>Holiday lookup</h1>
     <p class="sub">Bank, school &amp; religious holidays, at a glance. Click a day, or a start and an end day, to see what's off. Data covers <span id="range"></span>.</p>
-    <div class="chips" id="chips"></div>
   </header>
+
+  <section class="card mapcard" aria-label="Choose countries">
+    <div class="maphead">
+      <div class="mapbtns">
+        <button class="btn" id="selall" type="button">Select all</button>
+        <button class="btn" id="selnone" type="button">Clear</button>
+      </div>
+      <span class="note" id="mapcount"></span>
+    </div>
+    <div class="mapbox" id="map"></div>
+    <p class="note maplegend">Click a country to include or exclude it. Countries with a dark outline have holiday data; the rest are selectable but have none (the list below says so).</p>
+  </section>
 
   <div class="layout">
     <section class="card cal" aria-label="Calendar">
@@ -142,6 +154,7 @@
 </div>
 
 <script src="holidays.js"></script>
+<script src="map-paths.js"></script>
 <script>
 (function () {
   'use strict';
@@ -190,6 +203,10 @@
     });
   }
 
+  var MAP = globalThis.MapData;
+  var CODE_TO_ISO = { GB: '826', US: '840', DE: '276', FR: '250', JP: '392' };
+  var ALL_ISO = MAP.countries.map(function (c) { return c.iso; });
+
   var now = new Date();
   var state = {
     year: now.getFullYear(),
@@ -197,37 +214,68 @@
     start: localISO(now),
     end: localISO(now),
     pending: false, // a start day is waiting for an end day
-    active: H.COUNTRIES.map(function (c) { return c.code; })
+    active: new Set(ALL_ISO) // every country selected by default
   };
 
-  // Country filter chips
-  var chips = document.getElementById('chips');
-  H.COUNTRIES.forEach(function (c) {
-    var label = document.createElement('label');
-    label.className = 'chip';
-    label.dataset.country = c.code;
-    var cb = document.createElement('input');
-    cb.type = 'checkbox';
-    cb.checked = true;
-    cb.addEventListener('change', function () {
-      state.active = H.COUNTRIES.map(function (x) { return x.code; }).filter(function (code) {
-        return chips.querySelector('[data-country="' + code + '"] input').checked;
-      });
-      label.classList.toggle('off', !cb.checked);
-      render();
+  // World map: the country selector. Every country starts selected; clicking
+  // one toggles it. Countries with a `code` have holiday data (dark outline);
+  // the others are selectable but have none.
+  var mapBox = document.getElementById('map');
+  var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('viewBox', MAP.viewbox);
+  svg.setAttribute('role', 'group');
+  svg.setAttribute('aria-label', 'World map. Click a country to include or exclude it.');
+  MAP.countries.forEach(function (c) {
+    var p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    p.setAttribute('d', c.d);
+    p.setAttribute('data-iso', c.iso);
+    p.classList.add('country', 'on');
+    if (c.code) p.classList.add('hasdata');
+    var t = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+    t.textContent = c.name + (c.code ? '' : ' (no holiday data)');
+    p.appendChild(t);
+    svg.appendChild(p);
+  });
+  mapBox.appendChild(svg);
+
+  // The data-codes among the currently selected countries.
+  function activeCodes() {
+    var sel = state.active;
+    return H.COUNTRIES.map(function (c) { return c.code; }).filter(function (code) {
+      return sel.has(CODE_TO_ISO[code]);
     });
-    label.appendChild(cb);
-    var flag = document.createElement('span');
-    flag.innerHTML = FLAGS[c.code];
-    label.appendChild(flag);
-    label.appendChild(document.createTextNode(shortName(c)));
-    chips.appendChild(label);
+  }
+
+  function syncMapClasses() {
+    svg.querySelectorAll('path.country').forEach(function (p) {
+      p.classList.toggle('on', state.active.has(p.getAttribute('data-iso')));
+    });
+  }
+
+  function updateMapCount() {
+    document.getElementById('mapcount').textContent =
+      state.active.size + ' of ' + ALL_ISO.length + ' countries selected \u00b7 ' +
+      activeCodes().length + ' with data';
+  }
+
+  svg.addEventListener('click', function (e) {
+    var iso = e.target && e.target.getAttribute ? e.target.getAttribute('data-iso') : null;
+    if (!iso) return;
+    if (state.active.has(iso)) state.active.delete(iso);
+    else state.active.add(iso);
+    syncMapClasses();
+    updateMapCount();
+    render();
   });
 
-  function shortName(c) {
-    var map = { GB: 'UK', US: 'US', DE: 'Germany', FR: 'France', JP: 'Japan' };
-    return map[c.code] || c.name;
-  }
+  document.getElementById('selall').addEventListener('click', function () {
+    state.active = new Set(ALL_ISO);
+    syncMapClasses(); updateMapCount(); render();
+  });
+  document.getElementById('selnone').addEventListener('click', function () {
+    state.active = new Set();
+    syncMapClasses(); updateMapCount(); render();
+  });
 
   // Calendar
   var DOW = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -261,7 +309,7 @@
       if (!cell.inMonth) {
         b.disabled = true;
       } else {
-        var hols = H.holidaysForDate(cell.date, state.active);
+        var hols = H.holidaysForDate(cell.date, activeCodes());
         if (hols.length) {
           var dots = document.createElement('span');
           dots.className = 'dots';
@@ -399,8 +447,9 @@
   }
 
   function appendNotes(box) {
+    var codes = activeCodes();
     H.COUNTRIES.forEach(function (c) {
-      if (state.active.indexOf(c.code) === -1) return;
+      if (codes.indexOf(c.code) === -1) return;
       var note = H.SCHOOL_NOTES[c.code];
       if (note) {
         var el = document.createElement('p');
@@ -409,6 +458,33 @@
         box.appendChild(el);
       }
     });
+  }
+
+  // Selected countries that have no holiday data at all: say so, listing a
+  // few by name when there are many.
+  function appendNoData(box) {
+    var noData = MAP.countries
+      .filter(function (c) { return !c.code && state.active.has(c.iso); })
+      .map(function (c) { return c.name; })
+      .sort(function (a, b) { return a.localeCompare(b); });
+    if (!noData.length) return;
+    var text;
+    if (noData.length <= 8) {
+      text = 'No holiday data for ' + joinList(noData) + '.';
+    } else {
+      text = 'No holiday data for ' + noData.length + ' selected countries (e.g. ' +
+        noData.slice(0, 5).join(', ') + ', \u2026).';
+    }
+    var el = document.createElement('p');
+    el.className = 'note';
+    el.textContent = text;
+    box.appendChild(el);
+  }
+
+  function joinList(arr) {
+    if (arr.length === 1) return arr[0];
+    if (arr.length === 2) return arr[0] + ' and ' + arr[1];
+    return arr.slice(0, -1).join(', ') + ', and ' + arr[arr.length - 1];
   }
 
   function renderDetail() {
@@ -428,15 +504,15 @@
       var y = Number(d.slice(0, 4));
       if (y < MIN_Y || y > MAX_Y) return;
       covered++;
-      var hols = H.holidaysForDate(d, state.active).filter(function (h) {
+      var hols = H.holidaysForDate(d, activeCodes()).filter(function (h) {
         return h.kind === 'bank';
       });
       if (hols.length) { bankGroups.push({ date: d, hols: hols }); bankTotal += hols.length; }
     });
 
     var school = groupSchool(single
-      ? H.holidaysForDate(lo, state.active).filter(function (h) { return h.kind === 'school'; })
-      : H.schoolHolidaysInRange(lo, hi, state.active));
+      ? H.holidaysForDate(lo, activeCodes()).filter(function (h) { return h.kind === 'school'; })
+      : H.schoolHolidaysInRange(lo, hi, activeCodes()));
 
     // Religious observances are worldwide, so they are not filtered by the
     // country chips and are shown for any covered range.
@@ -445,6 +521,7 @@
     if (covered === 0) {
       box.appendChild(p('No holiday data for this range \u2014 data covers ' + RANGE + '.'));
       appendNotes(box);
+      appendNoData(box);
       return;
     }
 
@@ -495,6 +572,7 @@
     });
 
     appendNotes(box);
+    appendNoData(box);
   }
 
   function p(text) {
@@ -527,6 +605,7 @@
     renderCalendar();
     renderDetail();
   }
+  updateMapCount();
   render();
 })();
 </script>

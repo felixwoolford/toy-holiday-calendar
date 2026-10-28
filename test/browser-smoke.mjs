@@ -43,6 +43,16 @@ const DASH = '\u2013';
 await page.goto(url);
 await page.waitForSelector('#cal .day');
 
+// 1a. The world map is the country selector: every country starts selected,
+// the five data countries are dark-outlined, and the count reads correctly.
+const totalPaths = await page.locator('#map path.country').count();
+assert.ok(totalPaths > 150, 'map should have many countries');
+assert.strictEqual(await page.locator('#map path.country.on').count(), totalPaths, 'all selected by default');
+assert.strictEqual(await page.locator('#map path.country.hasdata').count(), 5, '5 data countries outlined');
+let mc = await page.textContent('#mapcount');
+assert.ok(mc.includes(totalPaths + ' of ' + totalPaths), mc);
+assert.ok(mc.includes('5 with data'), mc);
+
 // 1. Opens on the current month with today selected
 const now = new Date();
 assert.strictEqual(
@@ -93,12 +103,31 @@ assert.ok(!(await title()).includes(DASH));
 await clickDay(30);
 assert.ok((await title()).includes(`23 December ${DASH} 30 December 2025`), await title());
 
-// 6. Country filter still works
-await page.locator('#chips [data-country="GB"] input').uncheck();
+// 6. Country filter (world map) still works
+await page.locator('#map path[data-iso="826"]').dispatchEvent('click'); // deselect UK
 await clickDay(25);
 assert.ok(!(await detail()).includes('United Kingdom'));
 assert.strictEqual(await page.locator('#cal .day[data-date="2025-12-25"] .dot').count(), 3);
-await page.locator('#chips [data-country="GB"] input').check();
+mc = await page.textContent('#mapcount');
+assert.ok(mc.includes('4 with data'), mc);
+assert.ok(mc.includes(String(totalPaths - 1) + ' of ' + totalPaths), mc);
+await page.locator('#map path[data-iso="826"]').dispatchEvent('click'); // reselect UK
+
+// 6b. The no-data note lists selected countries without data; Clear and
+// Select all reset the whole map.
+d = await detail();
+assert.ok(/No holiday data for \d+ selected countries/.test(d), 'no-data note shown by default');
+await page.locator('#selnone').click();
+mc = await page.textContent('#mapcount');
+assert.ok(mc.includes('0 of ' + totalPaths), mc);
+assert.ok(mc.includes('0 with data'), mc);
+d = await detail();
+assert.ok(!/No holiday data for \d+ selected countries/.test(d), 'no no-data note when nothing is selected');
+assert.ok(d.includes('No bank holidays on this day.'), 'no bank holidays with no countries selected');
+await page.locator('#selall').click();
+mc = await page.textContent('#mapcount');
+assert.ok(mc.includes(totalPaths + ' of ' + totalPaths), mc);
+assert.ok(mc.includes('5 with data'), mc);
 
 // 7. School holidays on a day in the middle of summer break
 // (the pending single selection is completed by the first click;
@@ -138,7 +167,8 @@ await clickDay(5);
 d = await detail();
 assert.ok(d.includes('Christmas Day'), d);
 assert.ok(d.includes('Christmas holiday'), 'DE school break runs into 2028');
-assert.ok(!d.includes('No holiday data'), d);
+// the out-of-coverage message is absent (the no-data-countries note is fine)
+assert.ok(!d.includes('No holiday data for this range'), d);
 assert.ok(!(await page.locator('#range-note').isVisible()), 'Jan 2028 is covered');
 // 5 out-of-month cells (27-31 Dec) + 5 in-month (1-5 Jan)
 assert.strictEqual(await page.locator('#cal .day.inrange').count(), 10);

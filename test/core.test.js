@@ -266,3 +266,33 @@ test('isoDate round-trips', () => {
   assert.strictEqual(H.isoDate(new Date(Date.UTC(2026, 0, 5))), '2026-01-05');
   assert.strictEqual(H.isoDate(new Date(Date.UTC(2026, 11, 31))), '2026-12-31');
 });
+
+test('world map data: every country has a path, 5 data countries, rest have none', () => {
+  require('../app/map-paths.js');
+  const M = globalThis.MapData;
+  assert.ok(M && Array.isArray(M.countries), 'MapData.countries is an array');
+  assert.match(M.viewbox, /^0 0 \d+ \d+$/, 'viewbox present');
+  assert.ok(M.countries.length > 150, 'expected a full world map');
+  const codes = new Set();
+  const isos = new Set();
+  for (const c of M.countries) {
+    assert.ok(c.iso && c.iso.length > 0, 'every country has an iso key');
+    assert.ok(!isos.has(c.iso), 'duplicate iso ' + c.iso);
+    isos.add(c.iso);
+    assert.ok(c.name && c.name.length > 0, 'every country has a name');
+    assert.ok(c.d && c.d.length > 10 && /^M/.test(c.d), 'every country has a path: ' + c.name);
+    if (c.code) {
+      assert.ok(!codes.has(c.code), 'duplicate data code ' + c.code);
+      codes.add(c.code);
+    }
+  }
+  // exactly the five data countries are flagged, with the app's names
+  assert.deepStrictEqual([...codes].sort(), ['DE', 'FR', 'GB', 'JP', 'US']);
+  const byCode = Object.fromEntries(M.countries.filter((c) => c.code).map((c) => [c.code, c.name]));
+  assert.strictEqual(byCode.GB, 'United Kingdom');
+  assert.strictEqual(byCode.US, 'United States');
+  // a known no-data country is present but unflagged
+  const br = M.countries.find((c) => c.name === 'Brazil');
+  assert.ok(br, 'Brazil present');
+  assert.strictEqual(br.code, '');
+});

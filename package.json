@@ -7,6 +7,8 @@
     "build:data": "node build/fetch-holidays.mjs"
   },
   "devDependencies": {
-    "playwright-core": "^1.64.1"
+    "d3-geo": "^3.1.1",
+    "playwright-core": "^1.64.1",
+    "topojson-client": "^3.1.0"
   }
 }
