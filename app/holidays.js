@@ -1102,6 +1102,16 @@
     return cells;
   }
 
+  // Inclusive list of ISO dates from a to b (either order).
+  function dateRange(a, b) {
+    if (a > b) { var tmp = a; a = b; b = tmp; }
+    var out = [];
+    var t = Date.parse(a + 'T00:00:00Z');
+    var e = Date.parse(b + 'T00:00:00Z');
+    for (; t <= e; t += 86400000) out.push(isoDate(new Date(t)));
+    return out;
+  }
+
   return {
     DATA: DATA,
     COUNTRIES: COUNTRIES,
@@ -1109,6 +1119,7 @@
     hasHoliday: hasHoliday,
     supportedYears: supportedYears,
     calendarMonth: calendarMonth,
+    dateRange: dateRange,
     isoDate: isoDate
   };
 });

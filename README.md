@@ -19,9 +19,12 @@ That's all — no internet, no server, no Node/Python. The holiday data
 - The calendar opens on the current month with today selected.
 - Coloured dots mark days that have holidays (one colour per country); the
   chips at the top switch countries on/off.
-- Click a day to see the list. UK entries are labelled by region where a
-  holiday only applies to part of the UK; German entries carry a note where
-  they don't apply nationwide.
+- Click a day to see its holidays. Click a start day and then an end day to
+  select a range: the span is highlighted and every holiday in it is listed,
+  grouped by date. Clicking a day earlier than the start begins a new
+  selection; after a range is set, the next click also starts fresh.
+- UK entries are labelled by region where a holiday only applies to part of
+  the UK; German entries carry a note where they don't apply nationwide.
 
 ## Development (optional)
 

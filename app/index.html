@@ -47,6 +47,7 @@
     align-items: start;
   }
   @media (max-width: 720px) { .layout { grid-template-columns: 1fr; } }
+  @media (min-width: 721px) { .cal { position: sticky; top: 16px; } }
   .card {
     background: var(--card);
     border: 1px solid var(--line);
@@ -79,7 +80,8 @@
   .day:hover:not(:disabled) { border-color: var(--accent); }
   .day:disabled { opacity: .35; cursor: default; background: transparent; }
   .day.today { box-shadow: inset 0 0 0 1.5px var(--accent); }
-  .day.sel { background: #e8efff; border-color: var(--accent); }
+  .day.inrange { background: #eef3ff; }
+  .day.edge { background: #e2e9ff; border-color: var(--accent); }
   .dots { display: flex; gap: 3px; margin-top: 4px; }
   .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
 
@@ -90,6 +92,8 @@
   .hname { font-weight: 600; }
   .hmeta { color: var(--muted); font-size: 12.5px; }
   .none { color: var(--muted); padding: 8px 0; }
+  .dhead { margin: 14px 0 2px; font-size: 13.5px; }
+  .dhead:first-child { margin-top: 2px; }
   footer { margin-top: 14px; color: var(--muted); font-size: 12px; }
   footer a { color: inherit; }
 </style>
@@ -98,12 +102,12 @@
 <div class="wrap">
   <header>
     <h1>Holiday lookup</h1>
-    <p class="sub">Public &amp; bank holidays, at a glance. Data covers <span id="range"></span>.</p>
+    <p class="sub">Public &amp; bank holidays, at a glance. Click a day, or a start and an end day, to see what's off. Data covers <span id="range"></span>.</p>
     <div class="chips" id="chips"></div>
   </header>
 
   <div class="layout">
-    <section class="card" aria-label="Calendar">
+    <section class="card cal" aria-label="Calendar">
       <div class="calhead">
         <button class="btn" id="prev" aria-label="Previous month">&#8249;</button>
         <h2 id="month-label"></h2>
@@ -168,7 +172,9 @@
   var state = {
     year: now.getFullYear(),
     month: now.getMonth(),
-    selected: localISO(now),
+    start: localISO(now),
+    end: localISO(now),
+    pending: false, // a start day is waiting for an end day
     active: H.COUNTRIES.map(function (c) { return c.code; })
   };
 
@@ -249,50 +255,96 @@
           b.appendChild(dots);
         }
         b.addEventListener('click', function () {
-          state.selected = cell.date;
+          if (!state.pending) {
+            state.start = state.end = cell.date; // new selection
+            state.pending = true;
+          } else if (cell.date >= state.start) {
+            state.end = cell.date; // complete the range
+            state.pending = false;
+          } else {
+            state.start = state.end = cell.date; // earlier day: start again
+            state.pending = true;
+          }
           render();
         });
       }
-      if (cell.date === state.selected) b.classList.add('sel');
+      var inRange = cell.date >= state.start && cell.date <= state.end;
+      if (inRange) b.classList.add('inrange');
+      if (cell.date === state.start || cell.date === state.end) b.classList.add('edge');
       if (cell.date === todayStr) b.classList.add('today');
       cal.appendChild(b);
     });
   }
 
   // Detail panel
+  function fullDate(iso) {
+    return new Date(iso + 'T00:00:00Z').toLocaleDateString(
+      undefined, { timeZone: 'UTC', weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  }
+  function rangeTitle(a, b) {
+    var da = new Date(a + 'T00:00:00Z');
+    var db = new Date(b + 'T00:00:00Z');
+    var lo = { timeZone: 'UTC', day: 'numeric', month: 'long' };
+    if (da.getUTCFullYear() !== db.getUTCFullYear()) lo.year = 'numeric';
+    var right = { timeZone: 'UTC', day: 'numeric', month: 'long', year: 'numeric' };
+    return da.toLocaleDateString(undefined, lo) + ' \u2013 ' +
+      db.toLocaleDateString(undefined, right);
+  }
+  function hrow(h) {
+    var row = document.createElement('div');
+    row.className = 'hrow';
+    var flag = document.createElement('span');
+    flag.innerHTML = FLAGS[h.country];
+    row.appendChild(flag);
+    var txt = document.createElement('span');
+    var meta = esc(h.countryName) + (h.note ? ' \u00b7 ' + esc(h.note) : '');
+    txt.innerHTML = '<span class="hname">' + esc(h.name) + '</span><br><span class="hmeta">' + meta + '</span>';
+    row.appendChild(txt);
+    return row;
+  }
+
   function renderDetail() {
-    var d = new Date(state.selected + 'T00:00:00Z');
-    document.getElementById('detail-date').textContent = d.toLocaleDateString(
-      undefined, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+    var single = state.start === state.end;
+    document.getElementById('detail-date').textContent =
+      single ? fullDate(state.start) : rangeTitle(state.start, state.end);
     var box = document.getElementById('detail');
     box.innerHTML = '';
 
-    var y = Number(state.selected.slice(0, 4));
-    if (y < MIN_Y || y > MAX_Y) {
-      box.appendChild(p('No holiday data for this date \u2014 data covers ' + RANGE + '.'));
+    var groups = [];
+    var covered = 0;
+    H.dateRange(state.start, state.end).forEach(function (d) {
+      var y = Number(d.slice(0, 4));
+      if (y < MIN_Y || y > MAX_Y) return;
+      covered++;
+      var hols = H.holidaysForDate(d, state.active);
+      if (hols.length) groups.push({ date: d, hols: hols });
+    });
+
+    if (!groups.length) {
+      box.appendChild(p(covered === 0
+        ? 'No holiday data for this range \u2014 data covers ' + RANGE + '.'
+        : 'No holidays in the selected countries in this range.'));
       return;
     }
 
-    var any = false;
-    H.COUNTRIES.forEach(function (c) {
-      if (state.active.indexOf(c.code) === -1) return;
-      H.holidaysForDate(state.selected, [c.code]).forEach(function (h) {
-        any = true;
-        var row = document.createElement('div');
-        row.className = 'hrow';
-        var flag = document.createElement('span');
-        flag.innerHTML = FLAGS[c.code];
-        row.appendChild(flag);
-        var txt = document.createElement('span');
-        var meta = esc(c.name) + (h.note ? ' \u00b7 ' + esc(h.note) : '');
-        txt.innerHTML = '<span class="hname">' + esc(h.name) + '</span><br><span class="hmeta">' + meta + '</span>';
-        row.appendChild(txt);
-        box.appendChild(row);
-      });
-    });
-    if (!any) {
-      box.appendChild(p('No holidays in the selected countries on this day.'));
+    if (!single) {
+      var total = groups.reduce(function (n, g) { return n + g.hols.length; }, 0);
+      var sum = document.createElement('p');
+      sum.className = 'none';
+      sum.textContent = total + (total === 1 ? ' holiday' : ' holidays') +
+        ' over ' + covered + ' days';
+      box.appendChild(sum);
     }
+
+    groups.forEach(function (g) {
+      if (!single) {
+        var head = document.createElement('h3');
+        head.className = 'dhead';
+        head.textContent = fullDate(g.date);
+        box.appendChild(head);
+      }
+      g.hols.forEach(function (h) { box.appendChild(hrow(h)); });
+    });
   }
 
   function p(text) {
@@ -316,7 +368,8 @@
     var t = new Date();
     state.year = t.getFullYear();
     state.month = t.getMonth();
-    state.selected = localISO(t);
+    state.start = state.end = localISO(t);
+    state.pending = false;
     render();
   });
 

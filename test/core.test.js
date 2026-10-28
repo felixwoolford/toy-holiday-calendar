@@ -102,6 +102,17 @@ test('calendarMonth: 42 Monday-first cells', () => {
   assert.ok(feb.some((c) => c.date === '2028-02-29' && c.inMonth));
 });
 
+test('dateRange: inclusive, either order, across boundaries', () => {
+  assert.deepStrictEqual(H.dateRange('2026-12-25', '2026-12-28'),
+    ['2026-12-25', '2026-12-26', '2026-12-27', '2026-12-28']);
+  assert.deepStrictEqual(H.dateRange('2026-12-28', '2026-12-25'),
+    H.dateRange('2026-12-25', '2026-12-28'));
+  assert.deepStrictEqual(H.dateRange('2026-12-30', '2027-01-02'),
+    ['2026-12-30', '2026-12-31', '2027-01-01', '2027-01-02']);
+  assert.deepStrictEqual(H.dateRange('2026-05-01', '2026-05-01'), ['2026-05-01']);
+  assert.strictEqual(H.dateRange('2028-02-01', '2028-02-29').length, 29);
+});
+
 test('isoDate round-trips', () => {
   assert.strictEqual(H.isoDate(new Date(Date.UTC(2026, 0, 5))), '2026-01-05');
   assert.strictEqual(H.isoDate(new Date(Date.UTC(2026, 11, 31))), '2026-12-31');
