@@ -62,7 +62,9 @@ assert.strictEqual(
   now.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' }));
 const sel = page.locator('#cal .day.edge');
 assert.strictEqual(await sel.count(), 1);
-assert.strictEqual((await sel.textContent()).trim(), String(now.getDate()));
+// the cell text also carries the dot-count chip, so match the leading digits
+assert.ok((await sel.textContent()).trim().startsWith(String(now.getDate())),
+  (await sel.textContent()).trim());
 
 // 2. Single-day clicking still works, with school and bank sections
 await gotoMonth('December', 2025);
@@ -78,6 +80,18 @@ assert.ok(d.includes('Northern Ireland'), 'NI school break should name its regio
 assert.ok(d.includes('No school-holiday data for'), 'missing school data should be stated');
 // Japan has data but does not observe Christmas, so it appears nowhere
 assert.ok(!d.includes('Japan'), `Japan should not appear on 25 Dec; got: ${d}`);
+
+// 2a. A one-line summary sits at the very top of the panel, and the
+// sections are ordered bank -> religious -> school (bank first: that's
+// what she cares about most)
+const firstEl = page.locator('#detail > *').first();
+assert.strictEqual(await firstEl.getAttribute('class'), 'summary', 'summary is the first element');
+const summary = (await firstEl.textContent()).trim();
+assert.ok(/^\d+ bank holidays in \d+ countries/.test(summary), 'summary leads with bank holidays: ' + summary);
+assert.ok(summary.includes('school break'), 'summary mentions school breaks: ' + summary);
+const heads = await page.locator('#detail h3.dhead').allTextContents();
+const bi = heads.indexOf('Bank holidays'), ri = heads.indexOf('Religious holidays'), si = heads.indexOf('School holidays');
+assert.ok(bi !== -1 && bi < ri && ri < si, 'sections ordered bank, religious, school: ' + heads.join(' | '));
 
 // 2b. With many countries selected, same-named holidays are grouped:
 // "Christmas Day · 128 countries" is one collapsed line, not 128 rows.
@@ -107,7 +121,7 @@ assert.ok((await title()).includes(`25 December ${DASH} 28 December 2025`), awai
 assert.strictEqual(await page.locator('#cal .day.inrange').count(), 4);
 assert.strictEqual(await page.locator('#cal .day.edge').count(), 2);
 d = await detail();
-assert.ok(d.includes('holidays over 4 days'), d);
+assert.ok(/bank holidays in \d+ countries/.test(d), 'range summary counts bank holidays: ' + d);
 assert.ok(d.includes('26 December 2025') && d.includes('Boxing Day'), d);
 assert.ok(d.includes("St. Stephen's Day"), d);
 // small groups (<= 3 countries) start open and name the countries
@@ -132,20 +146,27 @@ assert.ok(!(await title()).includes(DASH));
 await clickDay(30);
 assert.ok((await title()).includes(`23 December ${DASH} 30 December 2025`), await title());
 
-// 6. Country filter (world map) still works. With 141 data countries most
-// days carry more dots than fit, so the calendar caps at 12 and shows "+N".
-const dotmore = '#cal .day[data-date="2025-12-25"] .dotmore';
-assert.strictEqual(await page.locator('#cal .day[data-date="2025-12-25"] .dot').count(), 12, 'dots capped at 12');
-const moreBefore = Number((await page.textContent(dotmore)).slice(1));
+// 6. Country filter (world map) still works. With many countries selected
+// the calendar shows one dot plus a country count per day (no dot soup).
+const dotcount = '#cal .day[data-date="2025-12-25"] .dotmore';
+assert.strictEqual(await page.locator('#cal .day[data-date="2025-12-25"] .dot').count(), 1, 'one dot per day with many countries selected');
+const moreBefore = Number(await page.textContent(dotcount));
 assert.ok(moreBefore > 100, 'most data countries observe Christmas');
 await page.locator('#map path[data-iso="826"]').dispatchEvent('click'); // deselect UK
 await clickDay(25);
 assert.ok(!(await detail()).includes('United Kingdom'));
-assert.strictEqual(Number((await page.textContent(dotmore)).slice(1)), moreBefore - 1);
+assert.strictEqual(Number(await page.textContent(dotcount)), moreBefore - 1);
 mc = await page.textContent('#mapcount');
 assert.ok(mc.includes(String(dataPaths - 1) + ' with data'), mc);
 assert.ok(mc.includes(String(totalPaths - 1) + ' of ' + totalPaths), mc);
 await page.locator('#map path[data-iso="826"]').dispatchEvent('click'); // reselect UK
+// with few countries selected, dots are per-country colours again (no count chip)
+await page.locator('#selnone').click();
+await page.locator('#map path[data-iso="826"]').dispatchEvent('click'); // UK
+await page.locator('#map path[data-iso="276"]').dispatchEvent('click'); // Germany
+assert.strictEqual(await page.locator('#cal .day[data-date="2025-12-25"] .dot').count(), 2, 'one dot per country when few are selected');
+assert.strictEqual(await page.locator('#cal .day[data-date="2025-12-25"] .dotmore').count(), 0, 'no count chip when few are selected');
+await page.locator('#selall').click();
 
 // 6b. The no-data note lists selected countries without data; Clear and
 // Select all reset the whole map.
@@ -235,6 +256,7 @@ await clickDay(13);
 d = await detail();
 assert.ok(d.includes('No school holidays on this day.'), d);
 assert.ok(d.includes('No bank holidays on this day.'), d);
+assert.ok((await page.locator('#detail > *').first().textContent()).includes('No holidays on this day.'), 'summary says no holidays');
 
 // 9. ... and as a range (14-15 Dec 2026 is likewise holiday-free)
 await gotoMonth('December', 2026);
@@ -308,8 +330,9 @@ assert.strictEqual(
   (await page.textContent('#month-label')).trim(),
   now.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' }),
   'month should reset to today, not be remembered');
-assert.strictEqual((await page.locator('#cal .day.edge').textContent()).trim(), String(now.getDate()),
-  'selected day should reset to today');
+// the cell text also carries the dot-count chip, so match the leading digits
+assert.ok((await page.locator('#cal .day.edge').textContent()).trim().startsWith(String(now.getDate())),
+  'selected day should reset to today: ' + (await page.locator('#cal .day.edge').textContent()).trim());
 
 // 14. Fails soft: if localStorage is unavailable (blocked/private window),
 // the app still works — it defaults to all countries and never throws.

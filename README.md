@@ -19,8 +19,9 @@ That's all — no internet, no server, no Node/Python. The holiday data
 
 - The calendar opens on the current month with today selected.
 - Coloured dots mark days that have holidays (one colour per country). With
-  many countries selected a day can have more dots than fit, so at most 12
-  are drawn and a small "+N" chip carries the rest (hover it for the count).
+  more than three countries selected, per-country dots are just noise, so
+  each day instead shows a single dot plus the number of countries with a
+  holiday on that day (hover it for the count).
 - The world map is the country selector: every country starts selected, and
   clicking one toggles it. 225 countries have holiday data — they're marked
   with a dark outline. The rest (14 entries — mostly territories, plus
@@ -39,6 +40,9 @@ That's all — no internet, no server, no Node/Python. The holiday data
   select a range: the span is highlighted and every holiday in it is listed,
   grouped by date. Clicking a day earlier than the start begins a new
   selection; after a range is set, the next click also starts fresh.
+- The panel opens with a one-line summary (e.g. "180 bank holidays in 180
+  countries, 6 school breaks"), and the sections are ordered bank,
+  religious, school — bank first, since that's what most people are after.
 - With many countries selected, same-named holidays are grouped into one
   expandable line (e.g. "Christmas Day · 128 countries") instead of one row
   per country; groups of up to three countries are open by default.

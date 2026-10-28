@@ -95,6 +95,7 @@
   .day.edge { background: #e2e9ff; border-color: var(--accent); }
   .dots { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 4px; }
   .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+  .dot-all { background: #475569; }
   .dotmore {
     font-size: 9px; line-height: 1.2; color: #6b7280; background: #e5e7eb;
     border-radius: 6px; padding: 1px 3px; font-weight: 600;
@@ -122,6 +123,7 @@
   .gname { font-weight: 600; }
   .gmeta { color: var(--muted); font-size: 12.5px; margin-left: auto; text-align: right; }
   .none { color: var(--muted); padding: 8px 0; }
+  .summary { margin: 0; padding: 0 0 6px; font-weight: 600; font-size: 13.5px; }
   .dhead { margin: 14px 0 2px; font-size: 13.5px; }
   .dhead:first-child { margin-top: 2px; }
   .relrow { display: flex; gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); }
@@ -458,27 +460,33 @@
       if (!cell.inMonth) {
         b.disabled = true;
       } else {
-        var hols = H.holidaysForDate(cell.date, activeCodes());
+        var codes = activeCodes();
+        var hols = H.holidaysForDate(cell.date, codes);
         if (hols.length) {
+          var seen = {};
+          hols.forEach(function (h) { seen[h.country] = true; });
+          var total = Object.keys(seen).length;
           var dots = document.createElement('span');
           dots.className = 'dots';
-          var seen = {};
-          hols.forEach(function (h) {
-            if (seen[h.country]) return;
-            seen[h.country] = true;
-            if (dots.childElementCount >= 12) return; // capped; see the "+N" chip
+          if (codes.length > 3) {
+            // Many countries selected: per-country dots are just colour noise,
+            // so show one dot plus how many countries are off that day.
             var d = document.createElement('span');
-            d.className = 'dot';
-            d.style.background = countryColor(h.country);
+            d.className = 'dot dot-all';
             dots.appendChild(d);
-          });
-          var total = Object.keys(seen).length;
-          if (total > 12) {
             var more = document.createElement('span');
             more.className = 'dotmore';
-            more.textContent = '+' + (total - 12);
-            more.title = (total - 12) + ' more countries have holidays on this day';
+            more.textContent = String(total);
+            more.title = total + (total === 1 ? ' country' : ' countries') +
+              ' have holidays on this day';
             dots.appendChild(more);
+          } else {
+            Object.keys(seen).forEach(function (code) {
+              var d = document.createElement('span');
+              d.className = 'dot';
+              d.style.background = countryColor(code);
+              dots.appendChild(d);
+            });
           }
           b.appendChild(dots);
         }
@@ -766,24 +774,29 @@
       return;
     }
 
-    if (!single && (bankTotal || school.length || religious.length)) {
-      var parts = [];
-      if (bankTotal) parts.push(bankTotal + (bankTotal === 1 ? ' bank holiday' : ' bank holidays'));
-      if (school.length) parts.push(school.length + (school.length === 1 ? ' school holiday' : ' school holidays'));
-      if (religious.length) parts.push(religious.length + (religious.length === 1 ? ' religious holiday' : ' religious holidays'));
-      var sum = document.createElement('p');
-      sum.className = 'none';
-      sum.textContent = parts.join(', ') + ' over ' + covered + ' days';
-      box.appendChild(sum);
+    // One-line summary at the very top: what's coming, before she scrolls.
+    var sumParts = [];
+    if (bankTotal) {
+      var bc = {};
+      bankGroups.forEach(function (g) {
+        g.hols.forEach(function (h) { bc[h.country] = true; });
+      });
+      var bcN = Object.keys(bc).length;
+      sumParts.push(bankTotal + (bankTotal === 1 ? ' bank holiday' : ' bank holidays') +
+        ' in ' + bcN + (bcN === 1 ? ' country' : ' countries'));
     }
-
-    section(box, 'School holidays', function () {
-      if (!school.length) {
-        box.appendChild(p('No school holidays ' + (single ? 'on this day' : 'in this range') + '.'));
-        return;
-      }
-      school.forEach(function (g) { box.appendChild(schoolRowEl(g)); });
-    });
+    if (religious.length) {
+      sumParts.push(religious.length + (religious.length === 1 ? ' religious day' : ' religious days'));
+    }
+    if (school.length) {
+      sumParts.push(school.length + (school.length === 1 ? ' school break' : ' school breaks'));
+    }
+    var sum = document.createElement('p');
+    sum.className = 'summary';
+    sum.textContent = sumParts.length
+      ? sumParts.join(', ')
+      : 'No holidays ' + (single ? 'on this day' : 'in this range') + '.';
+    box.appendChild(sum);
 
     section(box, 'Bank holidays', function () {
       if (!bankGroups.length) {
@@ -810,6 +823,14 @@
         box.appendChild(p('Dates marked \u00b11 day are expected \u2014 they depend on moon sighting or regional custom and may fall a day earlier or later.'));
       }
       religious.forEach(function (h) { box.appendChild(religiousRowEl(h)); });
+    });
+
+    section(box, 'School holidays', function () {
+      if (!school.length) {
+        box.appendChild(p('No school holidays ' + (single ? 'on this day' : 'in this range') + '.'));
+        return;
+      }
+      school.forEach(function (g) { box.appendChild(schoolRowEl(g)); });
     });
 
     appendNotes(box);
