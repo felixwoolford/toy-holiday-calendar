@@ -10,6 +10,7 @@ test('bank data integrity: every entry is a valid ISO date inside the covered ye
   for (const c of H.COUNTRIES) {
     const d = H.DATA[c.code];
     assert.ok(Array.isArray(d.bank), c.code + ' has a bank list');
+    assert.ok(d.bank.length > 0, c.code + ' has no bank holidays');
     for (const h of d.bank) {
       count++;
       assert.match(h.date, /^\d{4}-\d{2}-\d{2}$/, `${c.code}: bad date ${h.date}`);
@@ -21,7 +22,7 @@ test('bank data integrity: every entry is a valid ISO date inside the covered ye
       assert.ok(h.name && h.name.length > 0, `${c.code}: missing name ${h.date}`);
     }
   }
-  assert.ok(count > 100, 'suspiciously little data');
+  assert.ok(count > 5000, 'suspiciously little data');
 });
 
 test('school data integrity: valid ranges, always a region label', () => {
@@ -89,11 +90,13 @@ test('French and Japanese holidays', () => {
 
 test('holidaysForDate: all countries, ordering and filtering', () => {
   const all = H.holidaysForDate('2026-12-25');
-  assert.deepStrictEqual(
-    [...new Set(all.map((h) => h.country))],
-    ['GB', 'US', 'DE', 'FR']); // no JP
-  assert.strictEqual(all[0].countryName, 'United Kingdom');
+  const codes = [...new Set(all.map((h) => h.country))];
+  // Christmas is observed in most data countries, but not in Japan
+  assert.ok(codes.length > 50, 'many countries observe Christmas');
+  for (const c of ['GB', 'US', 'DE', 'FR']) assert.ok(codes.includes(c), c + ' observes Christmas');
+  assert.ok(!codes.includes('JP'), 'Japan does not observe Christmas');
   assert.ok(all.every((h) => h.kind === 'bank' || h.kind === 'school'));
+  assert.ok(all.every((h) => h.countryName && h.countryName.length > 0), 'rows carry the country name');
   const onlyUs = H.holidaysForDate('2026-11-26', ['US']).filter((h) => h.kind === 'bank');
   assert.deepStrictEqual(onlyUs.map((h) => h.name), ['Thanksgiving Day']);
   // unknown country code is ignored, does not throw
@@ -119,11 +122,16 @@ test('school holidays are labelled by region, never nationwide', () => {
   assert.deepStrictEqual([xmas.start, xmas.end], ['2026-12-21', '2027-01-01']);
 });
 
-test('countries without school data say so', () => {
+test('school data: only GB/DE/FR have it; notes only where data is partial', () => {
+  // the original five: only GB (Northern Ireland) has school data
   assert.deepStrictEqual(H.DATA.US.school, []);
   assert.deepStrictEqual(H.DATA.JP.school, []);
-  assert.match(H.SCHOOL_NOTES.US, /school district/);
-  assert.match(H.SCHOOL_NOTES.JP, /municipality/);
+  // and the rest of the world: no school data at all
+  const withSchool = H.COUNTRIES.filter((c) => H.DATA[c.code].school.length > 0);
+  assert.deepStrictEqual(withSchool.map((c) => c.code).sort(), ['DE', 'FR', 'GB']);
+  // notes exist only where data is partial (GB: NI only; FR: 2027/28 unpublished);
+  // countries with no school data are reported by the app, not by a note
+  assert.deepStrictEqual(Object.keys(H.SCHOOL_NOTES).sort(), ['FR', 'GB']);
   assert.match(H.SCHOOL_NOTES.GB, /local authority/);
   assert.ok(H.SCHOOL_NOTES.FR, 'FR note about the unpublished 2027/28 calendar');
   assert.strictEqual(H.SCHOOL_NOTES.DE, undefined);
@@ -267,7 +275,7 @@ test('isoDate round-trips', () => {
   assert.strictEqual(H.isoDate(new Date(Date.UTC(2026, 11, 31))), '2026-12-31');
 });
 
-test('world map data: every country has a path, 5 data countries, rest have none', () => {
+test('world map data: every country has a path, data countries match the data', () => {
   require('../app/map-paths.js');
   const M = globalThis.MapData;
   assert.ok(M && Array.isArray(M.countries), 'MapData.countries is an array');
@@ -286,13 +294,16 @@ test('world map data: every country has a path, 5 data countries, rest have none
       codes.add(c.code);
     }
   }
-  // exactly the five data countries are flagged, with the app's names
-  assert.deepStrictEqual([...codes].sort(), ['DE', 'FR', 'GB', 'JP', 'US']);
+  // most map countries have data (nager.at covers them), incl. the original five
+  assert.ok(codes.size > 100, 'expected most map countries to have data, got ' + codes.size);
+  for (const c of ['DE', 'FR', 'GB', 'JP', 'US']) assert.ok(codes.has(c), c + ' flagged');
   const byCode = Object.fromEntries(M.countries.filter((c) => c.code).map((c) => [c.code, c.name]));
   assert.strictEqual(byCode.GB, 'United Kingdom');
   assert.strictEqual(byCode.US, 'United States');
-  // a known no-data country is present but unflagged
-  const br = M.countries.find((c) => c.name === 'Brazil');
-  assert.ok(br, 'Brazil present');
-  assert.strictEqual(br.code, '');
+  // the map's data codes and the holiday data's countries agree exactly
+  assert.deepStrictEqual([...codes].sort(), H.COUNTRIES.map((c) => c.code).sort());
+  // a known no-data country is present but unflagged (India is not on nager.at)
+  const inr = M.countries.find((c) => c.name === 'India');
+  assert.ok(inr, 'India present');
+  assert.strictEqual(inr.code, '');
 });

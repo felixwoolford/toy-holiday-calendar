@@ -1,14 +1,15 @@
 #!/usr/bin/env node
-// Regenerates app/holidays.js:
-//   - bank/public holidays from https://date.nager.at (free, no API key)
+// Regenerates app/holidays.js and app/map-paths.js:
+//   - bank/public holidays from https://date.nager.at (free, no API key) for
+//     every world-map country that nager.at covers (~140 countries)
 //   - school holidays from:
 //       Germany:  https://www.schulferien.org/deutschland/ferien/<year>/ (per state)
 //       France:   https://www.schulferien.org/frankreich/ferien/<year>/  (per zone)
 //       UK:       https://www.education-ni.gov.uk/articles/school-holidays
 //                 (Northern Ireland only; England/Scotland/Wales set dates locally)
-//       US, Japan: none (set by local school districts / municipalities)
-// The generated file is committed so the app works offline with nothing installed.
-// Usage: node build/fetch-holidays.mjs
+//       all other countries: none (school calendars are set locally)
+// The generated files are committed so the app works offline with nothing
+// installed. Usage: node build/fetch-holidays.mjs
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -19,7 +20,87 @@ import * as d3geo from 'd3-geo';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 mkdirSync(join(root, 'app'), { recursive: true });
 const YEARS = [2024, 2025, 2026, 2027];
-const COUNTRY_CODES = ['GB', 'US', 'DE', 'FR', 'JP'];
+
+async function fetchJSON(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`GET ${url} -> HTTP ${res.status}`);
+  return res.json();
+}
+// fetchJSON with a retry, treating HTTP 404 as "no data" (empty array).
+async function fetchWithRetry(url, tries = 3) {
+  for (let i = 0; i < tries; i++) {
+    try {
+      const res = await fetch(url);
+      if (res.ok) return res.json();
+      if (res.status === 404) return [];
+      throw new Error(`HTTP ${res.status}`);
+    } catch (e) {
+      if (i === tries - 1) throw e;
+      await new Promise((r) => setTimeout(r, 400 * (i + 1)));
+    }
+  }
+}
+// Run fn over items with at most `limit` in flight; preserves order.
+async function mapPool(items, limit, fn) {
+  const out = new Array(items.length);
+  let idx = 0;
+  await Promise.all(
+    Array.from({ length: Math.min(limit, items.length) }, async () => {
+      while (idx < items.length) {
+        const i = idx++;
+        out[i] = await fn(items[i], i);
+      }
+    }),
+  );
+  return out;
+}
+
+// --------------------------------------------------- country coverage
+// The app's country selector is the world map (world-atlas / Natural Earth,
+// ~176 countries). We give holiday data to every map country that nager.at
+// covers. mledoze/countries bridges the map's numeric ISO ids to nager.at's
+// alpha-2 codes and supplies clean country names.
+const norm = (s) => String(s).replace(/^0+(?=\d)/, '');
+const ISO_LIST = await fetchJSON(
+  'https://raw.githubusercontent.com/mledoze/countries/master/countries.json',
+);
+const NAGER_LIST = await fetchJSON('https://date.nager.at/api/v3/AvailableCountries');
+const numToA2 = {};
+const a2ToName = {};
+for (const c of ISO_LIST) {
+  if (c.ccn3) numToA2[norm(c.ccn3)] = c.cca2;
+  if (c.cca2) a2ToName[c.cca2] = c.name.common;
+}
+const nagerCodes = new Set(NAGER_LIST.map((c) => c.countryCode));
+
+const topo = await fetchJSON('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
+const fc = topoFeature(topo, topo.objects.countries);
+const mapFeatures = fc.features.filter((f) => String(f.id) !== '010'); // drop Antarctica
+const W = 960, H = 460;
+const projection = d3geo.geoNaturalEarth1().fitExtent(
+  [[4, 4], [W - 4, H - 4]], { type: 'FeatureCollection', features: mapFeatures },
+);
+const geoPath = d3geo.geoPath(projection);
+const mapCountries = [];
+for (const f of mapFeatures) {
+  const d = geoPath(f);
+  if (!d) continue;
+  const num = f.id === undefined || f.id === null ? null : String(f.id);
+  const a2 = num ? numToA2[norm(num)] : null;
+  mapCountries.push({
+    iso: num || 'noid' + mapCountries.length,
+    code: a2 && nagerCodes.has(a2) ? a2 : '',
+    name: (a2 && a2ToName[a2]) || (f.properties && f.properties.name) || 'Unknown',
+    d,
+  });
+}
+const DATA_COUNTRIES = mapCountries.filter((c) => c.code);
+const DATA_CODES = DATA_COUNTRIES.map((c) => c.code);
+assert.ok(DATA_CODES.length > 100, `expected >100 data countries, got ${DATA_CODES.length}`);
+for (const code of ['GB', 'US', 'DE', 'FR', 'JP']) {
+  assert.ok(DATA_CODES.includes(code), `original data country missing: ${code}`);
+}
+console.log(`map: ${mapCountries.length} countries, ${DATA_CODES.length} with data`);
 
 // ------------------------------------------------------------- bank data
 
@@ -46,50 +127,58 @@ const DE_NOTES = {
   'Whit Monday': 'some states',
 };
 
-async function fetchJSON(url) {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`GET ${url} -> HTTP ${res.status}`);
-  return res.json();
-}
-
 function gbNote(counties) {
   if (!counties) return undefined;
   if (ALL_GB.every((c) => counties.includes(c))) return undefined;
   return counties.map((c) => GB_REGION[c]).join(', ');
 }
 
-const bank = {};
-for (const code of COUNTRY_CODES) {
+// Apply the per-country rules to one country's raw nager holidays (all years):
+//   GB: keep every region, label the partial ones.
+//   DE: nationwide only, with a note where a "national" holiday is partial.
+//   all others: nationwide (global) holidays only.
+// Dedupes by date+name, keeping the most far-reaching entry.
+function processBank(code, raw) {
   const seen = new Map(); // "date|name" -> entry, keep the most far-reaching one
-  for (const year of YEARS) {
-    for (const h of await fetchJSON(
-      `https://date.nager.at/api/v3/PublicHolidays/${year}/${code}`,
-    )) {
-      let name = RENAME[code]?.[h.name] ?? h.name;
-      let note;
-      if (code === 'GB') {
-        note = gbNote(h.counties); // UK: keep every region, label the partial ones
-      } else if (code === 'DE') {
-        if (!h.global) continue; // German state holidays: out of scope for now
-        note = DE_NOTES[name];
-      } else if (!h.global) {
-        continue; // US/FR/JP: nationwide holidays only
-      }
-      const key = `${h.date}|${name}`;
-      const rank = (x) => (x.global ? 2 : 0) + (x.counties?.length ?? 0);
-      const prev = seen.get(key);
-      if (!prev || rank(h) > rank(prev)) {
-        const entry = { date: h.date, name };
-        if (note) entry.note = note;
-        seen.set(key, entry);
-      }
+  for (const h of raw) {
+    let name = RENAME[code]?.[h.name] ?? h.name;
+    let note;
+    if (code === 'GB') {
+      note = gbNote(h.counties); // UK: keep every region, label the partial ones
+    } else if (code === 'DE') {
+      if (!h.global) continue; // German state holidays: out of scope
+      note = DE_NOTES[name];
+    } else if (!h.global) {
+      continue; // nationwide holidays only
+    }
+    const key = `${h.date}|${name}`;
+    const rank = (x) => (x.global ? 2 : 0) + (x.counties?.length ?? 0);
+    const prev = seen.get(key);
+    if (!prev || rank(h) > rank(prev)) {
+      const entry = { date: h.date, name };
+      if (note) entry.note = note;
+      seen.set(key, entry);
     }
   }
-  bank[code] = [...seen.values()].sort(
+  return [...seen.values()].sort(
     (a, b) => a.date.localeCompare(b.date) || a.name.localeCompare(b.name),
   );
-  console.log(`bank ${code}: ${bank[code].length}`);
 }
+
+const bank = {};
+await mapPool(DATA_CODES, 8, async (code) => {
+  const raw = [];
+  for (const year of YEARS) {
+    raw.push(...(await fetchWithRetry(
+      `https://date.nager.at/api/v3/PublicHolidays/${year}/${code}`,
+    )));
+  }
+  bank[code] = processBank(code, raw);
+});
+const totalBank = DATA_CODES.reduce((s, c) => s + bank[c].length, 0);
+console.log(`bank: ${DATA_CODES.length} countries, ${totalBank} holidays total`);
+const noBank = DATA_CODES.filter((c) => bank[c].length === 0);
+if (noBank.length) console.log('warning: no bank holidays for', noBank.join(', '));
 
 // ---------------------------------------------------------- school data
 
@@ -350,20 +439,18 @@ async function fetchNISchool() {
   return out;
 }
 
-const school = {
-  GB: await fetchNISchool(),
-  US: [], // set by each local school district
-  DE: await fetchDESchool(),
-  FR: await fetchFRSchool(),
-  JP: [], // set by each municipality
-};
-for (const code of COUNTRY_CODES) {
+const school = {};
+for (const code of DATA_CODES) school[code] = []; // no school data by default
+school.GB = await fetchNISchool();
+school.DE = await fetchDESchool();
+school.FR = await fetchFRSchool();
+for (const code of DATA_CODES) {
   school[code].sort(
     (a, b) => a.start.localeCompare(b.start) || a.end.localeCompare(b.end) ||
       a.name.localeCompare(b.name) || a.region.localeCompare(b.region),
   );
-  console.log(`school ${code}: ${school[code].length}`);
 }
+for (const code of ['GB', 'DE', 'FR']) console.log(`school ${code}: ${school[code].length}`);
 
 // Cross-check the French zones against the official 2026-27 calendar
 // (service-public.gouv.fr, F31952). schulferien.org's dates drop the
@@ -400,7 +487,7 @@ for (const [zone, byType] of Object.entries(FR_OFFICIAL)) {
 assert(school.DE.length > 100, 'DE school data too small');
 assert(school.FR.length > 40, 'FR school data too small');
 assert.strictEqual(school.GB.length, 24, 'NI: expected 24 entries (8 events x 3 years)');
-for (const code of COUNTRY_CODES) {
+for (const code of DATA_CODES) {
   for (const h of school[code]) {
     assert(h.start <= h.end, `school range backwards: ${JSON.stringify(h)}`);
     assert(h.name && h.region, `school entry missing name/region: ${JSON.stringify(h)}`);
@@ -414,8 +501,6 @@ for (const code of COUNTRY_CODES) {
 // Plain-language notes shown in the app where data is missing or partial.
 const SCHOOL_NOTES = {
   GB: 'In England, Scotland and Wales, school dates are set by each local authority, so only Northern Ireland is shown.',
-  US: 'In the US, school calendars are set by each local school district, so no school-holiday data is shown.',
-  JP: 'In Japan, school holidays are set by each municipality, so no school-holiday data is shown.',
   FR: 'The French school calendar for 2027/28 is not published yet, so autumn and Christmas 2027 are missing.',
 };
 
@@ -538,7 +623,8 @@ for (const def of RELIGIOUS_DEFS) {
 // ------------------------------------------------------- generated module
 
 const data = {};
-for (const code of COUNTRY_CODES) data[code] = { bank: bank[code], school: school[code] };
+for (const code of DATA_CODES) data[code] = { bank: bank[code], school: school[code] };
+const countriesList = DATA_COUNTRIES.map((c) => ({ code: c.code, name: c.name }));
 
 const apiSource = `
 (function (root, factory) {
@@ -554,13 +640,7 @@ const apiSource = `
   // };
   var DATA = __DATA__;
 
-  var COUNTRIES = [
-    { code: 'GB', name: 'United Kingdom' },
-    { code: 'US', name: 'United States' },
-    { code: 'DE', name: 'Germany' },
-    { code: 'FR', name: 'France' },
-    { code: 'JP', name: 'Japan' }
-  ];
+  var COUNTRIES = __COUNTRIES__;
 
   // Shown in the detail panel where school data is missing or partial.
   var SCHOOL_NOTES = __NOTES__;
@@ -722,10 +802,11 @@ writeFileSync(
   join(root, 'app', 'holidays.js'),
   header + apiSource
     .replace('__DATA__', JSON.stringify(data, null, 1))
+    .replace('__COUNTRIES__', JSON.stringify(countriesList, null, 1))
     .replace('__NOTES__', JSON.stringify(SCHOOL_NOTES, null, 1))
     .replace('__RELIGIOUS__', JSON.stringify(religious, null, 1)),
 );
-console.log(`wrote ${join(root, 'app', 'holidays.js')}`);
+console.log(`wrote ${join(root, 'app', 'holidays.js')} (${DATA_CODES.length} countries)`);
 
 // ------------------------------------------------------- world map
 // A static, offline world map so the page can be clicked to select countries.
@@ -733,45 +814,15 @@ console.log(`wrote ${join(root, 'app', 'holidays.js')}`);
 // (Natural Earth, public domain) and projected with d3-geo. Only the five
 // countries with holiday data carry a `code`; the rest are selectable but
 // have none (the app says so). Antarctica is dropped (no data, skews the fit).
-const MAP_ISO_TO_CODE = { '826': 'GB', '840': 'US', '276': 'DE', '250': 'FR', '392': 'JP' };
-const MAP_NAME = {
-  '826': 'United Kingdom', '840': 'United States', '276': 'Germany',
-  '250': 'France', '392': 'Japan',
-};
-
-async function buildMapData() {
-  const topo = await fetchJSON('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
-  const fc = topoFeature(topo, topo.objects.countries);
-  const features = fc.features.filter((f) => String(f.id) !== '010'); // drop Antarctica
-  const W = 960, H = 460;
-  const projection = d3geo.geoNaturalEarth1().fitExtent(
-    [[4, 4], [W - 4, H - 4]], { type: 'FeatureCollection', features },
-  );
-  const path = d3geo.geoPath(projection);
-  const countries = [];
-  features.forEach((f, i) => {
-    const d = path(f);
-    if (!d) return;
-    const rawIso = f.id === undefined || f.id === null ? null : String(f.id);
-    countries.push({
-      iso: rawIso || 'noid' + i,
-      code: MAP_ISO_TO_CODE[rawIso] || '',
-      name: MAP_NAME[rawIso] || (f.properties && f.properties.name) || 'Unknown',
-      d,
-    });
-  });
-  return { viewbox: `0 0 ${W} ${H}`, countries };
-}
-
-const mapData = await buildMapData();
+const mapData = { viewbox: `0 0 ${W} ${H}`, countries: mapCountries };
 assert(mapData.countries.length > 150, 'world map too small');
-for (const code of COUNTRY_CODES) {
+for (const code of DATA_CODES) {
   assert.ok(mapData.countries.some((c) => c.code === code), `map missing data country ${code}`);
 }
 const mapSource = `// Generated by build/fetch-holidays.mjs on ${new Date().toISOString().slice(0, 10)}
 // Offline world map: one SVG path per country (world-atlas / Natural Earth,
-// projected with d3-geo). \`code\` is set only for the five countries that have
-// holiday data; the others are selectable but have none.
+// projected with d3-geo). \`code\` is set for every country that has holiday
+// data (nager.at); the others are selectable but have none.
 globalThis.MapData = ${JSON.stringify(mapData)};
 `;
 writeFileSync(join(root, 'app', 'map-paths.js'), mapSource);

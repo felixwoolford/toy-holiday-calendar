@@ -34,8 +34,9 @@ async function gotoMonth(monthName, year) {
   }
   throw new Error(`could not reach ${monthName} ${year}`);
 }
+// match by data-date, not by text: cells now also carry dot-count chips
 const clickDay = (n) =>
-  page.locator('#cal .day:not(:disabled)', { hasText: new RegExp(`^${n}$`) }).click();
+  page.locator(`#cal .day:not(:disabled)[data-date$="-${String(n).padStart(2, '0')}"]`).click();
 const title = async () => (await page.textContent('#detail-date')).trim();
 const detail = async () => (await page.textContent('#detail')).trim();
 const DASH = '\u2013';
@@ -44,14 +45,15 @@ await page.goto(url);
 await page.waitForSelector('#cal .day');
 
 // 1a. The world map is the country selector: every country starts selected,
-// the five data countries are dark-outlined, and the count reads correctly.
+// most countries are dark-outlined (they have data), and the count is right.
 const totalPaths = await page.locator('#map path.country').count();
 assert.ok(totalPaths > 150, 'map should have many countries');
 assert.strictEqual(await page.locator('#map path.country.on').count(), totalPaths, 'all selected by default');
-assert.strictEqual(await page.locator('#map path.country.hasdata').count(), 5, '5 data countries outlined');
+const dataPaths = await page.locator('#map path.country.hasdata').count();
+assert.ok(dataPaths > 100, 'most map countries should be outlined as having data');
 let mc = await page.textContent('#mapcount');
 assert.ok(mc.includes(totalPaths + ' of ' + totalPaths), mc);
-assert.ok(mc.includes('5 with data'), mc);
+assert.ok(mc.includes(dataPaths + ' with data'), mc);
 
 // 1. Opens on the current month with today selected
 const now = new Date();
@@ -72,11 +74,11 @@ for (const want of ['School holidays', 'Bank holidays', 'Christmas Day',
   'United Kingdom', 'United States', 'Germany', 'France']) {
   assert.ok(d.includes(want), `detail should mention ${want}; got: ${d}`);
 }
-// school entries carry their region, and countries without data say so
+// school entries carry their region, and the lack of school data is stated
 assert.ok(d.includes('Northern Ireland'), 'NI school break should name its region');
-assert.ok(d.includes('school district'), 'US should explain the missing school data');
-// Japan only appears in its no-school-data note (it does not observe Christmas)
-assert.strictEqual(d.split('Japan').length - 1, 1, `Japan mentioned ${d.split('Japan').length - 1} times; got: ${d}`);
+assert.ok(d.includes('No school-holiday data for'), 'missing school data should be stated');
+// Japan has data but does not observe Christmas, so it appears nowhere
+assert.ok(!d.includes('Japan'), `Japan should not appear on 25 Dec; got: ${d}`);
 
 // 3. Second click extends to a range; span is highlighted
 await clickDay(28);
@@ -103,13 +105,18 @@ assert.ok(!(await title()).includes(DASH));
 await clickDay(30);
 assert.ok((await title()).includes(`23 December ${DASH} 30 December 2025`), await title());
 
-// 6. Country filter (world map) still works
+// 6. Country filter (world map) still works. With 141 data countries most
+// days carry more dots than fit, so the calendar caps at 12 and shows "+N".
+const dotmore = '#cal .day[data-date="2025-12-25"] .dotmore';
+assert.strictEqual(await page.locator('#cal .day[data-date="2025-12-25"] .dot').count(), 12, 'dots capped at 12');
+const moreBefore = Number((await page.textContent(dotmore)).slice(1));
+assert.ok(moreBefore > 100, 'most data countries observe Christmas');
 await page.locator('#map path[data-iso="826"]').dispatchEvent('click'); // deselect UK
 await clickDay(25);
 assert.ok(!(await detail()).includes('United Kingdom'));
-assert.strictEqual(await page.locator('#cal .day[data-date="2025-12-25"] .dot').count(), 3);
+assert.strictEqual(Number((await page.textContent(dotmore)).slice(1)), moreBefore - 1);
 mc = await page.textContent('#mapcount');
-assert.ok(mc.includes('4 with data'), mc);
+assert.ok(mc.includes(String(dataPaths - 1) + ' with data'), mc);
 assert.ok(mc.includes(String(totalPaths - 1) + ' of ' + totalPaths), mc);
 await page.locator('#map path[data-iso="826"]').dispatchEvent('click'); // reselect UK
 
@@ -127,10 +134,11 @@ assert.ok(d.includes('No bank holidays on this day.'), 'no bank holidays with no
 await page.locator('#selall').click();
 mc = await page.textContent('#mapcount');
 assert.ok(mc.includes(totalPaths + ' of ' + totalPaths), mc);
-assert.ok(mc.includes('5 with data'), mc);
+assert.ok(mc.includes(dataPaths + ' with data'), mc);
 
-// 6c. The search box finds small countries that are hard to click on the map,
+// 6c. The search box finds countries that are hard to click on the map,
 // and ticking them stays in sync with the map and the count.
+// A country with data (Luxembourg): unticking drops the "with data" count.
 await page.fill('#search', 'luxembourg');
 const luxRow = page.locator('#searchresults .searchrow', { hasText: 'Luxembourg' });
 assert.strictEqual(await luxRow.count(), 1, 'Luxembourg should be the only match');
@@ -139,12 +147,23 @@ assert.ok(await luxCb.isChecked(), 'Luxembourg is selected by default');
 await luxCb.uncheck();
 mc = await page.textContent('#mapcount');
 assert.ok(mc.includes(String(totalPaths - 1) + ' of ' + totalPaths), mc);
-assert.ok(mc.includes('5 with data'), mc); // Luxembourg has no data
+assert.ok(mc.includes(String(dataPaths - 1) + ' with data'), mc); // Luxembourg has data
 // ticking it back on restores the full selection
 await luxCb.check();
 assert.ok(await luxCb.isChecked());
 mc = await page.textContent('#mapcount');
 assert.ok(mc.includes(totalPaths + ' of ' + totalPaths), mc);
+// A country without data (India): unticking leaves the "with data" count alone.
+await page.fill('#search', 'india');
+const inRow = page.locator('#searchresults .searchrow', { hasText: 'India' });
+assert.strictEqual(await inRow.count(), 1, 'India should be the only match');
+const inCb = inRow.locator('input');
+assert.ok(await inCb.isChecked(), 'India is selected by default');
+await inCb.uncheck();
+mc = await page.textContent('#mapcount');
+assert.ok(mc.includes(String(totalPaths - 1) + ' of ' + totalPaths), mc);
+assert.ok(mc.includes(dataPaths + ' with data'), mc); // India has no data
+await inCb.check();
 // a data country is findable too and shows ticked
 await page.fill('#search', 'germany');
 const deRow = page.locator('#searchresults .searchrow', { hasText: 'Germany' });
@@ -167,20 +186,22 @@ d = await detail();
 for (const want of ['School holidays', 'Summer holiday', 'Bavaria', 'Northern Ireland']) {
   assert.ok(d.includes(want), `detail should mention ${want}; got: ${d}`);
 }
-assert.ok(d.includes('school district'), 'US note still shown');
+assert.ok(d.includes('No school-holiday data for'), 'missing school data still stated');
 
-// 8. A day with no holidays at all (15-18 Sep 2026 is holiday-free in all
-// five countries, verified against the data)
-await gotoMonth('September', 2026);
-await clickDay(15);
-await clickDay(15);
+// 8. A day with no holidays at all (7 Jun 2026 is holiday-free in every
+// data country, verified against the data)
+await gotoMonth('June', 2026);
+await clickDay(7);
+await clickDay(7);
 d = await detail();
 assert.ok(d.includes('No school holidays on this day.'), d);
 assert.ok(d.includes('No bank holidays on this day.'), d);
 
-// 9. ... and as a range
-await clickDay(18);
-assert.ok((await title()).includes(`15 September ${DASH} 18 September 2026`), await title());
+// 9. ... and as a range (13-15 Dec 2026 is likewise holiday-free)
+await gotoMonth('December', 2026);
+await clickDay(13);
+await clickDay(15);
+assert.ok((await title()).includes(`13 December ${DASH} 15 December 2026`), await title());
 d = await detail();
 assert.ok(d.includes('No school holidays in this range.'), d);
 assert.ok(d.includes('No bank holidays in this range.'), d);
@@ -227,12 +248,12 @@ await page.locator('#map path[data-iso="250"]').dispatchEvent('click'); // Franc
 await page.locator('#map path[data-iso="392"]').dispatchEvent('click'); // Japan off
 mc = await page.textContent('#mapcount');
 assert.ok(mc.includes(String(totalPaths - 2) + ' of ' + totalPaths), mc);
-assert.ok(mc.includes('3 with data'), mc);
+assert.ok(mc.includes(String(dataPaths - 2) + ' with data'), mc);
 await page.reload();
 await page.waitForSelector('#cal .day');
 mc = await page.textContent('#mapcount');
 assert.ok(mc.includes(String(totalPaths - 2) + ' of ' + totalPaths), mc);
-assert.ok(mc.includes('3 with data'), mc);
+assert.ok(mc.includes(String(dataPaths - 2) + ' with data'), mc);
 assert.strictEqual(await page.locator('#map path.country.on').count(), totalPaths - 2,
   'map should show the remembered subset');
 assert.ok(!/\bon\b/.test(await page.locator('#map path[data-iso="250"]').getAttribute('class')),
@@ -263,7 +284,7 @@ await page2.goto(url);
 await page2.waitForSelector('#cal .day');
 const mc2 = await page2.textContent('#mapcount');
 assert.ok(mc2.includes(totalPaths + ' of ' + totalPaths), mc2); // defaults to all
-assert.ok(mc2.includes('5 with data'), mc2);
+assert.ok(mc2.includes(dataPaths + ' with data'), mc2);
 await page2.locator('#map path[data-iso="826"]').dispatchEvent('click'); // still toggleable
 const mc3 = await page2.textContent('#mapcount');
 assert.ok(mc3.includes(String(totalPaths - 1) + ' of ' + totalPaths), mc3);

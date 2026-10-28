@@ -19,21 +19,15 @@
   //   school:  [{ start, end, name, region }]
   // };
   var DATA = {
- "GB": {
+ "TZ": {
   "bank": [
    {
     "date": "2024-01-01",
     "name": "New Year's Day"
    },
    {
-    "date": "2024-01-02",
-    "name": "2 January",
-    "note": "Scotland"
-   },
-   {
-    "date": "2024-03-18",
-    "name": "Saint Patrick's Day",
-    "note": "Northern Ireland"
+    "date": "2024-01-12",
+    "name": "Zanzibar Revolution Day"
    },
    {
     "date": "2024-03-29",
@@ -41,36 +35,35 @@
    },
    {
     "date": "2024-04-01",
-    "name": "Easter Monday",
-    "note": "England, Wales, Northern Ireland"
+    "name": "Easter Monday"
    },
    {
-    "date": "2024-05-06",
-    "name": "Early May Bank Holiday"
+    "date": "2024-04-07",
+    "name": "Karume Day"
    },
    {
-    "date": "2024-05-27",
-    "name": "Spring Bank Holiday"
+    "date": "2024-04-26",
+    "name": "Union Day"
    },
    {
-    "date": "2024-07-12",
-    "name": "Battle of the Boyne",
-    "note": "Northern Ireland"
+    "date": "2024-05-01",
+    "name": "International Workers' Day"
    },
    {
-    "date": "2024-08-05",
-    "name": "Summer Bank Holiday",
-    "note": "Scotland"
+    "date": "2024-07-07",
+    "name": "Saba Saba Day"
    },
    {
-    "date": "2024-08-26",
-    "name": "Summer Bank Holiday",
-    "note": "England, Wales, Northern Ireland"
+    "date": "2024-08-08",
+    "name": "Nane Nane Day"
    },
    {
-    "date": "2024-12-02",
-    "name": "Saint Andrew's Day",
-    "note": "Scotland"
+    "date": "2024-10-14",
+    "name": "Nyerere Day"
+   },
+   {
+    "date": "2024-12-09",
+    "name": "Independence Day"
    },
    {
     "date": "2024-12-25",
@@ -78,21 +71,19 @@
    },
    {
     "date": "2024-12-26",
-    "name": "Boxing Day"
+    "name": "St. Stephen's Day"
    },
    {
     "date": "2025-01-01",
     "name": "New Year's Day"
    },
    {
-    "date": "2025-01-02",
-    "name": "2 January",
-    "note": "Scotland"
+    "date": "2025-01-12",
+    "name": "Zanzibar Revolution Day"
    },
    {
-    "date": "2025-03-17",
-    "name": "Saint Patrick's Day",
-    "note": "Northern Ireland"
+    "date": "2025-04-07",
+    "name": "Karume Day"
    },
    {
     "date": "2025-04-18",
@@ -100,36 +91,31 @@
    },
    {
     "date": "2025-04-21",
-    "name": "Easter Monday",
-    "note": "England, Wales, Northern Ireland"
+    "name": "Easter Monday"
    },
    {
-    "date": "2025-05-05",
-    "name": "Early May Bank Holiday"
+    "date": "2025-04-26",
+    "name": "Union Day"
    },
    {
-    "date": "2025-05-26",
-    "name": "Spring Bank Holiday"
+    "date": "2025-05-01",
+    "name": "International Workers' Day"
    },
    {
-    "date": "2025-07-14",
-    "name": "Battle of the Boyne",
-    "note": "Northern Ireland"
+    "date": "2025-07-07",
+    "name": "Saba Saba Day"
    },
    {
-    "date": "2025-08-04",
-    "name": "Summer Bank Holiday",
-    "note": "Scotland"
+    "date": "2025-08-08",
+    "name": "Nane Nane Day"
    },
    {
-    "date": "2025-08-25",
-    "name": "Summer Bank Holiday",
-    "note": "England, Wales, Northern Ireland"
+    "date": "2025-10-14",
+    "name": "Nyerere Day"
    },
    {
-    "date": "2025-12-01",
-    "name": "Saint Andrew's Day",
-    "note": "Scotland"
+    "date": "2025-12-09",
+    "name": "Independence Day"
    },
    {
     "date": "2025-12-25",
@@ -137,21 +123,15 @@
    },
    {
     "date": "2025-12-26",
-    "name": "Boxing Day"
+    "name": "St. Stephen's Day"
    },
    {
     "date": "2026-01-01",
     "name": "New Year's Day"
    },
    {
-    "date": "2026-01-02",
-    "name": "2 January",
-    "note": "Scotland"
-   },
-   {
-    "date": "2026-03-17",
-    "name": "Saint Patrick's Day",
-    "note": "Northern Ireland"
+    "date": "2026-01-12",
+    "name": "Zanzibar Revolution Day"
    },
    {
     "date": "2026-04-03",
@@ -159,63 +139,51 @@
    },
    {
     "date": "2026-04-06",
-    "name": "Easter Monday",
-    "note": "England, Wales, Northern Ireland"
+    "name": "Easter Monday"
    },
    {
-    "date": "2026-05-04",
-    "name": "Early May Bank Holiday"
+    "date": "2026-04-07",
+    "name": "Karume Day"
    },
    {
-    "date": "2026-05-25",
-    "name": "Spring Bank Holiday"
+    "date": "2026-04-26",
+    "name": "Union Day"
    },
    {
-    "date": "2026-06-15",
-    "name": "World Cup Bank Holiday",
-    "note": "Scotland"
+    "date": "2026-05-01",
+    "name": "International Workers' Day"
    },
    {
-    "date": "2026-07-13",
-    "name": "Battle of the Boyne",
-    "note": "Northern Ireland"
+    "date": "2026-07-07",
+    "name": "Saba Saba Day"
    },
    {
-    "date": "2026-08-03",
-    "name": "Summer Bank Holiday",
-    "note": "Scotland"
+    "date": "2026-08-08",
+    "name": "Nane Nane Day"
    },
    {
-    "date": "2026-08-31",
-    "name": "Summer Bank Holiday",
-    "note": "England, Wales, Northern Ireland"
+    "date": "2026-10-14",
+    "name": "Nyerere Day"
    },
    {
-    "date": "2026-11-30",
-    "name": "Saint Andrew's Day",
-    "note": "Scotland"
+    "date": "2026-12-09",
+    "name": "Independence Day"
    },
    {
     "date": "2026-12-25",
     "name": "Christmas Day"
    },
    {
-    "date": "2026-12-28",
-    "name": "Boxing Day"
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
    },
    {
     "date": "2027-01-01",
     "name": "New Year's Day"
    },
    {
-    "date": "2027-01-02",
-    "name": "2 January",
-    "note": "Scotland"
-   },
-   {
-    "date": "2027-03-17",
-    "name": "Saint Patrick's Day",
-    "note": "Northern Ireland"
+    "date": "2027-01-12",
+    "name": "Zanzibar Revolution Day"
    },
    {
     "date": "2027-03-26",
@@ -223,192 +191,179 @@
    },
    {
     "date": "2027-03-29",
-    "name": "Easter Monday",
-    "note": "England, Wales, Northern Ireland"
+    "name": "Easter Monday"
    },
    {
-    "date": "2027-05-03",
-    "name": "Early May Bank Holiday"
+    "date": "2027-04-07",
+    "name": "Karume Day"
    },
    {
-    "date": "2027-05-31",
-    "name": "Spring Bank Holiday"
+    "date": "2027-04-26",
+    "name": "Union Day"
    },
    {
-    "date": "2027-07-12",
-    "name": "Battle of the Boyne",
-    "note": "Northern Ireland"
+    "date": "2027-05-01",
+    "name": "International Workers' Day"
    },
    {
-    "date": "2027-08-02",
-    "name": "Summer Bank Holiday",
-    "note": "Scotland"
+    "date": "2027-07-07",
+    "name": "Saba Saba Day"
    },
    {
-    "date": "2027-08-30",
-    "name": "Summer Bank Holiday",
-    "note": "England, Wales, Northern Ireland"
+    "date": "2027-08-08",
+    "name": "Nane Nane Day"
    },
    {
-    "date": "2027-11-30",
-    "name": "Saint Andrew's Day",
-    "note": "Scotland"
+    "date": "2027-10-14",
+    "name": "Nyerere Day"
    },
    {
-    "date": "2027-12-27",
+    "date": "2027-12-09",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-25",
     "name": "Christmas Day"
    },
    {
-    "date": "2027-12-28",
-    "name": "Boxing Day"
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
    }
   ],
-  "school": [
+  "school": []
+ },
+ "CA": {
+  "bank": [
    {
-    "start": "2024-10-31",
-    "end": "2024-11-01",
-    "name": "Halloween",
-    "region": "Northern Ireland"
+    "date": "2024-01-01",
+    "name": "New Year's Day"
    },
    {
-    "start": "2024-12-23",
-    "end": "2025-01-02",
-    "name": "Christmas and New Year",
-    "region": "Northern Ireland"
+    "date": "2024-03-29",
+    "name": "Good Friday"
    },
    {
-    "start": "2025-02-14",
-    "end": "2025-02-14",
-    "name": "Mid-term",
-    "region": "Northern Ireland"
+    "date": "2024-05-20",
+    "name": "Victoria Day"
    },
    {
-    "start": "2025-03-17",
-    "end": "2025-03-17",
-    "name": "St Patrick's Day",
-    "region": "Northern Ireland"
+    "date": "2024-07-01",
+    "name": "Canada Day"
    },
    {
-    "start": "2025-04-17",
-    "end": "2025-04-25",
-    "name": "Easter",
-    "region": "Northern Ireland"
+    "date": "2024-09-02",
+    "name": "Labour Day"
    },
    {
-    "start": "2025-05-05",
-    "end": "2025-05-05",
-    "name": "May Day",
-    "region": "Northern Ireland"
+    "date": "2024-09-30",
+    "name": "National Day for Truth and Reconciliation"
    },
    {
-    "start": "2025-05-26",
-    "end": "2025-05-26",
-    "name": "Spring Bank Holiday",
-    "region": "Northern Ireland"
+    "date": "2024-10-14",
+    "name": "Thanksgiving"
    },
    {
-    "start": "2025-07-01",
-    "end": "2025-08-31",
-    "name": "Summer holiday begins",
-    "region": "Northern Ireland"
+    "date": "2024-12-25",
+    "name": "Christmas Day"
    },
    {
-    "start": "2025-10-31",
-    "end": "2025-10-31",
-    "name": "Halloween",
-    "region": "Northern Ireland"
+    "date": "2025-01-01",
+    "name": "New Year's Day"
    },
    {
-    "start": "2025-12-22",
-    "end": "2026-01-02",
-    "name": "Christmas and New Year",
-    "region": "Northern Ireland"
+    "date": "2025-04-18",
+    "name": "Good Friday"
    },
    {
-    "start": "2026-02-13",
-    "end": "2026-02-13",
-    "name": "Mid-term",
-    "region": "Northern Ireland"
+    "date": "2025-05-19",
+    "name": "Victoria Day"
    },
    {
-    "start": "2026-03-17",
-    "end": "2026-03-17",
-    "name": "St Patrick's Day",
-    "region": "Northern Ireland"
+    "date": "2025-07-01",
+    "name": "Canada Day"
    },
    {
-    "start": "2026-04-02",
-    "end": "2026-04-10",
-    "name": "Easter",
-    "region": "Northern Ireland"
+    "date": "2025-09-01",
+    "name": "Labour Day"
    },
    {
-    "start": "2026-05-04",
-    "end": "2026-05-04",
-    "name": "May Day",
-    "region": "Northern Ireland"
+    "date": "2025-09-30",
+    "name": "National Day for Truth and Reconciliation"
    },
    {
-    "start": "2026-05-25",
-    "end": "2026-05-25",
-    "name": "Spring Bank Holiday",
-    "region": "Northern Ireland"
+    "date": "2025-10-13",
+    "name": "Thanksgiving"
    },
    {
-    "start": "2026-07-01",
-    "end": "2026-08-31",
-    "name": "Summer holiday begins",
-    "region": "Northern Ireland"
+    "date": "2025-12-25",
+    "name": "Christmas Day"
    },
    {
-    "start": "2026-10-30",
-    "end": "2026-10-30",
-    "name": "Halloween",
-    "region": "Northern Ireland"
+    "date": "2026-01-01",
+    "name": "New Year's Day"
    },
    {
-    "start": "2026-12-21",
-    "end": "2027-01-01",
-    "name": "Christmas and New Year",
-    "region": "Northern Ireland"
+    "date": "2026-04-03",
+    "name": "Good Friday"
    },
    {
-    "start": "2027-02-12",
-    "end": "2027-02-12",
-    "name": "Mid-term",
-    "region": "Northern Ireland"
+    "date": "2026-05-18",
+    "name": "Victoria Day"
    },
    {
-    "start": "2027-03-17",
-    "end": "2027-03-17",
-    "name": "St Patrick's Day",
-    "region": "Northern Ireland"
+    "date": "2026-07-01",
+    "name": "Canada Day"
    },
    {
-    "start": "2027-03-25",
-    "end": "2027-04-02",
-    "name": "Easter",
-    "region": "Northern Ireland"
+    "date": "2026-09-07",
+    "name": "Labour Day"
    },
    {
-    "start": "2027-05-03",
-    "end": "2027-05-03",
-    "name": "May Day",
-    "region": "Northern Ireland"
+    "date": "2026-09-30",
+    "name": "National Day for Truth and Reconciliation"
    },
    {
-    "start": "2027-05-31",
-    "end": "2027-05-31",
-    "name": "Spring Bank Holiday",
-    "region": "Northern Ireland"
+    "date": "2026-10-12",
+    "name": "Thanksgiving"
    },
    {
-    "start": "2027-07-01",
-    "end": "2027-08-31",
-    "name": "Summer holiday begins",
-    "region": "Northern Ireland"
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-24",
+    "name": "Victoria Day"
+   },
+   {
+    "date": "2027-07-01",
+    "name": "Canada Day"
+   },
+   {
+    "date": "2027-09-06",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-09-30",
+    "name": "National Day for Truth and Reconciliation"
+   },
+   {
+    "date": "2027-10-11",
+    "name": "Thanksgiving"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
    }
-  ]
+  ],
+  "school": []
  },
  "US": {
   "bank": [
@@ -587,6 +542,19449 @@
    {
     "date": "2027-12-24",
     "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "KZ": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2024-03-21",
+    "name": "Nauryz Meyramy"
+   },
+   {
+    "date": "2024-03-22",
+    "name": "Nauryz Meyramy"
+   },
+   {
+    "date": "2024-03-23",
+    "name": "Nauryz Meyramy"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Kazakhstan People's Unity Day"
+   },
+   {
+    "date": "2024-05-07",
+    "name": "Defender of the Fatherland Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Great Patriotic War Against Fascism Victory Day"
+   },
+   {
+    "date": "2024-07-06",
+    "name": "Capital City Day"
+   },
+   {
+    "date": "2024-08-30",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2024-10-25",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2024-12-16",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2025-03-21",
+    "name": "Nauryz Meyramy"
+   },
+   {
+    "date": "2025-03-22",
+    "name": "Nauryz Meyramy"
+   },
+   {
+    "date": "2025-03-23",
+    "name": "Nauryz Meyramy"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Kazakhstan People's Unity Day"
+   },
+   {
+    "date": "2025-05-07",
+    "name": "Defender of the Fatherland Day"
+   },
+   {
+    "date": "2025-05-09",
+    "name": "Great Patriotic War Against Fascism Victory Day"
+   },
+   {
+    "date": "2025-07-06",
+    "name": "Capital City Day"
+   },
+   {
+    "date": "2025-08-30",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2025-10-25",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2025-12-16",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2026-03-21",
+    "name": "Nauryz Meyramy"
+   },
+   {
+    "date": "2026-03-22",
+    "name": "Nauryz Meyramy"
+   },
+   {
+    "date": "2026-03-23",
+    "name": "Nauryz Meyramy"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Kazakhstan People's Unity Day"
+   },
+   {
+    "date": "2026-05-07",
+    "name": "Defender of the Fatherland Day"
+   },
+   {
+    "date": "2026-05-09",
+    "name": "Great Patriotic War Against Fascism Victory Day"
+   },
+   {
+    "date": "2026-07-06",
+    "name": "Capital City Day"
+   },
+   {
+    "date": "2026-08-30",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2026-10-25",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2026-12-16",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2027-03-21",
+    "name": "Nauryz Meyramy"
+   },
+   {
+    "date": "2027-03-22",
+    "name": "Nauryz Meyramy"
+   },
+   {
+    "date": "2027-03-23",
+    "name": "Nauryz Meyramy"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Kazakhstan People's Unity Day"
+   },
+   {
+    "date": "2027-05-07",
+    "name": "Defender of the Fatherland Day"
+   },
+   {
+    "date": "2027-05-09",
+    "name": "Great Patriotic War Against Fascism Victory Day"
+   },
+   {
+    "date": "2027-07-06",
+    "name": "Capital City Day"
+   },
+   {
+    "date": "2027-08-30",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2027-10-25",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2027-12-16",
+    "name": "Independence Day"
+   }
+  ],
+  "school": []
+ },
+ "PG": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-30",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-06-10",
+    "name": "Queen's Birthday"
+   },
+   {
+    "date": "2024-07-23",
+    "name": "Remembrance Day"
+   },
+   {
+    "date": "2024-08-26",
+    "name": "Repentance Day"
+   },
+   {
+    "date": "2024-09-16",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-19",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Queen's Birthday"
+   },
+   {
+    "date": "2025-07-23",
+    "name": "Remembrance Day"
+   },
+   {
+    "date": "2025-08-26",
+    "name": "Repentance Day"
+   },
+   {
+    "date": "2025-09-16",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-04",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-06-08",
+    "name": "Queen's Birthday"
+   },
+   {
+    "date": "2026-07-23",
+    "name": "Remembrance Day"
+   },
+   {
+    "date": "2026-08-26",
+    "name": "Repentance Day"
+   },
+   {
+    "date": "2026-09-16",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-27",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-06-14",
+    "name": "Queen's Birthday"
+   },
+   {
+    "date": "2027-07-23",
+    "name": "Remembrance Day"
+   },
+   {
+    "date": "2027-08-26",
+    "name": "Repentance Day"
+   },
+   {
+    "date": "2027-09-16",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "Boxing Day"
+   }
+  ],
+  "school": []
+ },
+ "ID": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-06-01",
+    "name": "Pancasila Day"
+   },
+   {
+    "date": "2024-08-17",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-01",
+    "name": "Pancasila Day"
+   },
+   {
+    "date": "2025-08-17",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-06-01",
+    "name": "Pancasila Day"
+   },
+   {
+    "date": "2026-08-17",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-06-01",
+    "name": "Pancasila Day"
+   },
+   {
+    "date": "2027-08-17",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "AR": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-12",
+    "name": "Carnival"
+   },
+   {
+    "date": "2024-02-13",
+    "name": "Carnival"
+   },
+   {
+    "date": "2024-03-24",
+    "name": "Day of Remembrance for Truth and Justice"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-02",
+    "name": "Day of the Veterans and Fallen of the Malvinas War"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-25",
+    "name": "May Revolution"
+   },
+   {
+    "date": "2024-06-17",
+    "name": "Anniversary of the Passing of General Martín Miguel de Güemes"
+   },
+   {
+    "date": "2024-06-20",
+    "name": "General Manuel Belgrano Memorial Day"
+   },
+   {
+    "date": "2024-07-09",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-08-17",
+    "name": "General José de San Martín Memorial Day"
+   },
+   {
+    "date": "2024-10-12",
+    "name": "Day of Respect for Cultural Diversity"
+   },
+   {
+    "date": "2024-11-18",
+    "name": "National Sovereignty Day"
+   },
+   {
+    "date": "2024-12-08",
+    "name": "Immaculate Conception Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-03",
+    "name": "Carnival"
+   },
+   {
+    "date": "2025-03-04",
+    "name": "Carnival"
+   },
+   {
+    "date": "2025-03-24",
+    "name": "Day of Remembrance for Truth and Justice"
+   },
+   {
+    "date": "2025-04-02",
+    "name": "Day of the Veterans and Fallen of the Malvinas War"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-25",
+    "name": "May Revolution"
+   },
+   {
+    "date": "2025-06-16",
+    "name": "Anniversary of the Passing of General Martín Miguel de Güemes"
+   },
+   {
+    "date": "2025-06-20",
+    "name": "General Manuel Belgrano Memorial Day"
+   },
+   {
+    "date": "2025-07-09",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-08-17",
+    "name": "General José de San Martín Memorial Day"
+   },
+   {
+    "date": "2025-10-12",
+    "name": "Day of Respect for Cultural Diversity"
+   },
+   {
+    "date": "2025-11-24",
+    "name": "National Sovereignty Day"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Immaculate Conception Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-16",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-02-17",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-03-24",
+    "name": "Day of Remembrance for Truth and Justice"
+   },
+   {
+    "date": "2026-04-02",
+    "name": "Day of the Veterans and Fallen of the Malvinas War"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "May Revolution"
+   },
+   {
+    "date": "2026-06-15",
+    "name": "Anniversary of the Passing of General Martín Miguel de Güemes"
+   },
+   {
+    "date": "2026-06-20",
+    "name": "General Manuel Belgrano Memorial Day"
+   },
+   {
+    "date": "2026-07-09",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-08-17",
+    "name": "General José de San Martín Memorial Day"
+   },
+   {
+    "date": "2026-10-12",
+    "name": "Day of Respect for Cultural Diversity"
+   },
+   {
+    "date": "2026-11-23",
+    "name": "National Sovereignty Day"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Immaculate Conception Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-08",
+    "name": "Carnival"
+   },
+   {
+    "date": "2027-02-09",
+    "name": "Carnival"
+   },
+   {
+    "date": "2027-03-24",
+    "name": "Day of Remembrance for Truth and Justice"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-04-02",
+    "name": "Day of the Veterans and Fallen of the Malvinas War"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-25",
+    "name": "May Revolution"
+   },
+   {
+    "date": "2027-06-20",
+    "name": "General Manuel Belgrano Memorial Day"
+   },
+   {
+    "date": "2027-06-21",
+    "name": "Anniversary of the Passing of General Martín Miguel de Güemes"
+   },
+   {
+    "date": "2027-07-09",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-08-16",
+    "name": "General José de San Martín Memorial Day"
+   },
+   {
+    "date": "2027-10-11",
+    "name": "Day of Respect for Cultural Diversity"
+   },
+   {
+    "date": "2027-11-20",
+    "name": "National Sovereignty Day"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Immaculate Conception Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "CL": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-30",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-21",
+    "name": "Navy Day"
+   },
+   {
+    "date": "2024-06-20",
+    "name": "National Day of Indigenous Peoples"
+   },
+   {
+    "date": "2024-06-29",
+    "name": "Saint Peter and Saint Paul"
+   },
+   {
+    "date": "2024-07-16",
+    "name": "Our Lady of Mount Carmel"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption of Mary"
+   },
+   {
+    "date": "2024-09-18",
+    "name": "National holiday"
+   },
+   {
+    "date": "2024-09-19",
+    "name": "Army Day"
+   },
+   {
+    "date": "2024-10-12",
+    "name": "Columbus Day"
+   },
+   {
+    "date": "2024-10-31",
+    "name": "Reformation Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2024-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-19",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-21",
+    "name": "Navy Day"
+   },
+   {
+    "date": "2025-06-20",
+    "name": "National Day of Indigenous Peoples"
+   },
+   {
+    "date": "2025-06-29",
+    "name": "Saint Peter and Saint Paul"
+   },
+   {
+    "date": "2025-07-16",
+    "name": "Our Lady of Mount Carmel"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption of Mary"
+   },
+   {
+    "date": "2025-09-18",
+    "name": "National holiday"
+   },
+   {
+    "date": "2025-09-19",
+    "name": "Army Day"
+   },
+   {
+    "date": "2025-10-12",
+    "name": "Columbus Day"
+   },
+   {
+    "date": "2025-10-31",
+    "name": "Reformation Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-04",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-21",
+    "name": "Navy Day"
+   },
+   {
+    "date": "2026-06-21",
+    "name": "National Day of Indigenous Peoples"
+   },
+   {
+    "date": "2026-06-29",
+    "name": "Saint Peter and Saint Paul"
+   },
+   {
+    "date": "2026-07-16",
+    "name": "Our Lady of Mount Carmel"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption of Mary"
+   },
+   {
+    "date": "2026-09-18",
+    "name": "National holiday"
+   },
+   {
+    "date": "2026-09-19",
+    "name": "Army Day"
+   },
+   {
+    "date": "2026-10-12",
+    "name": "Columbus Day"
+   },
+   {
+    "date": "2026-10-31",
+    "name": "Reformation Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-27",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-21",
+    "name": "Navy Day"
+   },
+   {
+    "date": "2027-06-21",
+    "name": "National Day of Indigenous Peoples"
+   },
+   {
+    "date": "2027-06-28",
+    "name": "Saint Peter and Saint Paul"
+   },
+   {
+    "date": "2027-07-16",
+    "name": "Our Lady of Mount Carmel"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption of Mary"
+   },
+   {
+    "date": "2027-09-18",
+    "name": "National holiday"
+   },
+   {
+    "date": "2027-09-19",
+    "name": "Army Day"
+   },
+   {
+    "date": "2027-10-11",
+    "name": "Columbus Day"
+   },
+   {
+    "date": "2027-10-31",
+    "name": "Reformation Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "CD": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-04",
+    "name": "Martyrs Day"
+   },
+   {
+    "date": "2024-01-16",
+    "name": "Laurent-Désiré Kabila Assassination"
+   },
+   {
+    "date": "2024-01-17",
+    "name": "Patrice Lumumba Assassination"
+   },
+   {
+    "date": "2024-04-06",
+    "name": "Kimbangu's Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-17",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2024-06-30",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-08-01",
+    "name": "Parents' Day"
+   },
+   {
+    "date": "2024-08-02",
+    "name": "Congolese Genocide Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-04",
+    "name": "Martyrs Day"
+   },
+   {
+    "date": "2025-01-16",
+    "name": "Laurent-Désiré Kabila Assassination"
+   },
+   {
+    "date": "2025-01-17",
+    "name": "Patrice Lumumba Assassination"
+   },
+   {
+    "date": "2025-04-06",
+    "name": "Kimbangu's Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-17",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2025-06-30",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-08-01",
+    "name": "Parents' Day"
+   },
+   {
+    "date": "2025-08-02",
+    "name": "Congolese Genocide Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-04",
+    "name": "Martyrs Day"
+   },
+   {
+    "date": "2026-01-16",
+    "name": "Laurent-Désiré Kabila Assassination"
+   },
+   {
+    "date": "2026-01-17",
+    "name": "Patrice Lumumba Assassination"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Kimbangu's Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-17",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2026-06-30",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-08-01",
+    "name": "Parents' Day"
+   },
+   {
+    "date": "2026-08-02",
+    "name": "Congolese Genocide Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-04",
+    "name": "Martyrs Day"
+   },
+   {
+    "date": "2027-01-16",
+    "name": "Laurent-Désiré Kabila Assassination"
+   },
+   {
+    "date": "2027-01-17",
+    "name": "Patrice Lumumba Assassination"
+   },
+   {
+    "date": "2027-04-06",
+    "name": "Kimbangu's Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2027-06-30",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-08-01",
+    "name": "Parents' Day"
+   },
+   {
+    "date": "2027-08-02",
+    "name": "Congolese Genocide Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "SO": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-06-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-07-01",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-06-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-07-01",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-06-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-07-01",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-06-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-07-01",
+    "name": "Republic Day"
+   }
+  ],
+  "school": []
+ },
+ "KE": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-06-01",
+    "name": "Madaraka Day"
+   },
+   {
+    "date": "2024-10-10",
+    "name": "Mazingira Day"
+   },
+   {
+    "date": "2024-10-21",
+    "name": "Mashujaa Day"
+   },
+   {
+    "date": "2024-12-12",
+    "name": "Jamhuri Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-06-02",
+    "name": "Madaraka Day"
+   },
+   {
+    "date": "2025-10-10",
+    "name": "Mazingira Day"
+   },
+   {
+    "date": "2025-10-20",
+    "name": "Mashujaa Day"
+   },
+   {
+    "date": "2025-12-12",
+    "name": "Jamhuri Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-06-01",
+    "name": "Madaraka Day"
+   },
+   {
+    "date": "2026-10-10",
+    "name": "Mazingira Day"
+   },
+   {
+    "date": "2026-10-20",
+    "name": "Mashujaa Day"
+   },
+   {
+    "date": "2026-12-12",
+    "name": "Jamhuri Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-06-01",
+    "name": "Madaraka Day"
+   },
+   {
+    "date": "2027-10-11",
+    "name": "Mazingira Day"
+   },
+   {
+    "date": "2027-10-20",
+    "name": "Mashujaa Day"
+   },
+   {
+    "date": "2027-12-13",
+    "name": "Jamhuri Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "Boxing Day"
+   }
+  ],
+  "school": []
+ },
+ "SD": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-01-07",
+    "name": "Coptic Christmas"
+   },
+   {
+    "date": "2024-05-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-01-07",
+    "name": "Coptic Christmas"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-01-07",
+    "name": "Coptic Christmas"
+   },
+   {
+    "date": "2026-04-12",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-01-07",
+    "name": "Coptic Christmas"
+   },
+   {
+    "date": "2027-05-02",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "TD": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-08-11",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-11-28",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2024-12-01",
+    "name": "Freedom and Democracy Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-08-11",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-11-28",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2025-12-01",
+    "name": "Freedom and Democracy Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-08-11",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-11-28",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2026-12-01",
+    "name": "Freedom and Democracy Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-08-11",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-11-28",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2027-12-01",
+    "name": "Freedom and Democracy Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "HT": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-02",
+    "name": "Ancestry Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2024-02-12",
+    "name": "Carnival"
+   },
+   {
+    "date": "2024-02-13",
+    "name": "Carnival"
+   },
+   {
+    "date": "2024-02-14",
+    "name": "Ash Wednesday"
+   },
+   {
+    "date": "2024-03-28",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour and Agriculture Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-18",
+    "name": "Flag and Universities Day"
+   },
+   {
+    "date": "2024-05-30",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption of Mary"
+   },
+   {
+    "date": "2024-10-17",
+    "name": "Dessalines Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2024-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2024-11-18",
+    "name": "Battle of Vertières Day"
+   },
+   {
+    "date": "2024-12-05",
+    "name": "Discovery Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-02",
+    "name": "Ancestry Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2025-03-03",
+    "name": "Carnival"
+   },
+   {
+    "date": "2025-03-04",
+    "name": "Carnival"
+   },
+   {
+    "date": "2025-03-05",
+    "name": "Ash Wednesday"
+   },
+   {
+    "date": "2025-04-17",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour and Agriculture Day"
+   },
+   {
+    "date": "2025-05-18",
+    "name": "Flag and Universities Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-19",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption of Mary"
+   },
+   {
+    "date": "2025-10-17",
+    "name": "Dessalines Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2025-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2025-11-18",
+    "name": "Battle of Vertières Day"
+   },
+   {
+    "date": "2025-12-05",
+    "name": "Discovery Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "Ancestry Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2026-02-16",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-02-17",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-02-18",
+    "name": "Ash Wednesday"
+   },
+   {
+    "date": "2026-04-02",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour and Agriculture Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-18",
+    "name": "Flag and Universities Day"
+   },
+   {
+    "date": "2026-06-04",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption of Mary"
+   },
+   {
+    "date": "2026-10-17",
+    "name": "Dessalines Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2026-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2026-11-18",
+    "name": "Battle of Vertières Day"
+   },
+   {
+    "date": "2026-12-05",
+    "name": "Discovery Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-02",
+    "name": "Ancestry Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2027-02-08",
+    "name": "Carnival"
+   },
+   {
+    "date": "2027-02-09",
+    "name": "Carnival"
+   },
+   {
+    "date": "2027-02-10",
+    "name": "Ash Wednesday"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour and Agriculture Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-18",
+    "name": "Flag and Universities Day"
+   },
+   {
+    "date": "2027-05-27",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption of Mary"
+   },
+   {
+    "date": "2027-10-17",
+    "name": "Dessalines Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2027-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2027-11-18",
+    "name": "Battle of Vertières Day"
+   },
+   {
+    "date": "2027-12-05",
+    "name": "Discovery Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "DO": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Day of Kings"
+   },
+   {
+    "date": "2024-01-21",
+    "name": "Our Lady of Altagracia"
+   },
+   {
+    "date": "2024-01-26",
+    "name": "Duarte's Birthday"
+   },
+   {
+    "date": "2024-02-27",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-28",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2024-05-30",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2024-08-16",
+    "name": "Restoration Day"
+   },
+   {
+    "date": "2024-09-24",
+    "name": "Our Lady of Mercy"
+   },
+   {
+    "date": "2024-11-06",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Day of Kings"
+   },
+   {
+    "date": "2025-01-21",
+    "name": "Our Lady of Altagracia"
+   },
+   {
+    "date": "2025-01-26",
+    "name": "Duarte's Birthday"
+   },
+   {
+    "date": "2025-02-27",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-28",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2025-06-19",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2025-08-16",
+    "name": "Restoration Day"
+   },
+   {
+    "date": "2025-09-24",
+    "name": "Our Lady of Mercy"
+   },
+   {
+    "date": "2025-11-06",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Day of Kings"
+   },
+   {
+    "date": "2026-01-21",
+    "name": "Our Lady of Altagracia"
+   },
+   {
+    "date": "2026-01-26",
+    "name": "Duarte's Birthday"
+   },
+   {
+    "date": "2026-02-27",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-28",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2026-06-04",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2026-08-16",
+    "name": "Restoration Day"
+   },
+   {
+    "date": "2026-09-24",
+    "name": "Our Lady of Mercy"
+   },
+   {
+    "date": "2026-11-06",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Day of Kings"
+   },
+   {
+    "date": "2027-01-21",
+    "name": "Our Lady of Altagracia"
+   },
+   {
+    "date": "2027-01-26",
+    "name": "Duarte's Birthday"
+   },
+   {
+    "date": "2027-02-27",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-27",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2027-05-28",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2027-08-16",
+    "name": "Restoration Day"
+   },
+   {
+    "date": "2027-09-24",
+    "name": "Our Lady of Mercy"
+   },
+   {
+    "date": "2027-11-06",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "RU": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-02",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2024-01-03",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2024-01-04",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2024-01-05",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2024-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2024-02-23",
+    "name": "Defender of the Fatherland Day"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2024-06-12",
+    "name": "Russia Day"
+   },
+   {
+    "date": "2024-11-04",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-02",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2025-01-03",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2025-01-04",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2025-01-05",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2025-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2025-02-23",
+    "name": "Defender of the Fatherland Day"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-09",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2025-06-12",
+    "name": "Russia Day"
+   },
+   {
+    "date": "2025-11-04",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2026-01-03",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2026-01-04",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2026-01-05",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2026-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2026-02-23",
+    "name": "Defender of the Fatherland Day"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-09",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2026-06-12",
+    "name": "Russia Day"
+   },
+   {
+    "date": "2026-11-04",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-02",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2027-01-03",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2027-01-04",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2027-01-05",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "New Year holiday"
+   },
+   {
+    "date": "2027-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2027-02-23",
+    "name": "Defender of the Fatherland Day"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-09",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2027-06-12",
+    "name": "Russia Day"
+   },
+   {
+    "date": "2027-11-04",
+    "name": "Unity Day"
+   }
+  ],
+  "school": []
+ },
+ "BS": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-12",
+    "name": "Majority Rule Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Perry Christie Day"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-07-10",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-08-05",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2024-10-14",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-03",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-10",
+    "name": "Majority Rule Day"
+   },
+   {
+    "date": "2025-03-31",
+    "name": "Perry Christie Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-07-10",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-08-04",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2025-10-13",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-12",
+    "name": "Majority Rule Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Perry Christie Day"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-07-10",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-08-07",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2026-10-12",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-11",
+    "name": "Majority Rule Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-02",
+    "name": "Perry Christie Day"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-07-10",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-08-06",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2027-10-11",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "FK": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-06-14",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2024-10-07",
+    "name": "Peat Cutting Day"
+   },
+   {
+    "date": "2024-11-14",
+    "name": "King's Birthday"
+   },
+   {
+    "date": "2024-12-09",
+    "name": "Battle Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2024-12-27",
+    "name": "Christmas Holiday"
+   },
+   {
+    "date": "2024-12-30",
+    "name": "Government Holiday"
+   },
+   {
+    "date": "2024-12-31",
+    "name": "Government Holiday"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-06-16",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2025-10-06",
+    "name": "Peat Cutting Day"
+   },
+   {
+    "date": "2025-11-14",
+    "name": "King's Birthday"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Battle Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-12-27",
+    "name": "Christmas Holiday"
+   },
+   {
+    "date": "2025-12-30",
+    "name": "Government Holiday"
+   },
+   {
+    "date": "2025-12-31",
+    "name": "Government Holiday"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-06-15",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2026-10-05",
+    "name": "Peat Cutting Day"
+   },
+   {
+    "date": "2026-11-16",
+    "name": "King's Birthday"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Battle Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-12-27",
+    "name": "Christmas Holiday"
+   },
+   {
+    "date": "2026-12-30",
+    "name": "Government Holiday"
+   },
+   {
+    "date": "2026-12-31",
+    "name": "Government Holiday"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-06-14",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2027-10-04",
+    "name": "Peat Cutting Day"
+   },
+   {
+    "date": "2027-11-15",
+    "name": "King's Birthday"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Battle Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-12-27",
+    "name": "Christmas Holiday"
+   },
+   {
+    "date": "2027-12-30",
+    "name": "Government Holiday"
+   },
+   {
+    "date": "2027-12-31",
+    "name": "Government Holiday"
+   }
+  ],
+  "school": []
+ },
+ "NO": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-28",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-17",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2024-05-19",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-17",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-17",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-02",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-17",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2026-05-24",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-16",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "GL": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2024-03-28",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-26",
+    "name": "General Prayer Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-10",
+    "name": "Bank closing day"
+   },
+   {
+    "date": "2024-05-19",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-06-21",
+    "name": "Ullortuneq"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2024-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2025-04-17",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-16",
+    "name": "General Prayer Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-05-30",
+    "name": "Bank closing day"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-06-21",
+    "name": "Ullortuneq"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2026-04-02",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "General Prayer Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-15",
+    "name": "Bank closing day"
+   },
+   {
+    "date": "2026-05-24",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-06-21",
+    "name": "Ullortuneq"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-23",
+    "name": "General Prayer Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-07",
+    "name": "Bank closing day"
+   },
+   {
+    "date": "2027-05-16",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-06-21",
+    "name": "Ullortuneq"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-12-31",
+    "name": "New Year's Eve"
+   }
+  ],
+  "school": []
+ },
+ "ZA": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-21",
+    "name": "Human Rights Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Family Day"
+   },
+   {
+    "date": "2024-04-27",
+    "name": "Freedom Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2024-05-29",
+    "name": "Election Day"
+   },
+   {
+    "date": "2024-06-17",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2024-08-09",
+    "name": "National Women's Day"
+   },
+   {
+    "date": "2024-09-24",
+    "name": "Heritage Day"
+   },
+   {
+    "date": "2024-12-16",
+    "name": "Day of Reconciliation"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Day of Goodwill"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-21",
+    "name": "Human Rights Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Family Day"
+   },
+   {
+    "date": "2025-04-28",
+    "name": "Freedom Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2025-06-16",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2025-08-09",
+    "name": "National Women's Day"
+   },
+   {
+    "date": "2025-09-24",
+    "name": "Heritage Day"
+   },
+   {
+    "date": "2025-12-16",
+    "name": "Day of Reconciliation"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Day of Goodwill"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-21",
+    "name": "Human Rights Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Family Day"
+   },
+   {
+    "date": "2026-04-27",
+    "name": "Freedom Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2026-06-16",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2026-08-10",
+    "name": "National Women's Day"
+   },
+   {
+    "date": "2026-09-24",
+    "name": "Heritage Day"
+   },
+   {
+    "date": "2026-11-04",
+    "name": "Election Day"
+   },
+   {
+    "date": "2026-12-16",
+    "name": "Day of Reconciliation"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "Day of Goodwill"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-22",
+    "name": "Human Rights Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Family Day"
+   },
+   {
+    "date": "2027-04-27",
+    "name": "Freedom Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2027-06-16",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2027-08-09",
+    "name": "National Women's Day"
+   },
+   {
+    "date": "2027-09-24",
+    "name": "Heritage Day"
+   },
+   {
+    "date": "2027-12-16",
+    "name": "Day of Reconciliation"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-27",
+    "name": "Day of Goodwill"
+   }
+  ],
+  "school": []
+ },
+ "LS": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-11",
+    "name": "Moshoeshoe Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-25",
+    "name": "Africa Day/ Heroes' Day"
+   },
+   {
+    "date": "2024-07-17",
+    "name": "King Letsie III's Birthday"
+   },
+   {
+    "date": "2024-10-04",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-11",
+    "name": "Moshoeshoe Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2025-05-25",
+    "name": "Africa Day/ Heroes' Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-07-17",
+    "name": "King Letsie III's Birthday"
+   },
+   {
+    "date": "2025-10-04",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-11",
+    "name": "Moshoeshoe Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Africa Day/ Heroes' Day"
+   },
+   {
+    "date": "2026-07-17",
+    "name": "King Letsie III's Birthday"
+   },
+   {
+    "date": "2026-10-04",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-11",
+    "name": "Moshoeshoe Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-25",
+    "name": "Africa Day/ Heroes' Day"
+   },
+   {
+    "date": "2027-07-17",
+    "name": "King Letsie III's Birthday"
+   },
+   {
+    "date": "2027-10-04",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "Boxing Day"
+   }
+  ],
+  "school": []
+ },
+ "MX": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-05",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2024-03-18",
+    "name": "Benito Juárez's birthday"
+   },
+   {
+    "date": "2024-03-28",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-09-16",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-10-01",
+    "name": "Inauguration Day"
+   },
+   {
+    "date": "2024-11-18",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-03",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2025-03-17",
+    "name": "Benito Juárez's birthday"
+   },
+   {
+    "date": "2025-04-17",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-09-16",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-11-17",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-02",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2026-03-16",
+    "name": "Benito Juárez's birthday"
+   },
+   {
+    "date": "2026-04-02",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-09-16",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-11-16",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-01",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2027-03-15",
+    "name": "Benito Juárez's birthday"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-04-30",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-09-16",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-11-15",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "UY": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2024-02-12",
+    "name": "Carnival"
+   },
+   {
+    "date": "2024-02-13",
+    "name": "Carnival"
+   },
+   {
+    "date": "2024-03-28",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-19",
+    "name": "Landing of the 33 Patriots Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2024-05-18",
+    "name": "Battle of Las Piedras"
+   },
+   {
+    "date": "2024-06-19",
+    "name": "Birthday of José Gervasio Artigas and Never Again Day"
+   },
+   {
+    "date": "2024-07-18",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2024-08-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-10-12",
+    "name": "Day of the race"
+   },
+   {
+    "date": "2024-11-02",
+    "name": "Deceased ones day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2025-03-03",
+    "name": "Carnival"
+   },
+   {
+    "date": "2025-03-04",
+    "name": "Carnival"
+   },
+   {
+    "date": "2025-04-17",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-19",
+    "name": "Landing of the 33 Patriots Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2025-05-18",
+    "name": "Battle of Las Piedras"
+   },
+   {
+    "date": "2025-06-19",
+    "name": "Birthday of José Gervasio Artigas and Never Again Day"
+   },
+   {
+    "date": "2025-07-18",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2025-08-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-10-12",
+    "name": "Day of the race"
+   },
+   {
+    "date": "2025-11-02",
+    "name": "Deceased ones day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2026-02-16",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-02-17",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-04-02",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-19",
+    "name": "Landing of the 33 Patriots Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2026-05-18",
+    "name": "Battle of Las Piedras"
+   },
+   {
+    "date": "2026-06-19",
+    "name": "Birthday of José Gervasio Artigas and Never Again Day"
+   },
+   {
+    "date": "2026-07-18",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2026-08-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-10-12",
+    "name": "Day of the race"
+   },
+   {
+    "date": "2026-11-02",
+    "name": "Deceased ones day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2027-02-08",
+    "name": "Carnival"
+   },
+   {
+    "date": "2027-02-09",
+    "name": "Carnival"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-04-19",
+    "name": "Landing of the 33 Patriots Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2027-05-18",
+    "name": "Battle of Las Piedras"
+   },
+   {
+    "date": "2027-06-19",
+    "name": "Birthday of José Gervasio Artigas and Never Again Day"
+   },
+   {
+    "date": "2027-07-18",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2027-08-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-10-12",
+    "name": "Day of the race"
+   },
+   {
+    "date": "2027-11-02",
+    "name": "Deceased ones day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "BR": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-12",
+    "name": "Carnival"
+   },
+   {
+    "date": "2024-02-13",
+    "name": "Carnival"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-21",
+    "name": "Tiradentes"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-30",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2024-09-07",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-10-12",
+    "name": "Our Lady of Aparecida"
+   },
+   {
+    "date": "2024-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2024-11-15",
+    "name": "Republic Proclamation Day"
+   },
+   {
+    "date": "2024-11-20",
+    "name": "Black Awareness Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-03",
+    "name": "Carnival"
+   },
+   {
+    "date": "2025-03-04",
+    "name": "Carnival"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Tiradentes"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-06-19",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2025-09-07",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-10-12",
+    "name": "Our Lady of Aparecida"
+   },
+   {
+    "date": "2025-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2025-11-15",
+    "name": "Republic Proclamation Day"
+   },
+   {
+    "date": "2025-11-20",
+    "name": "Black Awareness Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-16",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-02-17",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-21",
+    "name": "Tiradentes"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-06-04",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2026-09-07",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-10-12",
+    "name": "Our Lady of Aparecida"
+   },
+   {
+    "date": "2026-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2026-11-15",
+    "name": "Republic Proclamation Day"
+   },
+   {
+    "date": "2026-11-20",
+    "name": "Black Awareness Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-08",
+    "name": "Carnival"
+   },
+   {
+    "date": "2027-02-09",
+    "name": "Carnival"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-04-21",
+    "name": "Tiradentes"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-27",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2027-09-07",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-10-12",
+    "name": "Our Lady of Aparecida"
+   },
+   {
+    "date": "2027-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2027-11-15",
+    "name": "Republic Proclamation Day"
+   },
+   {
+    "date": "2027-11-20",
+    "name": "Black Awareness Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "BO": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-02",
+    "name": "Feast of the Virgin of Candelaria"
+   },
+   {
+    "date": "2024-02-12",
+    "name": "Carnival"
+   },
+   {
+    "date": "2024-02-13",
+    "name": "Carnival"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-30",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2024-06-21",
+    "name": "Andean New Year"
+   },
+   {
+    "date": "2024-08-02",
+    "name": "Agrarian Reform Day"
+   },
+   {
+    "date": "2024-08-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-11-02",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-02",
+    "name": "Feast of the Virgin of Candelaria"
+   },
+   {
+    "date": "2025-03-03",
+    "name": "Carnival"
+   },
+   {
+    "date": "2025-03-04",
+    "name": "Carnival"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-06-19",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2025-06-21",
+    "name": "Andean New Year"
+   },
+   {
+    "date": "2025-08-02",
+    "name": "Agrarian Reform Day"
+   },
+   {
+    "date": "2025-08-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-11-02",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-02",
+    "name": "Feast of the Virgin of Candelaria"
+   },
+   {
+    "date": "2026-02-16",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-02-17",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-06-04",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2026-06-21",
+    "name": "Andean New Year"
+   },
+   {
+    "date": "2026-08-02",
+    "name": "Agrarian Reform Day"
+   },
+   {
+    "date": "2026-08-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-11-02",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-02",
+    "name": "Feast of the Virgin of Candelaria"
+   },
+   {
+    "date": "2027-02-08",
+    "name": "Carnival"
+   },
+   {
+    "date": "2027-02-09",
+    "name": "Carnival"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-27",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2027-06-21",
+    "name": "Andean New Year"
+   },
+   {
+    "date": "2027-08-02",
+    "name": "Agrarian Reform Day"
+   },
+   {
+    "date": "2027-08-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-11-02",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "PE": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-28",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-06-07",
+    "name": "Battle of Arica and Flag Day"
+   },
+   {
+    "date": "2024-06-29",
+    "name": "Saint Peter and Saint Paul"
+   },
+   {
+    "date": "2024-07-23",
+    "name": "Air Force Day"
+   },
+   {
+    "date": "2024-07-28",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-07-29",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-08-06",
+    "name": "Battle of Junin"
+   },
+   {
+    "date": "2024-08-30",
+    "name": "Santa Rosa de Lima"
+   },
+   {
+    "date": "2024-10-08",
+    "name": "Battle of Angamos"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2024-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2024-12-09",
+    "name": "Battle of Ayacucho"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-17",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-06-07",
+    "name": "Battle of Arica and Flag Day"
+   },
+   {
+    "date": "2025-06-29",
+    "name": "Saint Peter and Saint Paul"
+   },
+   {
+    "date": "2025-07-23",
+    "name": "Air Force Day"
+   },
+   {
+    "date": "2025-07-28",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-07-29",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-08-06",
+    "name": "Battle of Junin"
+   },
+   {
+    "date": "2025-08-30",
+    "name": "Santa Rosa de Lima"
+   },
+   {
+    "date": "2025-10-08",
+    "name": "Battle of Angamos"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2025-12-09",
+    "name": "Battle of Ayacucho"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-02",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-06-29",
+    "name": "Saint Peter and Saint Paul"
+   },
+   {
+    "date": "2026-07-23",
+    "name": "Air Force Day"
+   },
+   {
+    "date": "2026-07-28",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-07-29",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-08-06",
+    "name": "Battle of Junin"
+   },
+   {
+    "date": "2026-08-30",
+    "name": "Santa Rosa de Lima"
+   },
+   {
+    "date": "2026-10-08",
+    "name": "Battle of Angamos"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2026-12-09",
+    "name": "Battle of Ayacucho"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-06-07",
+    "name": "Battle of Arica and Flag Day"
+   },
+   {
+    "date": "2027-06-29",
+    "name": "Saint Peter and Saint Paul"
+   },
+   {
+    "date": "2027-07-23",
+    "name": "Air Force Day"
+   },
+   {
+    "date": "2027-07-28",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-07-29",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-08-06",
+    "name": "Battle of Junin"
+   },
+   {
+    "date": "2027-08-30",
+    "name": "Santa Rosa de Lima"
+   },
+   {
+    "date": "2027-10-08",
+    "name": "Battle of Angamos"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2027-12-09",
+    "name": "Battle of Ayacucho"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "CO": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-08",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2024-03-25",
+    "name": "Saint Joseph's Day"
+   },
+   {
+    "date": "2024-03-28",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-13",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-06-03",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2024-06-10",
+    "name": "Sacred Heart"
+   },
+   {
+    "date": "2024-07-01",
+    "name": "Saint Peter and Saint Paul"
+   },
+   {
+    "date": "2024-07-20",
+    "name": "Declaration of Independence"
+   },
+   {
+    "date": "2024-08-07",
+    "name": "Battle of Boyacá"
+   },
+   {
+    "date": "2024-08-19",
+    "name": "Assumption of Mary"
+   },
+   {
+    "date": "2024-10-14",
+    "name": "Columbus Day"
+   },
+   {
+    "date": "2024-11-04",
+    "name": "All Saints’ Day"
+   },
+   {
+    "date": "2024-11-11",
+    "name": "Independence of Cartagena"
+   },
+   {
+    "date": "2024-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2025-03-24",
+    "name": "Saint Joseph's Day"
+   },
+   {
+    "date": "2025-04-17",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-06-02",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-23",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2025-06-30",
+    "name": "Sacred Heart"
+   },
+   {
+    "date": "2025-06-30",
+    "name": "Saint Peter and Saint Paul"
+   },
+   {
+    "date": "2025-07-20",
+    "name": "Declaration of Independence"
+   },
+   {
+    "date": "2025-08-07",
+    "name": "Battle of Boyacá"
+   },
+   {
+    "date": "2025-08-18",
+    "name": "Assumption of Mary"
+   },
+   {
+    "date": "2025-10-13",
+    "name": "Columbus Day"
+   },
+   {
+    "date": "2025-11-03",
+    "name": "All Saints’ Day"
+   },
+   {
+    "date": "2025-11-17",
+    "name": "Independence of Cartagena"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-12",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2026-03-23",
+    "name": "Saint Joseph's Day"
+   },
+   {
+    "date": "2026-04-02",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-18",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-06-08",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2026-06-15",
+    "name": "Sacred Heart"
+   },
+   {
+    "date": "2026-06-29",
+    "name": "Saint Peter and Saint Paul"
+   },
+   {
+    "date": "2026-07-13",
+    "name": "Our Lady of Chiquinquirá Day"
+   },
+   {
+    "date": "2026-07-20",
+    "name": "Declaration of Independence"
+   },
+   {
+    "date": "2026-08-07",
+    "name": "Battle of Boyacá"
+   },
+   {
+    "date": "2026-08-17",
+    "name": "Assumption of Mary"
+   },
+   {
+    "date": "2026-10-12",
+    "name": "Columbus Day"
+   },
+   {
+    "date": "2026-11-02",
+    "name": "All Saints’ Day"
+   },
+   {
+    "date": "2026-11-16",
+    "name": "Independence of Cartagena"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-11",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2027-03-22",
+    "name": "Saint Joseph's Day"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-10",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-31",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2027-06-07",
+    "name": "Sacred Heart"
+   },
+   {
+    "date": "2027-07-05",
+    "name": "Saint Peter and Saint Paul"
+   },
+   {
+    "date": "2027-07-12",
+    "name": "Our Lady of Chiquinquirá Day"
+   },
+   {
+    "date": "2027-07-20",
+    "name": "Declaration of Independence"
+   },
+   {
+    "date": "2027-08-07",
+    "name": "Battle of Boyacá"
+   },
+   {
+    "date": "2027-08-16",
+    "name": "Assumption of Mary"
+   },
+   {
+    "date": "2027-10-18",
+    "name": "Columbus Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints’ Day"
+   },
+   {
+    "date": "2027-11-15",
+    "name": "Independence of Cartagena"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "PA": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-09",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2024-02-12",
+    "name": "Carnival Monday"
+   },
+   {
+    "date": "2024-02-13",
+    "name": "Carnival Tuesday"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-11-04",
+    "name": "Flag Day"
+   },
+   {
+    "date": "2024-11-04",
+    "name": "Separation Day"
+   },
+   {
+    "date": "2024-11-05",
+    "name": "Consolidation of the Separation Day"
+   },
+   {
+    "date": "2024-11-10",
+    "name": "Shout in Villa de los Santos"
+   },
+   {
+    "date": "2024-11-28",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-09",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2024-12-20",
+    "name": "National Day of Mourning"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-09",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2025-03-03",
+    "name": "Carnival Monday"
+   },
+   {
+    "date": "2025-03-04",
+    "name": "Carnival Tuesday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-11-03",
+    "name": "Separation Day"
+   },
+   {
+    "date": "2025-11-04",
+    "name": "Flag Day"
+   },
+   {
+    "date": "2025-11-05",
+    "name": "Consolidation of the Separation Day"
+   },
+   {
+    "date": "2025-11-10",
+    "name": "Shout in Villa de los Santos"
+   },
+   {
+    "date": "2025-11-28",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2025-12-20",
+    "name": "National Day of Mourning"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-09",
+    "name": "Martyr's Day"
+   },
+   {
+    "date": "2026-02-16",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-02-17",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-11-03",
+    "name": "Separation Day"
+   },
+   {
+    "date": "2026-11-04",
+    "name": "Flag Day"
+   },
+   {
+    "date": "2026-11-05",
+    "name": "Colon Day"
+   },
+   {
+    "date": "2026-11-10",
+    "name": "Shout in Villa de los Santos"
+   },
+   {
+    "date": "2026-11-28",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-09",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2027-02-08",
+    "name": "Carnival Monday"
+   },
+   {
+    "date": "2027-02-09",
+    "name": "Carnival Tuesday"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-11-03",
+    "name": "Separation Day"
+   },
+   {
+    "date": "2027-11-04",
+    "name": "Flag Day"
+   },
+   {
+    "date": "2027-11-05",
+    "name": "Consolidation of the Separation Day"
+   },
+   {
+    "date": "2027-11-10",
+    "name": "Shout in Villa de los Santos"
+   },
+   {
+    "date": "2027-11-29",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2027-12-20",
+    "name": "National Day of Mourning"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "CR": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-28",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-11",
+    "name": "Juan Santamaría Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-07-25",
+    "name": "Annexation of the Party of Nicoya to Costa Rica"
+   },
+   {
+    "date": "2024-08-02",
+    "name": "Feast of Our Lady of the Angels"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2024-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-01",
+    "name": "Army Abolition Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-11",
+    "name": "Juan Santamaría Day"
+   },
+   {
+    "date": "2025-04-17",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-07-25",
+    "name": "Annexation of the Party of Nicoya to Costa Rica"
+   },
+   {
+    "date": "2025-08-02",
+    "name": "Feast of Our Lady of the Angels"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2025-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-01",
+    "name": "Army Abolition Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-02",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-11",
+    "name": "Juan Santamaría Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-07-25",
+    "name": "Annexation of the Party of Nicoya to Costa Rica"
+   },
+   {
+    "date": "2026-08-02",
+    "name": "Feast of Our Lady of the Angels"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2026-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-01",
+    "name": "Army Abolition Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-04-11",
+    "name": "Juan Santamaría Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-07-25",
+    "name": "Annexation of the Party of Nicoya to Costa Rica"
+   },
+   {
+    "date": "2027-08-02",
+    "name": "Feast of Our Lady of the Angels"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2027-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-01",
+    "name": "Army Abolition Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "NI": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-01",
+    "name": "Air Force Day"
+   },
+   {
+    "date": "2024-04-04",
+    "name": "Holy Thursday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-27",
+    "name": "Army Day"
+   },
+   {
+    "date": "2024-07-19",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2024-09-14",
+    "name": "Battle of San Jacinto"
+   },
+   {
+    "date": "2024-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-10-12",
+    "name": "Indigenous Resistance Day"
+   },
+   {
+    "date": "2024-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-01",
+    "name": "Air Force Day"
+   },
+   {
+    "date": "2025-04-03",
+    "name": "Holy Thursday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-27",
+    "name": "Army Day"
+   },
+   {
+    "date": "2025-07-19",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2025-09-14",
+    "name": "Battle of San Jacinto"
+   },
+   {
+    "date": "2025-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-10-12",
+    "name": "Indigenous Resistance Day"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-01",
+    "name": "Air Force Day"
+   },
+   {
+    "date": "2026-04-02",
+    "name": "Holy Thursday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-27",
+    "name": "Army Day"
+   },
+   {
+    "date": "2026-07-19",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2026-09-14",
+    "name": "Battle of San Jacinto"
+   },
+   {
+    "date": "2026-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-10-12",
+    "name": "Indigenous Resistance Day"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-01",
+    "name": "Air Force Day"
+   },
+   {
+    "date": "2027-04-01",
+    "name": "Holy Thursday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-27",
+    "name": "Army Day"
+   },
+   {
+    "date": "2027-07-19",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2027-09-14",
+    "name": "Battle of San Jacinto"
+   },
+   {
+    "date": "2027-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-10-12",
+    "name": "Indigenous Resistance Day"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-31",
+    "name": "New Year's Eve"
+   }
+  ],
+  "school": []
+ },
+ "HN": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-28",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-30",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2024-04-14",
+    "name": "America's Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-10-03",
+    "name": "Francisco Morazán's Day/Soldier's Day"
+   },
+   {
+    "date": "2024-10-12",
+    "name": "Columbus Day"
+   },
+   {
+    "date": "2024-10-21",
+    "name": "Army Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-14",
+    "name": "America's Day"
+   },
+   {
+    "date": "2025-04-17",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-19",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-10-03",
+    "name": "Francisco Morazán's Day/Soldier's Day"
+   },
+   {
+    "date": "2025-10-12",
+    "name": "Columbus Day"
+   },
+   {
+    "date": "2025-10-21",
+    "name": "Army Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-02",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-04",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2026-04-14",
+    "name": "America's Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-10-03",
+    "name": "Francisco Morazán's Day/Soldier's Day"
+   },
+   {
+    "date": "2026-10-12",
+    "name": "Columbus Day"
+   },
+   {
+    "date": "2026-10-21",
+    "name": "Army Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-27",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2027-04-14",
+    "name": "America's Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-10-03",
+    "name": "Francisco Morazán's Day/Soldier's Day"
+   },
+   {
+    "date": "2027-10-12",
+    "name": "Columbus Day"
+   },
+   {
+    "date": "2027-10-21",
+    "name": "Army Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "SV": {
+  "bank": [
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-03",
+    "name": "The Day of the Cross"
+   },
+   {
+    "date": "2024-05-07",
+    "name": "Soldiers' Day"
+   },
+   {
+    "date": "2024-05-10",
+    "name": "Father's Day"
+   },
+   {
+    "date": "2024-05-10",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2024-08-01",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2024-08-02",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2024-08-03",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2024-08-04",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2024-08-05",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2024-08-06",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2024-08-07",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2024-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-10-01",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2024-10-12",
+    "name": "Ethnic Pride Day"
+   },
+   {
+    "date": "2024-11-02",
+    "name": "Day of the Dead"
+   },
+   {
+    "date": "2024-11-07",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2024-11-08",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2024-11-09",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2024-11-10",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2024-11-11",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2024-11-12",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2024-11-13",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2024-11-21",
+    "name": "Day of the Queen of Peace"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-03",
+    "name": "The Day of the Cross"
+   },
+   {
+    "date": "2025-05-07",
+    "name": "Soldiers' Day"
+   },
+   {
+    "date": "2025-05-10",
+    "name": "Father's Day"
+   },
+   {
+    "date": "2025-05-10",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2025-08-01",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2025-08-02",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2025-08-03",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2025-08-04",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2025-08-05",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2025-08-06",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2025-08-07",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2025-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-10-01",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2025-10-12",
+    "name": "Ethnic Pride Day"
+   },
+   {
+    "date": "2025-11-02",
+    "name": "Day of the Dead"
+   },
+   {
+    "date": "2025-11-07",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2025-11-08",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2025-11-09",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2025-11-10",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2025-11-11",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2025-11-12",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2025-11-13",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2025-11-21",
+    "name": "Day of the Queen of Peace"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-03",
+    "name": "The Day of the Cross"
+   },
+   {
+    "date": "2026-05-07",
+    "name": "Soldiers' Day"
+   },
+   {
+    "date": "2026-05-10",
+    "name": "Father's Day"
+   },
+   {
+    "date": "2026-05-10",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2026-08-01",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2026-08-02",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2026-08-03",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2026-08-04",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2026-08-05",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2026-08-06",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2026-08-07",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2026-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-10-01",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2026-10-12",
+    "name": "Ethnic Pride Day"
+   },
+   {
+    "date": "2026-11-02",
+    "name": "Day of the Dead"
+   },
+   {
+    "date": "2026-11-07",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2026-11-08",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2026-11-09",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2026-11-10",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2026-11-11",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2026-11-12",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2026-11-13",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2026-11-21",
+    "name": "Day of the Queen of Peace"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "The Day of the Cross"
+   },
+   {
+    "date": "2027-05-07",
+    "name": "Soldiers' Day"
+   },
+   {
+    "date": "2027-05-10",
+    "name": "Father's Day"
+   },
+   {
+    "date": "2027-05-10",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2027-08-01",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2027-08-02",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2027-08-03",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2027-08-04",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2027-08-05",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2027-08-06",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2027-08-07",
+    "name": "August Festivals"
+   },
+   {
+    "date": "2027-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-10-01",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2027-10-12",
+    "name": "Ethnic Pride Day"
+   },
+   {
+    "date": "2027-11-02",
+    "name": "Day of the Dead"
+   },
+   {
+    "date": "2027-11-07",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2027-11-08",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2027-11-09",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2027-11-10",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2027-11-11",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2027-11-12",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2027-11-13",
+    "name": "National Pupusa Festival"
+   },
+   {
+    "date": "2027-11-21",
+    "name": "Day of the Queen of Peace"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-31",
+    "name": "New Year's Eve"
+   }
+  ],
+  "school": []
+ },
+ "GT": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-28",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-30",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2024-06-30",
+    "name": "Army Day"
+   },
+   {
+    "date": "2024-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-10-20",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-17",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-19",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2025-06-30",
+    "name": "Army Day"
+   },
+   {
+    "date": "2025-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-10-20",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-02",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-04",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2026-06-30",
+    "name": "Army Day"
+   },
+   {
+    "date": "2026-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-10-20",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-27",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2027-06-30",
+    "name": "Army Day"
+   },
+   {
+    "date": "2027-09-15",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-10-20",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-31",
+    "name": "New Year's Eve"
+   }
+  ],
+  "school": []
+ },
+ "BZ": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-15",
+    "name": "George Price Day"
+   },
+   {
+    "date": "2024-03-11",
+    "name": "National Heroes and Benefactors Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-30",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-29",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-08-01",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2024-09-10",
+    "name": "Saint George's Caye Day"
+   },
+   {
+    "date": "2024-09-21",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-10-14",
+    "name": "Indigenous Peoples' Resistance Day"
+   },
+   {
+    "date": "2024-11-19",
+    "name": "Garifuna Settlement Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-15",
+    "name": "George Price Day"
+   },
+   {
+    "date": "2025-03-10",
+    "name": "National Heroes and Benefactors Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-19",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-08-01",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2025-09-10",
+    "name": "Saint George's Caye Day"
+   },
+   {
+    "date": "2025-09-22",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-10-13",
+    "name": "Indigenous Peoples' Resistance Day"
+   },
+   {
+    "date": "2025-11-19",
+    "name": "Garifuna Settlement Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-15",
+    "name": "George Price Day"
+   },
+   {
+    "date": "2026-03-09",
+    "name": "National Heroes and Benefactors Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-04",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-08-01",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2026-09-10",
+    "name": "Saint George's Caye Day"
+   },
+   {
+    "date": "2026-09-21",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-10-12",
+    "name": "Pan America Day"
+   },
+   {
+    "date": "2026-11-19",
+    "name": "Garifuna Settlement Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-15",
+    "name": "George Price Day"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "National Heroes and Benefactors Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-27",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-08-02",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2027-09-10",
+    "name": "Saint George's Caye Day"
+   },
+   {
+    "date": "2027-09-21",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-10-11",
+    "name": "Indigenous Peoples' Resistance Day"
+   },
+   {
+    "date": "2027-11-19",
+    "name": "Garifuna Settlement Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-27",
+    "name": "Boxing Day"
+   }
+  ],
+  "school": []
+ },
+ "VE": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2024-01-14",
+    "name": "Feast of the Divina Pastora"
+   },
+   {
+    "date": "2024-01-15",
+    "name": "Teacher's Day"
+   },
+   {
+    "date": "2024-02-12",
+    "name": "Carnival"
+   },
+   {
+    "date": "2024-02-12",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2024-02-13",
+    "name": "Carnival"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2024-03-19",
+    "name": "Saint Joseph's Day"
+   },
+   {
+    "date": "2024-03-21",
+    "name": "Slavery Abolition Anniversary"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Foundation anniversary Day of San Cristóbal, Táchira"
+   },
+   {
+    "date": "2024-04-19",
+    "name": "Beginning of the Independence Movement"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-03",
+    "name": "Festival of the Crosses"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-12",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2024-05-30",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2024-06-16",
+    "name": "Father's Day"
+   },
+   {
+    "date": "2024-06-24",
+    "name": "Anniversary of the Battle of Carabobo"
+   },
+   {
+    "date": "2024-06-27",
+    "name": "Journalists' Day"
+   },
+   {
+    "date": "2024-07-05",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-07-21",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2024-07-24",
+    "name": "Simón Bolívar's Birthday"
+   },
+   {
+    "date": "2024-07-25",
+    "name": "Caracas City Foundation Day"
+   },
+   {
+    "date": "2024-08-03",
+    "name": "Flag Day"
+   },
+   {
+    "date": "2024-09-08",
+    "name": "Birth of the Blessed Virgin Mary"
+   },
+   {
+    "date": "2024-09-24",
+    "name": "Feast of the Our Lady of Mercy"
+   },
+   {
+    "date": "2024-10-12",
+    "name": "Day of Indigenous Resistance"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2024-12-08",
+    "name": "Immaculate Conception Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2025-01-14",
+    "name": "Feast of the Divina Pastora"
+   },
+   {
+    "date": "2025-01-15",
+    "name": "Teacher's Day"
+   },
+   {
+    "date": "2025-02-12",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2025-03-03",
+    "name": "Carnival"
+   },
+   {
+    "date": "2025-03-04",
+    "name": "Carnival"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2025-03-19",
+    "name": "Saint Joseph's Day"
+   },
+   {
+    "date": "2025-03-21",
+    "name": "Slavery Abolition Anniversary"
+   },
+   {
+    "date": "2025-03-31",
+    "name": "Foundation anniversary Day of San Cristóbal, Táchira"
+   },
+   {
+    "date": "2025-04-19",
+    "name": "Beginning of the Independence Movement"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-03",
+    "name": "Festival of the Crosses"
+   },
+   {
+    "date": "2025-05-11",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-15",
+    "name": "Father's Day"
+   },
+   {
+    "date": "2025-06-19",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2025-06-24",
+    "name": "Anniversary of the Battle of Carabobo"
+   },
+   {
+    "date": "2025-06-27",
+    "name": "Journalists' Day"
+   },
+   {
+    "date": "2025-07-05",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-07-20",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2025-07-24",
+    "name": "Simón Bolívar's Birthday"
+   },
+   {
+    "date": "2025-07-25",
+    "name": "Caracas City Foundation Day"
+   },
+   {
+    "date": "2025-08-03",
+    "name": "Flag Day"
+   },
+   {
+    "date": "2025-09-08",
+    "name": "Birth of the Blessed Virgin Mary"
+   },
+   {
+    "date": "2025-09-24",
+    "name": "Feast of the Our Lady of Mercy"
+   },
+   {
+    "date": "2025-10-12",
+    "name": "Day of Indigenous Resistance"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Immaculate Conception Day"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2026-01-14",
+    "name": "Feast of the Divina Pastora"
+   },
+   {
+    "date": "2026-01-15",
+    "name": "Teacher's Day"
+   },
+   {
+    "date": "2026-02-12",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2026-02-16",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-02-17",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2026-03-19",
+    "name": "Saint Joseph's Day"
+   },
+   {
+    "date": "2026-03-21",
+    "name": "Slavery Abolition Anniversary"
+   },
+   {
+    "date": "2026-03-31",
+    "name": "Foundation anniversary Day of San Cristóbal, Táchira"
+   },
+   {
+    "date": "2026-04-19",
+    "name": "Beginning of the Independence Movement"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-03",
+    "name": "Festival of the Crosses"
+   },
+   {
+    "date": "2026-05-10",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-06-04",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2026-06-21",
+    "name": "Father's Day"
+   },
+   {
+    "date": "2026-06-24",
+    "name": "Anniversary of the Battle of Carabobo"
+   },
+   {
+    "date": "2026-06-27",
+    "name": "Journalists' Day"
+   },
+   {
+    "date": "2026-07-05",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-07-19",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2026-07-24",
+    "name": "Simón Bolívar's Birthday"
+   },
+   {
+    "date": "2026-07-25",
+    "name": "Caracas City Foundation Day"
+   },
+   {
+    "date": "2026-08-03",
+    "name": "Flag Day"
+   },
+   {
+    "date": "2026-09-08",
+    "name": "Birth of the Blessed Virgin Mary"
+   },
+   {
+    "date": "2026-09-24",
+    "name": "Feast of the Our Lady of Mercy"
+   },
+   {
+    "date": "2026-10-12",
+    "name": "Day of Indigenous Resistance"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Immaculate Conception Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2027-01-14",
+    "name": "Feast of the Divina Pastora"
+   },
+   {
+    "date": "2027-01-15",
+    "name": "Teacher's Day"
+   },
+   {
+    "date": "2027-02-08",
+    "name": "Carnival"
+   },
+   {
+    "date": "2027-02-09",
+    "name": "Carnival"
+   },
+   {
+    "date": "2027-02-12",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2027-03-19",
+    "name": "Saint Joseph's Day"
+   },
+   {
+    "date": "2027-03-21",
+    "name": "Slavery Abolition Anniversary"
+   },
+   {
+    "date": "2027-03-31",
+    "name": "Foundation anniversary Day of San Cristóbal, Táchira"
+   },
+   {
+    "date": "2027-04-19",
+    "name": "Beginning of the Independence Movement"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Festival of the Crosses"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-09",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2027-05-27",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2027-06-20",
+    "name": "Father's Day"
+   },
+   {
+    "date": "2027-06-24",
+    "name": "Anniversary of the Battle of Carabobo"
+   },
+   {
+    "date": "2027-06-27",
+    "name": "Journalists' Day"
+   },
+   {
+    "date": "2027-07-05",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-07-18",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2027-07-24",
+    "name": "Simón Bolívar's Birthday"
+   },
+   {
+    "date": "2027-07-25",
+    "name": "Caracas City Foundation Day"
+   },
+   {
+    "date": "2027-08-03",
+    "name": "Flag Day"
+   },
+   {
+    "date": "2027-09-08",
+    "name": "Birth of the Blessed Virgin Mary"
+   },
+   {
+    "date": "2027-09-24",
+    "name": "Feast of the Our Lady of Mercy"
+   },
+   {
+    "date": "2027-10-12",
+    "name": "Day of Indigenous Resistance"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Immaculate Conception Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-31",
+    "name": "New Year's Eve"
+   }
+  ],
+  "school": []
+ },
+ "GY": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-23",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-05",
+    "name": "Arrival Day"
+   },
+   {
+    "date": "2024-05-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-07-01",
+    "name": "Caricom Day"
+   },
+   {
+    "date": "2024-08-01",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-23",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-05",
+    "name": "Arrival Day"
+   },
+   {
+    "date": "2025-05-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-07-07",
+    "name": "Caricom Day"
+   },
+   {
+    "date": "2025-08-01",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-23",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-05",
+    "name": "Arrival Day"
+   },
+   {
+    "date": "2026-05-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-07-06",
+    "name": "Caricom Day"
+   },
+   {
+    "date": "2026-08-01",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-23",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-05",
+    "name": "Arrival Day"
+   },
+   {
+    "date": "2027-05-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-07-05",
+    "name": "Caricom Day"
+   },
+   {
+    "date": "2027-08-01",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "Boxing Day"
+   }
+  ],
+  "school": []
+ },
+ "SR": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Three Kings Day"
+   },
+   {
+    "date": "2024-01-21",
+    "name": "World Religion Day"
+   },
+   {
+    "date": "2024-02-10",
+    "name": "Chinese New Year"
+   },
+   {
+    "date": "2024-02-25",
+    "name": "Day of the Revolution"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-06-05",
+    "name": "Indian Arrival Day"
+   },
+   {
+    "date": "2024-07-01",
+    "name": "Keti Koti"
+   },
+   {
+    "date": "2024-08-08",
+    "name": "Javanese Arrival Day"
+   },
+   {
+    "date": "2024-08-09",
+    "name": "Indigenous People's Day"
+   },
+   {
+    "date": "2024-10-10",
+    "name": "Day of the Maroons"
+   },
+   {
+    "date": "2024-10-20",
+    "name": "Chinese Arrival day"
+   },
+   {
+    "date": "2024-11-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Three Kings Day"
+   },
+   {
+    "date": "2025-01-19",
+    "name": "World Religion Day"
+   },
+   {
+    "date": "2025-01-29",
+    "name": "Chinese New Year"
+   },
+   {
+    "date": "2025-02-25",
+    "name": "Day of the Revolution"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-05",
+    "name": "Indian Arrival Day"
+   },
+   {
+    "date": "2025-07-01",
+    "name": "Keti Koti"
+   },
+   {
+    "date": "2025-08-08",
+    "name": "Javanese Arrival Day"
+   },
+   {
+    "date": "2025-08-09",
+    "name": "Indigenous People's Day"
+   },
+   {
+    "date": "2025-10-10",
+    "name": "Day of the Maroons"
+   },
+   {
+    "date": "2025-10-20",
+    "name": "Chinese Arrival day"
+   },
+   {
+    "date": "2025-11-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Three Kings Day"
+   },
+   {
+    "date": "2026-01-18",
+    "name": "World Religion Day"
+   },
+   {
+    "date": "2026-02-17",
+    "name": "Chinese New Year"
+   },
+   {
+    "date": "2026-02-25",
+    "name": "Day of the Revolution"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-06-05",
+    "name": "Indian Arrival Day"
+   },
+   {
+    "date": "2026-07-01",
+    "name": "Keti Koti"
+   },
+   {
+    "date": "2026-08-08",
+    "name": "Javanese Arrival Day"
+   },
+   {
+    "date": "2026-08-09",
+    "name": "Indigenous People's Day"
+   },
+   {
+    "date": "2026-10-10",
+    "name": "Day of the Maroons"
+   },
+   {
+    "date": "2026-10-20",
+    "name": "Chinese Arrival day"
+   },
+   {
+    "date": "2026-11-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Three Kings Day"
+   },
+   {
+    "date": "2027-01-17",
+    "name": "World Religion Day"
+   },
+   {
+    "date": "2027-02-06",
+    "name": "Chinese New Year"
+   },
+   {
+    "date": "2027-02-25",
+    "name": "Day of the Revolution"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-06-05",
+    "name": "Indian Arrival Day"
+   },
+   {
+    "date": "2027-07-01",
+    "name": "Keti Koti"
+   },
+   {
+    "date": "2027-08-08",
+    "name": "Javanese Arrival Day"
+   },
+   {
+    "date": "2027-08-09",
+    "name": "Indigenous People's Day"
+   },
+   {
+    "date": "2027-10-10",
+    "name": "Day of the Maroons"
+   },
+   {
+    "date": "2027-10-20",
+    "name": "Chinese Arrival day"
+   },
+   {
+    "date": "2027-11-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "Boxing Day"
+   }
+  ],
+  "school": []
+ },
+ "FR": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-08",
+    "name": "Victory in Europe Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-07-14",
+    "name": "Bastille Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-11-11",
+    "name": "Armistice Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-08",
+    "name": "Victory in Europe Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-07-14",
+    "name": "Bastille Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-11-11",
+    "name": "Armistice Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-08",
+    "name": "Victory in Europe Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-07-14",
+    "name": "Bastille Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-11-11",
+    "name": "Armistice Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-08",
+    "name": "Victory in Europe Day"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-07-14",
+    "name": "Bastille Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-11-11",
+    "name": "Armistice Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": [
+   {
+    "start": "2024-02-11",
+    "end": "2024-02-25",
+    "name": "Winter holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2024-02-18",
+    "end": "2024-03-03",
+    "name": "Winter holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2024-02-25",
+    "end": "2024-03-10",
+    "name": "Winter holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2024-02-25",
+    "end": "2024-03-10",
+    "name": "Winter holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2024-04-07",
+    "end": "2024-04-21",
+    "name": "Spring holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2024-04-14",
+    "end": "2024-04-28",
+    "name": "Spring holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2024-04-21",
+    "end": "2024-05-05",
+    "name": "Spring holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2024-04-28",
+    "end": "2024-05-12",
+    "name": "Spring holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2024-07-07",
+    "end": "2024-09-01",
+    "name": "Summer holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2024-07-07",
+    "end": "2024-09-01",
+    "name": "Summer holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2024-07-07",
+    "end": "2024-09-01",
+    "name": "Summer holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2024-07-07",
+    "end": "2024-09-04",
+    "name": "Summer holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2024-10-20",
+    "end": "2024-11-03",
+    "name": "Autumn holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2024-10-20",
+    "end": "2024-11-03",
+    "name": "Autumn holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2024-10-20",
+    "end": "2024-11-03",
+    "name": "Autumn holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2024-10-20",
+    "end": "2024-11-03",
+    "name": "Autumn holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2024-12-22",
+    "end": "2025-01-05",
+    "name": "Christmas holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2024-12-22",
+    "end": "2025-01-05",
+    "name": "Christmas holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2024-12-22",
+    "end": "2025-01-05",
+    "name": "Christmas holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2024-12-22",
+    "end": "2025-01-05",
+    "name": "Christmas holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2025-02-09",
+    "end": "2025-02-23",
+    "name": "Winter holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2025-02-16",
+    "end": "2025-03-02",
+    "name": "Winter holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2025-02-16",
+    "end": "2025-03-02",
+    "name": "Winter holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2025-02-23",
+    "end": "2025-03-09",
+    "name": "Winter holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2025-04-06",
+    "end": "2025-04-21",
+    "name": "Spring holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2025-04-11",
+    "end": "2025-04-27",
+    "name": "Spring holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2025-04-13",
+    "end": "2025-04-27",
+    "name": "Spring holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2025-04-20",
+    "end": "2025-05-04",
+    "name": "Spring holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2025-05-29",
+    "end": "2025-06-01",
+    "name": "Spring holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2025-07-04",
+    "end": "2025-09-01",
+    "name": "Summer holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2025-07-06",
+    "end": "2025-08-31",
+    "name": "Summer holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2025-07-06",
+    "end": "2025-08-31",
+    "name": "Summer holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2025-07-06",
+    "end": "2025-08-31",
+    "name": "Summer holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2025-10-19",
+    "end": "2025-11-02",
+    "name": "Autumn holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2025-10-19",
+    "end": "2025-11-02",
+    "name": "Autumn holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2025-10-19",
+    "end": "2025-11-02",
+    "name": "Autumn holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2025-10-19",
+    "end": "2025-11-02",
+    "name": "Autumn holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2025-12-21",
+    "end": "2026-01-04",
+    "name": "Christmas holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2025-12-21",
+    "end": "2026-01-04",
+    "name": "Christmas holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2025-12-21",
+    "end": "2026-01-04",
+    "name": "Christmas holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2025-12-21",
+    "end": "2026-01-04",
+    "name": "Christmas holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2026-02-08",
+    "end": "2026-02-22",
+    "name": "Winter holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2026-02-15",
+    "end": "2026-03-01",
+    "name": "Winter holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2026-02-15",
+    "end": "2026-03-01",
+    "name": "Winter holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2026-02-22",
+    "end": "2026-03-08",
+    "name": "Winter holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2026-04-05",
+    "end": "2026-04-19",
+    "name": "Spring holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2026-04-12",
+    "end": "2026-04-26",
+    "name": "Spring holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2026-04-12",
+    "end": "2026-04-26",
+    "name": "Spring holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2026-04-19",
+    "end": "2026-05-03",
+    "name": "Spring holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2026-07-05",
+    "end": "2026-08-31",
+    "name": "Summer holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2026-07-05",
+    "end": "2026-08-31",
+    "name": "Summer holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2026-07-05",
+    "end": "2026-08-31",
+    "name": "Summer holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2026-07-05",
+    "end": "2026-09-02",
+    "name": "Summer holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2026-10-18",
+    "end": "2026-11-01",
+    "name": "Autumn holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2026-10-18",
+    "end": "2026-11-01",
+    "name": "Autumn holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2026-10-18",
+    "end": "2026-11-01",
+    "name": "Autumn holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2026-10-18",
+    "end": "2026-11-01",
+    "name": "Autumn holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2026-12-20",
+    "end": "2027-01-03",
+    "name": "Christmas holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2026-12-20",
+    "end": "2027-01-03",
+    "name": "Christmas holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2026-12-20",
+    "end": "2027-01-03",
+    "name": "Christmas holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2026-12-20",
+    "end": "2027-01-03",
+    "name": "Christmas holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2027-02-07",
+    "end": "2027-02-21",
+    "name": "Winter holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2027-02-14",
+    "end": "2027-02-28",
+    "name": "Winter holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2027-02-14",
+    "end": "2027-02-28",
+    "name": "Winter holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2027-02-21",
+    "end": "2027-03-07",
+    "name": "Winter holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2027-04-04",
+    "end": "2027-04-18",
+    "name": "Spring holiday",
+    "region": "Zone C"
+   },
+   {
+    "start": "2027-04-11",
+    "end": "2027-04-25",
+    "name": "Spring holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2027-04-11",
+    "end": "2027-04-25",
+    "name": "Spring holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2027-04-18",
+    "end": "2027-05-02",
+    "name": "Spring holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2027-07-04",
+    "end": "2027-07-04",
+    "name": "Summer holiday",
+    "region": "Corsica"
+   },
+   {
+    "start": "2027-07-04",
+    "end": "2027-08-31",
+    "name": "Summer holiday",
+    "region": "Zone A"
+   },
+   {
+    "start": "2027-07-04",
+    "end": "2027-08-31",
+    "name": "Summer holiday",
+    "region": "Zone B"
+   },
+   {
+    "start": "2027-07-04",
+    "end": "2027-08-31",
+    "name": "Summer holiday",
+    "region": "Zone C"
+   }
+  ]
+ },
+ "EC": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-12",
+    "name": "Carnival"
+   },
+   {
+    "date": "2024-02-13",
+    "name": "Carnival"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-03",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2024-05-24",
+    "name": "The Battle of Pichincha"
+   },
+   {
+    "date": "2024-08-09",
+    "name": "Declaration of Independence of Quito"
+   },
+   {
+    "date": "2024-10-11",
+    "name": "Independence of Guayaquil"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2024-11-04",
+    "name": "Independence of Cuenca"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-03",
+    "name": "Carnival"
+   },
+   {
+    "date": "2025-03-04",
+    "name": "Carnival"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2025-05-24",
+    "name": "The Battle of Pichincha"
+   },
+   {
+    "date": "2025-08-10",
+    "name": "Declaration of Independence of Quito"
+   },
+   {
+    "date": "2025-10-09",
+    "name": "Independence of Guayaquil"
+   },
+   {
+    "date": "2025-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2025-11-03",
+    "name": "Independence of Cuenca"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-16",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-02-17",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "The Battle of Pichincha"
+   },
+   {
+    "date": "2026-08-10",
+    "name": "Declaration of Independence of Quito"
+   },
+   {
+    "date": "2026-10-09",
+    "name": "Independence of Guayaquil"
+   },
+   {
+    "date": "2026-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2026-11-02",
+    "name": "Independence of Cuenca"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-08",
+    "name": "Carnival"
+   },
+   {
+    "date": "2027-02-09",
+    "name": "Carnival"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-04-30",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2027-05-24",
+    "name": "The Battle of Pichincha"
+   },
+   {
+    "date": "2027-08-09",
+    "name": "Declaration of Independence of Quito"
+   },
+   {
+    "date": "2027-10-08",
+    "name": "Independence of Guayaquil"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2027-11-05",
+    "name": "Independence of Cuenca"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "PR": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Three Kings Day / Epiphany"
+   },
+   {
+    "date": "2024-01-08",
+    "name": "Birthday of Eugenio María de Hostos"
+   },
+   {
+    "date": "2024-01-15",
+    "name": "Martin Luther King, Jr. Day"
+   },
+   {
+    "date": "2024-02-18",
+    "name": "Birthday of Luis Muñoz Marín"
+   },
+   {
+    "date": "2024-02-19",
+    "name": "Presidents' Day"
+   },
+   {
+    "date": "2024-03-22",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-15",
+    "name": "Birthday of José de Diego"
+   },
+   {
+    "date": "2024-05-27",
+    "name": "Memorial Day"
+   },
+   {
+    "date": "2024-07-04",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-07-15",
+    "name": "Birthday of Don Luis Muñoz Rivera"
+   },
+   {
+    "date": "2024-07-25",
+    "name": "Puerto Rico Constitution Day"
+   },
+   {
+    "date": "2024-07-27",
+    "name": "Birthday of Dr. José Celso Barbosa"
+   },
+   {
+    "date": "2024-09-02",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-10-14",
+    "name": "Columbus Day"
+   },
+   {
+    "date": "2024-11-11",
+    "name": "Veterans Day"
+   },
+   {
+    "date": "2024-11-19",
+    "name": "Discovery of Puerto Rico"
+   },
+   {
+    "date": "2024-11-28",
+    "name": "Thanksgiving Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Three Kings Day / Epiphany"
+   },
+   {
+    "date": "2025-01-13",
+    "name": "Birthday of Eugenio María de Hostos"
+   },
+   {
+    "date": "2025-01-20",
+    "name": "Martin Luther King, Jr. Day"
+   },
+   {
+    "date": "2025-02-17",
+    "name": "Presidents' Day"
+   },
+   {
+    "date": "2025-02-18",
+    "name": "Birthday of Luis Muñoz Marín"
+   },
+   {
+    "date": "2025-03-22",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Birthday of José de Diego"
+   },
+   {
+    "date": "2025-05-26",
+    "name": "Memorial Day"
+   },
+   {
+    "date": "2025-07-04",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-07-21",
+    "name": "Birthday of Don Luis Muñoz Rivera"
+   },
+   {
+    "date": "2025-07-25",
+    "name": "Puerto Rico Constitution Day"
+   },
+   {
+    "date": "2025-07-27",
+    "name": "Birthday of Dr. José Celso Barbosa"
+   },
+   {
+    "date": "2025-09-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-10-13",
+    "name": "Columbus Day"
+   },
+   {
+    "date": "2025-11-11",
+    "name": "Veterans Day"
+   },
+   {
+    "date": "2025-11-19",
+    "name": "Discovery of Puerto Rico"
+   },
+   {
+    "date": "2025-11-27",
+    "name": "Thanksgiving Day"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Three Kings Day / Epiphany"
+   },
+   {
+    "date": "2026-01-12",
+    "name": "Birthday of Eugenio María de Hostos"
+   },
+   {
+    "date": "2026-01-19",
+    "name": "Martin Luther King, Jr. Day"
+   },
+   {
+    "date": "2026-02-16",
+    "name": "Presidents' Day"
+   },
+   {
+    "date": "2026-02-18",
+    "name": "Birthday of Luis Muñoz Marín"
+   },
+   {
+    "date": "2026-03-22",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-20",
+    "name": "Birthday of José de Diego"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Memorial Day"
+   },
+   {
+    "date": "2026-07-03",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-07-20",
+    "name": "Birthday of Don Luis Muñoz Rivera"
+   },
+   {
+    "date": "2026-07-25",
+    "name": "Puerto Rico Constitution Day"
+   },
+   {
+    "date": "2026-07-27",
+    "name": "Birthday of Dr. José Celso Barbosa"
+   },
+   {
+    "date": "2026-09-07",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-10-12",
+    "name": "Columbus Day"
+   },
+   {
+    "date": "2026-11-11",
+    "name": "Veterans Day"
+   },
+   {
+    "date": "2026-11-19",
+    "name": "Discovery of Puerto Rico"
+   },
+   {
+    "date": "2026-11-26",
+    "name": "Thanksgiving Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Three Kings Day / Epiphany"
+   },
+   {
+    "date": "2027-01-11",
+    "name": "Birthday of Eugenio María de Hostos"
+   },
+   {
+    "date": "2027-01-18",
+    "name": "Martin Luther King, Jr. Day"
+   },
+   {
+    "date": "2027-02-15",
+    "name": "Presidents' Day"
+   },
+   {
+    "date": "2027-02-18",
+    "name": "Birthday of Luis Muñoz Marín"
+   },
+   {
+    "date": "2027-03-22",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-04-19",
+    "name": "Birthday of José de Diego"
+   },
+   {
+    "date": "2027-05-31",
+    "name": "Memorial Day"
+   },
+   {
+    "date": "2027-07-05",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-07-19",
+    "name": "Birthday of Don Luis Muñoz Rivera"
+   },
+   {
+    "date": "2027-07-25",
+    "name": "Puerto Rico Constitution Day"
+   },
+   {
+    "date": "2027-07-27",
+    "name": "Birthday of Dr. José Celso Barbosa"
+   },
+   {
+    "date": "2027-09-06",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-10-11",
+    "name": "Columbus Day"
+   },
+   {
+    "date": "2027-11-11",
+    "name": "Veterans Day"
+   },
+   {
+    "date": "2027-11-19",
+    "name": "Discovery of Puerto Rico"
+   },
+   {
+    "date": "2027-11-25",
+    "name": "Thanksgiving Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "JM": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-14",
+    "name": "Ash Wednesday"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-23",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-08-01",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2024-08-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-10-16",
+    "name": "National Heroes Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-05",
+    "name": "Ash Wednesday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-23",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-08-01",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2025-08-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-10-16",
+    "name": "National Heroes Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-18",
+    "name": "Ash Wednesday"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-23",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-08-01",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2026-08-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-10-16",
+    "name": "National Heroes Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-10",
+    "name": "Ash Wednesday"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-23",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-08-01",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2027-08-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-10-16",
+    "name": "National Heroes Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "CU": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "Triumph of the Revolution"
+   },
+   {
+    "date": "2024-01-02",
+    "name": "Victory of Fidel Castro"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-07-25",
+    "name": "Day before the Commemoration of the Assault of the Moncada garrison"
+   },
+   {
+    "date": "2024-07-26",
+    "name": "Commemoration of the Assault of the Moncada garrison"
+   },
+   {
+    "date": "2024-07-27",
+    "name": "Day after the Commemoration of the Assault of the Moncada garrison"
+   },
+   {
+    "date": "2024-10-10",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "Triumph of the Revolution"
+   },
+   {
+    "date": "2025-01-02",
+    "name": "Victory of Fidel Castro"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-07-25",
+    "name": "Day before the Commemoration of the Assault of the Moncada garrison"
+   },
+   {
+    "date": "2025-07-26",
+    "name": "Commemoration of the Assault of the Moncada garrison"
+   },
+   {
+    "date": "2025-07-27",
+    "name": "Day after the Commemoration of the Assault of the Moncada garrison"
+   },
+   {
+    "date": "2025-10-10",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "Triumph of the Revolution"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "Victory of Fidel Castro"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-07-25",
+    "name": "Day before the Commemoration of the Assault of the Moncada garrison"
+   },
+   {
+    "date": "2026-07-26",
+    "name": "Commemoration of the Assault of the Moncada garrison"
+   },
+   {
+    "date": "2026-07-27",
+    "name": "Day after the Commemoration of the Assault of the Moncada garrison"
+   },
+   {
+    "date": "2026-10-10",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "Triumph of the Revolution"
+   },
+   {
+    "date": "2027-01-02",
+    "name": "Victory of Fidel Castro"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-07-25",
+    "name": "Day before the Commemoration of the Assault of the Moncada garrison"
+   },
+   {
+    "date": "2027-07-26",
+    "name": "Commemoration of the Assault of the Moncada garrison"
+   },
+   {
+    "date": "2027-07-27",
+    "name": "Day after the Commemoration of the Assault of the Moncada garrison"
+   },
+   {
+    "date": "2027-10-10",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "ZW": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-21",
+    "name": "Robert Mugabe National Youth Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-30",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-18",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Worker's Day"
+   },
+   {
+    "date": "2024-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2024-08-12",
+    "name": "Heroes' Day"
+   },
+   {
+    "date": "2024-08-13",
+    "name": "Defence Forces Day"
+   },
+   {
+    "date": "2024-12-22",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-21",
+    "name": "Robert Mugabe National Youth Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-04-19",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Worker's Day"
+   },
+   {
+    "date": "2025-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2025-08-11",
+    "name": "Heroes' Day"
+   },
+   {
+    "date": "2025-08-12",
+    "name": "Defence Forces Day"
+   },
+   {
+    "date": "2025-12-22",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-21",
+    "name": "Robert Mugabe National Youth Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-04",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-18",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Worker's Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2026-08-10",
+    "name": "Heroes' Day"
+   },
+   {
+    "date": "2026-08-11",
+    "name": "Defence Forces Day"
+   },
+   {
+    "date": "2026-12-22",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-21",
+    "name": "Robert Mugabe National Youth Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-27",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-18",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Worker's Day"
+   },
+   {
+    "date": "2027-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2027-08-09",
+    "name": "Heroes' Day"
+   },
+   {
+    "date": "2027-08-10",
+    "name": "Defence Forces Day"
+   },
+   {
+    "date": "2027-12-22",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "BW": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-07-01",
+    "name": "Sir Seretse Khama Day"
+   },
+   {
+    "date": "2024-07-15",
+    "name": "Presidents' Day"
+   },
+   {
+    "date": "2024-09-30",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-10-01",
+    "name": "Botswana Day holiday"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-07-01",
+    "name": "Sir Seretse Khama Day"
+   },
+   {
+    "date": "2025-07-21",
+    "name": "Presidents' Day"
+   },
+   {
+    "date": "2025-09-30",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-10-01",
+    "name": "Botswana Day holiday"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-07-01",
+    "name": "Sir Seretse Khama Day"
+   },
+   {
+    "date": "2026-07-20",
+    "name": "Presidents' Day"
+   },
+   {
+    "date": "2026-09-30",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-10-01",
+    "name": "Botswana Day holiday"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-07-01",
+    "name": "Sir Seretse Khama Day"
+   },
+   {
+    "date": "2027-07-19",
+    "name": "Presidents' Day"
+   },
+   {
+    "date": "2027-09-30",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-10-01",
+    "name": "Botswana Day holiday"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "NA": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-21",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2024-05-04",
+    "name": "Cassinga Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2024-08-26",
+    "name": "Heroes' Day"
+   },
+   {
+    "date": "2024-12-10",
+    "name": "Human Rights Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Day of Goodwill"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-21",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2025-05-04",
+    "name": "Cassinga Day"
+   },
+   {
+    "date": "2025-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2025-05-28",
+    "name": "Genocide Remembrance Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-08-26",
+    "name": "Heroes' Day"
+   },
+   {
+    "date": "2025-12-10",
+    "name": "Human Rights Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Day of Goodwill"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-21",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2026-05-04",
+    "name": "Cassinga Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2026-05-28",
+    "name": "Genocide Remembrance Day"
+   },
+   {
+    "date": "2026-08-26",
+    "name": "Heroes' Day"
+   },
+   {
+    "date": "2026-12-10",
+    "name": "Human Rights Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "Day of Goodwill"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-21",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2027-05-04",
+    "name": "Cassinga Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2027-05-28",
+    "name": "Genocide Remembrance Day"
+   },
+   {
+    "date": "2027-08-26",
+    "name": "Heroes' Day"
+   },
+   {
+    "date": "2027-12-10",
+    "name": "Human Rights Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "Day of Goodwill"
+   }
+  ],
+  "school": []
+ },
+ "SN": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-04",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-04",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-04",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-04",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "ML": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-20",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2024-03-25",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-05",
+    "name": "Leylatoul Qadr (Roughly Date)"
+   },
+   {
+    "date": "2024-04-09",
+    "name": "Korité (Roughly Date)"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2024-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2024-06-16",
+    "name": "Tabaski (Roughly Date)"
+   },
+   {
+    "date": "2024-07-16",
+    "name": "Ashura (Roughly Date)"
+   },
+   {
+    "date": "2024-09-15",
+    "name": "Mawloud (Roughly Date)"
+   },
+   {
+    "date": "2024-09-22",
+    "name": "Baptism of the Prophet (Roughly Date)"
+   },
+   {
+    "date": "2024-09-22",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-20",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2025-03-25",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2025-03-26",
+    "name": "Leylatoul Qadr (Roughly Date)"
+   },
+   {
+    "date": "2025-03-30",
+    "name": "Korité (Roughly Date)"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2025-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2025-06-06",
+    "name": "Tabaski (Roughly Date)"
+   },
+   {
+    "date": "2025-07-05",
+    "name": "Ashura (Roughly Date)"
+   },
+   {
+    "date": "2025-09-04",
+    "name": "Mawloud (Roughly Date)"
+   },
+   {
+    "date": "2025-09-11",
+    "name": "Baptism of the Prophet (Roughly Date)"
+   },
+   {
+    "date": "2025-09-22",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-20",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2026-03-15",
+    "name": "Leylatoul Qadr (Roughly Date)"
+   },
+   {
+    "date": "2026-03-19",
+    "name": "Korité (Roughly Date)"
+   },
+   {
+    "date": "2026-03-25",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2026-05-26",
+    "name": "Tabaski (Roughly Date)"
+   },
+   {
+    "date": "2026-06-25",
+    "name": "Ashura (Roughly Date)"
+   },
+   {
+    "date": "2026-08-25",
+    "name": "Mawloud (Roughly Date)"
+   },
+   {
+    "date": "2026-09-01",
+    "name": "Baptism of the Prophet (Roughly Date)"
+   },
+   {
+    "date": "2026-09-22",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-20",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2027-03-05",
+    "name": "Leylatoul Qadr (Roughly Date)"
+   },
+   {
+    "date": "2027-03-09",
+    "name": "Korité (Roughly Date)"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2027-05-16",
+    "name": "Tabaski (Roughly Date)"
+   },
+   {
+    "date": "2027-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2027-06-14",
+    "name": "Ashura (Roughly Date)"
+   },
+   {
+    "date": "2027-08-14",
+    "name": "Mawloud (Roughly Date)"
+   },
+   {
+    "date": "2027-08-21",
+    "name": "Baptism of the Prophet (Roughly Date)"
+   },
+   {
+    "date": "2027-09-22",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "MR": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2024-11-28",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2025-11-28",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2026-11-28",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2027-11-28",
+    "name": "Independence Day"
+   }
+  ],
+  "school": []
+ },
+ "BJ": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-10",
+    "name": "Traditional Day"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-08-01",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-10-26",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-11-30",
+    "name": "National Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-10",
+    "name": "Traditional Day"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-08-01",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-10-26",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-11-30",
+    "name": "National Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-10",
+    "name": "Traditional Day"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-08-01",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-10-26",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-11-30",
+    "name": "National Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-10",
+    "name": "Traditional Day"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-08-01",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-10-26",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-11-30",
+    "name": "National Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "NE": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-24",
+    "name": "Concord Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-08-03",
+    "name": "Nigerien Independence Day"
+   },
+   {
+    "date": "2024-12-18",
+    "name": "Nigerien Republic Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-04-24",
+    "name": "Concord Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-08-03",
+    "name": "Nigerien Independence Day"
+   },
+   {
+    "date": "2025-12-18",
+    "name": "Nigerien Republic Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-24",
+    "name": "Concord Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-08-03",
+    "name": "Nigerien Independence Day"
+   },
+   {
+    "date": "2026-12-18",
+    "name": "Nigerien Republic Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-24",
+    "name": "Concord Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-08-03",
+    "name": "Nigerien Independence Day"
+   },
+   {
+    "date": "2027-12-18",
+    "name": "Nigerien Republic Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "NG": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2024-05-27",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2024-06-12",
+    "name": "Democracy Day"
+   },
+   {
+    "date": "2024-10-01",
+    "name": "National Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "National Youth Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2025-05-27",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2025-06-12",
+    "name": "Democracy Day"
+   },
+   {
+    "date": "2025-10-01",
+    "name": "National Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "National Youth Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2026-05-27",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2026-06-12",
+    "name": "Democracy Day"
+   },
+   {
+    "date": "2026-10-01",
+    "name": "National Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "National Youth Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-28",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2027-05-27",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2027-06-12",
+    "name": "Democracy Day"
+   },
+   {
+    "date": "2027-10-01",
+    "name": "National Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "National Youth Day"
+   },
+   {
+    "date": "2027-12-27",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2027-12-27",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "CM": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-11",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "National Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-11",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-20",
+    "name": "National Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-11",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-20",
+    "name": "National Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-11",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-20",
+    "name": "National Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "TG": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-13",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-27",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-06-21",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-13",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-04-27",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-06-21",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-13",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-27",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-06-21",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-13",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-27",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-06-21",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "GH": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-08",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2024-03-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2024-07-01",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2024-09-21",
+    "name": "Founders Day"
+   },
+   {
+    "date": "2024-12-06",
+    "name": "Farmers' Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-07",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2025-03-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2025-07-01",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2025-09-22",
+    "name": "Founders Day"
+   },
+   {
+    "date": "2025-12-05",
+    "name": "Farmers' Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-07",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2026-03-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2026-07-01",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2026-09-21",
+    "name": "Founders Day"
+   },
+   {
+    "date": "2026-12-04",
+    "name": "Farmers' Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-07",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2027-03-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2027-07-01",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2027-09-21",
+    "name": "Founders Day"
+   },
+   {
+    "date": "2027-12-03",
+    "name": "Farmers' Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "Boxing Day"
+   }
+  ],
+  "school": []
+ },
+ "CI": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-08-07",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2024-11-15",
+    "name": "National Peace Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-08-07",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2025-11-15",
+    "name": "National Peace Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-08-07",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2026-11-15",
+    "name": "National Peace Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-08-07",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2027-11-15",
+    "name": "National Peace Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "GN": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-10-02",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-10-02",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-10-02",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-10-02",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "GW": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-20",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-09-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-31",
+    "name": "New Year's Evey"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-20",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-09-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-31",
+    "name": "New Year's Evey"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-20",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-09-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-31",
+    "name": "New Year's Evey"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-20",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-09-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-31",
+    "name": "New Year's Evey"
+   }
+  ],
+  "school": []
+ },
+ "LR": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-11",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2024-03-13",
+    "name": "National Decoration Day"
+   },
+   {
+    "date": "2024-03-15",
+    "name": "Joseph Jenkins Roberts Birthday"
+   },
+   {
+    "date": "2024-04-12",
+    "name": "Fast and Prayer Day"
+   },
+   {
+    "date": "2024-05-14",
+    "name": "National Unification Day"
+   },
+   {
+    "date": "2024-07-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-08-24",
+    "name": "National Flag Day"
+   },
+   {
+    "date": "2024-11-07",
+    "name": "Thanksgiving Day"
+   },
+   {
+    "date": "2024-11-29",
+    "name": "William V. S. Tubman's Birthday"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-11",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2025-03-12",
+    "name": "National Decoration Day"
+   },
+   {
+    "date": "2025-03-15",
+    "name": "Joseph Jenkins Roberts Birthday"
+   },
+   {
+    "date": "2025-04-11",
+    "name": "Fast and Prayer Day"
+   },
+   {
+    "date": "2025-05-14",
+    "name": "National Unification Day"
+   },
+   {
+    "date": "2025-07-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-08-24",
+    "name": "National Flag Day"
+   },
+   {
+    "date": "2025-11-06",
+    "name": "Thanksgiving Day"
+   },
+   {
+    "date": "2025-11-29",
+    "name": "William V. S. Tubman's Birthday"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-11",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2026-03-11",
+    "name": "National Decoration Day"
+   },
+   {
+    "date": "2026-03-15",
+    "name": "Joseph Jenkins Roberts Birthday"
+   },
+   {
+    "date": "2026-04-10",
+    "name": "Fast and Prayer Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "National Unification Day"
+   },
+   {
+    "date": "2026-07-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-08-24",
+    "name": "National Flag Day"
+   },
+   {
+    "date": "2026-11-05",
+    "name": "Thanksgiving Day"
+   },
+   {
+    "date": "2026-11-29",
+    "name": "William V. S. Tubman's Birthday"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-11",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2027-03-10",
+    "name": "National Decoration Day"
+   },
+   {
+    "date": "2027-03-15",
+    "name": "Joseph Jenkins Roberts Birthday"
+   },
+   {
+    "date": "2027-04-09",
+    "name": "Fast and Prayer Day"
+   },
+   {
+    "date": "2027-05-14",
+    "name": "National Unification Day"
+   },
+   {
+    "date": "2027-07-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-08-24",
+    "name": "National Flag Day"
+   },
+   {
+    "date": "2027-11-04",
+    "name": "Thanksgiving Day"
+   },
+   {
+    "date": "2027-11-29",
+    "name": "William V. S. Tubman's Birthday"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "SL": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-18",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-27",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-18",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-04-27",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-18",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-27",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-18",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-27",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "BF": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-03",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women’s Day"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-15",
+    "name": "Day of Customs and Traditions"
+   },
+   {
+    "date": "2024-08-05",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-10-31",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-12-11",
+    "name": "Proclamation of Independence Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-03",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "International Women’s Day"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-15",
+    "name": "Day of Customs and Traditions"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-08-05",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-10-31",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-12-11",
+    "name": "Proclamation of Independence Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-03",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "International Women’s Day"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-15",
+    "name": "Day of Customs and Traditions"
+   },
+   {
+    "date": "2026-08-05",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-10-31",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-12-11",
+    "name": "Proclamation of Independence Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-03",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women’s Day"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-15",
+    "name": "Day of Customs and Traditions"
+   },
+   {
+    "date": "2027-08-05",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-10-31",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-12-11",
+    "name": "Proclamation of Independence Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "CF": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Barthelemy Boganda Day"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-06-30",
+    "name": "General Prayer Day"
+   },
+   {
+    "date": "2024-08-13",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2024-12-01",
+    "name": "National Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-29",
+    "name": "Barthelemy Boganda Day"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-06-30",
+    "name": "General Prayer Day"
+   },
+   {
+    "date": "2025-08-13",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2025-12-01",
+    "name": "National Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-29",
+    "name": "Barthelemy Boganda Day"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-06-30",
+    "name": "General Prayer Day"
+   },
+   {
+    "date": "2026-08-13",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2026-12-01",
+    "name": "National Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Barthelemy Boganda Day"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-06-30",
+    "name": "General Prayer Day"
+   },
+   {
+    "date": "2027-08-13",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2027-12-01",
+    "name": "National Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "CG": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-06-10",
+    "name": "Reconciliation Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "National Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-11-28",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-06-10",
+    "name": "Reconciliation Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "National Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-11-28",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-06-10",
+    "name": "Reconciliation Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "National Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-11-28",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-06-10",
+    "name": "Reconciliation Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "National Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-11-28",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "GA": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-12",
+    "name": "Renovation Day"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-17",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-06",
+    "name": "Martyr's Day"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-08-17",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-12",
+    "name": "Renovation Day"
+   },
+   {
+    "date": "2025-04-17",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-06",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-08-17",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-12",
+    "name": "Renovation Day"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-17",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-06",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-08-17",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-12",
+    "name": "Renovation Day"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-17",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Martyr's Day"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-08-17",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "GQ": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-30",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2024-06-05",
+    "name": "President's Day"
+   },
+   {
+    "date": "2024-08-03",
+    "name": "Freedom Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2024-10-12",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-06-05",
+    "name": "President's Day"
+   },
+   {
+    "date": "2025-06-19",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2025-08-03",
+    "name": "Freedom Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2025-10-12",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-06-04",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2026-06-05",
+    "name": "President's Day"
+   },
+   {
+    "date": "2026-08-03",
+    "name": "Freedom Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2026-10-12",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-27",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2027-06-05",
+    "name": "President's Day"
+   },
+   {
+    "date": "2027-08-03",
+    "name": "Freedom Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2027-10-12",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "ZM": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2024-03-12",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-30",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-29",
+    "name": "Kenneth Kaunda's Birthday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-27",
+    "name": "African Freedom Day"
+   },
+   {
+    "date": "2024-07-01",
+    "name": "Heroes' Day"
+   },
+   {
+    "date": "2024-07-02",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2024-08-05",
+    "name": "Farmers' Day"
+   },
+   {
+    "date": "2024-10-18",
+    "name": "National Day of Prayer"
+   },
+   {
+    "date": "2024-10-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-10",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2025-03-12",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-19",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-04-28",
+    "name": "Kenneth Kaunda's Birthday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-26",
+    "name": "African Freedom Day"
+   },
+   {
+    "date": "2025-07-07",
+    "name": "Heroes' Day"
+   },
+   {
+    "date": "2025-07-08",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2025-08-04",
+    "name": "Farmers' Day"
+   },
+   {
+    "date": "2025-10-20",
+    "name": "National Day of Prayer"
+   },
+   {
+    "date": "2025-10-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-09",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2026-03-12",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-04",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-28",
+    "name": "Kenneth Kaunda's Birthday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "African Freedom Day"
+   },
+   {
+    "date": "2026-07-06",
+    "name": "Heroes' Day"
+   },
+   {
+    "date": "2026-07-07",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2026-08-03",
+    "name": "Farmers' Day"
+   },
+   {
+    "date": "2026-10-19",
+    "name": "National Day of Prayer"
+   },
+   {
+    "date": "2026-10-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2027-03-12",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-27",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-28",
+    "name": "Kenneth Kaunda's Birthday"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-25",
+    "name": "African Freedom Day"
+   },
+   {
+    "date": "2027-07-05",
+    "name": "Heroes' Day"
+   },
+   {
+    "date": "2027-07-06",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2027-08-02",
+    "name": "Farmers' Day"
+   },
+   {
+    "date": "2027-10-18",
+    "name": "National Day of Prayer"
+   },
+   {
+    "date": "2027-10-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-27",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "MW": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-15",
+    "name": "John Chilembwe Day"
+   },
+   {
+    "date": "2024-03-04",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-14",
+    "name": "President Kamuzu Banda's Birthday"
+   },
+   {
+    "date": "2024-07-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-10-15",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-15",
+    "name": "John Chilembwe Day"
+   },
+   {
+    "date": "2025-03-03",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-14",
+    "name": "President Kamuzu Banda's Birthday"
+   },
+   {
+    "date": "2025-07-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-10-15",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-15",
+    "name": "John Chilembwe Day"
+   },
+   {
+    "date": "2026-03-03",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "President Kamuzu Banda's Birthday"
+   },
+   {
+    "date": "2026-07-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-10-15",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-28",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-15",
+    "name": "John Chilembwe Day"
+   },
+   {
+    "date": "2027-03-03",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-14",
+    "name": "President Kamuzu Banda's Birthday"
+   },
+   {
+    "date": "2027-07-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-10-15",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2027-12-27",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-27",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "MZ": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-03",
+    "name": "Heroes's Day"
+   },
+   {
+    "date": "2024-04-07",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Worker's Day"
+   },
+   {
+    "date": "2024-06-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-09-07",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2024-09-25",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2024-10-04",
+    "name": "Day of Peace and Reconciliation"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-03",
+    "name": "Heroes's Day"
+   },
+   {
+    "date": "2025-04-07",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Worker's Day"
+   },
+   {
+    "date": "2025-06-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-09-07",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2025-09-25",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2025-10-04",
+    "name": "Day of Peace and Reconciliation"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-03",
+    "name": "Heroes's Day"
+   },
+   {
+    "date": "2026-04-07",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Worker's Day"
+   },
+   {
+    "date": "2026-06-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-09-07",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2026-09-25",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2026-10-04",
+    "name": "Day of Peace and Reconciliation"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-03",
+    "name": "Heroes's Day"
+   },
+   {
+    "date": "2027-04-07",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Worker's Day"
+   },
+   {
+    "date": "2027-06-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-09-07",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2027-09-25",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2027-10-04",
+    "name": "Day of Peace and Reconciliation"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "SZ": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-19",
+    "name": "King's Birthday"
+   },
+   {
+    "date": "2024-04-25",
+    "name": "National Flag Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-09-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-19",
+    "name": "King's Birthday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-04-25",
+    "name": "National Flag Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-09-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-20",
+    "name": "King's Birthday"
+   },
+   {
+    "date": "2026-04-25",
+    "name": "National Flag Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-09-07",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-19",
+    "name": "King's Birthday"
+   },
+   {
+    "date": "2027-04-26",
+    "name": "National Flag Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Workers' Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-09-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "AO": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-04",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2024-02-12",
+    "name": "Carnival"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2024-03-23",
+    "name": "Day of the Liberation of Southern Africa"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-04",
+    "name": "Peace Day"
+   },
+   {
+    "date": "2024-04-05",
+    "name": "Peace Day (Ponte)"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-09-16",
+    "name": "National Heroes' Day (Ponte)"
+   },
+   {
+    "date": "2024-09-17",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2024-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2024-11-11",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-03",
+    "name": "Liberation Day (Ponte)"
+   },
+   {
+    "date": "2025-02-04",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2025-03-03",
+    "name": "Carnival"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2025-03-23",
+    "name": "Day of the Liberation of Southern Africa"
+   },
+   {
+    "date": "2025-04-04",
+    "name": "Peace Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-02",
+    "name": "Labour Day (Ponte)"
+   },
+   {
+    "date": "2025-09-17",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2025-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2025-11-10",
+    "name": "Independence Day (Ponte)"
+   },
+   {
+    "date": "2025-11-11",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Christmas Day (Ponte)"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "New Year's Day (Ponte)"
+   },
+   {
+    "date": "2026-02-04",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2026-02-16",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2026-03-23",
+    "name": "Day of the Liberation of Southern Africa"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-04",
+    "name": "Peace Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-09-17",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2026-09-18",
+    "name": "National Heroes' Day (Ponte)"
+   },
+   {
+    "date": "2026-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2026-11-11",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-04",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2027-02-05",
+    "name": "Liberation Day (Ponte)"
+   },
+   {
+    "date": "2027-02-08",
+    "name": "Carnival"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2027-03-22",
+    "name": "Day of the Liberation of Southern Africa (Ponte)"
+   },
+   {
+    "date": "2027-03-23",
+    "name": "Day of the Liberation of Southern Africa"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-04-04",
+    "name": "Peace Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-09-17",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Souls' Day (Ponte)"
+   },
+   {
+    "date": "2027-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2027-11-11",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-11-12",
+    "name": "Independence Day (Ponte)"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "BI": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-05",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2024-04-06",
+    "name": "Ntaryamira Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-06-08",
+    "name": "National Patriotism Day"
+   },
+   {
+    "date": "2024-07-01",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-10-13",
+    "name": "Rwagasore Day"
+   },
+   {
+    "date": "2024-10-21",
+    "name": "Ndadaye Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-05",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2025-04-06",
+    "name": "Ntaryamira Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "National Patriotism Day"
+   },
+   {
+    "date": "2025-07-01",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-10-13",
+    "name": "Rwagasore Day"
+   },
+   {
+    "date": "2025-10-21",
+    "name": "Ndadaye Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-05",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Ntaryamira Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-06-08",
+    "name": "National Patriotism Day"
+   },
+   {
+    "date": "2026-07-01",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-10-13",
+    "name": "Rwagasore Day"
+   },
+   {
+    "date": "2026-10-21",
+    "name": "Ndadaye Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-05",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2027-04-06",
+    "name": "Ntaryamira Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-06-08",
+    "name": "National Patriotism Day"
+   },
+   {
+    "date": "2027-07-01",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-10-13",
+    "name": "Rwagasore Day"
+   },
+   {
+    "date": "2027-10-21",
+    "name": "Ndadaye Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "MG": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-06-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-29",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-06-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-29",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-06-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-06-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "GM": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-18",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2024-07-22",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-18",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2025-07-22",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-18",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2026-07-22",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-18",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-25",
+    "name": "Africa Day"
+   },
+   {
+    "date": "2027-07-22",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "TN": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-20",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-04-09",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-07-25",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2024-08-13",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2024-10-15",
+    "name": "Evacuation Day"
+   },
+   {
+    "date": "2024-12-17",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-20",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-04-09",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-07-25",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2025-08-13",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2025-10-15",
+    "name": "Evacuation Day"
+   },
+   {
+    "date": "2025-12-17",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-20",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-04-09",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-07-25",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2026-08-13",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2026-10-15",
+    "name": "Evacuation Day"
+   },
+   {
+    "date": "2026-12-17",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-20",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-04-09",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-07-25",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2027-08-13",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2027-10-15",
+    "name": "Evacuation Day"
+   },
+   {
+    "date": "2027-12-17",
+    "name": "Revolution Day"
+   }
+  ],
+  "school": []
+ },
+ "DZ": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-12",
+    "name": "Amazigh New Year"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-07-05",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-12",
+    "name": "Amazigh New Year"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-07-05",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-12",
+    "name": "Amazigh New Year"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-07-05",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-12",
+    "name": "Amazigh New Year"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-07-05",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "Revolution Day"
+   }
+  ],
+  "school": []
+ },
+ "IQ": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Army Day"
+   },
+   {
+    "date": "2024-03-21",
+    "name": "Nowruz"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-10-03",
+    "name": "National Day"
+   },
+   {
+    "date": "2024-12-10",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Army Day"
+   },
+   {
+    "date": "2025-03-21",
+    "name": "Nowruz"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-10-03",
+    "name": "National Day"
+   },
+   {
+    "date": "2025-12-10",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Army Day"
+   },
+   {
+    "date": "2026-03-21",
+    "name": "Nowruz"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-10-03",
+    "name": "National Day"
+   },
+   {
+    "date": "2026-12-10",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Army Day"
+   },
+   {
+    "date": "2027-03-21",
+    "name": "Nowruz"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-10-03",
+    "name": "National Day"
+   },
+   {
+    "date": "2027-12-10",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "VU": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-21",
+    "name": "Father Walter Lini Day"
+   },
+   {
+    "date": "2024-03-05",
+    "name": "Custom Chief's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-07-24",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2024-07-30",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-10-05",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2024-11-29",
+    "name": "National Unity Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Family Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-21",
+    "name": "Father Walter Lini Day"
+   },
+   {
+    "date": "2025-03-05",
+    "name": "Custom Chief's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-07-24",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2025-07-30",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-10-05",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2025-11-29",
+    "name": "National Unity Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Family Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-21",
+    "name": "Father Walter Lini Day"
+   },
+   {
+    "date": "2026-03-05",
+    "name": "Custom Chief's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-07-24",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2026-07-30",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-10-05",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2026-11-29",
+    "name": "National Unity Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "Family Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-21",
+    "name": "Father Walter Lini Day"
+   },
+   {
+    "date": "2027-03-05",
+    "name": "Custom Chief's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-07-24",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2027-07-30",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-10-05",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2027-11-29",
+    "name": "National Unity Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "Family Day"
+   }
+  ],
+  "school": []
+ },
+ "KH": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-07",
+    "name": "Victory over Genocide Day"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2024-04-14",
+    "name": "Khmer New Year"
+   },
+   {
+    "date": "2024-04-15",
+    "name": "Khmer New Year"
+   },
+   {
+    "date": "2024-04-16",
+    "name": "Khmer New Year"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-14",
+    "name": "King Sihamoni's Birthday"
+   },
+   {
+    "date": "2024-05-26",
+    "name": "Royal Ploughing Ceremony"
+   },
+   {
+    "date": "2024-06-18",
+    "name": "Queen Mother's Birthday"
+   },
+   {
+    "date": "2024-09-24",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2024-10-01",
+    "name": "Pchum Ben"
+   },
+   {
+    "date": "2024-10-02",
+    "name": "Pchum Ben"
+   },
+   {
+    "date": "2024-10-03",
+    "name": "Pchum Ben"
+   },
+   {
+    "date": "2024-10-15",
+    "name": "Commemoration Day of the King's Father"
+   },
+   {
+    "date": "2024-10-29",
+    "name": "Coronation Day of King Sihamoni"
+   },
+   {
+    "date": "2024-11-09",
+    "name": "National Independence Day"
+   },
+   {
+    "date": "2024-11-14",
+    "name": "Water Festival"
+   },
+   {
+    "date": "2024-11-15",
+    "name": "Water Festival"
+   },
+   {
+    "date": "2024-11-16",
+    "name": "Water Festival"
+   },
+   {
+    "date": "2024-12-29",
+    "name": "Cambodia Peace Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-07",
+    "name": "Victory over Genocide Day"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2025-04-14",
+    "name": "Khmer New Year"
+   },
+   {
+    "date": "2025-04-15",
+    "name": "Khmer New Year"
+   },
+   {
+    "date": "2025-04-16",
+    "name": "Khmer New Year"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-14",
+    "name": "King Sihamoni's Birthday"
+   },
+   {
+    "date": "2025-05-15",
+    "name": "Royal Ploughing Ceremony"
+   },
+   {
+    "date": "2025-06-18",
+    "name": "Queen Mother's Birthday"
+   },
+   {
+    "date": "2025-09-21",
+    "name": "Pchum Ben"
+   },
+   {
+    "date": "2025-09-22",
+    "name": "Pchum Ben"
+   },
+   {
+    "date": "2025-09-23",
+    "name": "Pchum Ben"
+   },
+   {
+    "date": "2025-09-24",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2025-10-15",
+    "name": "Commemoration Day of the King's Father"
+   },
+   {
+    "date": "2025-10-29",
+    "name": "Coronation Day of King Sihamoni"
+   },
+   {
+    "date": "2025-11-04",
+    "name": "Water Festival"
+   },
+   {
+    "date": "2025-11-05",
+    "name": "Water Festival"
+   },
+   {
+    "date": "2025-11-06",
+    "name": "Water Festival"
+   },
+   {
+    "date": "2025-11-09",
+    "name": "National Independence Day"
+   },
+   {
+    "date": "2025-12-29",
+    "name": "Cambodia Peace Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-07",
+    "name": "Victory over Genocide Day"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2026-04-14",
+    "name": "Khmer New Year"
+   },
+   {
+    "date": "2026-04-15",
+    "name": "Khmer New Year"
+   },
+   {
+    "date": "2026-04-16",
+    "name": "Khmer New Year"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-05",
+    "name": "Royal Ploughing Ceremony"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "King Sihamoni's Birthday"
+   },
+   {
+    "date": "2026-06-18",
+    "name": "Queen Mother's Birthday"
+   },
+   {
+    "date": "2026-09-24",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2026-10-10",
+    "name": "Pchum Ben"
+   },
+   {
+    "date": "2026-10-11",
+    "name": "Pchum Ben"
+   },
+   {
+    "date": "2026-10-12",
+    "name": "Pchum Ben"
+   },
+   {
+    "date": "2026-10-15",
+    "name": "Commemoration Day of the King's Father"
+   },
+   {
+    "date": "2026-10-29",
+    "name": "Coronation Day of King Sihamoni"
+   },
+   {
+    "date": "2026-11-09",
+    "name": "National Independence Day"
+   },
+   {
+    "date": "2026-11-23",
+    "name": "Water Festival"
+   },
+   {
+    "date": "2026-11-24",
+    "name": "Water Festival"
+   },
+   {
+    "date": "2026-11-25",
+    "name": "Water Festival"
+   },
+   {
+    "date": "2026-12-29",
+    "name": "Cambodia Peace Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-07",
+    "name": "Victory over Genocide Day"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2027-04-14",
+    "name": "Khmer New Year"
+   },
+   {
+    "date": "2027-04-15",
+    "name": "Khmer New Year"
+   },
+   {
+    "date": "2027-04-16",
+    "name": "Khmer New Year"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-14",
+    "name": "King Sihamoni's Birthday"
+   },
+   {
+    "date": "2027-05-24",
+    "name": "Royal Ploughing Ceremony"
+   },
+   {
+    "date": "2027-06-18",
+    "name": "Queen Mother's Birthday"
+   },
+   {
+    "date": "2027-09-24",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2027-09-29",
+    "name": "Pchum Ben"
+   },
+   {
+    "date": "2027-09-30",
+    "name": "Pchum Ben"
+   },
+   {
+    "date": "2027-10-01",
+    "name": "Pchum Ben"
+   },
+   {
+    "date": "2027-10-15",
+    "name": "Commemoration Day of the King's Father"
+   },
+   {
+    "date": "2027-10-29",
+    "name": "Coronation Day of King Sihamoni"
+   },
+   {
+    "date": "2027-11-09",
+    "name": "National Independence Day"
+   },
+   {
+    "date": "2027-11-12",
+    "name": "Water Festival"
+   },
+   {
+    "date": "2027-11-13",
+    "name": "Water Festival"
+   },
+   {
+    "date": "2027-11-14",
+    "name": "Water Festival"
+   },
+   {
+    "date": "2027-12-29",
+    "name": "Cambodia Peace Day"
+   }
+  ],
+  "school": []
+ },
+ "VN": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-04-30",
+    "name": "Reunification Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-09-02",
+    "name": "National Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-30",
+    "name": "Reunification Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-09-02",
+    "name": "National Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-30",
+    "name": "Reunification Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-09-02",
+    "name": "National Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-04-30",
+    "name": "Reunification Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-09-02",
+    "name": "National Day"
+   }
+  ],
+  "school": []
+ },
+ "KR": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-09",
+    "name": "Lunar New Year"
+   },
+   {
+    "date": "2024-02-10",
+    "name": "Lunar New Year"
+   },
+   {
+    "date": "2024-02-12",
+    "name": "Lunar New Year"
+   },
+   {
+    "date": "2024-03-01",
+    "name": "Independence Movement Day"
+   },
+   {
+    "date": "2024-05-06",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2024-05-15",
+    "name": "Buddha's Birthday"
+   },
+   {
+    "date": "2024-06-06",
+    "name": "Memorial Day"
+   },
+   {
+    "date": "2024-07-17",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2024-09-16",
+    "name": "Chuseok"
+   },
+   {
+    "date": "2024-09-17",
+    "name": "Chuseok"
+   },
+   {
+    "date": "2024-09-18",
+    "name": "Chuseok"
+   },
+   {
+    "date": "2024-10-03",
+    "name": "National Foundation Day"
+   },
+   {
+    "date": "2024-10-09",
+    "name": "Hangul Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-28",
+    "name": "Lunar New Year"
+   },
+   {
+    "date": "2025-01-29",
+    "name": "Lunar New Year"
+   },
+   {
+    "date": "2025-01-30",
+    "name": "Lunar New Year"
+   },
+   {
+    "date": "2025-03-03",
+    "name": "Independence Movement Day"
+   },
+   {
+    "date": "2025-05-05",
+    "name": "Buddha's Birthday"
+   },
+   {
+    "date": "2025-05-05",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2025-06-06",
+    "name": "Memorial Day"
+   },
+   {
+    "date": "2025-07-17",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2025-10-03",
+    "name": "National Foundation Day"
+   },
+   {
+    "date": "2025-10-06",
+    "name": "Chuseok"
+   },
+   {
+    "date": "2025-10-07",
+    "name": "Chuseok"
+   },
+   {
+    "date": "2025-10-08",
+    "name": "Chuseok"
+   },
+   {
+    "date": "2025-10-09",
+    "name": "Hangul Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-16",
+    "name": "Lunar New Year"
+   },
+   {
+    "date": "2026-02-17",
+    "name": "Lunar New Year"
+   },
+   {
+    "date": "2026-02-18",
+    "name": "Lunar New Year"
+   },
+   {
+    "date": "2026-03-02",
+    "name": "Independence Movement Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-05",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Buddha's Birthday"
+   },
+   {
+    "date": "2026-06-03",
+    "name": "Local Election Day"
+   },
+   {
+    "date": "2026-06-06",
+    "name": "Memorial Day"
+   },
+   {
+    "date": "2026-07-17",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2026-08-17",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2026-09-24",
+    "name": "Chuseok"
+   },
+   {
+    "date": "2026-09-25",
+    "name": "Chuseok"
+   },
+   {
+    "date": "2026-09-26",
+    "name": "Chuseok"
+   },
+   {
+    "date": "2026-10-05",
+    "name": "National Foundation Day"
+   },
+   {
+    "date": "2026-10-09",
+    "name": "Hangul Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-06",
+    "name": "Lunar New Year"
+   },
+   {
+    "date": "2027-02-08",
+    "name": "Lunar New Year"
+   },
+   {
+    "date": "2027-02-09",
+    "name": "Lunar New Year"
+   },
+   {
+    "date": "2027-03-01",
+    "name": "Independence Movement Day"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-05",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2027-05-13",
+    "name": "Buddha's Birthday"
+   },
+   {
+    "date": "2027-06-06",
+    "name": "Memorial Day"
+   },
+   {
+    "date": "2027-07-19",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2027-08-16",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2027-09-14",
+    "name": "Chuseok"
+   },
+   {
+    "date": "2027-09-15",
+    "name": "Chuseok"
+   },
+   {
+    "date": "2027-09-16",
+    "name": "Chuseok"
+   },
+   {
+    "date": "2027-10-04",
+    "name": "National Foundation Day"
+   },
+   {
+    "date": "2027-10-11",
+    "name": "Hangul Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "MN": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2024-06-01",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2024-07-11",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2024-07-12",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2024-07-13",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2024-07-14",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2024-07-15",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2024-11-26",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2024-12-29",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2025-06-01",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2025-07-11",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2025-07-12",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2025-07-13",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2025-07-14",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2025-07-15",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2025-11-26",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2025-12-29",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2026-06-01",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2026-07-11",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2026-07-12",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2026-07-13",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2026-07-14",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2026-07-15",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2026-11-26",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2026-12-29",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2027-06-01",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2027-07-11",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2027-07-12",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2027-07-13",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2027-07-14",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2027-07-15",
+    "name": "Naadam Holiday"
+   },
+   {
+    "date": "2027-11-26",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2027-12-29",
+    "name": "Independence Day"
+   }
+  ],
+  "school": []
+ },
+ "BD": {
+  "bank": [
+   {
+    "date": "2024-02-21",
+    "name": "International Mother Language Day"
+   },
+   {
+    "date": "2024-03-26",
+    "name": "Independence and National Day"
+   },
+   {
+    "date": "2024-04-14",
+    "name": "Bengali New Year"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-12-16",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-02-21",
+    "name": "International Mother Language Day"
+   },
+   {
+    "date": "2025-03-26",
+    "name": "Independence and National Day"
+   },
+   {
+    "date": "2025-04-14",
+    "name": "Bengali New Year"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-08-05",
+    "name": "July Mass Uprising Day"
+   },
+   {
+    "date": "2025-12-16",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-02-21",
+    "name": "International Mother Language Day"
+   },
+   {
+    "date": "2026-03-26",
+    "name": "Independence and National Day"
+   },
+   {
+    "date": "2026-04-14",
+    "name": "Bengali New Year"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-08-05",
+    "name": "July Mass Uprising Day"
+   },
+   {
+    "date": "2026-12-16",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-02-21",
+    "name": "International Mother Language Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Independence and National Day"
+   },
+   {
+    "date": "2027-04-14",
+    "name": "Bengali New Year"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-08-05",
+    "name": "July Mass Uprising Day"
+   },
+   {
+    "date": "2027-12-16",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "SY": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-18",
+    "name": "Syrian Revolution Day"
+   },
+   {
+    "date": "2024-03-21",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2024-03-21",
+    "name": "Newroz"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-17",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-12-08",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-18",
+    "name": "Syrian Revolution Day"
+   },
+   {
+    "date": "2025-03-21",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2025-03-21",
+    "name": "Newroz"
+   },
+   {
+    "date": "2025-04-17",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-18",
+    "name": "Syrian Revolution Day"
+   },
+   {
+    "date": "2026-03-21",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2026-03-21",
+    "name": "Newroz"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-12",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-17",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-18",
+    "name": "Syrian Revolution Day"
+   },
+   {
+    "date": "2027-03-21",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2027-03-21",
+    "name": "Newroz"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-04-17",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-02",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "AM": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-05",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-01-28",
+    "name": "Army Day"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-24",
+    "name": "Armenian Genocide Remembrance Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Victory and Peace Day"
+   },
+   {
+    "date": "2024-05-28",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2024-07-05",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2024-09-21",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-05",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-28",
+    "name": "Army Day"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-24",
+    "name": "Armenian Genocide Remembrance Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-09",
+    "name": "Victory and Peace Day"
+   },
+   {
+    "date": "2025-05-28",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2025-07-05",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2025-09-21",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-05",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-28",
+    "name": "Army Day"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-24",
+    "name": "Armenian Genocide Remembrance Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-09",
+    "name": "Victory and Peace Day"
+   },
+   {
+    "date": "2026-05-28",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2026-07-05",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2026-09-21",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-05",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-28",
+    "name": "Army Day"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-04-24",
+    "name": "Armenian Genocide Remembrance Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-09",
+    "name": "Victory and Peace Day"
+   },
+   {
+    "date": "2027-05-28",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2027-07-05",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2027-09-21",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-31",
+    "name": "New Year's Eve"
+   }
+  ],
+  "school": []
+ },
+ "SE": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-19",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-06-06",
+    "name": "National Day of Sweden"
+   },
+   {
+    "date": "2024-06-21",
+    "name": "Midsummer Eve"
+   },
+   {
+    "date": "2024-06-22",
+    "name": "Midsummer Day"
+   },
+   {
+    "date": "2024-11-02",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2024-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-06",
+    "name": "National Day of Sweden"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-20",
+    "name": "Midsummer Eve"
+   },
+   {
+    "date": "2025-06-21",
+    "name": "Midsummer Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-24",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-06-06",
+    "name": "National Day of Sweden"
+   },
+   {
+    "date": "2026-06-19",
+    "name": "Midsummer Eve"
+   },
+   {
+    "date": "2026-06-20",
+    "name": "Midsummer Day"
+   },
+   {
+    "date": "2026-10-31",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-16",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-06-06",
+    "name": "National Day of Sweden"
+   },
+   {
+    "date": "2027-06-25",
+    "name": "Midsummer Eve"
+   },
+   {
+    "date": "2027-06-26",
+    "name": "Midsummer Day"
+   },
+   {
+    "date": "2027-11-06",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-12-31",
+    "name": "New Year's Eve"
+   }
+  ],
+  "school": []
+ },
+ "BY": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2024-05-14",
+    "name": "Commemoration Day"
+   },
+   {
+    "date": "2024-07-03",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-11-07",
+    "name": "October Revolution Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Catholic Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2025-04-29",
+    "name": "Commemoration Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-09",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2025-07-03",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-11-07",
+    "name": "October Revolution Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Catholic Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2026-04-21",
+    "name": "Commemoration Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-09",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2026-07-03",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-11-07",
+    "name": "October Revolution Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Catholic Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-09",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2027-05-11",
+    "name": "Commemoration Day"
+   },
+   {
+    "date": "2027-07-03",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-11-07",
+    "name": "October Revolution Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Catholic Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "UA": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2024-05-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-08",
+    "name": "Victory day over Nazism in World War II"
+   },
+   {
+    "date": "2024-06-23",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-06-28",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2024-07-15",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2024-08-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-10-01",
+    "name": "Defender of Ukraine Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2025-05-08",
+    "name": "Victory day over Nazism in World War II"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-28",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2025-07-15",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2025-08-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-10-01",
+    "name": "Defender of Ukraine Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2026-04-12",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2026-05-08",
+    "name": "Victory day over Nazism in World War II"
+   },
+   {
+    "date": "2026-05-31",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-06-28",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2026-07-15",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2026-08-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-10-01",
+    "name": "Defender of Ukraine Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2027-05-02",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-08",
+    "name": "Victory day over Nazism in World War II"
+   },
+   {
+    "date": "2027-06-20",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-06-28",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2027-07-15",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2027-08-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-10-01",
+    "name": "Defender of Ukraine Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "PL": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2024-05-03",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2024-05-19",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-05-30",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-11-11",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2025-05-03",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-19",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-11-11",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2026-05-03",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2026-05-24",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-06-04",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-11-11",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2027-05-16",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-05-27",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-11-11",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "AT": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "National Holiday"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-19",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-05-30",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-10-26",
+    "name": "National Holiday"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "National Holiday"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-06-19",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-10-26",
+    "name": "National Holiday"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "National Holiday"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-24",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-06-04",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-10-26",
+    "name": "National Holiday"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "National Holiday"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-16",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-05-27",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-10-26",
+    "name": "National Holiday"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "HU": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-15",
+    "name": "1848 Revolution Memorial Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour day"
+   },
+   {
+    "date": "2024-05-19",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-08-20",
+    "name": "State Foundation Day"
+   },
+   {
+    "date": "2024-10-23",
+    "name": "1956 Revolution Memorial Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-15",
+    "name": "1848 Revolution Memorial Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour day"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-08-20",
+    "name": "State Foundation Day"
+   },
+   {
+    "date": "2025-10-23",
+    "name": "1956 Revolution Memorial Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-15",
+    "name": "1848 Revolution Memorial Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour day"
+   },
+   {
+    "date": "2026-05-24",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-08-20",
+    "name": "State Foundation Day"
+   },
+   {
+    "date": "2026-10-23",
+    "name": "1956 Revolution Memorial Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-15",
+    "name": "1848 Revolution Memorial Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour day"
+   },
+   {
+    "date": "2027-05-16",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-08-20",
+    "name": "State Foundation Day"
+   },
+   {
+    "date": "2027-10-23",
+    "name": "1956 Revolution Memorial Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "MD": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2024-01-08",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2024-02-23",
+    "name": "Day of Veterans of the Armed Forces and Law Enforcement Agencies"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day (Moldova)"
+   },
+   {
+    "date": "2024-05-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Victory and Commemoration Day"
+   },
+   {
+    "date": "2024-05-22",
+    "name": "Bălţi Day"
+   },
+   {
+    "date": "2024-08-26",
+    "name": "Memorial Day"
+   },
+   {
+    "date": "2024-08-27",
+    "name": "Independence Day (Moldova)"
+   },
+   {
+    "date": "2024-08-31",
+    "name": "Limba Noastra (National Language Day)"
+   },
+   {
+    "date": "2024-09-03",
+    "name": "Day of the Moldovan National Army"
+   },
+   {
+    "date": "2024-10-14",
+    "name": "Capital's Day"
+   },
+   {
+    "date": "2024-11-21",
+    "name": "South Capital's Day Cahul"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2025-01-08",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2025-02-23",
+    "name": "Day of Veterans of the Armed Forces and Law Enforcement Agencies"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day (Moldova)"
+   },
+   {
+    "date": "2025-05-09",
+    "name": "Victory and Commemoration Day"
+   },
+   {
+    "date": "2025-05-22",
+    "name": "Bălţi Day"
+   },
+   {
+    "date": "2025-08-25",
+    "name": "Memorial Day"
+   },
+   {
+    "date": "2025-08-27",
+    "name": "Independence Day (Moldova)"
+   },
+   {
+    "date": "2025-08-31",
+    "name": "Limba Noastra (National Language Day)"
+   },
+   {
+    "date": "2025-09-03",
+    "name": "Day of the Moldovan National Army"
+   },
+   {
+    "date": "2025-10-14",
+    "name": "Capital's Day"
+   },
+   {
+    "date": "2025-11-21",
+    "name": "South Capital's Day Cahul"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2026-01-08",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2026-02-23",
+    "name": "Day of Veterans of the Armed Forces and Law Enforcement Agencies"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2026-04-12",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day (Moldova)"
+   },
+   {
+    "date": "2026-05-09",
+    "name": "Victory and Commemoration Day"
+   },
+   {
+    "date": "2026-05-22",
+    "name": "Bălţi Day"
+   },
+   {
+    "date": "2026-08-27",
+    "name": "Independence Day (Moldova)"
+   },
+   {
+    "date": "2026-08-31",
+    "name": "Limba Noastra (National Language Day)"
+   },
+   {
+    "date": "2026-08-31",
+    "name": "Memorial Day"
+   },
+   {
+    "date": "2026-09-03",
+    "name": "Day of the Moldovan National Army"
+   },
+   {
+    "date": "2026-10-14",
+    "name": "Capital's Day"
+   },
+   {
+    "date": "2026-11-21",
+    "name": "South Capital's Day Cahul"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2027-01-08",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2027-02-23",
+    "name": "Day of Veterans of the Armed Forces and Law Enforcement Agencies"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day (Moldova)"
+   },
+   {
+    "date": "2027-05-02",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-09",
+    "name": "Victory and Commemoration Day"
+   },
+   {
+    "date": "2027-05-22",
+    "name": "Bălţi Day"
+   },
+   {
+    "date": "2027-08-27",
+    "name": "Independence Day (Moldova)"
+   },
+   {
+    "date": "2027-08-30",
+    "name": "Memorial Day"
+   },
+   {
+    "date": "2027-08-31",
+    "name": "Limba Noastra (National Language Day)"
+   },
+   {
+    "date": "2027-09-03",
+    "name": "Day of the Moldovan National Army"
+   },
+   {
+    "date": "2027-10-14",
+    "name": "Capital's Day"
+   },
+   {
+    "date": "2027-11-21",
+    "name": "South Capital's Day Cahul"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "RO": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-02",
+    "name": "Day after New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2024-01-07",
+    "name": "Saint John the Baptist"
+   },
+   {
+    "date": "2024-01-24",
+    "name": "Union Day/Small Union"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-06-01",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2024-06-23",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-06-24",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Dormition of the Theotokos"
+   },
+   {
+    "date": "2024-11-30",
+    "name": "St. Andrew's Day"
+   },
+   {
+    "date": "2024-12-01",
+    "name": "National Day/Great Union"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-02",
+    "name": "Day after New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2025-01-07",
+    "name": "Saint John the Baptist"
+   },
+   {
+    "date": "2025-01-24",
+    "name": "Union Day/Small Union"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-06-01",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Dormition of the Theotokos"
+   },
+   {
+    "date": "2025-11-30",
+    "name": "St. Andrew's Day"
+   },
+   {
+    "date": "2025-12-01",
+    "name": "National Day/Great Union"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "Day after New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2026-01-07",
+    "name": "Saint John the Baptist"
+   },
+   {
+    "date": "2026-01-24",
+    "name": "Union Day/Small Union"
+   },
+   {
+    "date": "2026-04-10",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-12",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-13",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-31",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-06-01",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2026-06-01",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Dormition of the Theotokos"
+   },
+   {
+    "date": "2026-11-30",
+    "name": "St. Andrew's Day"
+   },
+   {
+    "date": "2026-12-01",
+    "name": "National Day/Great Union"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-02",
+    "name": "Day after New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2027-01-07",
+    "name": "Saint John the Baptist"
+   },
+   {
+    "date": "2027-01-24",
+    "name": "Union Day/Small Union"
+   },
+   {
+    "date": "2027-04-30",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-02",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-06-01",
+    "name": "Children's Day"
+   },
+   {
+    "date": "2027-06-20",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-06-21",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Dormition of the Theotokos"
+   },
+   {
+    "date": "2027-11-30",
+    "name": "St. Andrew's Day"
+   },
+   {
+    "date": "2027-12-01",
+    "name": "National Day/Great Union"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "LT": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-16",
+    "name": "The Day of Restoration of the State of Lithuania"
+   },
+   {
+    "date": "2024-03-11",
+    "name": "Day of Restoration of Independence of Lithuania"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "International Working Day"
+   },
+   {
+    "date": "2024-06-24",
+    "name": "St. John's Day"
+   },
+   {
+    "date": "2024-07-06",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-16",
+    "name": "The Day of Restoration of the State of Lithuania"
+   },
+   {
+    "date": "2025-03-11",
+    "name": "Day of Restoration of Independence of Lithuania"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "International Working Day"
+   },
+   {
+    "date": "2025-06-24",
+    "name": "St. John's Day"
+   },
+   {
+    "date": "2025-07-06",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-16",
+    "name": "The Day of Restoration of the State of Lithuania"
+   },
+   {
+    "date": "2026-03-11",
+    "name": "Day of Restoration of Independence of Lithuania"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "International Working Day"
+   },
+   {
+    "date": "2026-06-24",
+    "name": "St. John's Day"
+   },
+   {
+    "date": "2026-07-06",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-16",
+    "name": "The Day of Restoration of the State of Lithuania"
+   },
+   {
+    "date": "2027-03-11",
+    "name": "Day of Restoration of Independence of Lithuania"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "International Working Day"
+   },
+   {
+    "date": "2027-06-24",
+    "name": "St. John's Day"
+   },
+   {
+    "date": "2027-07-06",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-11-02",
+    "name": "All Souls' Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "LV": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-20",
+    "name": "Commemoration Day of Defenders of the Barricades in 1991"
+   },
+   {
+    "date": "2024-01-26",
+    "name": "Day of the International (de jure) Recognition of the Republic of Latvia"
+   },
+   {
+    "date": "2024-03-02",
+    "name": "National Partisan Armed Resistance Remembrance Day"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2024-03-17",
+    "name": "National Resistance Movement Remembrance Day"
+   },
+   {
+    "date": "2024-03-25",
+    "name": "Commemoration Day of Victims of Communist Terror"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-27",
+    "name": "Latgale Congress Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Day of the Convocation of the Constitutional Assembly of the Republic of Latvia"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-06",
+    "name": "Day of the Restoration of Independence of the Republic of Latvia"
+   },
+   {
+    "date": "2024-05-08",
+    "name": "Day of the Defeat of Nazism and Commemoration Day of Victims of World War II"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Europe Day"
+   },
+   {
+    "date": "2024-05-12",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2024-05-15",
+    "name": "International Day of the Family"
+   },
+   {
+    "date": "2024-05-17",
+    "name": "Firefighter and Rescuer Day"
+   },
+   {
+    "date": "2024-05-19",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-06-01",
+    "name": "International Day for Protection of Children"
+   },
+   {
+    "date": "2024-06-14",
+    "name": "Commemoration Day of Victims of Communist Terror"
+   },
+   {
+    "date": "2024-06-16",
+    "name": "Medical Worker Day"
+   },
+   {
+    "date": "2024-06-17",
+    "name": "Day of the Occupation of the Republic of Latvia"
+   },
+   {
+    "date": "2024-06-22",
+    "name": "Heroes' Commemoration Day (Anniversary of the Battle of Cēsis)"
+   },
+   {
+    "date": "2024-06-23",
+    "name": "Līgo Day"
+   },
+   {
+    "date": "2024-06-24",
+    "name": "Jāņi Day"
+   },
+   {
+    "date": "2024-07-04",
+    "name": "Commemoration Day of Genocide Against the Jews"
+   },
+   {
+    "date": "2024-07-13",
+    "name": "Day of the Sea Festival"
+   },
+   {
+    "date": "2024-08-11",
+    "name": "Latvian Freedom Fighters' Remembrance Day"
+   },
+   {
+    "date": "2024-08-21",
+    "name": "Day of the Passing of the Constitutional Law on the Status of the Republic of Latvia as a State"
+   },
+   {
+    "date": "2024-08-23",
+    "name": "Day of Remembrance for Victims of Stalinism and Nazism"
+   },
+   {
+    "date": "2024-09-01",
+    "name": "Knowledge Day"
+   },
+   {
+    "date": "2024-09-08",
+    "name": "Father's Day"
+   },
+   {
+    "date": "2024-09-22",
+    "name": "Baltic Unity Day"
+   },
+   {
+    "date": "2024-10-01",
+    "name": "International Day of Older Persons"
+   },
+   {
+    "date": "2024-10-05",
+    "name": "Teachers' Day"
+   },
+   {
+    "date": "2024-10-15",
+    "name": "Official Language Day"
+   },
+   {
+    "date": "2024-11-07",
+    "name": "Border Guards Day"
+   },
+   {
+    "date": "2024-11-11",
+    "name": "Lāčplēsis Day"
+   },
+   {
+    "date": "2024-11-18",
+    "name": "Day of the Proclamation of the Republic of Latvia"
+   },
+   {
+    "date": "2024-11-21",
+    "name": "Remembrance Day of the Tragedy of 21 November 2013"
+   },
+   {
+    "date": "2024-12-01",
+    "name": "Commemoration Day of Victims of Genocide Against the Latvian People By the Totalitarian Communist Regime"
+   },
+   {
+    "date": "2024-12-05",
+    "name": "Police Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Second day of Christmas"
+   },
+   {
+    "date": "2024-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-20",
+    "name": "Commemoration Day of Defenders of the Barricades in 1991"
+   },
+   {
+    "date": "2025-01-26",
+    "name": "Day of the International (de jure) Recognition of the Republic of Latvia"
+   },
+   {
+    "date": "2025-03-02",
+    "name": "National Partisan Armed Resistance Remembrance Day"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2025-03-17",
+    "name": "National Resistance Movement Remembrance Day"
+   },
+   {
+    "date": "2025-03-25",
+    "name": "Commemoration Day of Victims of Communist Terror"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-04-27",
+    "name": "Latgale Congress Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Day of the Convocation of the Constitutional Assembly of the Republic of Latvia"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-05",
+    "name": "Day of the Restoration of Independence of the Republic of Latvia"
+   },
+   {
+    "date": "2025-05-08",
+    "name": "Day of the Defeat of Nazism and Commemoration Day of Victims of World War II"
+   },
+   {
+    "date": "2025-05-09",
+    "name": "Europe Day"
+   },
+   {
+    "date": "2025-05-11",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2025-05-15",
+    "name": "International Day of the Family"
+   },
+   {
+    "date": "2025-05-17",
+    "name": "Firefighter and Rescuer Day"
+   },
+   {
+    "date": "2025-06-01",
+    "name": "International Day for Protection of Children"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-14",
+    "name": "Commemoration Day of Victims of Communist Terror"
+   },
+   {
+    "date": "2025-06-15",
+    "name": "Medical Worker Day"
+   },
+   {
+    "date": "2025-06-17",
+    "name": "Day of the Occupation of the Republic of Latvia"
+   },
+   {
+    "date": "2025-06-22",
+    "name": "Heroes' Commemoration Day (Anniversary of the Battle of Cēsis)"
+   },
+   {
+    "date": "2025-06-23",
+    "name": "Līgo Day"
+   },
+   {
+    "date": "2025-06-24",
+    "name": "Jāņi Day"
+   },
+   {
+    "date": "2025-07-04",
+    "name": "Commemoration Day of Genocide Against the Jews"
+   },
+   {
+    "date": "2025-07-12",
+    "name": "Day of the Sea Festival"
+   },
+   {
+    "date": "2025-08-11",
+    "name": "Latvian Freedom Fighters' Remembrance Day"
+   },
+   {
+    "date": "2025-08-21",
+    "name": "Day of the Passing of the Constitutional Law on the Status of the Republic of Latvia as a State"
+   },
+   {
+    "date": "2025-08-23",
+    "name": "Day of Remembrance for Victims of Stalinism and Nazism"
+   },
+   {
+    "date": "2025-09-01",
+    "name": "Knowledge Day"
+   },
+   {
+    "date": "2025-09-14",
+    "name": "Father's Day"
+   },
+   {
+    "date": "2025-09-22",
+    "name": "Baltic Unity Day"
+   },
+   {
+    "date": "2025-10-01",
+    "name": "International Day of Older Persons"
+   },
+   {
+    "date": "2025-10-05",
+    "name": "Teachers' Day"
+   },
+   {
+    "date": "2025-10-15",
+    "name": "Official Language Day"
+   },
+   {
+    "date": "2025-11-07",
+    "name": "Border Guards Day"
+   },
+   {
+    "date": "2025-11-11",
+    "name": "Lāčplēsis Day"
+   },
+   {
+    "date": "2025-11-18",
+    "name": "Day of the Proclamation of the Republic of Latvia"
+   },
+   {
+    "date": "2025-11-21",
+    "name": "Remembrance Day of the Tragedy of 21 November 2013"
+   },
+   {
+    "date": "2025-12-05",
+    "name": "Police Day"
+   },
+   {
+    "date": "2025-12-07",
+    "name": "Commemoration Day of Victims of Genocide Against the Latvian People By the Totalitarian Communist Regime"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Second day of Christmas"
+   },
+   {
+    "date": "2025-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-20",
+    "name": "Commemoration Day of Defenders of the Barricades in 1991"
+   },
+   {
+    "date": "2026-01-26",
+    "name": "Day of the International (de jure) Recognition of the Republic of Latvia"
+   },
+   {
+    "date": "2026-02-27",
+    "name": "World Non-Governmental Organization Day"
+   },
+   {
+    "date": "2026-03-02",
+    "name": "National Partisan Armed Resistance Remembrance Day"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2026-03-17",
+    "name": "National Resistance Movement Remembrance Day"
+   },
+   {
+    "date": "2026-03-25",
+    "name": "Commemoration Day of Victims of Communist Terror"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-27",
+    "name": "Latgale Congress Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Day of the Convocation of the Constitutional Assembly of the Republic of Latvia"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-04",
+    "name": "Day of the Restoration of Independence of the Republic of Latvia"
+   },
+   {
+    "date": "2026-05-08",
+    "name": "Day of the Defeat of Nazism and Commemoration Day of Victims of World War II"
+   },
+   {
+    "date": "2026-05-09",
+    "name": "Europe Day"
+   },
+   {
+    "date": "2026-05-10",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2026-05-15",
+    "name": "International Day of the Family"
+   },
+   {
+    "date": "2026-05-17",
+    "name": "Firefighter and Rescuer Day"
+   },
+   {
+    "date": "2026-05-24",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-06-01",
+    "name": "International Day for Protection of Children"
+   },
+   {
+    "date": "2026-06-14",
+    "name": "Commemoration Day of Victims of Communist Terror"
+   },
+   {
+    "date": "2026-06-17",
+    "name": "Day of the Occupation of the Republic of Latvia"
+   },
+   {
+    "date": "2026-06-21",
+    "name": "Medical Worker Day"
+   },
+   {
+    "date": "2026-06-22",
+    "name": "Heroes' Commemoration Day (Anniversary of the Battle of Cēsis)"
+   },
+   {
+    "date": "2026-06-23",
+    "name": "Līgo Day"
+   },
+   {
+    "date": "2026-06-24",
+    "name": "Jāņi Day"
+   },
+   {
+    "date": "2026-07-04",
+    "name": "Commemoration Day of Genocide Against the Jews"
+   },
+   {
+    "date": "2026-07-11",
+    "name": "Day of the Sea Festival"
+   },
+   {
+    "date": "2026-08-11",
+    "name": "Latvian Freedom Fighters' Remembrance Day"
+   },
+   {
+    "date": "2026-08-21",
+    "name": "Day of the Passing of the Constitutional Law on the Status of the Republic of Latvia as a State"
+   },
+   {
+    "date": "2026-08-23",
+    "name": "Day of Remembrance for Victims of Stalinism and Nazism"
+   },
+   {
+    "date": "2026-09-01",
+    "name": "Knowledge Day"
+   },
+   {
+    "date": "2026-09-13",
+    "name": "Father's Day"
+   },
+   {
+    "date": "2026-09-22",
+    "name": "Baltic Unity Day"
+   },
+   {
+    "date": "2026-10-01",
+    "name": "International Day of Older Persons"
+   },
+   {
+    "date": "2026-10-05",
+    "name": "Teachers' Day"
+   },
+   {
+    "date": "2026-10-15",
+    "name": "Official Language Day"
+   },
+   {
+    "date": "2026-11-07",
+    "name": "Border Guards Day"
+   },
+   {
+    "date": "2026-11-11",
+    "name": "Lāčplēsis Day"
+   },
+   {
+    "date": "2026-11-18",
+    "name": "Day of the Proclamation of the Republic of Latvia"
+   },
+   {
+    "date": "2026-11-21",
+    "name": "Remembrance Day of the Tragedy of 21 November 2013"
+   },
+   {
+    "date": "2026-12-05",
+    "name": "Police Day"
+   },
+   {
+    "date": "2026-12-06",
+    "name": "Commemoration Day of Victims of Genocide Against the Latvian People By the Totalitarian Communist Regime"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "Second day of Christmas"
+   },
+   {
+    "date": "2026-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-20",
+    "name": "Commemoration Day of Defenders of the Barricades in 1991"
+   },
+   {
+    "date": "2027-01-26",
+    "name": "Day of the International (de jure) Recognition of the Republic of Latvia"
+   },
+   {
+    "date": "2027-02-27",
+    "name": "World Non-Governmental Organization Day"
+   },
+   {
+    "date": "2027-03-02",
+    "name": "National Partisan Armed Resistance Remembrance Day"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2027-03-17",
+    "name": "National Resistance Movement Remembrance Day"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Commemoration Day of Victims of Communist Terror"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-27",
+    "name": "Latgale Congress Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Day of the Convocation of the Constitutional Assembly of the Republic of Latvia"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-04",
+    "name": "Day of the Restoration of Independence of the Republic of Latvia"
+   },
+   {
+    "date": "2027-05-08",
+    "name": "Day of the Defeat of Nazism and Commemoration Day of Victims of World War II"
+   },
+   {
+    "date": "2027-05-09",
+    "name": "Europe Day"
+   },
+   {
+    "date": "2027-05-09",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2027-05-15",
+    "name": "International Day of the Family"
+   },
+   {
+    "date": "2027-05-16",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Firefighter and Rescuer Day"
+   },
+   {
+    "date": "2027-06-01",
+    "name": "International Day for Protection of Children"
+   },
+   {
+    "date": "2027-06-14",
+    "name": "Commemoration Day of Victims of Communist Terror"
+   },
+   {
+    "date": "2027-06-17",
+    "name": "Day of the Occupation of the Republic of Latvia"
+   },
+   {
+    "date": "2027-06-20",
+    "name": "Medical Worker Day"
+   },
+   {
+    "date": "2027-06-22",
+    "name": "Heroes' Commemoration Day (Anniversary of the Battle of Cēsis)"
+   },
+   {
+    "date": "2027-06-23",
+    "name": "Līgo Day"
+   },
+   {
+    "date": "2027-06-24",
+    "name": "Jāņi Day"
+   },
+   {
+    "date": "2027-07-04",
+    "name": "Commemoration Day of Genocide Against the Jews"
+   },
+   {
+    "date": "2027-07-10",
+    "name": "Day of the Sea Festival"
+   },
+   {
+    "date": "2027-08-11",
+    "name": "Latvian Freedom Fighters' Remembrance Day"
+   },
+   {
+    "date": "2027-08-21",
+    "name": "Day of the Passing of the Constitutional Law on the Status of the Republic of Latvia as a State"
+   },
+   {
+    "date": "2027-08-23",
+    "name": "Day of Remembrance for Victims of Stalinism and Nazism"
+   },
+   {
+    "date": "2027-09-01",
+    "name": "Knowledge Day"
+   },
+   {
+    "date": "2027-09-12",
+    "name": "Father's Day"
+   },
+   {
+    "date": "2027-09-22",
+    "name": "Baltic Unity Day"
+   },
+   {
+    "date": "2027-10-01",
+    "name": "International Day of Older Persons"
+   },
+   {
+    "date": "2027-10-05",
+    "name": "Teachers' Day"
+   },
+   {
+    "date": "2027-10-15",
+    "name": "Official Language Day"
+   },
+   {
+    "date": "2027-11-07",
+    "name": "Border Guards Day"
+   },
+   {
+    "date": "2027-11-11",
+    "name": "Lāčplēsis Day"
+   },
+   {
+    "date": "2027-11-18",
+    "name": "Day of the Proclamation of the Republic of Latvia"
+   },
+   {
+    "date": "2027-11-21",
+    "name": "Remembrance Day of the Tragedy of 21 November 2013"
+   },
+   {
+    "date": "2027-12-05",
+    "name": "Commemoration Day of Victims of Genocide Against the Latvian People By the Totalitarian Communist Regime"
+   },
+   {
+    "date": "2027-12-05",
+    "name": "Police Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "Second day of Christmas"
+   },
+   {
+    "date": "2027-12-31",
+    "name": "New Year's Eve"
+   }
+  ],
+  "school": []
+ },
+ "EE": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Spring Day"
+   },
+   {
+    "date": "2024-05-19",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-06-23",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2024-06-24",
+    "name": "Midsummer Day"
+   },
+   {
+    "date": "2024-08-20",
+    "name": "Day of Restoration of Independence"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Spring Day"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-23",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2025-06-24",
+    "name": "Midsummer Day"
+   },
+   {
+    "date": "2025-08-20",
+    "name": "Day of Restoration of Independence"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Spring Day"
+   },
+   {
+    "date": "2026-05-24",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-06-23",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2026-06-24",
+    "name": "Midsummer Day"
+   },
+   {
+    "date": "2026-08-20",
+    "name": "Day of Restoration of Independence"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Spring Day"
+   },
+   {
+    "date": "2027-05-16",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-06-23",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2027-06-24",
+    "name": "Midsummer Day"
+   },
+   {
+    "date": "2027-08-20",
+    "name": "Day of Restoration of Independence"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
    }
   ],
   "school": []
@@ -3145,11 +22543,1245 @@
    }
   ]
  },
- "FR": {
+ "BG": {
   "bank": [
    {
     "date": "2024-01-01",
     "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-04",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2024-05-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-04",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2024-05-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-06",
+    "name": "Saint George's Day"
+   },
+   {
+    "date": "2024-05-24",
+    "name": "Saints Cyril and Methodius Day"
+   },
+   {
+    "date": "2024-09-06",
+    "name": "Unification Day"
+   },
+   {
+    "date": "2024-09-23",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Second day of Christmas"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-03",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-19",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2025-05-06",
+    "name": "Saint George's Day"
+   },
+   {
+    "date": "2025-05-26",
+    "name": "Saints Cyril and Methodius Day"
+   },
+   {
+    "date": "2025-09-08",
+    "name": "Unification Day"
+   },
+   {
+    "date": "2025-09-22",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Second day of Christmas"
+   },
+   {
+    "date": "2025-12-31",
+    "name": "Currency change day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "Currency change day"
+   },
+   {
+    "date": "2026-03-03",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2026-04-10",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-11",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2026-04-12",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-13",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2026-05-06",
+    "name": "Saint George's Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Saints Cyril and Methodius Day"
+   },
+   {
+    "date": "2026-09-07",
+    "name": "Unification Day"
+   },
+   {
+    "date": "2026-09-22",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "Second day of Christmas"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-03",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2027-04-30",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2027-05-02",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Saint George's Day"
+   },
+   {
+    "date": "2027-05-24",
+    "name": "Saints Cyril and Methodius Day"
+   },
+   {
+    "date": "2027-09-06",
+    "name": "Unification Day"
+   },
+   {
+    "date": "2027-09-22",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-27",
+    "name": "Second day of Christmas"
+   }
+  ],
+  "school": []
+ },
+ "GR": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2024-03-18",
+    "name": "Clean Monday"
+   },
+   {
+    "date": "2024-03-25",
+    "name": "Annunciation"
+   },
+   {
+    "date": "2024-03-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-05-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-07",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-06-23",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-06-24",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-10-28",
+    "name": "Ochi Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2025-03-03",
+    "name": "Clean Monday"
+   },
+   {
+    "date": "2025-03-25",
+    "name": "Annunciation"
+   },
+   {
+    "date": "2025-03-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-10-28",
+    "name": "Ochi Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2026-02-23",
+    "name": "Clean Monday"
+   },
+   {
+    "date": "2026-03-25",
+    "name": "Annunciation"
+   },
+   {
+    "date": "2026-03-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-04-10",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-12",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-13",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-31",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-06-01",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-10-28",
+    "name": "Ochi Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2027-03-15",
+    "name": "Clean Monday"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Annunciation"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-04-30",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-02",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-06-20",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-06-21",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-10-28",
+    "name": "Ochi Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "TR": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-04-10",
+    "name": "Eid al-Fitr First Day"
+   },
+   {
+    "date": "2024-04-11",
+    "name": "Eid al-Fitr Second Day"
+   },
+   {
+    "date": "2024-04-12",
+    "name": "Eid al-Fitr Third Day"
+   },
+   {
+    "date": "2024-04-23",
+    "name": "National Independence & Children's Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-19",
+    "name": "Atatürk Commemoration & Youth Day"
+   },
+   {
+    "date": "2024-06-16",
+    "name": "Eid al-Adha First Day"
+   },
+   {
+    "date": "2024-06-17",
+    "name": "Eid al-Adha Second Day"
+   },
+   {
+    "date": "2024-06-18",
+    "name": "Eid al-Adha Third Day"
+   },
+   {
+    "date": "2024-06-19",
+    "name": "Eid al-Adha Fourth Day"
+   },
+   {
+    "date": "2024-07-15",
+    "name": "Democracy and National Unity Day"
+   },
+   {
+    "date": "2024-08-30",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2024-10-29",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-30",
+    "name": "Eid al-Fitr First Day"
+   },
+   {
+    "date": "2025-03-31",
+    "name": "Eid al-Fitr Second Day"
+   },
+   {
+    "date": "2025-04-01",
+    "name": "Eid al-Fitr Third Day"
+   },
+   {
+    "date": "2025-04-23",
+    "name": "National Independence & Children's Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-19",
+    "name": "Atatürk Commemoration & Youth Day"
+   },
+   {
+    "date": "2025-06-06",
+    "name": "Eid al-Adha First Day"
+   },
+   {
+    "date": "2025-06-07",
+    "name": "Eid al-Adha Second Day"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Eid al-Adha Third Day"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Eid al-Adha Fourth Day"
+   },
+   {
+    "date": "2025-07-15",
+    "name": "Democracy and National Unity Day"
+   },
+   {
+    "date": "2025-08-30",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2025-10-29",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-20",
+    "name": "Eid al-Fitr First Day"
+   },
+   {
+    "date": "2026-03-21",
+    "name": "Eid al-Fitr Second Day"
+   },
+   {
+    "date": "2026-03-22",
+    "name": "Eid al-Fitr Third Day"
+   },
+   {
+    "date": "2026-04-23",
+    "name": "National Independence & Children's Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-19",
+    "name": "Atatürk Commemoration & Youth Day"
+   },
+   {
+    "date": "2026-05-27",
+    "name": "Eid al-Adha First Day"
+   },
+   {
+    "date": "2026-05-28",
+    "name": "Eid al-Adha Second Day"
+   },
+   {
+    "date": "2026-05-29",
+    "name": "Eid al-Adha Third Day"
+   },
+   {
+    "date": "2026-05-30",
+    "name": "Eid al-Adha Fourth Day"
+   },
+   {
+    "date": "2026-07-15",
+    "name": "Democracy and National Unity Day"
+   },
+   {
+    "date": "2026-08-30",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2026-10-29",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-10",
+    "name": "Eid al-Fitr First Day (Tentative Date)"
+   },
+   {
+    "date": "2027-03-11",
+    "name": "Eid al-Fitr Second Day (Tentative Date)"
+   },
+   {
+    "date": "2027-03-12",
+    "name": "Eid al-Fitr Third Day (Tentative Date)"
+   },
+   {
+    "date": "2027-04-23",
+    "name": "National Independence & Children's Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-16",
+    "name": "Eid al-Adha First Day (Tentative Date)"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Eid al-Adha Second Day (Tentative Date)"
+   },
+   {
+    "date": "2027-05-18",
+    "name": "Eid al-Adha Third Day (Tentative Date)"
+   },
+   {
+    "date": "2027-05-19",
+    "name": "Atatürk Commemoration & Youth Day"
+   },
+   {
+    "date": "2027-05-19",
+    "name": "Eid al-Adha Fourth Day (Tentative Date)"
+   },
+   {
+    "date": "2027-07-15",
+    "name": "Democracy and National Unity Day"
+   },
+   {
+    "date": "2027-08-30",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2027-10-29",
+    "name": "Republic Day"
+   }
+  ],
+  "school": []
+ },
+ "AL": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-14",
+    "name": "Summer Day"
+   },
+   {
+    "date": "2024-03-22",
+    "name": "Nowruz"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2024-05-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-09-05",
+    "name": "Mother Teresa Day"
+   },
+   {
+    "date": "2024-11-28",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-11-29",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2024-12-09",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-14",
+    "name": "Summer Day"
+   },
+   {
+    "date": "2025-03-24",
+    "name": "Nowruz"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2025-09-05",
+    "name": "Mother Teresa Day"
+   },
+   {
+    "date": "2025-11-28",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-01",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-16",
+    "name": "Summer Day"
+   },
+   {
+    "date": "2026-03-23",
+    "name": "Nowruz"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-12",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-13",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2026-09-07",
+    "name": "Mother Teresa Day"
+   },
+   {
+    "date": "2026-11-30",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-11-30",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-04",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-15",
+    "name": "Summer Day"
+   },
+   {
+    "date": "2027-03-22",
+    "name": "Nowruz"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-02",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "May Day"
+   },
+   {
+    "date": "2027-09-06",
+    "name": "Mother Teresa Day"
+   },
+   {
+    "date": "2027-11-29",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-11-29",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2027-12-27",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "HR": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2024-05-30",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2024-05-30",
+    "name": "National Day"
+   },
+   {
+    "date": "2024-06-22",
+    "name": "Anti-Fascist Struggle Day"
+   },
+   {
+    "date": "2024-08-05",
+    "name": "Victory and Homeland Thanksgiving Day and the Day of Croatian defenders"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-11-18",
+    "name": "Remembrance Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2025-05-30",
+    "name": "National Day"
+   },
+   {
+    "date": "2025-06-19",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2025-06-22",
+    "name": "Anti-Fascist Struggle Day"
+   },
+   {
+    "date": "2025-08-05",
+    "name": "Victory and Homeland Thanksgiving Day and the Day of Croatian defenders"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-11-18",
+    "name": "Remembrance Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2026-05-30",
+    "name": "National Day"
+   },
+   {
+    "date": "2026-06-04",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2026-06-22",
+    "name": "Anti-Fascist Struggle Day"
+   },
+   {
+    "date": "2026-08-05",
+    "name": "Victory and Homeland Thanksgiving Day and the Day of Croatian defenders"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-11-18",
+    "name": "Remembrance Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2027-05-27",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2027-05-30",
+    "name": "National Day"
+   },
+   {
+    "date": "2027-06-22",
+    "name": "Anti-Fascist Struggle Day"
+   },
+   {
+    "date": "2027-08-05",
+    "name": "Victory and Homeland Thanksgiving Day and the Day of Croatian defenders"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-11-18",
+    "name": "Remembrance Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "CH": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-08-01",
+    "name": "Swiss National Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-08-01",
+    "name": "Swiss National Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-08-01",
+    "name": "Swiss National Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-08-01",
+    "name": "Swiss National Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "LU": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
    },
    {
     "date": "2024-04-01",
@@ -3160,20 +23792,221 @@
     "name": "Labour Day"
    },
    {
-    "date": "2024-05-08",
-    "name": "Victory in Europe Day"
+    "date": "2024-05-09",
+    "name": "Ascension Day"
    },
    {
     "date": "2024-05-09",
-    "name": "Ascension Day"
+    "name": "Europe Day"
    },
    {
     "date": "2024-05-20",
     "name": "Whit Monday"
    },
    {
-    "date": "2024-07-14",
-    "name": "Bastille Day"
+    "date": "2024-06-23",
+    "name": "Sovereign's birthday"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-09",
+    "name": "Europe Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-06-23",
+    "name": "Sovereign's birthday"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-09",
+    "name": "Europe Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-06-23",
+    "name": "Sovereign's birthday"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-09",
+    "name": "Europe Day"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-06-23",
+    "name": "Sovereign's birthday"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "BE": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-10",
+    "name": "Day after Ascension Day"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-07-21",
+    "name": "Belgian National Day"
    },
    {
     "date": "2024-08-15",
@@ -3192,8 +24025,20 @@
     "name": "Christmas Day"
    },
    {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
     "date": "2025-01-01",
     "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
    },
    {
     "date": "2025-04-21",
@@ -3204,20 +24049,20 @@
     "name": "Labour Day"
    },
    {
-    "date": "2025-05-08",
-    "name": "Victory in Europe Day"
-   },
-   {
     "date": "2025-05-29",
     "name": "Ascension Day"
+   },
+   {
+    "date": "2025-05-30",
+    "name": "Day after Ascension Day"
    },
    {
     "date": "2025-06-09",
     "name": "Whit Monday"
    },
    {
-    "date": "2025-07-14",
-    "name": "Bastille Day"
+    "date": "2025-07-21",
+    "name": "Belgian National Day"
    },
    {
     "date": "2025-08-15",
@@ -3236,8 +24081,20 @@
     "name": "Christmas Day"
    },
    {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
     "date": "2026-01-01",
     "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
    },
    {
     "date": "2026-04-06",
@@ -3248,20 +24105,20 @@
     "name": "Labour Day"
    },
    {
-    "date": "2026-05-08",
-    "name": "Victory in Europe Day"
-   },
-   {
     "date": "2026-05-14",
     "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-15",
+    "name": "Day after Ascension Day"
    },
    {
     "date": "2026-05-25",
     "name": "Whit Monday"
    },
    {
-    "date": "2026-07-14",
-    "name": "Bastille Day"
+    "date": "2026-07-21",
+    "name": "Belgian National Day"
    },
    {
     "date": "2026-08-15",
@@ -3280,8 +24137,20 @@
     "name": "Christmas Day"
    },
    {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
     "date": "2027-01-01",
     "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
    },
    {
     "date": "2027-03-29",
@@ -3296,16 +24165,16 @@
     "name": "Ascension Day"
    },
    {
-    "date": "2027-05-08",
-    "name": "Victory in Europe Day"
+    "date": "2027-05-07",
+    "name": "Day after Ascension Day"
    },
    {
     "date": "2027-05-17",
     "name": "Whit Monday"
    },
    {
-    "date": "2027-07-14",
-    "name": "Bastille Day"
+    "date": "2027-07-21",
+    "name": "Belgian National Day"
    },
    {
     "date": "2027-08-15",
@@ -3322,448 +24191,4399 @@
    {
     "date": "2027-12-25",
     "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "NL": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-27",
+    "name": "King's Day"
+   },
+   {
+    "date": "2024-05-05",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-19",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-04-26",
+    "name": "King's Day"
+   },
+   {
+    "date": "2025-05-05",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-27",
+    "name": "King's Day"
+   },
+   {
+    "date": "2026-05-05",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-24",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-27",
+    "name": "King's Day"
+   },
+   {
+    "date": "2027-05-05",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-16",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "PT": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-13",
+    "name": "Carnival"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-25",
+    "name": "Freedom Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-30",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2024-06-10",
+    "name": "National Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-10-05",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2024-12-01",
+    "name": "Restoration of Independence"
+   },
+   {
+    "date": "2024-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-04",
+    "name": "Carnival"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-25",
+    "name": "Freedom Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-06-10",
+    "name": "National Day"
+   },
+   {
+    "date": "2025-06-19",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-10-05",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2025-12-01",
+    "name": "Restoration of Independence"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-17",
+    "name": "Carnival"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-25",
+    "name": "Freedom Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-06-04",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2026-06-10",
+    "name": "National Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-10-05",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2026-12-01",
+    "name": "Restoration of Independence"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-09",
+    "name": "Carnival"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-04-25",
+    "name": "Freedom Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-27",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2027-06-10",
+    "name": "National Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-10-05",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2027-12-01",
+    "name": "Restoration of Independence"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "ES": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption"
+   },
+   {
+    "date": "2024-10-12",
+    "name": "National Day of Spain"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2024-12-06",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2024-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption"
+   },
+   {
+    "date": "2025-10-12",
+    "name": "National Day of Spain"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2025-12-06",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption"
+   },
+   {
+    "date": "2026-10-12",
+    "name": "National Day of Spain"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2026-12-06",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption"
+   },
+   {
+    "date": "2027-10-12",
+    "name": "National Day of Spain"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2027-12-06",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "IE": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-05",
+    "name": "Saint Brigid's Day"
+   },
+   {
+    "date": "2024-03-17",
+    "name": "Saint Patrick's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-06",
+    "name": "May Day"
+   },
+   {
+    "date": "2024-06-03",
+    "name": "June Holiday"
+   },
+   {
+    "date": "2024-08-05",
+    "name": "August Holiday"
+   },
+   {
+    "date": "2024-10-28",
+    "name": "October Holiday"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-03",
+    "name": "Saint Brigid's Day"
+   },
+   {
+    "date": "2025-03-17",
+    "name": "Saint Patrick's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-05",
+    "name": "May Day"
+   },
+   {
+    "date": "2025-06-02",
+    "name": "June Holiday"
+   },
+   {
+    "date": "2025-08-04",
+    "name": "August Holiday"
+   },
+   {
+    "date": "2025-10-27",
+    "name": "October Holiday"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-02",
+    "name": "Saint Brigid's Day"
+   },
+   {
+    "date": "2026-03-17",
+    "name": "Saint Patrick's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-04",
+    "name": "May Day"
+   },
+   {
+    "date": "2026-06-01",
+    "name": "June Holiday"
+   },
+   {
+    "date": "2026-08-03",
+    "name": "August Holiday"
+   },
+   {
+    "date": "2026-10-26",
+    "name": "October Holiday"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-01",
+    "name": "Saint Brigid's Day"
+   },
+   {
+    "date": "2027-03-17",
+    "name": "Saint Patrick's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "May Day"
+   },
+   {
+    "date": "2027-06-07",
+    "name": "June Holiday"
+   },
+   {
+    "date": "2027-08-02",
+    "name": "August Holiday"
+   },
+   {
+    "date": "2027-10-25",
+    "name": "October Holiday"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "NC": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-08",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-07-14",
+    "name": "French National Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-09-24",
+    "name": "New Caledonia Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-11-11",
+    "name": "Armistice Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-08",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-07-14",
+    "name": "French National Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-09-24",
+    "name": "New Caledonia Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-11-11",
+    "name": "Armistice Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-08",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-07-14",
+    "name": "French National Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-09-24",
+    "name": "New Caledonia Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-11-11",
+    "name": "Armistice Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-08",
+    "name": "Victory Day"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-07-14",
+    "name": "French National Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-09-24",
+    "name": "New Caledonia Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-11-11",
+    "name": "Armistice Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-31",
+    "name": "New Year's Eve"
+   }
+  ],
+  "school": []
+ },
+ "SB": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-30",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-06-14",
+    "name": "King's Birthday"
+   },
+   {
+    "date": "2024-07-07",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "National Day of Thanksgiving"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-19",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-06-13",
+    "name": "King's Birthday"
+   },
+   {
+    "date": "2025-07-07",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "National Day of Thanksgiving"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-04",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-06-12",
+    "name": "King's Birthday"
+   },
+   {
+    "date": "2026-07-07",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "National Day of Thanksgiving"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-27",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-06-11",
+    "name": "King's Birthday"
+   },
+   {
+    "date": "2027-07-07",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "National Day of Thanksgiving"
+   }
+  ],
+  "school": []
+ },
+ "NZ": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-02",
+    "name": "Day after New Year's Day"
+   },
+   {
+    "date": "2024-02-06",
+    "name": "Waitangi Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-25",
+    "name": "Anzac Day"
+   },
+   {
+    "date": "2024-06-03",
+    "name": "King's Birthday"
+   },
+   {
+    "date": "2024-06-28",
+    "name": "Matariki"
+   },
+   {
+    "date": "2024-10-28",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-02",
+    "name": "Day after New Year's Day"
+   },
+   {
+    "date": "2025-02-06",
+    "name": "Waitangi Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-04-25",
+    "name": "Anzac Day"
+   },
+   {
+    "date": "2025-06-02",
+    "name": "King's Birthday"
+   },
+   {
+    "date": "2025-06-20",
+    "name": "Matariki"
+   },
+   {
+    "date": "2025-10-27",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "Day after New Year's Day"
+   },
+   {
+    "date": "2026-02-06",
+    "name": "Waitangi Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-27",
+    "name": "Anzac Day"
+   },
+   {
+    "date": "2026-06-01",
+    "name": "King's Birthday"
+   },
+   {
+    "date": "2026-07-10",
+    "name": "Matariki"
+   },
+   {
+    "date": "2026-10-26",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-28",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-04",
+    "name": "Day after New Year's Day"
+   },
+   {
+    "date": "2027-02-08",
+    "name": "Waitangi Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-26",
+    "name": "Anzac Day"
+   },
+   {
+    "date": "2027-06-07",
+    "name": "King's Birthday"
+   },
+   {
+    "date": "2027-06-25",
+    "name": "Matariki"
+   },
+   {
+    "date": "2027-10-25",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-12-27",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-28",
+    "name": "Boxing Day"
+   }
+  ],
+  "school": []
+ },
+ "AU": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-26",
+    "name": "Australia Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-25",
+    "name": "Anzac Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-27",
+    "name": "Australia Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-04-25",
+    "name": "Anzac Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-26",
+    "name": "Australia Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-28",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-26",
+    "name": "Australia Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-12-27",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-28",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "CN": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-10",
+    "name": "Chinese New Year (Spring Festival)"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-06-10",
+    "name": "Dragon Boat Festival"
+   },
+   {
+    "date": "2024-09-17",
+    "name": "Mid-Autumn Festival"
+   },
+   {
+    "date": "2024-10-01",
+    "name": "National Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-29",
+    "name": "Chinese New Year (Spring Festival)"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-31",
+    "name": "Dragon Boat Festival"
+   },
+   {
+    "date": "2025-10-01",
+    "name": "National Day"
+   },
+   {
+    "date": "2025-10-06",
+    "name": "Mid-Autumn Festival"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-17",
+    "name": "Chinese New Year (Spring Festival)"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-06-19",
+    "name": "Dragon Boat Festival"
+   },
+   {
+    "date": "2026-09-25",
+    "name": "Mid-Autumn Festival"
+   },
+   {
+    "date": "2026-10-01",
+    "name": "National Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-06",
+    "name": "Chinese New Year (Spring Festival)"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-06-09",
+    "name": "Dragon Boat Festival"
+   },
+   {
+    "date": "2027-09-15",
+    "name": "Mid-Autumn Festival"
+   },
+   {
+    "date": "2027-10-01",
+    "name": "National Day"
+   }
+  ],
+  "school": []
+ },
+ "IT": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-25",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "International Workers Day"
+   },
+   {
+    "date": "2024-06-02",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2024-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-04-25",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "International Workers Day"
+   },
+   {
+    "date": "2025-06-02",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-25",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "International Workers Day"
+   },
+   {
+    "date": "2026-06-02",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-10-04",
+    "name": "St. Francis of Assisi's Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-25",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "International Workers Day"
+   },
+   {
+    "date": "2027-06-02",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-10-04",
+    "name": "St. Francis of Assisi's Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints Day"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Immaculate Conception"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "DK": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-28",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-10",
+    "name": "Bank closing day"
+   },
+   {
+    "date": "2024-05-19",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-06-05",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2024-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-17",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-05-30",
+    "name": "Bank closing day"
+   },
+   {
+    "date": "2025-06-05",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-02",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-15",
+    "name": "Bank closing day"
+   },
+   {
+    "date": "2026-05-24",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-06-05",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-07",
+    "name": "Bank closing day"
+   },
+   {
+    "date": "2027-05-16",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-06-05",
+    "name": "Constitution Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-12-31",
+    "name": "New Year's Eve"
+   }
+  ],
+  "school": []
+ },
+ "GB": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-02",
+    "name": "2 January",
+    "note": "Scotland"
+   },
+   {
+    "date": "2024-03-18",
+    "name": "Saint Patrick's Day",
+    "note": "Northern Ireland"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday",
+    "note": "England, Wales, Northern Ireland"
+   },
+   {
+    "date": "2024-05-06",
+    "name": "Early May Bank Holiday"
+   },
+   {
+    "date": "2024-05-27",
+    "name": "Spring Bank Holiday"
+   },
+   {
+    "date": "2024-07-12",
+    "name": "Battle of the Boyne",
+    "note": "Northern Ireland"
+   },
+   {
+    "date": "2024-08-05",
+    "name": "Summer Bank Holiday",
+    "note": "Scotland"
+   },
+   {
+    "date": "2024-08-26",
+    "name": "Summer Bank Holiday",
+    "note": "England, Wales, Northern Ireland"
+   },
+   {
+    "date": "2024-12-02",
+    "name": "Saint Andrew's Day",
+    "note": "Scotland"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-02",
+    "name": "2 January",
+    "note": "Scotland"
+   },
+   {
+    "date": "2025-03-17",
+    "name": "Saint Patrick's Day",
+    "note": "Northern Ireland"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday",
+    "note": "England, Wales, Northern Ireland"
+   },
+   {
+    "date": "2025-05-05",
+    "name": "Early May Bank Holiday"
+   },
+   {
+    "date": "2025-05-26",
+    "name": "Spring Bank Holiday"
+   },
+   {
+    "date": "2025-07-14",
+    "name": "Battle of the Boyne",
+    "note": "Northern Ireland"
+   },
+   {
+    "date": "2025-08-04",
+    "name": "Summer Bank Holiday",
+    "note": "Scotland"
+   },
+   {
+    "date": "2025-08-25",
+    "name": "Summer Bank Holiday",
+    "note": "England, Wales, Northern Ireland"
+   },
+   {
+    "date": "2025-12-01",
+    "name": "Saint Andrew's Day",
+    "note": "Scotland"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "2 January",
+    "note": "Scotland"
+   },
+   {
+    "date": "2026-03-17",
+    "name": "Saint Patrick's Day",
+    "note": "Northern Ireland"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday",
+    "note": "England, Wales, Northern Ireland"
+   },
+   {
+    "date": "2026-05-04",
+    "name": "Early May Bank Holiday"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Spring Bank Holiday"
+   },
+   {
+    "date": "2026-06-15",
+    "name": "World Cup Bank Holiday",
+    "note": "Scotland"
+   },
+   {
+    "date": "2026-07-13",
+    "name": "Battle of the Boyne",
+    "note": "Northern Ireland"
+   },
+   {
+    "date": "2026-08-03",
+    "name": "Summer Bank Holiday",
+    "note": "Scotland"
+   },
+   {
+    "date": "2026-08-31",
+    "name": "Summer Bank Holiday",
+    "note": "England, Wales, Northern Ireland"
+   },
+   {
+    "date": "2026-11-30",
+    "name": "Saint Andrew's Day",
+    "note": "Scotland"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-28",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-02",
+    "name": "2 January",
+    "note": "Scotland"
+   },
+   {
+    "date": "2027-03-17",
+    "name": "Saint Patrick's Day",
+    "note": "Northern Ireland"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday",
+    "note": "England, Wales, Northern Ireland"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Early May Bank Holiday"
+   },
+   {
+    "date": "2027-05-31",
+    "name": "Spring Bank Holiday"
+   },
+   {
+    "date": "2027-07-12",
+    "name": "Battle of the Boyne",
+    "note": "Northern Ireland"
+   },
+   {
+    "date": "2027-08-02",
+    "name": "Summer Bank Holiday",
+    "note": "Scotland"
+   },
+   {
+    "date": "2027-08-30",
+    "name": "Summer Bank Holiday",
+    "note": "England, Wales, Northern Ireland"
+   },
+   {
+    "date": "2027-11-30",
+    "name": "Saint Andrew's Day",
+    "note": "Scotland"
+   },
+   {
+    "date": "2027-12-27",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-28",
+    "name": "Boxing Day"
    }
   ],
   "school": [
    {
-    "start": "2024-02-11",
-    "end": "2024-02-25",
-    "name": "Winter holiday",
-    "region": "Zone C"
+    "start": "2024-10-31",
+    "end": "2024-11-01",
+    "name": "Halloween",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2024-02-18",
-    "end": "2024-03-03",
-    "name": "Winter holiday",
-    "region": "Zone A"
+    "start": "2024-12-23",
+    "end": "2025-01-02",
+    "name": "Christmas and New Year",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2024-02-25",
-    "end": "2024-03-10",
-    "name": "Winter holiday",
-    "region": "Corsica"
+    "start": "2025-02-14",
+    "end": "2025-02-14",
+    "name": "Mid-term",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2024-02-25",
-    "end": "2024-03-10",
-    "name": "Winter holiday",
-    "region": "Zone B"
+    "start": "2025-03-17",
+    "end": "2025-03-17",
+    "name": "St Patrick's Day",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2024-04-07",
-    "end": "2024-04-21",
-    "name": "Spring holiday",
-    "region": "Zone C"
+    "start": "2025-04-17",
+    "end": "2025-04-25",
+    "name": "Easter",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2024-04-14",
-    "end": "2024-04-28",
-    "name": "Spring holiday",
-    "region": "Zone A"
+    "start": "2025-05-05",
+    "end": "2025-05-05",
+    "name": "May Day",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2024-04-21",
-    "end": "2024-05-05",
-    "name": "Spring holiday",
-    "region": "Zone B"
+    "start": "2025-05-26",
+    "end": "2025-05-26",
+    "name": "Spring Bank Holiday",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2024-04-28",
-    "end": "2024-05-12",
-    "name": "Spring holiday",
-    "region": "Corsica"
-   },
-   {
-    "start": "2024-07-07",
-    "end": "2024-09-01",
-    "name": "Summer holiday",
-    "region": "Zone A"
-   },
-   {
-    "start": "2024-07-07",
-    "end": "2024-09-01",
-    "name": "Summer holiday",
-    "region": "Zone B"
-   },
-   {
-    "start": "2024-07-07",
-    "end": "2024-09-01",
-    "name": "Summer holiday",
-    "region": "Zone C"
-   },
-   {
-    "start": "2024-07-07",
-    "end": "2024-09-04",
-    "name": "Summer holiday",
-    "region": "Corsica"
-   },
-   {
-    "start": "2024-10-20",
-    "end": "2024-11-03",
-    "name": "Autumn holiday",
-    "region": "Corsica"
-   },
-   {
-    "start": "2024-10-20",
-    "end": "2024-11-03",
-    "name": "Autumn holiday",
-    "region": "Zone A"
-   },
-   {
-    "start": "2024-10-20",
-    "end": "2024-11-03",
-    "name": "Autumn holiday",
-    "region": "Zone B"
-   },
-   {
-    "start": "2024-10-20",
-    "end": "2024-11-03",
-    "name": "Autumn holiday",
-    "region": "Zone C"
-   },
-   {
-    "start": "2024-12-22",
-    "end": "2025-01-05",
-    "name": "Christmas holiday",
-    "region": "Corsica"
-   },
-   {
-    "start": "2024-12-22",
-    "end": "2025-01-05",
-    "name": "Christmas holiday",
-    "region": "Zone A"
-   },
-   {
-    "start": "2024-12-22",
-    "end": "2025-01-05",
-    "name": "Christmas holiday",
-    "region": "Zone B"
-   },
-   {
-    "start": "2024-12-22",
-    "end": "2025-01-05",
-    "name": "Christmas holiday",
-    "region": "Zone C"
-   },
-   {
-    "start": "2025-02-09",
-    "end": "2025-02-23",
-    "name": "Winter holiday",
-    "region": "Zone B"
-   },
-   {
-    "start": "2025-02-16",
-    "end": "2025-03-02",
-    "name": "Winter holiday",
-    "region": "Corsica"
-   },
-   {
-    "start": "2025-02-16",
-    "end": "2025-03-02",
-    "name": "Winter holiday",
-    "region": "Zone C"
-   },
-   {
-    "start": "2025-02-23",
-    "end": "2025-03-09",
-    "name": "Winter holiday",
-    "region": "Zone A"
-   },
-   {
-    "start": "2025-04-06",
-    "end": "2025-04-21",
-    "name": "Spring holiday",
-    "region": "Zone B"
-   },
-   {
-    "start": "2025-04-11",
-    "end": "2025-04-27",
-    "name": "Spring holiday",
-    "region": "Corsica"
-   },
-   {
-    "start": "2025-04-13",
-    "end": "2025-04-27",
-    "name": "Spring holiday",
-    "region": "Zone C"
-   },
-   {
-    "start": "2025-04-20",
-    "end": "2025-05-04",
-    "name": "Spring holiday",
-    "region": "Zone A"
-   },
-   {
-    "start": "2025-05-29",
-    "end": "2025-06-01",
-    "name": "Spring holiday",
-    "region": "Corsica"
-   },
-   {
-    "start": "2025-07-04",
-    "end": "2025-09-01",
-    "name": "Summer holiday",
-    "region": "Corsica"
-   },
-   {
-    "start": "2025-07-06",
+    "start": "2025-07-01",
     "end": "2025-08-31",
-    "name": "Summer holiday",
-    "region": "Zone A"
+    "name": "Summer holiday begins",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2025-07-06",
-    "end": "2025-08-31",
-    "name": "Summer holiday",
-    "region": "Zone B"
+    "start": "2025-10-31",
+    "end": "2025-10-31",
+    "name": "Halloween",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2025-07-06",
-    "end": "2025-08-31",
-    "name": "Summer holiday",
-    "region": "Zone C"
+    "start": "2025-12-22",
+    "end": "2026-01-02",
+    "name": "Christmas and New Year",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2025-10-19",
-    "end": "2025-11-02",
-    "name": "Autumn holiday",
-    "region": "Corsica"
+    "start": "2026-02-13",
+    "end": "2026-02-13",
+    "name": "Mid-term",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2025-10-19",
-    "end": "2025-11-02",
-    "name": "Autumn holiday",
-    "region": "Zone A"
+    "start": "2026-03-17",
+    "end": "2026-03-17",
+    "name": "St Patrick's Day",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2025-10-19",
-    "end": "2025-11-02",
-    "name": "Autumn holiday",
-    "region": "Zone B"
+    "start": "2026-04-02",
+    "end": "2026-04-10",
+    "name": "Easter",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2025-10-19",
-    "end": "2025-11-02",
-    "name": "Autumn holiday",
-    "region": "Zone C"
+    "start": "2026-05-04",
+    "end": "2026-05-04",
+    "name": "May Day",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2025-12-21",
-    "end": "2026-01-04",
-    "name": "Christmas holiday",
-    "region": "Corsica"
+    "start": "2026-05-25",
+    "end": "2026-05-25",
+    "name": "Spring Bank Holiday",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2025-12-21",
-    "end": "2026-01-04",
-    "name": "Christmas holiday",
-    "region": "Zone A"
-   },
-   {
-    "start": "2025-12-21",
-    "end": "2026-01-04",
-    "name": "Christmas holiday",
-    "region": "Zone B"
-   },
-   {
-    "start": "2025-12-21",
-    "end": "2026-01-04",
-    "name": "Christmas holiday",
-    "region": "Zone C"
-   },
-   {
-    "start": "2026-02-08",
-    "end": "2026-02-22",
-    "name": "Winter holiday",
-    "region": "Zone A"
-   },
-   {
-    "start": "2026-02-15",
-    "end": "2026-03-01",
-    "name": "Winter holiday",
-    "region": "Corsica"
-   },
-   {
-    "start": "2026-02-15",
-    "end": "2026-03-01",
-    "name": "Winter holiday",
-    "region": "Zone B"
-   },
-   {
-    "start": "2026-02-22",
-    "end": "2026-03-08",
-    "name": "Winter holiday",
-    "region": "Zone C"
-   },
-   {
-    "start": "2026-04-05",
-    "end": "2026-04-19",
-    "name": "Spring holiday",
-    "region": "Zone A"
-   },
-   {
-    "start": "2026-04-12",
-    "end": "2026-04-26",
-    "name": "Spring holiday",
-    "region": "Corsica"
-   },
-   {
-    "start": "2026-04-12",
-    "end": "2026-04-26",
-    "name": "Spring holiday",
-    "region": "Zone B"
-   },
-   {
-    "start": "2026-04-19",
-    "end": "2026-05-03",
-    "name": "Spring holiday",
-    "region": "Zone C"
-   },
-   {
-    "start": "2026-07-05",
+    "start": "2026-07-01",
     "end": "2026-08-31",
-    "name": "Summer holiday",
-    "region": "Zone A"
+    "name": "Summer holiday begins",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2026-07-05",
-    "end": "2026-08-31",
-    "name": "Summer holiday",
-    "region": "Zone B"
+    "start": "2026-10-30",
+    "end": "2026-10-30",
+    "name": "Halloween",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2026-07-05",
-    "end": "2026-08-31",
-    "name": "Summer holiday",
-    "region": "Zone C"
+    "start": "2026-12-21",
+    "end": "2027-01-01",
+    "name": "Christmas and New Year",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2026-07-05",
-    "end": "2026-09-02",
-    "name": "Summer holiday",
-    "region": "Corsica"
+    "start": "2027-02-12",
+    "end": "2027-02-12",
+    "name": "Mid-term",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2026-10-18",
-    "end": "2026-11-01",
-    "name": "Autumn holiday",
-    "region": "Corsica"
+    "start": "2027-03-17",
+    "end": "2027-03-17",
+    "name": "St Patrick's Day",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2026-10-18",
-    "end": "2026-11-01",
-    "name": "Autumn holiday",
-    "region": "Zone A"
+    "start": "2027-03-25",
+    "end": "2027-04-02",
+    "name": "Easter",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2026-10-18",
-    "end": "2026-11-01",
-    "name": "Autumn holiday",
-    "region": "Zone B"
+    "start": "2027-05-03",
+    "end": "2027-05-03",
+    "name": "May Day",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2026-10-18",
-    "end": "2026-11-01",
-    "name": "Autumn holiday",
-    "region": "Zone C"
+    "start": "2027-05-31",
+    "end": "2027-05-31",
+    "name": "Spring Bank Holiday",
+    "region": "Northern Ireland"
    },
    {
-    "start": "2026-12-20",
-    "end": "2027-01-03",
-    "name": "Christmas holiday",
-    "region": "Corsica"
-   },
-   {
-    "start": "2026-12-20",
-    "end": "2027-01-03",
-    "name": "Christmas holiday",
-    "region": "Zone A"
-   },
-   {
-    "start": "2026-12-20",
-    "end": "2027-01-03",
-    "name": "Christmas holiday",
-    "region": "Zone B"
-   },
-   {
-    "start": "2026-12-20",
-    "end": "2027-01-03",
-    "name": "Christmas holiday",
-    "region": "Zone C"
-   },
-   {
-    "start": "2027-02-07",
-    "end": "2027-02-21",
-    "name": "Winter holiday",
-    "region": "Zone C"
-   },
-   {
-    "start": "2027-02-14",
-    "end": "2027-02-28",
-    "name": "Winter holiday",
-    "region": "Corsica"
-   },
-   {
-    "start": "2027-02-14",
-    "end": "2027-02-28",
-    "name": "Winter holiday",
-    "region": "Zone A"
-   },
-   {
-    "start": "2027-02-21",
-    "end": "2027-03-07",
-    "name": "Winter holiday",
-    "region": "Zone B"
-   },
-   {
-    "start": "2027-04-04",
-    "end": "2027-04-18",
-    "name": "Spring holiday",
-    "region": "Zone C"
-   },
-   {
-    "start": "2027-04-11",
-    "end": "2027-04-25",
-    "name": "Spring holiday",
-    "region": "Corsica"
-   },
-   {
-    "start": "2027-04-11",
-    "end": "2027-04-25",
-    "name": "Spring holiday",
-    "region": "Zone A"
-   },
-   {
-    "start": "2027-04-18",
-    "end": "2027-05-02",
-    "name": "Spring holiday",
-    "region": "Zone B"
-   },
-   {
-    "start": "2027-07-04",
-    "end": "2027-07-04",
-    "name": "Summer holiday",
-    "region": "Corsica"
-   },
-   {
-    "start": "2027-07-04",
+    "start": "2027-07-01",
     "end": "2027-08-31",
-    "name": "Summer holiday",
-    "region": "Zone A"
-   },
-   {
-    "start": "2027-07-04",
-    "end": "2027-08-31",
-    "name": "Summer holiday",
-    "region": "Zone B"
-   },
-   {
-    "start": "2027-07-04",
-    "end": "2027-08-31",
-    "name": "Summer holiday",
-    "region": "Zone C"
+    "name": "Summer holiday begins",
+    "region": "Northern Ireland"
    }
   ]
+ },
+ "IS": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-28",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-25",
+    "name": "First Day of Summer"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-19",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-05-20",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-06-17",
+    "name": "Icelandic National Day"
+   },
+   {
+    "date": "2024-08-05",
+    "name": "Commerce Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2024-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-17",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-04-24",
+    "name": "First Day of Summer"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-06-17",
+    "name": "Icelandic National Day"
+   },
+   {
+    "date": "2025-08-04",
+    "name": "Commerce Day"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-02",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-23",
+    "name": "First Day of Summer"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-24",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-05-25",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-06-17",
+    "name": "Icelandic National Day"
+   },
+   {
+    "date": "2026-08-03",
+    "name": "Commerce Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-12-31",
+    "name": "New Year's Eve"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-22",
+    "name": "First Day of Summer"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-16",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-05-17",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-06-17",
+    "name": "Icelandic National Day"
+   },
+   {
+    "date": "2027-08-02",
+    "name": "Commerce Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-12-31",
+    "name": "New Year's Eve"
+   }
+  ],
+  "school": []
+ },
+ "GE": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2024-01-19",
+    "name": "Epiphany (Orthodox)"
+   },
+   {
+    "date": "2024-03-03",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2024-04-09",
+    "name": "National Unity Day"
+   },
+   {
+    "date": "2024-05-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-04",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2024-05-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Day of Victory over Fascism"
+   },
+   {
+    "date": "2024-05-12",
+    "name": "Saint Andrew the First-Called Day"
+   },
+   {
+    "date": "2024-05-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-08-28",
+    "name": "Saint Mary's Day"
+   },
+   {
+    "date": "2024-10-14",
+    "name": "Day of Svetitskhoveli Cathedra"
+   },
+   {
+    "date": "2024-11-23",
+    "name": "Saint George's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2025-01-19",
+    "name": "Epiphany (Orthodox)"
+   },
+   {
+    "date": "2025-03-03",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2025-04-09",
+    "name": "National Unity Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-19",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-09",
+    "name": "Day of Victory over Fascism"
+   },
+   {
+    "date": "2025-05-12",
+    "name": "Saint Andrew the First-Called Day"
+   },
+   {
+    "date": "2025-05-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-08-28",
+    "name": "Saint Mary's Day"
+   },
+   {
+    "date": "2025-10-14",
+    "name": "Day of Svetitskhoveli Cathedra"
+   },
+   {
+    "date": "2025-11-23",
+    "name": "Saint George's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2026-01-19",
+    "name": "Epiphany (Orthodox)"
+   },
+   {
+    "date": "2026-03-03",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2026-04-09",
+    "name": "National Unity Day"
+   },
+   {
+    "date": "2026-04-10",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-11",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2026-04-12",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-13",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-09",
+    "name": "Day of Victory over Fascism"
+   },
+   {
+    "date": "2026-05-12",
+    "name": "Saint Andrew the First-Called Day"
+   },
+   {
+    "date": "2026-05-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-08-28",
+    "name": "Saint Mary's Day"
+   },
+   {
+    "date": "2026-10-14",
+    "name": "Day of Svetitskhoveli Cathedra"
+   },
+   {
+    "date": "2026-11-23",
+    "name": "Saint George's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2027-01-19",
+    "name": "Epiphany (Orthodox)"
+   },
+   {
+    "date": "2027-03-03",
+    "name": "Mother's Day"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2027-04-09",
+    "name": "National Unity Day"
+   },
+   {
+    "date": "2027-04-30",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2027-05-02",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-09",
+    "name": "Day of Victory over Fascism"
+   },
+   {
+    "date": "2027-05-12",
+    "name": "Saint Andrew the First-Called Day"
+   },
+   {
+    "date": "2027-05-26",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-08-28",
+    "name": "Saint Mary's Day"
+   },
+   {
+    "date": "2027-10-14",
+    "name": "Day of Svetitskhoveli Cathedra"
+   },
+   {
+    "date": "2027-11-23",
+    "name": "Saint George's Day"
+   }
+  ],
+  "school": []
+ },
+ "PH": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-10",
+    "name": "Chinese New Year"
+   },
+   {
+    "date": "2024-03-28",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-30",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2024-04-09",
+    "name": "Day of Valor"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-06-12",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-08-21",
+    "name": "Ninoy Aquino Day"
+   },
+   {
+    "date": "2024-08-26",
+    "name": "National Heroes Day"
+   },
+   {
+    "date": "2024-10-31",
+    "name": "All Saints' Day Eve"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-11-30",
+    "name": "Bonifacio Day"
+   },
+   {
+    "date": "2024-12-08",
+    "name": "Feast of the Immaculate Conception of Mary"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-30",
+    "name": "Rizal Day"
+   },
+   {
+    "date": "2024-12-31",
+    "name": "Last Day of The Year"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-29",
+    "name": "Chinese New Year"
+   },
+   {
+    "date": "2025-04-01",
+    "name": "Feast of Ramadhan"
+   },
+   {
+    "date": "2025-04-09",
+    "name": "Day of Valor"
+   },
+   {
+    "date": "2025-04-17",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-19",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-12",
+    "name": "Midterm Elections"
+   },
+   {
+    "date": "2025-06-06",
+    "name": "Feast of Sacrifice"
+   },
+   {
+    "date": "2025-06-12",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-08-21",
+    "name": "Ninoy Aquino Day"
+   },
+   {
+    "date": "2025-08-25",
+    "name": "National Heroes Day"
+   },
+   {
+    "date": "2025-10-31",
+    "name": "All Saints' Day Eve"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-11-30",
+    "name": "Bonifacio Day"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Feast of the Immaculate Conception of Mary"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-30",
+    "name": "Rizal Day"
+   },
+   {
+    "date": "2025-12-31",
+    "name": "Last Day of The Year"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-17",
+    "name": "Chinese New Year"
+   },
+   {
+    "date": "2026-04-02",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-04",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2026-04-09",
+    "name": "Day of Valor"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-06-12",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-08-21",
+    "name": "Ninoy Aquino Day"
+   },
+   {
+    "date": "2026-08-31",
+    "name": "National Heroes Day"
+   },
+   {
+    "date": "2026-10-31",
+    "name": "All Saints' Day Eve"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-11-30",
+    "name": "Bonifacio Day"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Feast of the Immaculate Conception of Mary"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-30",
+    "name": "Rizal Day"
+   },
+   {
+    "date": "2026-12-31",
+    "name": "Last Day of The Year"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-06",
+    "name": "Chinese New Year"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-27",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2027-04-09",
+    "name": "Day of Valor"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-06-12",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-08-21",
+    "name": "Ninoy Aquino Day"
+   },
+   {
+    "date": "2027-08-30",
+    "name": "National Heroes Day"
+   },
+   {
+    "date": "2027-10-31",
+    "name": "All Saints' Day Eve"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-11-30",
+    "name": "Bonifacio Day"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Feast of the Immaculate Conception of Mary"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-30",
+    "name": "Rizal Day"
+   },
+   {
+    "date": "2027-12-31",
+    "name": "Last Day of The Year"
+   }
+  ],
+  "school": []
+ },
+ "SI": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-08",
+    "name": "Prešeren Day"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-27",
+    "name": "Day of Uprising Against Occupation"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-02",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-02",
+    "name": "Primož Trubar Day"
+   },
+   {
+    "date": "2024-05-19",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-06-25",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2024-08-14",
+    "name": "Sovereignty Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Unification of Prekmurje Slovenes with the Mother Nation"
+   },
+   {
+    "date": "2024-09-15",
+    "name": "Integration of Primorska into the Homeland"
+   },
+   {
+    "date": "2024-09-23",
+    "name": "Slovenian Sports Day"
+   },
+   {
+    "date": "2024-10-31",
+    "name": "Reformation Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "Day of the Dead"
+   },
+   {
+    "date": "2024-11-23",
+    "name": "Rudolf Maister Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Independence and Unity Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-08",
+    "name": "Prešeren Day"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-04-27",
+    "name": "Day of Uprising Against Occupation"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-02",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-02",
+    "name": "Primož Trubar Day"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-25",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2025-08-14",
+    "name": "Sovereignty Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Unification of Prekmurje Slovenes with the Mother Nation"
+   },
+   {
+    "date": "2025-09-15",
+    "name": "Integration of Primorska into the Homeland"
+   },
+   {
+    "date": "2025-09-23",
+    "name": "Slovenian Sports Day"
+   },
+   {
+    "date": "2025-10-31",
+    "name": "Reformation Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "Day of the Dead"
+   },
+   {
+    "date": "2025-11-23",
+    "name": "Rudolf Maister Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Independence and Unity Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-08",
+    "name": "Prešeren Day"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-27",
+    "name": "Day of Uprising Against Occupation"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-02",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-02",
+    "name": "Primož Trubar Day"
+   },
+   {
+    "date": "2026-05-24",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-06-25",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2026-08-14",
+    "name": "Sovereignty Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Unification of Prekmurje Slovenes with the Mother Nation"
+   },
+   {
+    "date": "2026-09-15",
+    "name": "Integration of Primorska into the Homeland"
+   },
+   {
+    "date": "2026-09-23",
+    "name": "Slovenian Sports Day"
+   },
+   {
+    "date": "2026-10-31",
+    "name": "Reformation Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "Day of the Dead"
+   },
+   {
+    "date": "2026-11-23",
+    "name": "Rudolf Maister Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "Independence and Unity Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-08",
+    "name": "Prešeren Day"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-27",
+    "name": "Day of Uprising Against Occupation"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-02",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-02",
+    "name": "Primož Trubar Day"
+   },
+   {
+    "date": "2027-05-16",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-06-25",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2027-08-14",
+    "name": "Sovereignty Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Unification of Prekmurje Slovenes with the Mother Nation"
+   },
+   {
+    "date": "2027-09-15",
+    "name": "Integration of Primorska into the Homeland"
+   },
+   {
+    "date": "2027-09-23",
+    "name": "Slovenian Sports Day"
+   },
+   {
+    "date": "2027-10-31",
+    "name": "Reformation Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "Day of the Dead"
+   },
+   {
+    "date": "2027-11-23",
+    "name": "Rudolf Maister Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "Independence and Unity Day"
+   }
+  ],
+  "school": []
+ },
+ "FI": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2024-05-09",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2024-05-19",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-06-21",
+    "name": "Midsummer Eve"
+   },
+   {
+    "date": "2024-06-22",
+    "name": "Midsummer Day"
+   },
+   {
+    "date": "2024-11-02",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2024-12-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2025-05-29",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-20",
+    "name": "Midsummer Eve"
+   },
+   {
+    "date": "2025-06-21",
+    "name": "Midsummer Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2025-12-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2026-05-24",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-06-19",
+    "name": "Midsummer Eve"
+   },
+   {
+    "date": "2026-06-20",
+    "name": "Midsummer Day"
+   },
+   {
+    "date": "2026-10-31",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2026-12-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2027-05-06",
+    "name": "Ascension Day"
+   },
+   {
+    "date": "2027-05-16",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-06-25",
+    "name": "Midsummer Eve"
+   },
+   {
+    "date": "2027-06-26",
+    "name": "Midsummer Day"
+   },
+   {
+    "date": "2027-11-06",
+    "name": "All Saints' Day"
+   },
+   {
+    "date": "2027-12-06",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "SK": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "Day of the Establishment of the Slovak Republic"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2024-05-08",
+    "name": "Day of victory over fascism"
+   },
+   {
+    "date": "2024-07-05",
+    "name": "St. Cyril and Methodius Day"
+   },
+   {
+    "date": "2024-08-29",
+    "name": "Slovak National Uprising anniversary"
+   },
+   {
+    "date": "2024-09-01",
+    "name": "Day of the Constitution of the Slovak Republic"
+   },
+   {
+    "date": "2024-09-15",
+    "name": "Day of Our Lady of the Seven Sorrows"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "All Saints’ Day"
+   },
+   {
+    "date": "2024-11-17",
+    "name": "Struggle for Freedom and Democracy Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "Day of the Establishment of the Slovak Republic"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2025-05-08",
+    "name": "Day of victory over fascism"
+   },
+   {
+    "date": "2025-07-05",
+    "name": "St. Cyril and Methodius Day"
+   },
+   {
+    "date": "2025-08-29",
+    "name": "Slovak National Uprising anniversary"
+   },
+   {
+    "date": "2025-09-01",
+    "name": "Day of the Constitution of the Slovak Republic"
+   },
+   {
+    "date": "2025-09-15",
+    "name": "Day of Our Lady of the Seven Sorrows"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "All Saints’ Day"
+   },
+   {
+    "date": "2025-11-17",
+    "name": "Struggle for Freedom and Democracy Day"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "Day of the Establishment of the Slovak Republic"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2026-05-08",
+    "name": "Day of victory over fascism"
+   },
+   {
+    "date": "2026-07-05",
+    "name": "St. Cyril and Methodius Day"
+   },
+   {
+    "date": "2026-08-29",
+    "name": "Slovak National Uprising anniversary"
+   },
+   {
+    "date": "2026-09-01",
+    "name": "Day of the Constitution of the Slovak Republic"
+   },
+   {
+    "date": "2026-09-15",
+    "name": "Day of Our Lady of the Seven Sorrows"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "All Saints’ Day"
+   },
+   {
+    "date": "2026-11-17",
+    "name": "Struggle for Freedom and Democracy Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "Day of the Establishment of the Slovak Republic"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2027-05-08",
+    "name": "Day of victory over fascism"
+   },
+   {
+    "date": "2027-07-05",
+    "name": "St. Cyril and Methodius Day"
+   },
+   {
+    "date": "2027-08-29",
+    "name": "Slovak National Uprising anniversary"
+   },
+   {
+    "date": "2027-09-01",
+    "name": "Day of the Constitution of the Slovak Republic"
+   },
+   {
+    "date": "2027-09-15",
+    "name": "Day of Our Lady of the Seven Sorrows"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "All Saints’ Day"
+   },
+   {
+    "date": "2027-11-17",
+    "name": "Struggle for Freedom and Democracy Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "CZ": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-08",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2024-07-05",
+    "name": "Saints Cyril and Methodius Day"
+   },
+   {
+    "date": "2024-07-06",
+    "name": "Jan Hus Day"
+   },
+   {
+    "date": "2024-09-28",
+    "name": "St. Wenceslas Day"
+   },
+   {
+    "date": "2024-10-28",
+    "name": "Independent Czechoslovak State Day"
+   },
+   {
+    "date": "2024-11-17",
+    "name": "Struggle for Freedom and Democracy Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-08",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2025-07-05",
+    "name": "Saints Cyril and Methodius Day"
+   },
+   {
+    "date": "2025-07-06",
+    "name": "Jan Hus Day"
+   },
+   {
+    "date": "2025-09-28",
+    "name": "St. Wenceslas Day"
+   },
+   {
+    "date": "2025-10-28",
+    "name": "Independent Czechoslovak State Day"
+   },
+   {
+    "date": "2025-11-17",
+    "name": "Struggle for Freedom and Democracy Day"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-08",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2026-07-05",
+    "name": "Saints Cyril and Methodius Day"
+   },
+   {
+    "date": "2026-07-06",
+    "name": "Jan Hus Day"
+   },
+   {
+    "date": "2026-09-28",
+    "name": "St. Wenceslas Day"
+   },
+   {
+    "date": "2026-10-28",
+    "name": "Independent Czechoslovak State Day"
+   },
+   {
+    "date": "2026-11-17",
+    "name": "Struggle for Freedom and Democracy Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-08",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2027-07-05",
+    "name": "Saints Cyril and Methodius Day"
+   },
+   {
+    "date": "2027-07-06",
+    "name": "Jan Hus Day"
+   },
+   {
+    "date": "2027-09-28",
+    "name": "St. Wenceslas Day"
+   },
+   {
+    "date": "2027-10-28",
+    "name": "Independent Czechoslovak State Day"
+   },
+   {
+    "date": "2027-11-17",
+    "name": "Struggle for Freedom and Democracy Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "ER": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-07",
+    "name": "Orthodox Christmas"
+   },
+   {
+    "date": "2024-01-19",
+    "name": "Orthodox Epiphany"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2024-05-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-06-20",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2024-09-01",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-07",
+    "name": "Orthodox Christmas"
+   },
+   {
+    "date": "2025-01-19",
+    "name": "Orthodox Epiphany"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2025-05-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-06-20",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2025-09-01",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-07",
+    "name": "Orthodox Christmas"
+   },
+   {
+    "date": "2026-01-19",
+    "name": "Orthodox Epiphany"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2026-05-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-06-20",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2026-09-01",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-07",
+    "name": "Orthodox Christmas"
+   },
+   {
+    "date": "2027-01-19",
+    "name": "Orthodox Epiphany"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "Women's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "May Day"
+   },
+   {
+    "date": "2027-05-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-06-20",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2027-09-01",
+    "name": "Revolution Day"
+   }
+  ],
+  "school": []
  },
  "JP": {
   "bank": [
@@ -4025,22 +28845,3407 @@
    }
   ],
   "school": []
+ },
+ "PY": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-01",
+    "name": "Heroes' day"
+   },
+   {
+    "date": "2024-03-28",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-14",
+    "name": "Paraguayan Independence"
+   },
+   {
+    "date": "2024-05-15",
+    "name": "Paraguayan Independence"
+   },
+   {
+    "date": "2024-06-12",
+    "name": "Chaco Armistice"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Founding of Asunción"
+   },
+   {
+    "date": "2024-09-29",
+    "name": "Boqueron Battle Victory Day"
+   },
+   {
+    "date": "2024-12-08",
+    "name": "Virgin of Caacupe"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-01",
+    "name": "Heroes' day"
+   },
+   {
+    "date": "2025-04-17",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-14",
+    "name": "Paraguayan Independence"
+   },
+   {
+    "date": "2025-05-15",
+    "name": "Paraguayan Independence"
+   },
+   {
+    "date": "2025-06-12",
+    "name": "Chaco Armistice"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Founding of Asunción"
+   },
+   {
+    "date": "2025-09-29",
+    "name": "Boqueron Battle Victory Day"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Virgin of Caacupe"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-01",
+    "name": "Heroes' day"
+   },
+   {
+    "date": "2026-04-02",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-14",
+    "name": "Paraguayan Independence"
+   },
+   {
+    "date": "2026-05-15",
+    "name": "Paraguayan Independence"
+   },
+   {
+    "date": "2026-06-12",
+    "name": "Chaco Armistice"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Founding of Asunción"
+   },
+   {
+    "date": "2026-09-29",
+    "name": "Boqueron Battle Victory Day"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Virgin of Caacupe"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-01",
+    "name": "Heroes' day"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Maundy Thursday"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-14",
+    "name": "Paraguayan Independence"
+   },
+   {
+    "date": "2027-05-15",
+    "name": "Paraguayan Independence"
+   },
+   {
+    "date": "2027-06-12",
+    "name": "Chaco Armistice"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Founding of Asunción"
+   },
+   {
+    "date": "2027-09-29",
+    "name": "Boqueron Battle Victory Day"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Virgin of Caacupe"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   }
+  ],
+  "school": []
+ },
+ "YE": {
+  "bank": [
+   {
+    "date": "2024-02-05",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-09-26",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2024-10-14",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2024-11-30",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-02-05",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-09-26",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2025-10-14",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2025-11-30",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-02-05",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-09-26",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2026-10-14",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2026-11-30",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-02-05",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-09-26",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2027-10-14",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2027-11-30",
+    "name": "Independence Day"
+   }
+  ],
+  "school": []
+ },
+ "CY": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2024-03-18",
+    "name": "Green Monday"
+   },
+   {
+    "date": "2024-03-25",
+    "name": "Greek Independence Day"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Cyprus National Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-07",
+    "name": "Easter Tuesday"
+   },
+   {
+    "date": "2024-06-23",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2024-06-24",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption of the Virgin Mary"
+   },
+   {
+    "date": "2024-10-01",
+    "name": "Cyprus Independence Day"
+   },
+   {
+    "date": "2024-10-28",
+    "name": "Ohi Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2025-03-03",
+    "name": "Green Monday"
+   },
+   {
+    "date": "2025-03-25",
+    "name": "Greek Independence Day"
+   },
+   {
+    "date": "2025-04-01",
+    "name": "Cyprus National Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-04-22",
+    "name": "Easter Tuesday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption of the Virgin Mary"
+   },
+   {
+    "date": "2025-10-01",
+    "name": "Cyprus Independence Day"
+   },
+   {
+    "date": "2025-10-28",
+    "name": "Ohi Day"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2026-02-23",
+    "name": "Green Monday"
+   },
+   {
+    "date": "2026-03-25",
+    "name": "Greek Independence Day"
+   },
+   {
+    "date": "2026-04-01",
+    "name": "Cyprus National Day"
+   },
+   {
+    "date": "2026-04-10",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-13",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-14",
+    "name": "Easter Tuesday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-31",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2026-06-01",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption of the Virgin Mary"
+   },
+   {
+    "date": "2026-10-01",
+    "name": "Cyprus Independence Day"
+   },
+   {
+    "date": "2026-10-28",
+    "name": "Ohi Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Epiphany"
+   },
+   {
+    "date": "2027-03-15",
+    "name": "Green Monday"
+   },
+   {
+    "date": "2027-03-25",
+    "name": "Greek Independence Day"
+   },
+   {
+    "date": "2027-04-01",
+    "name": "Cyprus National Day"
+   },
+   {
+    "date": "2027-04-30",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-04",
+    "name": "Easter Tuesday"
+   },
+   {
+    "date": "2027-06-20",
+    "name": "Pentecost"
+   },
+   {
+    "date": "2027-06-21",
+    "name": "Whit Monday"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption of the Virgin Mary"
+   },
+   {
+    "date": "2027-10-01",
+    "name": "Cyprus Independence Day"
+   },
+   {
+    "date": "2027-10-28",
+    "name": "Ohi Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "MA": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-11",
+    "name": "Proclamation of Independence"
+   },
+   {
+    "date": "2024-01-14",
+    "name": "Amazigh New Year"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-07-30",
+    "name": "Enthronement"
+   },
+   {
+    "date": "2024-08-14",
+    "name": "Zikra Oued Ed-Dahab"
+   },
+   {
+    "date": "2024-08-20",
+    "name": "Revolution of the King and the People"
+   },
+   {
+    "date": "2024-08-21",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2024-11-06",
+    "name": "Green March"
+   },
+   {
+    "date": "2024-11-18",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-11",
+    "name": "Proclamation of Independence"
+   },
+   {
+    "date": "2025-01-14",
+    "name": "Amazigh New Year"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-07-30",
+    "name": "Enthronement"
+   },
+   {
+    "date": "2025-08-14",
+    "name": "Zikra Oued Ed-Dahab"
+   },
+   {
+    "date": "2025-08-20",
+    "name": "Revolution of the King and the People"
+   },
+   {
+    "date": "2025-08-21",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2025-11-06",
+    "name": "Green March"
+   },
+   {
+    "date": "2025-11-18",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-11",
+    "name": "Proclamation of Independence"
+   },
+   {
+    "date": "2026-01-14",
+    "name": "Amazigh New Year"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-07-30",
+    "name": "Enthronement"
+   },
+   {
+    "date": "2026-08-14",
+    "name": "Zikra Oued Ed-Dahab"
+   },
+   {
+    "date": "2026-08-20",
+    "name": "Revolution of the King and the People"
+   },
+   {
+    "date": "2026-08-21",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2026-10-31",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2026-11-06",
+    "name": "Green March"
+   },
+   {
+    "date": "2026-11-18",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-11",
+    "name": "Proclamation of Independence"
+   },
+   {
+    "date": "2027-01-14",
+    "name": "Amazigh New Year"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-07-30",
+    "name": "Enthronement"
+   },
+   {
+    "date": "2027-08-14",
+    "name": "Zikra Oued Ed-Dahab"
+   },
+   {
+    "date": "2027-08-20",
+    "name": "Revolution of the King and the People"
+   },
+   {
+    "date": "2027-08-21",
+    "name": "Youth Day"
+   },
+   {
+    "date": "2027-10-31",
+    "name": "Unity Day"
+   },
+   {
+    "date": "2027-11-06",
+    "name": "Green March"
+   },
+   {
+    "date": "2027-11-18",
+    "name": "Independence Day"
+   }
+  ],
+  "school": []
+ },
+ "EG": {
+  "bank": [
+   {
+    "date": "2024-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2024-01-25",
+    "name": "Revolution Day 2011 / National Police Day"
+   },
+   {
+    "date": "2024-04-25",
+    "name": "Sinai Liberation Day"
+   },
+   {
+    "date": "2024-05-05",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-06-15",
+    "name": "Eid Al-Adha"
+   },
+   {
+    "date": "2024-06-16",
+    "name": "Eid Al-Adha"
+   },
+   {
+    "date": "2024-06-17",
+    "name": "Eid Al-Adha"
+   },
+   {
+    "date": "2024-06-18",
+    "name": "Eid Al-Adha"
+   },
+   {
+    "date": "2024-06-19",
+    "name": "Eid Al-Adha"
+   },
+   {
+    "date": "2024-06-20",
+    "name": "Eid Al-Adha"
+   },
+   {
+    "date": "2024-06-30",
+    "name": "June 30 Revolution"
+   },
+   {
+    "date": "2024-07-11",
+    "name": "Islamic New Year"
+   },
+   {
+    "date": "2024-07-25",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2024-09-16",
+    "name": "Prophet Muhammad's Birthday"
+   },
+   {
+    "date": "2024-10-06",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2025-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2025-01-25",
+    "name": "Revolution Day 2011 / National Police Day"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-04-24",
+    "name": "Sinai Liberation Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-06-06",
+    "name": "Eid Al-Adha"
+   },
+   {
+    "date": "2025-06-07",
+    "name": "Eid Al-Adha"
+   },
+   {
+    "date": "2025-06-08",
+    "name": "Eid Al-Adha"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "Eid Al-Adha"
+   },
+   {
+    "date": "2025-06-26",
+    "name": "Islamic New Year"
+   },
+   {
+    "date": "2025-07-03",
+    "name": "June 30 Revolution"
+   },
+   {
+    "date": "2025-07-24",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2025-09-04",
+    "name": "Prophet Muhammad's Birthday"
+   },
+   {
+    "date": "2025-10-06",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2026-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2026-01-29",
+    "name": "Revolution Day 2011 / National Police Day"
+   },
+   {
+    "date": "2026-04-13",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-25",
+    "name": "Sinai Liberation Day"
+   },
+   {
+    "date": "2026-05-07",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-27",
+    "name": "Eid Al-Adha"
+   },
+   {
+    "date": "2026-05-28",
+    "name": "Eid Al-Adha"
+   },
+   {
+    "date": "2026-05-29",
+    "name": "Eid Al-Adha"
+   },
+   {
+    "date": "2026-05-30",
+    "name": "Eid Al-Adha"
+   },
+   {
+    "date": "2026-05-31",
+    "name": "Eid Al-Adha"
+   },
+   {
+    "date": "2026-06-18",
+    "name": "Islamic New Year"
+   },
+   {
+    "date": "2026-07-02",
+    "name": "June 30 Revolution"
+   },
+   {
+    "date": "2026-07-23",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2026-08-26",
+    "name": "Prophet Muhammad's Birthday"
+   },
+   {
+    "date": "2026-10-06",
+    "name": "Armed Forces Day"
+   },
+   {
+    "date": "2027-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2027-01-25",
+    "name": "Revolution Day 2011 / National Police Day"
+   },
+   {
+    "date": "2027-04-25",
+    "name": "Sinai Liberation Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-06-10",
+    "name": "Islamic New Year"
+   },
+   {
+    "date": "2027-07-01",
+    "name": "June 30 Revolution"
+   },
+   {
+    "date": "2027-07-23",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2027-08-14",
+    "name": "Prophet Muhammad's Birthday (Tentative Date)"
+   },
+   {
+    "date": "2027-10-06",
+    "name": "Armed Forces Day"
+   }
+  ],
+  "school": []
+ },
+ "LY": {
+  "bank": [
+   {
+    "date": "2024-02-17",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-09-16",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2024-10-23",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-02-17",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-09-16",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2025-10-23",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-02-17",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-09-16",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2026-10-23",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-02-17",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-09-16",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2027-10-23",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Independence Day"
+   }
+  ],
+  "school": []
+ },
+ "ET": {
+  "bank": [
+   {
+    "date": "2024-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2024-01-20",
+    "name": "Epiphany (Orthodox)"
+   },
+   {
+    "date": "2024-03-02",
+    "name": "Adwa Victory Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2024-05-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-05",
+    "name": "Ethiopian Patriots' Victory Day"
+   },
+   {
+    "date": "2024-05-28",
+    "name": "Downfall of the Derg"
+   },
+   {
+    "date": "2024-09-12",
+    "name": "Enkutatash"
+   },
+   {
+    "date": "2024-09-28",
+    "name": "Meskel (Orthodox)"
+   },
+   {
+    "date": "2025-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2025-01-19",
+    "name": "Epiphany (Orthodox)"
+   },
+   {
+    "date": "2025-03-02",
+    "name": "Adwa Victory Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2025-05-05",
+    "name": "Ethiopian Patriots' Victory Day"
+   },
+   {
+    "date": "2025-05-28",
+    "name": "Downfall of the Derg"
+   },
+   {
+    "date": "2025-09-11",
+    "name": "Enkutatash"
+   },
+   {
+    "date": "2025-09-27",
+    "name": "Meskel (Orthodox)"
+   },
+   {
+    "date": "2026-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2026-01-19",
+    "name": "Epiphany (Orthodox)"
+   },
+   {
+    "date": "2026-03-02",
+    "name": "Adwa Victory Day"
+   },
+   {
+    "date": "2026-04-10",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-12",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2026-05-05",
+    "name": "Ethiopian Patriots' Victory Day"
+   },
+   {
+    "date": "2026-05-28",
+    "name": "Downfall of the Derg"
+   },
+   {
+    "date": "2026-09-11",
+    "name": "Enkutatash"
+   },
+   {
+    "date": "2026-09-27",
+    "name": "Meskel (Orthodox)"
+   },
+   {
+    "date": "2027-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2027-01-19",
+    "name": "Epiphany (Orthodox)"
+   },
+   {
+    "date": "2027-03-02",
+    "name": "Adwa Victory Day"
+   },
+   {
+    "date": "2027-04-30",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "International Workers' Day"
+   },
+   {
+    "date": "2027-05-02",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-05",
+    "name": "Ethiopian Patriots' Victory Day"
+   },
+   {
+    "date": "2027-05-28",
+    "name": "Downfall of the Derg"
+   },
+   {
+    "date": "2027-09-11",
+    "name": "Enkutatash"
+   },
+   {
+    "date": "2027-09-27",
+    "name": "Meskel (Orthodox)"
+   }
+  ],
+  "school": []
+ },
+ "DJ": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-06-27",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-06-27",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-06-27",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-06-27",
+    "name": "Independence Day"
+   }
+  ],
+  "school": []
+ },
+ "UG": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-26",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2024-02-16",
+    "name": "Archbishop Janani Luwum Day"
+   },
+   {
+    "date": "2024-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-06-03",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2024-06-09",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2024-10-09",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-26",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2025-02-16",
+    "name": "Archbishop Janani Luwum Day"
+   },
+   {
+    "date": "2025-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-06-03",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2025-06-09",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2025-10-09",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-26",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2026-02-16",
+    "name": "Archbishop Janani Luwum Day"
+   },
+   {
+    "date": "2026-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-06-03",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2026-06-09",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2026-10-09",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "Boxing Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-26",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2027-02-16",
+    "name": "Archbishop Janani Luwum Day"
+   },
+   {
+    "date": "2027-03-08",
+    "name": "International Women's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-06-03",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2027-06-09",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2027-10-09",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "Boxing Day"
+   }
+  ],
+  "school": []
+ },
+ "RW": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-02-01",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-04-07",
+    "name": "Tutsi Genocide Memorial Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-07-01",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-07-04",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2024-08-02",
+    "name": "Umuganura Day"
+   },
+   {
+    "date": "2024-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-02-01",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2025-04-07",
+    "name": "Tutsi Genocide Memorial Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-07-01",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-07-04",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2025-08-01",
+    "name": "Umuganura Day"
+   },
+   {
+    "date": "2025-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-02-01",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-07",
+    "name": "Tutsi Genocide Memorial Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-07-01",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-07-04",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2026-08-07",
+    "name": "Umuganura Day"
+   },
+   {
+    "date": "2026-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-02-01",
+    "name": "National Heroes' Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-07",
+    "name": "Tutsi Genocide Memorial Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-07-01",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-07-04",
+    "name": "Liberation Day"
+   },
+   {
+    "date": "2027-08-06",
+    "name": "Umuganura Day"
+   },
+   {
+    "date": "2027-08-15",
+    "name": "Assumption Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "BA": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "May Day / International Workers' Day"
+   },
+   {
+    "date": "2024-05-02",
+    "name": "May Day / International Workers' Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "May Day / International Workers' Day"
+   },
+   {
+    "date": "2025-05-02",
+    "name": "May Day / International Workers' Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "May Day / International Workers' Day"
+   },
+   {
+    "date": "2026-05-02",
+    "name": "May Day / International Workers' Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "May Day / International Workers' Day"
+   },
+   {
+    "date": "2027-05-02",
+    "name": "May Day / International Workers' Day"
+   }
+  ],
+  "school": []
+ },
+ "MK": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-24",
+    "name": "Saints Cyril and Methodius Day"
+   },
+   {
+    "date": "2024-08-02",
+    "name": "Day of the Republic"
+   },
+   {
+    "date": "2024-09-08",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-10-11",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2024-10-23",
+    "name": "Day of the Macedonian Revolutionary Struggle"
+   },
+   {
+    "date": "2024-12-08",
+    "name": "Saint Clement of Ohrid Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-24",
+    "name": "Saints Cyril and Methodius Day"
+   },
+   {
+    "date": "2025-08-02",
+    "name": "Day of the Republic"
+   },
+   {
+    "date": "2025-09-08",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-10-11",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2025-10-23",
+    "name": "Day of the Macedonian Revolutionary Struggle"
+   },
+   {
+    "date": "2025-12-08",
+    "name": "Saint Clement of Ohrid Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2026-04-10",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-12",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-13",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-24",
+    "name": "Saints Cyril and Methodius Day"
+   },
+   {
+    "date": "2026-08-02",
+    "name": "Day of the Republic"
+   },
+   {
+    "date": "2026-09-08",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-10-11",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2026-10-23",
+    "name": "Day of the Macedonian Revolutionary Struggle"
+   },
+   {
+    "date": "2026-12-08",
+    "name": "Saint Clement of Ohrid Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2027-04-30",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-02",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-24",
+    "name": "Saints Cyril and Methodius Day"
+   },
+   {
+    "date": "2027-08-02",
+    "name": "Day of the Republic"
+   },
+   {
+    "date": "2027-09-08",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-10-11",
+    "name": "Revolution Day"
+   },
+   {
+    "date": "2027-10-23",
+    "name": "Day of the Macedonian Revolutionary Struggle"
+   },
+   {
+    "date": "2027-12-08",
+    "name": "Saint Clement of Ohrid Day"
+   }
+  ],
+  "school": []
+ },
+ "RS": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-07",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-02-15",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2024-02-16",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-02",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-05-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-11-11",
+    "name": "Armistice Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-07",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-02-15",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2025-02-17",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-02",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-11-11",
+    "name": "Armistice Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-07",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-02-16",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2026-02-17",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2026-04-10",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-12",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-13",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-02",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-11-11",
+    "name": "Armistice Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-07",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-02-15",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2027-02-16",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2027-04-30",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-02",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-11-11",
+    "name": "Armistice Day"
+   }
+  ],
+  "school": []
+ },
+ "ME": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-01-06",
+    "name": "Orthodox Christmas Eve"
+   },
+   {
+    "date": "2024-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2024-01-08",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-02",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-05-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-21",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-05-22",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-07-13",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2024-07-14",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2024-11-01",
+    "name": "Catholic All Saints' Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Catholic Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Catholic Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "Catholic St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-01-06",
+    "name": "Orthodox Christmas Eve"
+   },
+   {
+    "date": "2025-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2025-01-08",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-02",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-21",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-05-22",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-07-13",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2025-07-14",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2025-11-01",
+    "name": "Catholic All Saints' Day"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Catholic Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Catholic Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "Catholic St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-01-06",
+    "name": "Orthodox Christmas Eve"
+   },
+   {
+    "date": "2026-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2026-01-08",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-04-10",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-13",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-02",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-21",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-05-22",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-07-13",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2026-07-14",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2026-11-01",
+    "name": "Catholic All Saints' Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Catholic Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Catholic Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "Catholic St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-02",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-01-06",
+    "name": "Orthodox Christmas Eve"
+   },
+   {
+    "date": "2027-01-07",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2027-01-08",
+    "name": "Christmas Day (Orthodox)"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-04-30",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-02",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-03",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-21",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-05-22",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-07-13",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2027-07-14",
+    "name": "Statehood Day"
+   },
+   {
+    "date": "2027-11-01",
+    "name": "Catholic All Saints' Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Catholic Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Catholic Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "Catholic St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "TT": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-30",
+    "name": "Spiritual Baptist Shouter Liberation Day"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-30",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2024-05-30",
+    "name": "Indian Arrival Day"
+   },
+   {
+    "date": "2024-06-19",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-08-01",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2024-08-31",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-09-24",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-03-30",
+    "name": "Spiritual Baptist Shouter Liberation Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-30",
+    "name": "Indian Arrival Day"
+   },
+   {
+    "date": "2025-06-19",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2025-06-19",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-08-01",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2025-08-31",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-09-24",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-03-30",
+    "name": "Spiritual Baptist Shouter Liberation Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-30",
+    "name": "Indian Arrival Day"
+   },
+   {
+    "date": "2026-06-04",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2026-06-19",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-08-01",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2026-08-31",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-09-24",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-03-30",
+    "name": "Spiritual Baptist Shouter Liberation Day"
+   },
+   {
+    "date": "2027-05-27",
+    "name": "Corpus Christi"
+   },
+   {
+    "date": "2027-05-30",
+    "name": "Indian Arrival Day"
+   },
+   {
+    "date": "2027-06-19",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-08-01",
+    "name": "Emancipation Day"
+   },
+   {
+    "date": "2027-08-31",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-09-24",
+    "name": "Republic Day"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
+ },
+ "SS": {
+  "bank": [
+   {
+    "date": "2024-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2024-03-29",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2024-03-30",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2024-03-31",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2024-04-01",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2024-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2024-05-16",
+    "name": "SPLA Day"
+   },
+   {
+    "date": "2024-07-09",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2024-07-30",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2024-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2024-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2024-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2025-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2025-04-18",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2025-04-19",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2025-04-20",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2025-04-21",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2025-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2025-05-16",
+    "name": "SPLA Day"
+   },
+   {
+    "date": "2025-07-09",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2025-07-30",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2025-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2025-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2025-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2026-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2026-04-03",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2026-04-04",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2026-04-05",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2026-04-06",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2026-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2026-05-16",
+    "name": "SPLA Day"
+   },
+   {
+    "date": "2026-07-09",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2026-07-30",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2026-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2026-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2026-12-26",
+    "name": "St. Stephen's Day"
+   },
+   {
+    "date": "2027-01-01",
+    "name": "New Year's Day"
+   },
+   {
+    "date": "2027-03-26",
+    "name": "Good Friday"
+   },
+   {
+    "date": "2027-03-27",
+    "name": "Holy Saturday"
+   },
+   {
+    "date": "2027-03-28",
+    "name": "Easter Sunday"
+   },
+   {
+    "date": "2027-03-29",
+    "name": "Easter Monday"
+   },
+   {
+    "date": "2027-05-01",
+    "name": "Labour Day"
+   },
+   {
+    "date": "2027-05-16",
+    "name": "SPLA Day"
+   },
+   {
+    "date": "2027-07-09",
+    "name": "Independence Day"
+   },
+   {
+    "date": "2027-07-30",
+    "name": "Martyrs' Day"
+   },
+   {
+    "date": "2027-12-24",
+    "name": "Christmas Eve"
+   },
+   {
+    "date": "2027-12-25",
+    "name": "Christmas Day"
+   },
+   {
+    "date": "2027-12-26",
+    "name": "St. Stephen's Day"
+   }
+  ],
+  "school": []
  }
 };
 
   var COUNTRIES = [
-    { code: 'GB', name: 'United Kingdom' },
-    { code: 'US', name: 'United States' },
-    { code: 'DE', name: 'Germany' },
-    { code: 'FR', name: 'France' },
-    { code: 'JP', name: 'Japan' }
-  ];
+ {
+  "code": "TZ",
+  "name": "Tanzania"
+ },
+ {
+  "code": "CA",
+  "name": "Canada"
+ },
+ {
+  "code": "US",
+  "name": "United States"
+ },
+ {
+  "code": "KZ",
+  "name": "Kazakhstan"
+ },
+ {
+  "code": "PG",
+  "name": "Papua New Guinea"
+ },
+ {
+  "code": "ID",
+  "name": "Indonesia"
+ },
+ {
+  "code": "AR",
+  "name": "Argentina"
+ },
+ {
+  "code": "CL",
+  "name": "Chile"
+ },
+ {
+  "code": "CD",
+  "name": "DR Congo"
+ },
+ {
+  "code": "SO",
+  "name": "Somalia"
+ },
+ {
+  "code": "KE",
+  "name": "Kenya"
+ },
+ {
+  "code": "SD",
+  "name": "Sudan"
+ },
+ {
+  "code": "TD",
+  "name": "Chad"
+ },
+ {
+  "code": "HT",
+  "name": "Haiti"
+ },
+ {
+  "code": "DO",
+  "name": "Dominican Republic"
+ },
+ {
+  "code": "RU",
+  "name": "Russia"
+ },
+ {
+  "code": "BS",
+  "name": "Bahamas"
+ },
+ {
+  "code": "FK",
+  "name": "Falkland Islands"
+ },
+ {
+  "code": "NO",
+  "name": "Norway"
+ },
+ {
+  "code": "GL",
+  "name": "Greenland"
+ },
+ {
+  "code": "ZA",
+  "name": "South Africa"
+ },
+ {
+  "code": "LS",
+  "name": "Lesotho"
+ },
+ {
+  "code": "MX",
+  "name": "Mexico"
+ },
+ {
+  "code": "UY",
+  "name": "Uruguay"
+ },
+ {
+  "code": "BR",
+  "name": "Brazil"
+ },
+ {
+  "code": "BO",
+  "name": "Bolivia"
+ },
+ {
+  "code": "PE",
+  "name": "Peru"
+ },
+ {
+  "code": "CO",
+  "name": "Colombia"
+ },
+ {
+  "code": "PA",
+  "name": "Panama"
+ },
+ {
+  "code": "CR",
+  "name": "Costa Rica"
+ },
+ {
+  "code": "NI",
+  "name": "Nicaragua"
+ },
+ {
+  "code": "HN",
+  "name": "Honduras"
+ },
+ {
+  "code": "SV",
+  "name": "El Salvador"
+ },
+ {
+  "code": "GT",
+  "name": "Guatemala"
+ },
+ {
+  "code": "BZ",
+  "name": "Belize"
+ },
+ {
+  "code": "VE",
+  "name": "Venezuela"
+ },
+ {
+  "code": "GY",
+  "name": "Guyana"
+ },
+ {
+  "code": "SR",
+  "name": "Suriname"
+ },
+ {
+  "code": "FR",
+  "name": "France"
+ },
+ {
+  "code": "EC",
+  "name": "Ecuador"
+ },
+ {
+  "code": "PR",
+  "name": "Puerto Rico"
+ },
+ {
+  "code": "JM",
+  "name": "Jamaica"
+ },
+ {
+  "code": "CU",
+  "name": "Cuba"
+ },
+ {
+  "code": "ZW",
+  "name": "Zimbabwe"
+ },
+ {
+  "code": "BW",
+  "name": "Botswana"
+ },
+ {
+  "code": "NA",
+  "name": "Namibia"
+ },
+ {
+  "code": "SN",
+  "name": "Senegal"
+ },
+ {
+  "code": "ML",
+  "name": "Mali"
+ },
+ {
+  "code": "MR",
+  "name": "Mauritania"
+ },
+ {
+  "code": "BJ",
+  "name": "Benin"
+ },
+ {
+  "code": "NE",
+  "name": "Niger"
+ },
+ {
+  "code": "NG",
+  "name": "Nigeria"
+ },
+ {
+  "code": "CM",
+  "name": "Cameroon"
+ },
+ {
+  "code": "TG",
+  "name": "Togo"
+ },
+ {
+  "code": "GH",
+  "name": "Ghana"
+ },
+ {
+  "code": "CI",
+  "name": "Ivory Coast"
+ },
+ {
+  "code": "GN",
+  "name": "Guinea"
+ },
+ {
+  "code": "GW",
+  "name": "Guinea-Bissau"
+ },
+ {
+  "code": "LR",
+  "name": "Liberia"
+ },
+ {
+  "code": "SL",
+  "name": "Sierra Leone"
+ },
+ {
+  "code": "BF",
+  "name": "Burkina Faso"
+ },
+ {
+  "code": "CF",
+  "name": "Central African Republic"
+ },
+ {
+  "code": "CG",
+  "name": "Congo"
+ },
+ {
+  "code": "GA",
+  "name": "Gabon"
+ },
+ {
+  "code": "GQ",
+  "name": "Equatorial Guinea"
+ },
+ {
+  "code": "ZM",
+  "name": "Zambia"
+ },
+ {
+  "code": "MW",
+  "name": "Malawi"
+ },
+ {
+  "code": "MZ",
+  "name": "Mozambique"
+ },
+ {
+  "code": "SZ",
+  "name": "Eswatini"
+ },
+ {
+  "code": "AO",
+  "name": "Angola"
+ },
+ {
+  "code": "BI",
+  "name": "Burundi"
+ },
+ {
+  "code": "MG",
+  "name": "Madagascar"
+ },
+ {
+  "code": "GM",
+  "name": "Gambia"
+ },
+ {
+  "code": "TN",
+  "name": "Tunisia"
+ },
+ {
+  "code": "DZ",
+  "name": "Algeria"
+ },
+ {
+  "code": "IQ",
+  "name": "Iraq"
+ },
+ {
+  "code": "VU",
+  "name": "Vanuatu"
+ },
+ {
+  "code": "KH",
+  "name": "Cambodia"
+ },
+ {
+  "code": "VN",
+  "name": "Vietnam"
+ },
+ {
+  "code": "KR",
+  "name": "South Korea"
+ },
+ {
+  "code": "MN",
+  "name": "Mongolia"
+ },
+ {
+  "code": "BD",
+  "name": "Bangladesh"
+ },
+ {
+  "code": "SY",
+  "name": "Syria"
+ },
+ {
+  "code": "AM",
+  "name": "Armenia"
+ },
+ {
+  "code": "SE",
+  "name": "Sweden"
+ },
+ {
+  "code": "BY",
+  "name": "Belarus"
+ },
+ {
+  "code": "UA",
+  "name": "Ukraine"
+ },
+ {
+  "code": "PL",
+  "name": "Poland"
+ },
+ {
+  "code": "AT",
+  "name": "Austria"
+ },
+ {
+  "code": "HU",
+  "name": "Hungary"
+ },
+ {
+  "code": "MD",
+  "name": "Moldova"
+ },
+ {
+  "code": "RO",
+  "name": "Romania"
+ },
+ {
+  "code": "LT",
+  "name": "Lithuania"
+ },
+ {
+  "code": "LV",
+  "name": "Latvia"
+ },
+ {
+  "code": "EE",
+  "name": "Estonia"
+ },
+ {
+  "code": "DE",
+  "name": "Germany"
+ },
+ {
+  "code": "BG",
+  "name": "Bulgaria"
+ },
+ {
+  "code": "GR",
+  "name": "Greece"
+ },
+ {
+  "code": "TR",
+  "name": "Türkiye"
+ },
+ {
+  "code": "AL",
+  "name": "Albania"
+ },
+ {
+  "code": "HR",
+  "name": "Croatia"
+ },
+ {
+  "code": "CH",
+  "name": "Switzerland"
+ },
+ {
+  "code": "LU",
+  "name": "Luxembourg"
+ },
+ {
+  "code": "BE",
+  "name": "Belgium"
+ },
+ {
+  "code": "NL",
+  "name": "Netherlands"
+ },
+ {
+  "code": "PT",
+  "name": "Portugal"
+ },
+ {
+  "code": "ES",
+  "name": "Spain"
+ },
+ {
+  "code": "IE",
+  "name": "Ireland"
+ },
+ {
+  "code": "NC",
+  "name": "New Caledonia"
+ },
+ {
+  "code": "SB",
+  "name": "Solomon Islands"
+ },
+ {
+  "code": "NZ",
+  "name": "New Zealand"
+ },
+ {
+  "code": "AU",
+  "name": "Australia"
+ },
+ {
+  "code": "CN",
+  "name": "China"
+ },
+ {
+  "code": "IT",
+  "name": "Italy"
+ },
+ {
+  "code": "DK",
+  "name": "Denmark"
+ },
+ {
+  "code": "GB",
+  "name": "United Kingdom"
+ },
+ {
+  "code": "IS",
+  "name": "Iceland"
+ },
+ {
+  "code": "GE",
+  "name": "Georgia"
+ },
+ {
+  "code": "PH",
+  "name": "Philippines"
+ },
+ {
+  "code": "SI",
+  "name": "Slovenia"
+ },
+ {
+  "code": "FI",
+  "name": "Finland"
+ },
+ {
+  "code": "SK",
+  "name": "Slovakia"
+ },
+ {
+  "code": "CZ",
+  "name": "Czechia"
+ },
+ {
+  "code": "ER",
+  "name": "Eritrea"
+ },
+ {
+  "code": "JP",
+  "name": "Japan"
+ },
+ {
+  "code": "PY",
+  "name": "Paraguay"
+ },
+ {
+  "code": "YE",
+  "name": "Yemen"
+ },
+ {
+  "code": "CY",
+  "name": "Cyprus"
+ },
+ {
+  "code": "MA",
+  "name": "Morocco"
+ },
+ {
+  "code": "EG",
+  "name": "Egypt"
+ },
+ {
+  "code": "LY",
+  "name": "Libya"
+ },
+ {
+  "code": "ET",
+  "name": "Ethiopia"
+ },
+ {
+  "code": "DJ",
+  "name": "Djibouti"
+ },
+ {
+  "code": "UG",
+  "name": "Uganda"
+ },
+ {
+  "code": "RW",
+  "name": "Rwanda"
+ },
+ {
+  "code": "BA",
+  "name": "Bosnia and Herzegovina"
+ },
+ {
+  "code": "MK",
+  "name": "North Macedonia"
+ },
+ {
+  "code": "RS",
+  "name": "Serbia"
+ },
+ {
+  "code": "ME",
+  "name": "Montenegro"
+ },
+ {
+  "code": "TT",
+  "name": "Trinidad and Tobago"
+ },
+ {
+  "code": "SS",
+  "name": "South Sudan"
+ }
+];
 
   // Shown in the detail panel where school data is missing or partial.
   var SCHOOL_NOTES = {
  "GB": "In England, Scotland and Wales, school dates are set by each local authority, so only Northern Ireland is shown.",
- "US": "In the US, school calendars are set by each local school district, so no school-holiday data is shown.",
- "JP": "In Japan, school holidays are set by each municipality, so no school-holiday data is shown.",
  "FR": "The French school calendar for 2027/28 is not published yet, so autumn and Christmas 2027 are missing."
 };
 
