@@ -102,7 +102,7 @@
 <div class="wrap">
   <header>
     <h1>Holiday lookup</h1>
-    <p class="sub">Public &amp; bank holidays, at a glance. Click a day, or a start and an end day, to see what's off. Data covers <span id="range"></span>.</p>
+    <p class="sub">Bank &amp; school holidays, at a glance. Click a day, or a start and an end day, to see what's off. Data covers <span id="range"></span>.</p>
     <div class="chips" id="chips"></div>
   </header>
 
@@ -126,7 +126,7 @@
     </section>
   </div>
 
-  <footer>Self-contained page &mdash; works offline, no install needed. Holiday data: <a href="https://date.nager.at">date.nager.at</a></footer>
+  <footer>Self-contained page &mdash; works offline, no install needed. Bank holidays: <a href="https://date.nager.at">date.nager.at</a> &middot; School holidays: <a href="https://www.schulferien.org">schulferien.org</a> (Germany, France), <a href="https://www.education-ni.gov.uk">education-ni.gov.uk</a> (Northern Ireland)</footer>
 </div>
 
 <script src="holidays.js"></script>
@@ -303,6 +303,72 @@
     return row;
   }
 
+  function fmtDay(isoStr, extra) {
+    return new Date(isoStr + 'T00:00:00Z').toLocaleDateString(
+      undefined, Object.assign({ timeZone: 'UTC', day: 'numeric', month: 'short' }, extra || {}));
+  }
+  function fmtRange(a, b) {
+    if (a === b) return fmtDay(a, { year: 'numeric' });
+    var sameYear = a.slice(0, 4) === b.slice(0, 4);
+    return fmtDay(a, sameYear ? {} : { year: 'numeric' }) + ' \u2013 ' +
+      fmtDay(b, { year: 'numeric' });
+  }
+
+  // Group school entries that share country, name and dates, so that e.g.
+  // "Summer holiday in all 16 German states" is one line, not sixteen.
+  function groupSchool(list) {
+    var map = new Map();
+    list.forEach(function (h) {
+      var k = h.country + '|' + h.name + '|' + h.start + '|' + h.end;
+      if (!map.has(k)) {
+        map.set(k, {
+          country: h.country, countryName: h.countryName, name: h.name,
+          start: h.start, end: h.end, regions: []
+        });
+      }
+      map.get(k).regions.push(h.region);
+    });
+    return [...map.values()];
+  }
+
+  function schoolRowEl(g) {
+    var r = g.regions;
+    var regionText = r.length === 1 ? r[0]
+      : r.length === 2 ? r[0] + ' and ' + r[1]
+      : r.length + ' regions: ' + r.join(', ');
+    var row = document.createElement('div');
+    row.className = 'hrow';
+    var flag = document.createElement('span');
+    flag.innerHTML = FLAGS[g.country];
+    row.appendChild(flag);
+    var txt = document.createElement('span');
+    var meta = esc(g.countryName) + ' \u00b7 ' + esc(regionText) + ' \u00b7 ' + fmtRange(g.start, g.end);
+    txt.innerHTML = '<span class="hname">' + esc(g.name) + '</span><br><span class="hmeta">' + meta + '</span>';
+    row.appendChild(txt);
+    return row;
+  }
+
+  function section(box, title, fill) {
+    var h = document.createElement('h3');
+    h.className = 'dhead';
+    h.textContent = title;
+    box.appendChild(h);
+    fill();
+  }
+
+  function appendNotes(box) {
+    H.COUNTRIES.forEach(function (c) {
+      if (state.active.indexOf(c.code) === -1) return;
+      var note = H.SCHOOL_NOTES[c.code];
+      if (note) {
+        var el = document.createElement('p');
+        el.className = 'note';
+        el.textContent = note;
+        box.appendChild(el);
+      }
+    });
+  }
+
   function renderDetail() {
     var single = state.start === state.end;
     document.getElementById('detail-date').textContent =
@@ -310,41 +376,67 @@
     var box = document.getElementById('detail');
     box.innerHTML = '';
 
-    var groups = [];
+    var lo = state.start < state.end ? state.start : state.end;
+    var hi = state.start < state.end ? state.end : state.start;
+
     var covered = 0;
-    H.dateRange(state.start, state.end).forEach(function (d) {
+    var bankGroups = [];
+    var bankTotal = 0;
+    H.dateRange(lo, hi).forEach(function (d) {
       var y = Number(d.slice(0, 4));
       if (y < MIN_Y || y > MAX_Y) return;
       covered++;
-      var hols = H.holidaysForDate(d, state.active);
-      if (hols.length) groups.push({ date: d, hols: hols });
+      var hols = H.holidaysForDate(d, state.active).filter(function (h) {
+        return h.kind === 'bank';
+      });
+      if (hols.length) { bankGroups.push({ date: d, hols: hols }); bankTotal += hols.length; }
     });
 
-    if (!groups.length) {
-      box.appendChild(p(covered === 0
-        ? 'No holiday data for this range \u2014 data covers ' + RANGE + '.'
-        : 'No holidays in the selected countries in this range.'));
+    var school = groupSchool(single
+      ? H.holidaysForDate(lo, state.active).filter(function (h) { return h.kind === 'school'; })
+      : H.schoolHolidaysInRange(lo, hi, state.active));
+
+    if (covered === 0) {
+      box.appendChild(p('No holiday data for this range \u2014 data covers ' + RANGE + '.'));
+      appendNotes(box);
       return;
     }
 
-    if (!single) {
-      var total = groups.reduce(function (n, g) { return n + g.hols.length; }, 0);
+    if (!single && (bankTotal || school.length)) {
+      var parts = [];
+      if (bankTotal) parts.push(bankTotal + (bankTotal === 1 ? ' bank holiday' : ' bank holidays'));
+      if (school.length) parts.push(school.length + (school.length === 1 ? ' school holiday' : ' school holidays'));
       var sum = document.createElement('p');
       sum.className = 'none';
-      sum.textContent = total + (total === 1 ? ' holiday' : ' holidays') +
-        ' over ' + covered + ' days';
+      sum.textContent = parts.join(', ') + ' over ' + covered + ' days';
       box.appendChild(sum);
     }
 
-    groups.forEach(function (g) {
-      if (!single) {
-        var head = document.createElement('h3');
-        head.className = 'dhead';
-        head.textContent = fullDate(g.date);
-        box.appendChild(head);
+    section(box, 'School holidays', function () {
+      if (!school.length) {
+        box.appendChild(p('No school holidays ' + (single ? 'on this day' : 'in this range') + '.'));
+        return;
       }
-      g.hols.forEach(function (h) { box.appendChild(hrow(h)); });
+      school.forEach(function (g) { box.appendChild(schoolRowEl(g)); });
     });
+
+    section(box, 'Bank holidays', function () {
+      if (!bankGroups.length) {
+        box.appendChild(p('No bank holidays ' + (single ? 'on this day' : 'in this range') + '.'));
+        return;
+      }
+      bankGroups.forEach(function (g) {
+        if (!single) {
+          var head = document.createElement('h3');
+          head.className = 'dhead';
+          head.textContent = fullDate(g.date);
+          box.appendChild(head);
+        }
+        g.hols.forEach(function (h) { box.appendChild(hrow(h)); });
+      });
+    });
+
+    appendNotes(box);
   }
 
   function p(text) {

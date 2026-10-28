@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Browser smoke test: loads the app from file:// and exercises the UI,
-// including single-day and range selection.
+// including single-day and range selection and the school-holiday sections.
 // Needs: npm i playwright-core, and a Chromium/Chrome binary
 // (set CHROMIUM=/path/to/chromium, defaults to /usr/bin/chromium).
 // Usage: node test/browser-smoke.mjs
@@ -52,16 +52,21 @@ const sel = page.locator('#cal .day.edge');
 assert.strictEqual(await sel.count(), 1);
 assert.strictEqual((await sel.textContent()).trim(), String(now.getDate()));
 
-// 2. Single-day clicking still works
+// 2. Single-day clicking still works, with school and bank sections
 await gotoMonth('December', 2025);
 await clickDay(25);
 assert.ok((await title()).includes('25 December 2025'));
 assert.ok(!(await title()).includes(DASH));
 let d = await detail();
-for (const want of ['Christmas Day', 'United Kingdom', 'United States', 'Germany', 'France']) {
+for (const want of ['School holidays', 'Bank holidays', 'Christmas Day',
+  'United Kingdom', 'United States', 'Germany', 'France']) {
   assert.ok(d.includes(want), `detail should mention ${want}; got: ${d}`);
 }
-assert.ok(!d.includes('Japan'), 'Japan does not observe Christmas');
+// school entries carry their region, and countries without data say so
+assert.ok(d.includes('Northern Ireland'), 'NI school break should name its region');
+assert.ok(d.includes('school district'), 'US should explain the missing school data');
+// Japan only appears in its no-school-data note (it does not observe Christmas)
+assert.strictEqual(d.split('Japan').length - 1, 1, `Japan mentioned ${d.split('Japan').length - 1} times; got: ${d}`);
 
 // 3. Second click extends to a range; span is highlighted
 await clickDay(28);
@@ -95,28 +100,52 @@ assert.ok(!(await detail()).includes('United Kingdom'));
 assert.strictEqual(await page.locator('#cal .day[data-date="2025-12-25"] .dot').count(), 3);
 await page.locator('#chips [data-country="GB"] input').check();
 
-// 7. A range with no holidays
-// (the previous single selection is still pending, so the first click
-// completes it; clicking the same day again starts a fresh single day)
-await gotoMonth('January', 2027);
-await clickDay(5);
-await clickDay(5);
+// 7. School holidays on a day in the middle of summer break
+// (the pending single selection is completed by the first click;
+// clicking the same day again starts a fresh single day)
+await gotoMonth('August', 2026);
+await clickDay(10);
+await clickDay(10);
 assert.ok(!(await title()).includes(DASH));
-await clickDay(8);
-assert.ok((await detail()).includes('No holidays in the selected countries in this range.'));
+d = await detail();
+for (const want of ['School holidays', 'Summer holiday', 'Bavaria', 'Northern Ireland']) {
+  assert.ok(d.includes(want), `detail should mention ${want}; got: ${d}`);
+}
+assert.ok(d.includes('school district'), 'US note still shown');
 
-// 8. A range crossing the data limit: covered part is shown, note appears,
-// and the highlight continues into the out-of-month cells
+// 8. A day with no holidays at all (15-18 Sep 2026 is holiday-free in all
+// five countries, verified against the data)
+await gotoMonth('September', 2026);
+await clickDay(15);
+await clickDay(15);
+d = await detail();
+assert.ok(d.includes('No school holidays on this day.'), d);
+assert.ok(d.includes('No bank holidays on this day.'), d);
+
+// 9. ... and as a range
+await clickDay(18);
+assert.ok((await title()).includes(`15 September ${DASH} 18 September 2026`), await title());
+d = await detail();
+assert.ok(d.includes('No school holidays in this range.'), d);
+assert.ok(d.includes('No bank holidays in this range.'), d);
+
+// 10. A range crossing a year boundary: covered part is shown, and 2028 is
+// now inside the data range (German Christmas holidays run into January)
 await gotoMonth('December', 2027);
 await clickDay(25);
 await gotoMonth('January', 2028);
-await clickDay(2);
+await clickDay(5);
 d = await detail();
 assert.ok(d.includes('Christmas Day'), d);
+assert.ok(d.includes('Christmas holiday'), 'DE school break runs into 2028');
 assert.ok(!d.includes('No holiday data'), d);
+assert.ok(!(await page.locator('#range-note').isVisible()), 'Jan 2028 is covered');
+// 5 out-of-month cells (27-31 Dec) + 5 in-month (1-5 Jan)
+assert.strictEqual(await page.locator('#cal .day.inrange').count(), 10);
+
+// 11. Months beyond the data limit show the note
+await gotoMonth('June', 2029);
 assert.ok(await page.locator('#range-note').isVisible());
-// 5 out-of-month cells (27-31 Dec) + 2 in-month (1-2 Jan)
-assert.strictEqual(await page.locator('#cal .day.inrange').count(), 7);
 
 assert.deepStrictEqual(errors, [], `page errors: ${errors.join(' | ')}`);
 console.log('browser smoke test: OK');

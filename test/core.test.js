@@ -4,17 +4,18 @@ const { test } = require('node:test');
 const assert = require('node:assert');
 const H = require('../app/holidays.js');
 
-test('data integrity: every entry is a valid ISO date inside the covered years', () => {
+test('bank data integrity: every entry is a valid ISO date inside the covered years', () => {
   const [minY, maxY] = H.supportedYears();
   let count = 0;
   for (const c of H.COUNTRIES) {
-    assert.ok(Array.isArray(H.DATA[c.code]), c.code + ' has a list');
-    for (const h of H.DATA[c.code]) {
+    const d = H.DATA[c.code];
+    assert.ok(Array.isArray(d.bank), c.code + ' has a bank list');
+    for (const h of d.bank) {
       count++;
       assert.match(h.date, /^\d{4}-\d{2}-\d{2}$/, `${c.code}: bad date ${h.date}`);
-      const d = new Date(h.date + 'T00:00:00Z');
-      assert.ok(!Number.isNaN(d.getTime()), `${c.code}: unparseable ${h.date}`);
-      assert.strictEqual(d.toISOString().slice(0, 10), h.date, `${c.code}: not a real date ${h.date}`);
+      const dt = new Date(h.date + 'T00:00:00Z');
+      assert.ok(!Number.isNaN(dt.getTime()), `${c.code}: unparseable ${h.date}`);
+      assert.strictEqual(dt.toISOString().slice(0, 10), h.date, `${c.code}: not a real date ${h.date}`);
       const y = Number(h.date.slice(0, 4));
       assert.ok(y >= minY && y <= maxY, `${c.code}: year out of range ${h.date}`);
       assert.ok(h.name && h.name.length > 0, `${c.code}: missing name ${h.date}`);
@@ -23,63 +24,136 @@ test('data integrity: every entry is a valid ISO date inside the covered years',
   assert.ok(count > 100, 'suspiciously little data');
 });
 
+test('school data integrity: valid ranges, always a region label', () => {
+  let count = 0;
+  for (const c of H.COUNTRIES) {
+    const d = H.DATA[c.code];
+    assert.ok(Array.isArray(d.school), c.code + ' has a school list');
+    for (const h of d.school) {
+      count++;
+      assert.match(h.start, /^\d{4}-\d{2}-\d{2}$/, `${c.code}: bad start ${h.start}`);
+      assert.match(h.end, /^\d{4}-\d{2}-\d{2}$/, `${c.code}: bad end ${h.end}`);
+      assert.ok(h.start <= h.end, `${c.code}: backwards range ${h.start}..${h.end}`);
+      assert.ok(h.name && h.name.length > 0, `${c.code}: missing name`);
+      assert.ok(h.region && h.region.length > 0, `${c.code}: missing region`);
+    }
+  }
+  assert.ok(count > 400, 'suspiciously little school data');
+});
+
 test('supportedYears reflects the data', () => {
-  assert.deepStrictEqual(H.supportedYears(), [2024, 2027]);
+  // bank holidays 2024-2027, German Christmas holidays run into January 2028
+  assert.deepStrictEqual(H.supportedYears(), [2024, 2028]);
 });
 
 test('UK bank holidays (2026)', () => {
-  const names = (d) => H.holidaysForDate(d, ['GB']).map((h) => h.name);
+  const bank = (d) => H.holidaysForDate(d, ['GB']).filter((h) => h.kind === 'bank');
+  const names = (d) => bank(d).map((h) => h.name);
   assert.ok(names('2026-04-06').includes('Easter Monday'));
   assert.ok(names('2026-05-04').includes('Early May Bank Holiday'));
   assert.ok(names('2026-08-31').includes('Summer Bank Holiday'));
   assert.deepStrictEqual(names('2026-12-28'), ['Boxing Day']); // substituted: 26 Dec is a Saturday
-  assert.ok(H.holidaysForDate('2026-08-03', ['GB'])[0].note === 'Scotland');
+  assert.ok(bank('2026-08-03')[0].note === 'Scotland');
 });
 
 test('US federal holidays (2026)', () => {
-  const names = (d) => H.holidaysForDate(d, ['US']).map((h) => h.name);
+  const bank = (d) => H.holidaysForDate(d, ['US']).filter((h) => h.kind === 'bank');
+  const names = (d) => bank(d).map((h) => h.name);
   assert.ok(names('2026-11-26').includes('Thanksgiving Day'));
   assert.ok(names('2026-01-01').includes("New Year's Day"));
   // 4 July 2026 is a Saturday: the source lists the observed date only
-  assert.deepStrictEqual(H.holidaysForDate('2026-07-03', ['US']).map((h) => h.name), ['Independence Day']);
+  assert.deepStrictEqual(bank('2026-07-03').map((h) => h.name), ['Independence Day']);
   assert.deepStrictEqual(H.holidaysForDate('2026-07-04', ['US']), []);
 });
 
 test('German nationwide holidays carry honest notes', () => {
-  const de = (d, name) =>
-    H.holidaysForDate(d, ['DE']).find((h) => h.name === name);
+  const de = (d, name) => H.holidaysForDate(d, ['DE']).find(
+    (h) => h.kind === 'bank' && h.name === name);
   assert.ok(de('2026-05-01', 'Labour Day'));
   assert.strictEqual(de('2026-04-06', 'Easter Monday').note, 'most states (not Schleswig-Holstein)');
   assert.strictEqual(de('2026-05-14', 'Ascension Day').note, 'some states');
-  assert.deepStrictEqual(H.holidaysForDate('2026-10-03', ['DE']).map((h) => h.name), ['German Unity Day']);
+  assert.deepStrictEqual(
+    H.holidaysForDate('2026-10-03', ['DE']).filter((h) => h.kind === 'bank').map((h) => h.name),
+    ['German Unity Day']);
 });
 
 test('French and Japanese holidays', () => {
   assert.deepStrictEqual(
-    H.holidaysForDate('2026-07-14', ['FR']).map((h) => h.name),
+    H.holidaysForDate('2026-07-14', ['FR']).filter((h) => h.kind === 'bank').map((h) => h.name),
     ['Bastille Day']);
   assert.ok(H.holidaysForDate('2026-01-12', ['JP']).some((h) => h.name === 'Coming of Age Day'));
   assert.ok(H.holidaysForDate('2026-11-03', ['JP']).some((h) => h.name === 'Culture Day'));
-  // Japan does not observe Christmas
+  // Japan does not observe Christmas, and has no school data
   assert.deepStrictEqual(H.holidaysForDate('2026-12-25', ['JP']), []);
 });
 
 test('holidaysForDate: all countries, ordering and filtering', () => {
   const all = H.holidaysForDate('2026-12-25');
   assert.deepStrictEqual(
-    all.map((h) => h.country),
+    [...new Set(all.map((h) => h.country))],
     ['GB', 'US', 'DE', 'FR']); // no JP
   assert.strictEqual(all[0].countryName, 'United Kingdom');
-  const onlyUs = H.holidaysForDate('2026-11-26', ['US']);
+  assert.ok(all.every((h) => h.kind === 'bank' || h.kind === 'school'));
+  const onlyUs = H.holidaysForDate('2026-11-26', ['US']).filter((h) => h.kind === 'bank');
   assert.deepStrictEqual(onlyUs.map((h) => h.name), ['Thanksgiving Day']);
   // unknown country code is ignored, does not throw
   assert.deepStrictEqual(H.holidaysForDate('2026-11-26', ['XX']), []);
+});
+
+test('school holidays are labelled by region, never nationwide', () => {
+  // Germany: per state
+  const h = H.holidaysForDate('2026-08-10', ['DE']).find(
+    (x) => x.kind === 'school' && x.name === 'Summer holiday' && x.region === 'Bavaria');
+  assert.ok(h, 'Bavaria summer 2026 covers 10 Aug');
+  assert.deepStrictEqual([h.start, h.end], ['2026-08-03', '2026-09-14']);
+  // France: per zone
+  const fr = H.holidaysForDate('2027-02-15', ['FR']).find(
+    (x) => x.kind === 'school' && x.region === 'Zone A');
+  assert.ok(fr, 'Zone A winter 2027 covers 15 Feb');
+  assert.deepStrictEqual([fr.start, fr.end], ['2027-02-14', '2027-02-28']);
+  // UK: Northern Ireland only
+  const gb = H.holidaysForDate('2026-12-25', ['GB']).filter((x) => x.kind === 'school');
+  assert.ok(gb.length >= 1, 'NI Christmas break covers 25 Dec 2026');
+  assert.ok(gb.every((x) => x.region === 'Northern Ireland'));
+  const xmas = gb.find((x) => x.name === 'Christmas and New Year');
+  assert.deepStrictEqual([xmas.start, xmas.end], ['2026-12-21', '2027-01-01']);
+});
+
+test('countries without school data say so', () => {
+  assert.deepStrictEqual(H.DATA.US.school, []);
+  assert.deepStrictEqual(H.DATA.JP.school, []);
+  assert.match(H.SCHOOL_NOTES.US, /school district/);
+  assert.match(H.SCHOOL_NOTES.JP, /municipality/);
+  assert.match(H.SCHOOL_NOTES.GB, /local authority/);
+  assert.ok(H.SCHOOL_NOTES.FR, 'FR note about the unpublished 2027/28 calendar');
+  assert.strictEqual(H.SCHOOL_NOTES.DE, undefined);
+});
+
+test('schoolHolidaysInRange: overlap, either order, sorted by start', () => {
+  const aug = H.schoolHolidaysInRange('2026-08-01', '2026-08-31', ['DE']);
+  assert.strictEqual(aug.length, 16, 'all 16 German states are on summer holiday in Aug 2026');
+  assert.ok(aug.every((h) => h.name === 'Summer holiday'));
+  // a range inside one break returns that break once, with its full dates
+  const one = H.schoolHolidaysInRange('2027-02-15', '2027-02-19', ['FR']);
+  const za = one.find((h) => h.region === 'Zone A');
+  assert.deepStrictEqual([za.start, za.end], ['2027-02-14', '2027-02-28']);
+  // either order gives the same result
+  assert.strictEqual(
+    H.schoolHolidaysInRange('2026-08-31', '2026-08-01', ['DE']).length, aug.length);
+  // sorted by start date
+  const all = H.schoolHolidaysInRange('2026-01-01', '2026-12-31');
+  assert.ok(all.length > 50);
+  for (let i = 1; i < all.length; i++) {
+    assert.ok(all[i - 1].start <= all[i].start, 'sorted by start');
+  }
 });
 
 test('hasHoliday', () => {
   assert.ok(H.hasHoliday('2026-12-25'));
   assert.ok(H.hasHoliday('2026-12-25', ['JP']) === false);
   assert.ok(H.hasHoliday('2026-06-17', ['GB']) === false);
+  // no bank holiday, but DE school holidays count too
+  assert.ok(H.hasHoliday('2026-08-10', ['DE']));
 });
 
 test('calendarMonth: 42 Monday-first cells', () => {
